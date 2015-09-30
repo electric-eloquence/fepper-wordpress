@@ -11,10 +11,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-		// Post thumbnail.
-		fepper_post_thumbnail();
-	?>
 
 	<header class="entry-header">
 		<?php
@@ -53,7 +49,6 @@
 	?>
 
 	<footer class="entry-footer">
-		<?php fepper_entry_meta(); ?>
 		<?php edit_post_link( __( 'Edit', 'twentyfifteen' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 

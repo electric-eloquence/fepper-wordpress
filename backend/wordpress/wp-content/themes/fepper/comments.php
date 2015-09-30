@@ -30,8 +30,6 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<?php fepper_comment_nav(); ?>
-
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
@@ -41,8 +39,6 @@ if ( post_password_required() ) {
 				) );
 			?>
 		</ol><!-- .comment-list -->
-
-		<?php fepper_comment_nav(); ?>
 
 	<?php endif; // have_comments() ?>
 
