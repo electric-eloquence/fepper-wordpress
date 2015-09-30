@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		// Post thumbnail.
-		twentyfifteen_post_thumbnail();
+		fepper_post_thumbnail();
 	?>
 
 	<header class="entry-header">
@@ -53,7 +53,7 @@
 	?>
 
 	<footer class="entry-footer">
-		<?php twentyfifteen_entry_meta(); ?>
+		<?php fepper_entry_meta(); ?>
 		<?php edit_post_link( __( 'Edit', 'twentyfifteen' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 
