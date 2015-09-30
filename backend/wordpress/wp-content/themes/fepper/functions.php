@@ -102,15 +102,6 @@ function fepper_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
 	) );
-
-	$color_scheme  = fepper_get_color_scheme();
-	$default_color = trim( $color_scheme[0], '#' );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'fepper_custom_background_args', array(
-		'default-color'      => $default_color,
-		'default-attachment' => 'fixed',
-	) ) );
 }
 endif; // fepper_setup
 add_action( 'after_setup_theme', 'fepper_setup' );
@@ -231,17 +222,10 @@ function fepper_scripts() {
 	wp_enqueue_style( 'twentyfifteen-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'twentyfifteen-style' ), '20141010' );
 	wp_style_add_data( 'twentyfifteen-ie7', 'conditional', 'lt IE 8' );
 
-	wp_enqueue_script( 'twentyfifteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20141010', true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'twentyfifteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20141010' );
-	}
-
-	wp_enqueue_script( 'twentyfifteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
 	wp_localize_script( 'twentyfifteen-script', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
@@ -325,22 +309,8 @@ function fepper_search_form_modify( $html ) {
 add_filter( 'get_search_form', 'fepper_search_form_modify' );
 
 /**
- * Implement the Custom Header feature.
- *
- * @since Twenty Fifteen 1.0
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  *
  * @since Twenty Fifteen 1.0
  */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Customizer additions.
- *
- * @since Twenty Fifteen 1.0
- */
-require get_template_directory() . '/inc/customizer.php';
