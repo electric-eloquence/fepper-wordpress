@@ -41,7 +41,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-if ( ! function_exists( 'twentyfifteen_setup' ) ) :
+if ( ! function_exists( 'fepper_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -51,7 +51,7 @@ if ( ! function_exists( 'twentyfifteen_setup' ) ) :
  *
  * @since Twenty Fifteen 1.0
  */
-function twentyfifteen_setup() {
+function fepper_setup() {
 
 	/*
 	 * Make theme available for translation.
@@ -103,17 +103,17 @@ function twentyfifteen_setup() {
 		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
 	) );
 
-	$color_scheme  = twentyfifteen_get_color_scheme();
+	$color_scheme  = fepper_get_color_scheme();
 	$default_color = trim( $color_scheme[0], '#' );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'twentyfifteen_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'fepper_custom_background_args', array(
 		'default-color'      => $default_color,
 		'default-attachment' => 'fixed',
 	) ) );
 }
-endif; // twentyfifteen_setup
-add_action( 'after_setup_theme', 'twentyfifteen_setup' );
+endif; // fepper_setup
+add_action( 'after_setup_theme', 'fepper_setup' );
 
 /**
  * Register widget area.
@@ -122,7 +122,7 @@ add_action( 'after_setup_theme', 'twentyfifteen_setup' );
  *
  * @link https://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function twentyfifteen_widgets_init() {
+function fepper_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Widget Area', 'twentyfifteen' ),
 		'id'            => 'sidebar-1',
@@ -133,9 +133,9 @@ function twentyfifteen_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'twentyfifteen_widgets_init' );
+add_action( 'widgets_init', 'fepper_widgets_init' );
 
-if ( ! function_exists( 'twentyfifteen_fonts_url' ) ) :
+if ( ! function_exists( 'fepper_fonts_url' ) ) :
 /**
  * Register Google fonts for Twenty Fifteen.
  *
@@ -143,7 +143,7 @@ if ( ! function_exists( 'twentyfifteen_fonts_url' ) ) :
  *
  * @return string Google fonts URL for the theme.
  */
-function twentyfifteen_fonts_url() {
+function fepper_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
@@ -206,19 +206,19 @@ endif;
  *
  * @since Twenty Fifteen 1.1
  */
-function twentyfifteen_javascript_detection() {
+function fepper_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'twentyfifteen_javascript_detection', 0 );
+add_action( 'wp_head', 'fepper_javascript_detection', 0 );
 
 /**
  * Enqueue scripts and styles.
  *
  * @since Twenty Fifteen 1.0
  */
-function twentyfifteen_scripts() {
+function fepper_scripts() {
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'twentyfifteen-fonts', twentyfifteen_fonts_url(), array(), null );
+	wp_enqueue_style( 'twentyfifteen-fonts', fepper_fonts_url(), array(), null );
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'twentyfifteen-style', get_template_directory_uri() . '/css/style.css' );
@@ -247,7 +247,7 @@ function twentyfifteen_scripts() {
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
 	) );
 }
-add_action( 'wp_enqueue_scripts', 'twentyfifteen_scripts' );
+add_action( 'wp_enqueue_scripts', 'fepper_scripts' );
 
 /**
  * Add featured image as background image to post navigation elements.
@@ -256,7 +256,7 @@ add_action( 'wp_enqueue_scripts', 'twentyfifteen_scripts' );
  *
  * @see wp_add_inline_style()
  */
-function twentyfifteen_post_nav_background() {
+function fepper_post_nav_background() {
 	if ( ! is_single() ) {
 		return;
 	}
@@ -289,7 +289,7 @@ function twentyfifteen_post_nav_background() {
 
 	wp_add_inline_style( 'twentyfifteen-style', $css );
 }
-add_action( 'wp_enqueue_scripts', 'twentyfifteen_post_nav_background' );
+add_action( 'wp_enqueue_scripts', 'fepper_post_nav_background' );
 
 /**
  * Display descriptions in main navigation.
@@ -302,14 +302,14 @@ add_action( 'wp_enqueue_scripts', 'twentyfifteen_post_nav_background' );
  * @param array   $args        wp_nav_menu() arguments.
  * @return string Menu item with possible description.
  */
-function twentyfifteen_nav_description( $item_output, $item, $depth, $args ) {
+function fepper_nav_description( $item_output, $item, $depth, $args ) {
 	if ( 'primary' == $args->theme_location && $item->description ) {
 		$item_output = str_replace( $args->link_after . '</a>', '<div class="menu-item-description">' . $item->description . '</div>' . $args->link_after . '</a>', $item_output );
 	}
 
 	return $item_output;
 }
-add_filter( 'walker_nav_menu_start_el', 'twentyfifteen_nav_description', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'fepper_nav_description', 10, 4 );
 
 /**
  * Add a `screen-reader-text` class to the search form's submit button.
@@ -319,10 +319,10 @@ add_filter( 'walker_nav_menu_start_el', 'twentyfifteen_nav_description', 10, 4 )
  * @param string $html Search form HTML.
  * @return string Modified search form HTML.
  */
-function twentyfifteen_search_form_modify( $html ) {
+function fepper_search_form_modify( $html ) {
 	return str_replace( 'class="search-submit"', 'class="search-submit screen-reader-text"', $html );
 }
-add_filter( 'get_search_form', 'twentyfifteen_search_form_modify' );
+add_filter( 'get_search_form', 'fepper_search_form_modify' );
 
 /**
  * Implement the Custom Header feature.
