@@ -65,8 +65,15 @@ add_action( 'after_setup_theme', 'fepper_setup' );
  */
 function fepper_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Widget Area', 'fepper' ),
+		'name'          => __( 'Header Sidebar', 'fepper' ),
 		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your header.', 'fepper' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Side Sidebar', 'fepper' ),
+		'id'            => 'sidebar-2',
 		'description'   => __( 'Add widgets here to appear in your sidebar.', 'fepper' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
