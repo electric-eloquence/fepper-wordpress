@@ -1,5 +1,5 @@
 <div class="page" id="page">
-	{{> 02-organisms/00-global/00-header }}
+	{{> 03-templates/fp-header }}
 	<div role="main">
 		{{# emergency }}
 			{{> 01-molecules/07-messaging/00-alert }}
@@ -27,14 +27,13 @@
 							<li>{{> 01-molecules/02-blocks/00-media-block }}</li>
 						{{/ latest-posts }}
 					</ul>
-					<a href="#" class="text-btn">View more posts</a>
+					<a href="{{ view-more--url }}" class="text-btn">View more posts</a>
 				</section>
 			</div><!--end .l-main-->
 
 			<div class="l-sidebar">
-				{{> 02-organisms/04-sections/01-recent-tweets }}
+				{{> 02-organisms/04-sections/01-recent-comments }}
 			</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->
 	</div><!--End role=main-->
-	{{> 02-organisms/00-global/01-footer }}
 </div>

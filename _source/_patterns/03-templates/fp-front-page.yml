@@ -1,0 +1,43 @@
+"# hero": |
+  <?php
+  query_posts( 'cat=6' );
+  while ( have_posts() ) : the_post();
+"> 01-molecules/02-blocks/02-block-hero": |
+  echo get_the_post_thumbnail( $post->ID, 'full' );
+  the_title();
+"/ hero": |
+  endwhile;
+  ?>
+"# touts": |
+  <?php
+  query_posts( 'cat=11' );
+  while ( have_posts() ) : the_post();
+  ?>
+"> 01-molecules/02-blocks/05-inset-block": |
+  <?php
+  echo get_the_post_thumbnail( $post->ID, 'full' );
+  the_title();
+  ?>
+"/ touts": |
+  <?php endwhile; ?>
+"# latest-posts": |
+  <?php
+  query_posts( 'cat=1' );
+  while ( have_posts() ) : the_post();
+  ?>
+"> 01-molecules/02-blocks/00-media-block": |
+  <?php
+  echo get_the_post_thumbnail( $post->ID, 'medium' );
+  the_title();
+  the_excerpt();
+  ?>
+"/ latest-posts": |
+  <?php endwhile; ?>
+"view-more--url": |
+  <?php echo esc_url( site_url( 'blog' ) ); ?>
+"> 02-organisms/04-sections/01-recent-comments": |
+  <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+    <div id="widget-area" class="widget-area" role="complementary">
+      <?php dynamic_sidebar( 'sidebar-1' ); ?>
+    </div><!-- .widget-area -->
+  <?php endif; ?>
