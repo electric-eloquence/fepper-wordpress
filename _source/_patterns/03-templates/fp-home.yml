@@ -1,0 +1,22 @@
+"page-title": |
+  <?php
+  $page_for_posts_id = get_option('page_for_posts');
+  echo get_post_field( 'post_content', $page_for_posts_id );
+  ?>
+"# latest-posts": |
+  <?php
+  query_posts( 'cat=1' );
+  while ( have_posts() ) : the_post();
+  ?>
+"url": |
+  <?php the_permalink(); ?>
+"> atoms-square": |
+  <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+"headline.short": |
+  <?php the_title(); ?>
+"{ excerpt.medium }": |
+  <?php the_excerpt(); ?>
+"/ latest-posts": |
+  <?php endwhile; ?>
+"> 02-organisms/04-sections/01-recent-comments": |
+  <?php dynamic_sidebar( 'sidebar-1' ); ?>
