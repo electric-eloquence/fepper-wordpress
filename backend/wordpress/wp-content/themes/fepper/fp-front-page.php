@@ -3,10 +3,18 @@
 		<?php
 query_posts( 'cat=6' );
 while ( have_posts() ) : the_post();
-			echo get_the_post_thumbnail( $post->ID, 'full' );
-the_title();
-		endwhile;
 ?>
+			<div class="block block-hero">
+	<a href="<?php the_permalink(); ?>" class="inner">
+		<div class="b-thumb">
+			<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?> 
+		</div>
+		<div class="b-text">
+			<h2 class="headline"><?php the_title(); ?></h2>
+		</div>
+	</a>
+</div>
+<?php endwhile; ?>
 
 		<div class="g g-3up">
 			<?php
@@ -14,12 +22,19 @@ query_posts( 'cat=11' );
 while ( have_posts() ) : the_post();
 ?>
 				<div class="gi">
-					<?php
-echo get_the_post_thumbnail( $post->ID, 'full' );
-the_title();
-?>
+					<div class="block block-inset">
+	<a href="<?php the_permalink(); ?>" class="inner">
+		<div class="b-thumb">
+			<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?> 
+		</div>
+		<div class="b-text">
+			<h2 class="headline"><?php the_title(); ?></h2>
+		</div>
+	</a>
+</div>
+
 				</div>
-			<?php endwhile; ?>
+<?php endwhile; ?>
 		</div><!--end 3up-->
 
 		<hr />
@@ -45,6 +60,8 @@ while ( have_posts() ) : the_post();
 		</div>
 	</a>
 </div>
+
+							</li>
 <?php endwhile; ?>
 					</ul>
 					<a href="<?php echo esc_url( site_url( 'blog' ) ); ?>" class="text-btn">View more posts</a>
