@@ -1,9 +1,11 @@
 <!-- Begin .header -->
 <header class="header cf" role="banner">
-	{{> atoms-logo }}
+	{{> 00-atoms/03-images/00-logo.mustache }}
 	<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
 	<a href="#" class="nav-toggle nav-toggle-menu icon-menu"><span class="is-vishidden">Menu</span></a>
-	{{> molecules-primary-nav }}
-	{{> molecules-search }}
+	{{# search }}
+		{{> 01-molecules/04-forms/00-search }}
+	{{/ search }}
+	{{> 01-molecules/05-navigation/00-primary-nav }}
 </header>
 <!-- End .header -->
