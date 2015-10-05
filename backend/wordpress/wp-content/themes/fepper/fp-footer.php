@@ -5,5 +5,3 @@
 	</div>
 </footer>
 <!-- End Footer -->
-
-

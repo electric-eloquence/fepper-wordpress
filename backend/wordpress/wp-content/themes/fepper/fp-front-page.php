@@ -34,7 +34,7 @@ query_posts( 'cat=1' );
 while ( have_posts() ) : the_post();
 ?>
 							<li>
-<div class="block block-thumb">
+								<div class="block block-thumb">
 	<a href="<?php the_permalink(); ?>" class="b-inner">
 		<div class="b-thumb">
 			<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
@@ -45,22 +45,15 @@ while ( have_posts() ) : the_post();
 		</div>
 	</a>
 </div>
-
-							</li>
-						<?php endwhile; ?>
+<?php endwhile; ?>
 					</ul>
 					<a href="<?php echo esc_url( site_url( 'blog' ) ); ?>" class="text-btn">View more posts</a>
 				</section>
 			</div><!--end .l-main-->
 
 			<div class="l-sidebar">
-				<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-  <div id="widget-area" class="widget-area" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-1' ); ?>
-  </div><!-- .widget-area -->
-<?php endif; ?>
+				<?php dynamic_sidebar( 'sidebar-1' ); ?>
 			</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->
 	</div><!--End role=main-->
 </div>
-

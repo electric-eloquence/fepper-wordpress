@@ -58,18 +58,6 @@ function fepper_setup() {
 endif; // fepper_setup
 add_action( 'after_setup_theme', 'fepper_setup' );
 
-if ( ! function_exists( 'fepper_excerpt_more' ) && ! is_admin() ) :
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with "...".
- *
- * @return string 'Continue reading' link prepended with an ellipsis.
- */
-function fepper_excerpt_more( $more ) {
-	return '...';
-}
-add_filter( 'excerpt_more', 'fepper_excerpt_more' );
-endif;
-
 /**
  * JavaScript Detection.
  *
