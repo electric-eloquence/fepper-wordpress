@@ -59,6 +59,14 @@ endif; // fepper_setup
 add_action( 'after_setup_theme', 'fepper_setup' );
 
 /**
+ * Change excerpt length to 35 words
+ */
+function fepper_excerpt_length( $length ) {
+  return 35;
+}
+add_filter( 'excerpt_length', 'fepper_excerpt_length', 999 );
+
+/**
  * JavaScript Detection.
  *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
