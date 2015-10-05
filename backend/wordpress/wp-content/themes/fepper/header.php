@@ -18,6 +18,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
 
-	<div id="content" class="site-content">
+<?php get_template_part( 'fp-header' ); ?>

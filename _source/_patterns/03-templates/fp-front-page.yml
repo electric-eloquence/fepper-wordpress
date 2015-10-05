@@ -33,7 +33,7 @@
   ?>
 "/ latest-posts": |
   <?php endwhile; ?>
-"view-more--url": |
+"view-more--href": |
   <?php echo esc_url( site_url( 'blog' ) ); ?>
 "> 02-organisms/04-sections/01-recent-comments": |
   <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>

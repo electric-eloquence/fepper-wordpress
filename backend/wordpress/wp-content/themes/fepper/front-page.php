@@ -12,11 +12,7 @@
 
 get_header();
 
-get_template_part( 'fp-header' );
-
 get_template_part( 'fp-front-page' );
-
-get_template_part( 'fp-footer' );
 
 get_footer();
 ?>

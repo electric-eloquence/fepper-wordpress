@@ -139,5 +139,5 @@
 			"headline" : "This is the headline for the latest block"
 		}
 	],
-	"view-more--url" : "../04-pages-01-blog/04-pages-01-blog.html"
+	"view-more--href" : "../04-pages-01-blog/04-pages-01-blog.html"
 }
