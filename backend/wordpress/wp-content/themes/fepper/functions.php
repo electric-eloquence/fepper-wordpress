@@ -58,30 +58,17 @@ function fepper_setup() {
 endif; // fepper_setup
 add_action( 'after_setup_theme', 'fepper_setup' );
 
+if ( ! function_exists( 'fepper_excerpt_more' ) && ! is_admin() ) :
 /**
- * Register widget area.
+ * Replaces "[...]" (appended to automatically generated excerpts) with "...".
  *
- * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+ * @return string 'Continue reading' link prepended with an ellipsis.
  */
-function fepper_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Header Sidebar', 'fepper' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your header.', 'fepper' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Side Sidebar', 'fepper' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'fepper' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+function fepper_excerpt_more( $more ) {
+	return '...';
 }
-add_action( 'widgets_init', 'fepper_widgets_init' );
+add_filter( 'excerpt_more', 'fepper_excerpt_more' );
+endif;
 
 /**
  * JavaScript Detection.
@@ -101,3 +88,37 @@ function fepper_scripts() {
 	wp_enqueue_style( 'fepper-style', get_template_directory_uri() . '/css/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'fepper_scripts' );
+
+/**
+ * Register widget area.
+ *
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function fepper_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Header Sidebar', 'fepper' ),
+		'id'            => 'sidebar',
+		'description'   => __( 'Add widgets here to appear in your header.', 'fepper' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Side Sidebar 1', 'fepper' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'fepper' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Side Sidebar 2', 'fepper' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'fepper' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'fepper_widgets_init' );
