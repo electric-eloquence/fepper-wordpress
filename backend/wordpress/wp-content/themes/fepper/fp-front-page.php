@@ -19,9 +19,7 @@ echo get_the_post_thumbnail( $post->ID, 'full' );
 the_title();
 ?>
 				</div>
-			<?php
-endwhile;
-?>
+			<?php endwhile; ?>
 		</div><!--end 3up-->
 
 		<hr />
@@ -40,16 +38,19 @@ echo get_the_post_thumbnail( $post->ID, 'medium' );
 the_title();
 the_excerpt();
 ?></li>
-						<?php
-endwhile;
-?>
+						<?php endwhile; ?>
 					</ul>
-					<a href="#" class="text-btn">View more posts</a>
+					<a href="<?php echo esc_url( site_url( 'blog' ) ); ?>" class="text-btn">View more posts</a>
 				</section>
 			</div><!--end .l-main-->
 
 			<div class="l-sidebar">
-				</div><!--end .l-sidebar-->
+				<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+  <div id="widget-area" class="widget-area" role="complementary">
+    <?php dynamic_sidebar( 'sidebar-1' ); ?>
+  </div><!-- .widget-area -->
+<?php endif; ?>
+			</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->
 	</div><!--End role=main-->
 </div>
