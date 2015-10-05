@@ -23,7 +23,9 @@
 					<h2 class="section-title">Latest Posts</h2>
 					<ul class="post-list">
 						{{# latest-posts }}
-							<li>{{> 01-molecules/02-blocks/00-media-block }}</li>
+							<li>
+								{{> 01-molecules/02-blocks/00-media-block.mustache }}
+							</li>
 						{{/ latest-posts }}
 					</ul>
 					<a href="{{ view-more--href }}" class="text-btn">View more posts</a>

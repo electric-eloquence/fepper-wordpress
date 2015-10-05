@@ -33,11 +33,20 @@ the_title();
 query_posts( 'cat=1' );
 while ( have_posts() ) : the_post();
 ?>
-							<li><?php
-echo get_the_post_thumbnail( $post->ID, 'medium' );
-the_title();
-the_excerpt();
-?></li>
+							<li>
+<div class="block block-thumb">
+	<a href="<?php the_permalink(); ?>" class="b-inner">
+		<div class="b-thumb">
+			<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+		</div>
+		<div class="b-text">
+			<h2 class="headline"><?php the_title(); ?></h2>
+			<p><?php the_excerpt(); ?></p>
+		</div>
+	</a>
+</div>
+
+							</li>
 						<?php endwhile; ?>
 					</ul>
 					<a href="<?php echo esc_url( site_url( 'blog' ) ); ?>" class="text-btn">View more posts</a>

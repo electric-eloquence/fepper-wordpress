@@ -25,12 +25,14 @@
   query_posts( 'cat=1' );
   while ( have_posts() ) : the_post();
   ?>
-"> 01-molecules/02-blocks/00-media-block": |
-  <?php
-  echo get_the_post_thumbnail( $post->ID, 'medium' );
-  the_title();
-  the_excerpt();
-  ?>
+"url": |
+  <?php the_permalink(); ?>
+"> atoms-square": |
+  <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+"headline.short": |
+  <?php the_title(); ?>
+"excerpt.medium": |
+  <?php the_excerpt(); ?>
 "/ latest-posts": |
   <?php endwhile; ?>
 "view-more--href": |
