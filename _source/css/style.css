@@ -410,7 +410,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .search-field {
-	width: 12em;
+	width: 11.5em;
+	height: 36px;
 }
 
 input[type="submit"].search-submit {
@@ -418,6 +419,7 @@ input[type="submit"].search-submit {
 	border-left: 0;
 	color: transparent;
 	font-size: 0.85em;
+	height: 36px;
 	padding-right: 0;
 	padding-left: 0;
 	position: relative;
@@ -1422,6 +1424,23 @@ td {
 	background: gray;
 }
 
+.comments.section {
+	border-top: 1px solid #dddddd;
+	margin-top: 2em;
+}
+
+.comments.section .section-title {
+	margin: 1rem 0;
+}
+
+.comments.section .comment {
+	min-height: 9em;
+}
+
+.comments.section .reply {
+	display: none;
+}
+
 .comments li {
 	margin-bottom: 1rem;
 }
@@ -1433,7 +1452,7 @@ td {
 
 .comment-meta {
 	float: left;
-	width: 6.5em;
+	width: 12em;
 }
 .comment-meta img {
 	display: block;
@@ -1441,12 +1460,19 @@ td {
 	margin-bottom: 0.5rem;
 }
 
+.comment-author,
+.comment-metadata,
 .comment-name {
 	font-size: 0.75em;
 }
 
 .comment-text {
 	margin-left: 9em;
+}
+
+.comment-respond {
+	border-top: 1px solid #dddddd;
+	padding-top: 1em;
 }
 
 .alert {
@@ -1461,4 +1487,8 @@ td {
 	color: #F00;
 	border-color: #F00;
 	background: #ffbebe;
+}
+
+.required {
+	color: red;
 }

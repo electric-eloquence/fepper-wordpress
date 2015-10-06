@@ -86,6 +86,7 @@ header, footer, nav, section, article, hgroup, figure {
 }
 
 /* Completely remove from the flow but leave available to screen readers. */
+.screen-reader-text,
 .is-vishidden {
 	position: absolute !important;
 	overflow: hidden;
@@ -392,6 +393,37 @@ input[type="search"]::-webkit-search-decoration {
 	border: 0;
 	border-left: 1px solid gray;
 	color: gray;
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-form > label {
+	float: left;
+}
+
+.search-form > label:after {
+	position: absolute;
+	top: 0.5em;
+	right: 1em;
+}
+
+.search-field {
+	width: 11.5em;
+	height: 36px;
+}
+
+input[type="submit"].search-submit {
+	background-color: transparent;
+	border-left: 0;
+	color: transparent;
+	font-size: 0.85em;
+	height: 36px;
+	padding-right: 0;
+	padding-left: 0;
+	position: relative;
+	z-index: 1;
 }
 
 /*------------------------------------*\
@@ -899,6 +931,7 @@ td {
 	-webkit-font-smoothing: antialiased;
 }
 
+.search-form > label:after,
 .icon-twitter:before, .icon-stumbleupon:before, .icon-pinterest:before, .icon-linkedin:before, .icon-google-plus:before, .icon-search:before, .icon-play:before, .icon-menu:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-bubble:before, .icon-facebook:before, .icon-feed:before, .icon-youtube:before, .icon-tag:before, .icon-tumblr:before, .icon-instagram, .icon-podcast, .icon-apple, .icon-android, .icon-arrow:after, .icon-envelope:before {
 	font-family: 'icons';
 	speak: none;
@@ -930,6 +963,7 @@ td {
 	content: "\67";
 }
 
+.search-form > label:after,
 .icon-search:before {
 	content: "\73";
 }
@@ -1338,6 +1372,16 @@ td {
 	margin-bottom: 0.5rem;
 }
 
+.widget-title {
+	border-bottom: 1px solid #dddddd;
+	padding: 0.5rem 0;
+}
+
+.widget > ul > li {
+	border-bottom: 1px solid #dddddd;
+	padding: 0.25em 0;
+}
+
 .article-header h1 {
 	font-size: 2.5em;
 }
@@ -1380,6 +1424,23 @@ td {
 	background: gray;
 }
 
+.comments.section {
+	border-top: 1px solid #dddddd;
+	margin-top: 2em;
+}
+
+.comments.section .section-title {
+	margin: 1rem 0;
+}
+
+.comments.section .comment {
+	min-height: 9em;
+}
+
+.comments.section .reply {
+	display: none;
+}
+
 .comments li {
 	margin-bottom: 1rem;
 }
@@ -1391,7 +1452,8 @@ td {
 
 .comment-meta {
 	float: left;
-	width: 6.5em;
+	min-height: 9em;
+	width: 12em;
 }
 .comment-meta img {
 	display: block;
@@ -1399,12 +1461,19 @@ td {
 	margin-bottom: 0.5rem;
 }
 
+.comment-author,
+.comment-metadata,
 .comment-name {
 	font-size: 0.75em;
 }
 
 .comment-text {
 	margin-left: 9em;
+}
+
+.comment-respond {
+	border-top: 1px solid #dddddd;
+	padding-top: 1em;
 }
 
 .alert {
@@ -1419,4 +1488,8 @@ td {
 	color: #F00;
 	border-color: #F00;
 	background: #ffbebe;
+}
+
+.required {
+	color: red;
 }
