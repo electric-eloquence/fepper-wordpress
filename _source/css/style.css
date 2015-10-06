@@ -86,6 +86,7 @@ header, footer, nav, section, article, hgroup, figure {
 }
 
 /* Completely remove from the flow but leave available to screen readers. */
+.screen-reader-text,
 .is-vishidden {
 	position: absolute !important;
 	overflow: hidden;
@@ -392,6 +393,35 @@ input[type="search"]::-webkit-search-decoration {
 	border: 0;
 	border-left: 1px solid gray;
 	color: gray;
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-form > label {
+	float: left;
+}
+
+.search-form > label:after {
+	position: absolute;
+	top: 0.5em;
+	right: 1em;
+}
+
+.search-field {
+	width: 12em;
+}
+
+input[type="submit"].search-submit {
+	background-color: transparent;
+	border-left: 0;
+	color: transparent;
+	font-size: 0.85em;
+	padding-right: 0;
+	padding-left: 0;
+	position: relative;
+	z-index: 1;
 }
 
 /*------------------------------------*\
@@ -899,6 +929,7 @@ td {
 	-webkit-font-smoothing: antialiased;
 }
 
+.search-form > label:after,
 .icon-twitter:before, .icon-stumbleupon:before, .icon-pinterest:before, .icon-linkedin:before, .icon-google-plus:before, .icon-search:before, .icon-play:before, .icon-menu:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-bubble:before, .icon-facebook:before, .icon-feed:before, .icon-youtube:before, .icon-tag:before, .icon-tumblr:before, .icon-instagram, .icon-podcast, .icon-apple, .icon-android, .icon-arrow:after, .icon-envelope:before {
 	font-family: 'icons';
 	speak: none;
@@ -930,6 +961,7 @@ td {
 	content: "\67";
 }
 
+.search-form > label:after,
 .icon-search:before {
 	content: "\73";
 }
