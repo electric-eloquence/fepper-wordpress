@@ -1,0 +1,28 @@
+"# comments": |
+  <?php if ( have_comments() ) : ?>
+"amount": |
+  <?php
+  printf(
+    _nx(
+      'One thought on &ldquo;%2$s&rdquo;',
+      '%1$s thoughts on &ldquo;%2$s&rdquo;',
+      get_comments_number(),
+      'comments title',
+      'fepper'
+    ),
+    number_format_i18n( get_comments_number() ),
+    get_the_title()
+  );
+  ?>
+"#listItems.five": |
+  <?php
+"> molecules-single-comment": |
+  wp_list_comments( array(
+    'style'       => 'ul',
+    'short_ping'  => true,
+    'avatar_size' => 56,
+  ) );
+"/listItems.five": |
+  ?>
+"# comments": |
+  <?php endif; ?>

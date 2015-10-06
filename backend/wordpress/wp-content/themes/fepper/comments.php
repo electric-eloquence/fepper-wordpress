@@ -18,7 +18,27 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
+<section class="comments section">
+    <div class="comments-container">
+        <h2 class="section-title">
+			<?php
+				printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'fepper' ),
+					number_format_i18n( get_comments_number() ), get_the_title() );
+			?>
+        </h2>
+        {{> molecules-comment-form }}
+        <ul class="comment-list">
+			<?php
+				wp_list_comments( array(
+					'style'       => 'ul',
+					'short_ping'  => true,
+					'avatar_size' => 56,
+				) );
+			?>
+        </ul>
+    </div>
+    {{> molecules-pagination }}
+</section>
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
