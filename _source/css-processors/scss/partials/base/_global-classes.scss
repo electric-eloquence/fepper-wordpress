@@ -22,6 +22,7 @@
 }
 
 /* Completely remove from the flow but leave available to screen readers. */
+.screen-reader-text,
 .is-vishidden {
 	position: absolute !important;
 	overflow: hidden;
