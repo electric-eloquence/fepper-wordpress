@@ -87,5 +87,5 @@
 			"headline" : "This is the headline for the latest block"
 		}
 	],
-	"pagination-label": "<a href=\"#\" class=\"text-btn\">View more posts</a>"
+	"pagination_label": "<a href=\"#\" class=\"text-btn\">View more posts</a>"
 }
