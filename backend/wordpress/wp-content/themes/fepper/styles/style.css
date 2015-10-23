@@ -2,7 +2,7 @@
 
 */
 /*------------------------------------*\
-	  $TABLE OF CONTENTS
+	$TABLE OF CONTENTS
 \*------------------------------------*/
 /**
  * VARIABLES..............................Declarations of Sass variables
@@ -27,10 +27,10 @@
  * TOC To Be Continued
  */
 /*------------------------------------*\
-	  $VARIABLES
+	$VARIABLES
 \*------------------------------------*/
 /*------------------------------------*\
-	  $MIXINS
+	$MIXINS
 \*------------------------------------*/
 /* CSS Transition
 	Usage: @include transition(width,0.3s,ease-out);
@@ -39,7 +39,7 @@
 	Usage: @include font-size(1, large);
 */
 /*------------------------------------*\
-	  $RESET
+	$RESET
 \*------------------------------------*/
 /* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
 * {
@@ -58,10 +58,10 @@ header, footer, nav, section, article, hgroup, figure {
 }
 
 /*------------------------------------*\
-	  $GLOBAL ELEMENTS
+	$GLOBAL ELEMENTS
 \*------------------------------------*/
 /*------------------------------------*\
-	  $GLOBAL CLASSES
+	$GLOBAL CLASSES
 \*------------------------------------*/
 /* Clearfix */
 .cf, .l-two-col, [role=main] {
@@ -129,25 +129,25 @@ header, footer, nav, section, article, hgroup, figure {
 /* Display Classes */
 @media all and (max-width: 46.8em) {
 	.hide-small {
-	  display: none;
+		display: none;
 	}
 }
 
 @media all and (min-width: 46.8em) and (max-width: 50em) {
 	.hide-med {
-	  display: none;
+		display: none;
 	}
 }
 
 @media all and (min-width: 50em) {
 	.hide-large {
-	  display: none;
+		display: none;
 	}
 }
 
 @media all and (min-width: 66em) {
 	.hide-large-2 {
-	  display: none;
+		display: none;
 	}
 }
 
@@ -244,7 +244,7 @@ dd {
 }
 
 /*------------------------------------*\
-	  $MEDIA ELEMENTS
+	$MEDIA ELEMENTS
 \*------------------------------------*/
 /* Flexible Media */
 img, video, object {
@@ -268,7 +268,7 @@ figcaption {
 }
 
 /*------------------------------------*\
-	  $FORMS
+	$FORMS
 \*------------------------------------*/
 form > div {
 	margin-bottom: 1rem;
@@ -356,7 +356,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 @media all and (min-width: 46.8em) {
 	.inline-search-results-form {
-	  width: 82%;
+		width: 82%;
 	}
 }
 .inline-search-results-form fieldset, .inline-search-results-form .inline-container {
@@ -380,7 +380,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /*------------------------------------*\
-	  $SPECIFIC FORMS
+	$SPECIFIC FORMS
 \*------------------------------------*/
 /* Search Form */
 .search-field {
@@ -427,7 +427,7 @@ input[type="submit"].search-submit {
 }
 
 /*------------------------------------*\
-	  $Table
+	$Table
 \*------------------------------------*/
 table {
 	border-collapse: collapse;
@@ -467,10 +467,10 @@ td {
 }
 
 /*------------------------------------*\
-	  $LAYOUT
+	$LAYOUT
 \*------------------------------------*/
 /*------------------------------------*\
-	  $LAYOUT
+	$LAYOUT
 \*------------------------------------*/
 /* Layout Container */
 .lc, .header, [role=main] {
@@ -480,31 +480,31 @@ td {
 }
 
 /*------------------------------------*\
-	  $TEMPLATES
+	$TEMPLATES
 \*------------------------------------*/
 /* Two Column Layout */
 @media all and (min-width: 50em) {
 	.l-two-col .l-main {
-	  float: left;
-	  width: 70%;
-	  padding-right: 1rem;
+		float: left;
+		width: 70%;
+		padding-right: 1rem;
 	}
 }
 @media all and (max-width: 50em) {
 	.l-two-col .l-sidebar {
-	  clear: both;
+		clear: both;
 	}
 }
 @media all and (min-width: 50em) {
 	.l-two-col .l-sidebar {
-	  float: left;
-	  width: 30%;
-	  padding: 0 0 0 1rem;
+		float: left;
+		width: 30%;
+		padding: 0 0 0 1rem;
 	}
 }
 
 /*------------------------------------*\
-	  $GRIDS
+	$GRIDS
 \*------------------------------------*/
 /* Grid Container */
 .g {
@@ -521,7 +521,7 @@ td {
 }
 @media all and (min-width: 46.8em) {
 	.gi {
-	  float: left;
+		float: left;
 	}
 }
 
@@ -533,11 +533,11 @@ td {
 /* Grid 2up */
 @media all and (min-width: 46.8em) {
 	.g-2up > .gi {
-	  float: left;
-	  width: 50%;
+		float: left;
+		width: 50%;
 	}
 	.g-2up > .gi:nth-of-type(odd) {
-	  clear: left;
+		clear: left;
 	}
 }
 
@@ -553,44 +553,44 @@ td {
 /* Grid 3up */
 @media all and (min-width: 46.8em) {
 	.g-3up > .gi {
-	  float: left;
-	  width: 50%;
+		float: left;
+		width: 50%;
 	}
 	.g-3up > .gi:nth-of-type(2n+1) {
-	  clear: left;
+		clear: left;
 	}
 }
 @media all and (min-width: 50em) {
 	.g-3up > .gi {
-	  width: 33.3333333%;
+		width: 33.3333333%;
 	}
 	.g-3up > .gi:nth-of-type(2n+1) {
-	  clear: none;
+		clear: none;
 	}
 	.g-3up > .gi:nth-of-type(3n+1) {
-	  clear: left;
+		clear: left;
 	}
 }
 
 /* Grid 4up */
 @media all and (min-width: 46.8em) {
 	.g-4up > .gi {
-	  float: left;
-	  width: 50%;
+		float: left;
+		width: 50%;
 	}
 	.g-4up > .gi:nth-of-type(2n+1) {
-	  clear: both;
+		clear: both;
 	}
 }
 @media all and (min-width: 50em) {
 	.g-4up > .gi {
-	  width: 25%;
+		width: 25%;
 	}
 	.g-4up > .gi:nth-of-type(2n+1) {
-	  clear: none;
+		clear: none;
 	}
 	.g-4up > .gi:nth-of-type(4n+1) {
-	  clear: left;
+		clear: left;
 	}
 }
 
@@ -605,33 +605,33 @@ td {
 
 @media all and (min-width: 29.75em) {
 	.g-max4 > .gi {
-	  float: left;
-	  width: 50%;
+		float: left;
+		width: 50%;
 	}
 	.g-max4 > .gi:nth-of-type(2n+1) {
-	  clear: both;
+		clear: both;
 	}
 }
 @media all and (min-width: 39.8em) {
 	.g-max4 > .gi {
-	  width: 33.3333333%;
+		width: 33.3333333%;
 	}
 	.g-max4 > .gi:nth-of-type(2n+1) {
-	  clear: none;
+		clear: none;
 	}
 	.g-max4 > .gi:nth-of-type(3n+1) {
-	  clear: left;
+		clear: left;
 	}
 }
 @media all and (min-width: 50em) {
 	.g-max4 > .gi {
-	  width: 25%;
+		width: 25%;
 	}
 	.g-max4 > .gi:nth-of-type(3n+1) {
-	  clear: none;
+		clear: none;
 	}
 	.g-max4 > .gi:nth-of-type(4n+1) {
-	  clear: left;
+		clear: left;
 	}
 }
 
@@ -645,50 +645,50 @@ td {
 }
 @media all and (min-width: 39.8em) {
 	.g-max5 > .gi {
-	  width: 33.3333333%;
+		width: 33.3333333%;
 	}
 	.g-max5 > .gi:nth-of-type(2n+1) {
-	  clear: none;
+		clear: none;
 	}
 	.g-max5 > .gi:nth-of-type(3n+1) {
-	  clear: left;
+		clear: left;
 	}
 }
 @media all and (min-width: 46.8em) {
 	.g-max5 > .gi {
-	  width: 25%;
+		width: 25%;
 	}
 	.g-max5 > .gi:nth-of-type(3n+1) {
-	  clear: none;
+		clear: none;
 	}
 	.g-max5 > .gi:nth-of-type(4n+1) {
-	  clear: left;
+		clear: left;
 	}
 }
 @media all and (min-width: 48em) {
 	.g-max5 > .gi {
-	  width: 20%;
+		width: 20%;
 	}
 	.g-max5 > .gi:nth-of-type(4n+1) {
-	  clear: none;
+		clear: none;
 	}
 	.g-max5 > .gi:nth-of-type(5n+1) {
-	  clear: left;
+		clear: left;
 	}
 }
 
 /* Grid 2/3 */
 @media all and (min-width: 46.8em) {
 	.gi-2-3 {
-	  float: left;
-	  width: 66.666666%;
+		float: left;
+		width: 66.666666%;
 	}
 }
 
 @media all and (min-width: 46.8em) {
 	.gi-1-3 {
-	  float: left;
-	  width: 33.333333%;
+		float: left;
+		width: 33.333333%;
 	}
 }
 
@@ -702,7 +702,7 @@ td {
 }
 
 /*------------------------------------*\
-	  $PAGE STRUCTURE
+	$PAGE STRUCTURE
 \*------------------------------------*/
 .header {
 	background: white;
@@ -717,7 +717,7 @@ td {
 }
 @media all and (min-width: 46.8em) {
 	.logo {
-	  max-width: 9rem;
+		max-width: 9rem;
 	}
 }
 
@@ -731,7 +731,7 @@ td {
 }
 @media all and (min-width: 46.8em) {
 	.nav-toggle {
-	  display: none;
+		display: none;
 	}
 }
 
@@ -741,14 +741,14 @@ td {
 }
 @media all and (min-width: 46.8em) {
 	.search-form {
-	  float: right;
-	  max-height: none;
-	  margin: 0.65em 0.5em 0 0;
+		float: right;
+		max-height: none;
+		margin: 0.65em 0.5em 0 0;
 	}
 }
 
 /*------------------------------------*\
-	  $NAVIGATION
+	$NAVIGATION
 \*------------------------------------*/
 .nav {
 	clear: both;
@@ -765,15 +765,15 @@ td {
 }
 @media all and (min-width: 46.8em) {
 	.nav {
-	  max-height: none;
-	  float: right;
-	  clear: none;
+		max-height: none;
+		float: right;
+		clear: none;
 	}
 	.nav li {
-	  float: left;
+		float: left;
 	}
 	.nav a {
-	  border: 0;
+		border: 0;
 	}
 }
 
@@ -792,7 +792,7 @@ td {
 }
 
 /*------------------------------------*\
-	  $MAIN CONTENT AREA
+	$MAIN CONTENT AREA
 \*------------------------------------*/
 [role=main] {
 	padding: 0.5rem 0.5rem 2rem;
@@ -800,7 +800,7 @@ td {
 }
 
 /*------------------------------------*\
-	  $FOOTER
+	$FOOTER
 \*------------------------------------*/
 .footer {
 	clear: both;
@@ -824,8 +824,8 @@ td {
 }
 @media all and (min-width: 46.8em) {
 	.nav-footer li {
-	  border: 0;
-	  float: left;
+		border: 0;
+		float: left;
 	}
 }
 .nav-footer a {
@@ -835,12 +835,12 @@ td {
 
 @media all and (min-width: 46.8em) {
 	.copyright {
-	  float: right;
+		float: right;
 	}
 }
 
 /*------------------------------------*\
-	  $TEXT Styles
+	$TEXT Styles
 \*------------------------------------*/
 /* Global Font Classes */
 .font-secondary {
@@ -910,7 +910,7 @@ td {
 }
 
 /*------------------------------------*\
-	  $COMPONENTS
+	$COMPONENTS
 \*------------------------------------*/
 /* Icon Font */
 @font-face {
@@ -1057,7 +1057,7 @@ td {
 }
 
 /*------------------------------------*\
-	  $BUTTONS
+	$BUTTONS
 \*------------------------------------*/
 .btn {
 	display: inline-block;
@@ -1123,16 +1123,16 @@ td {
 }
 @media all and (min-width: 50em) {
 	.block-hero {
-	  position: relative;
+		position: relative;
 	}
 	.block-hero .b-text {
-	  position: absolute;
-	  bottom: 0;
-	  left: 0;
-	  width: 100%;
-	  background: rgba(0, 0, 0, 0.5);
-	  color: white;
-	  padding: 1.5rem;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		color: white;
+		padding: 1.5rem;
 	}
 }
 
@@ -1149,22 +1149,22 @@ td {
 }
 @media all and (min-width: 29.75em) {
 	.block-thumb .b-thumb {
-	  display: table-cell;
-	  vertical-align: top;
-	  width: 30%;
-	  max-width: 10em;
+		display: table-cell;
+		vertical-align: top;
+		width: 30%;
+		max-width: 10em;
 	}
 	.block-thumb .b-thumb img {
-	  display: block;
-	  width: 100%;
-	  height: auto;
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 }
 @media all and (min-width: 29.75em) {
 	.block-thumb .b-text {
-	  display: table-cell;
-	  width: 70%;
-	  padding: 0 1rem;
+		display: table-cell;
+		width: 70%;
+		padding: 0 1rem;
 	}
 }
 
@@ -1293,17 +1293,17 @@ td {
 }
 @media all and (min-width: 24em) {
 	.tooltip {
-	  width: 22em;
+		width: 22em;
 	}
 }
 @media all and (min-width: 29.75em) {
 	.tooltip {
-	  width: 27em;
+		width: 27em;
 	}
 }
 @media all and (min-width: 39.8em) {
 	.tooltip {
-	  width: 30em;
+		width: 30em;
 	}
 }
 

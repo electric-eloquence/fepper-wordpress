@@ -7,13 +7,14 @@ while ( have_posts() ) : the_post();
 			<div class="block block-hero">
 	<a href="<?php the_permalink(); ?>" class="inner">
 		<div class="b-thumb">
-			<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?> 
+			<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 		</div>
 		<div class="b-text">
 			<h2 class="headline"><?php the_title(); ?></h2>
 		</div>
 	</a>
 </div>
+
 <?php endwhile; ?>
 
 		<div class="g g-3up">
@@ -25,7 +26,7 @@ while ( have_posts() ) : the_post();
 					<div class="block block-inset">
 	<a href="<?php the_permalink(); ?>" class="inner">
 		<div class="b-thumb">
-			<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?> 
+			<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 		</div>
 		<div class="b-text">
 			<h2 class="headline"><?php the_title(); ?></h2>

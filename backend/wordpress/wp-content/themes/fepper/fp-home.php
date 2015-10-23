@@ -31,7 +31,6 @@ while ( have_posts() ) : the_post();
 					</ul>
 				</section>
 				</div><!--end l-main-->
-
 			<div class="l-sidebar">
 				<?php dynamic_sidebar( 'sidebar-1' ); ?>
 			</div><!--end l-sidebar-->

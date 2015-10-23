@@ -16,7 +16,7 @@
   ?>
 "# listItems.five": |
   <?php
-"> molecules-single-comment": |
+"> 01-molecules/06-components/02-single-comment": |
   wp_list_comments( array(
   	'style'       => 'ul',
   	'short_ping'  => true,
