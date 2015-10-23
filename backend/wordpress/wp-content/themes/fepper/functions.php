@@ -81,7 +81,7 @@ add_action( 'wp_head', 'fepper_javascript_detection', 0 );
  */
 function fepper_scripts() {
 	// Load our main stylesheet.
-	wp_enqueue_style( 'fepper-style', get_template_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'fepper-style', get_template_directory_uri() . '/styles/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'fepper_scripts' );
 
