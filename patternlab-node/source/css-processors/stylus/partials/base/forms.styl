@@ -80,17 +80,12 @@ input[type="search"]::-webkit-search-decoration
 /* Search Form */
 .search-field
 	padding-right: 3em
-.inline-form .search-submit
-	background: none
-	padding: 0.78em 1em
-	border: 0
-	border-left: 1px solid $gray
-	color: $gray
 .search-form
 	position: relative;
 .search-form > label
 	float: left
 .search-form > label:after
+	color: $black
 	position: absolute
 	top: 0.5em
 	right: 1em
@@ -107,3 +102,5 @@ input[type="submit"].search-submit
 	padding-left: 0
 	position: relative
 	z-index: 1
+input[type="submit"].search-submit:hover
+	background-color: rgba(0, 0, 0, 0.3)
