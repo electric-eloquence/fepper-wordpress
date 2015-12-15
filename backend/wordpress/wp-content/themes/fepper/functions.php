@@ -6,6 +6,20 @@
  * @subpackage Fepper
  */
 
+// Parse variables.styl for breakpoints. Create a global $breakpoints array and
+// add these values to it. Do this in the global scope so any and all functions
+// can access them.
+// Out of the box, they will be:
+// $breakpoints['bp_lg_max'] = -1;
+// $breakpoints['bp_lg_min'] = 1024;
+// $breakpoints['bp_md_min'] = 768;
+// $breakpoints['bp_sm_min'] = 480;
+// $breakpoints['bp_xs_min'] = 0;
+$bp_ini = get_template_directory() . '/scripts/src/variables.styl';
+if (file_exists($bp_ini)) {
+  $GLOBALS['breakpoints'] = parse_ini_file($bp_ini);
+}
+
 if ( ! function_exists( 'fepper_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
