@@ -10,7 +10,7 @@ echo get_post_field( 'post_content', $page_for_posts_id );
 					
 					<ul class="post-list">
 						<?php
-query_posts( 'cat=1' );
+query_posts( 'cat=1&paged='.get_query_var('paged') );
 while ( have_posts() ) : the_post();
 ?>
 							<li>
@@ -27,7 +27,11 @@ while ( have_posts() ) : the_post();
 </div>
 
 							</li>
-<?php endwhile; ?>
+						<?php
+endwhile;
+// Previous/next page navigation.
+the_posts_pagination();
+?>
 					</ul>
 				</section>
 				</div><!--end l-main-->

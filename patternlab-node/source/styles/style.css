@@ -774,6 +774,7 @@ td {
 }
 
 .pagination {
+	padding-top: 1em;
 	overflow: hidden;
 }
 .pagination li {
