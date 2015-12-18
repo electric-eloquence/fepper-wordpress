@@ -16,12 +16,18 @@
 	font-size: 2.08rem
 	line-height: 1
 	border-left: 1px solid #dbdbdb
+	&:focus
+		color: $gray-dark
+	&:hover
+		color: $gray
 	@media all and (min-width: $bp-med)
 		display: none
+.toggle-open
+	max-height: none !important
 .search-form
+	float: right
 	overflow: hidden
 	max-height: 0
 	@media all and (min-width: $bp-med)
-		float: right
 		max-height: none
 		margin: 0.65em 0.5em 0 0

@@ -10,6 +10,7 @@
 ?>
 
 <?php get_template_part( 'fp-footer' ); ?>
+<?php wp_footer(); ?>
 
 </body>
 </html>

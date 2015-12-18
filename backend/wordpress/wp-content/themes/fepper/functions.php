@@ -91,12 +91,24 @@ function fepper_javascript_detection() {
 add_action( 'wp_head', 'fepper_javascript_detection', 0 );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue styles.
  */
-function fepper_scripts() {
+function fepper_styles() {
 	// Load our main stylesheet.
 	wp_enqueue_style( 'fepper-style', get_template_directory_uri() . '/styles/style.css' );
 }
+
+/**
+ * Enqueue scripts.
+ */
+function fepper_scripts() {
+	// Load our JavaScripts.
+	wp_enqueue_script( 'fepper-variables', get_template_directory_uri() . '/scripts/src/variables.styl', array(), false, true );
+	wp_enqueue_script( 'fepper-fepper-obj', get_template_directory_uri() . '/scripts/min/fepper-obj.min.js', array(), false, true );
+	wp_enqueue_script( 'fepper-functions', get_template_directory_uri() . '/scripts/min/functions.min.js', array( 'jquery' ), false, true );
+}
+
+add_action( 'wp_enqueue_scripts', 'fepper_styles' );
 add_action( 'wp_enqueue_scripts', 'fepper_scripts' );
 
 /**

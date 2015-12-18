@@ -725,19 +725,29 @@ td {
 	line-height: 1;
 	border-left: 1px solid #dbdbdb;
 }
+.nav-toggle:focus {
+	color: #333333;
+}
+.nav-toggle:hover {
+	color: gray;
+}
 @media all and (min-width: 46.8em) {
 	.nav-toggle {
 		display: none;
 	}
 }
 
+.toggle-open {
+	max-height: none !important;
+}
+
 .search-form {
+	float: right;
 	overflow: hidden;
 	max-height: 0;
 }
 @media all and (min-width: 46.8em) {
 	.search-form {
-		float: right;
 		max-height: none;
 		margin: 0.65em 0.5em 0 0;
 	}

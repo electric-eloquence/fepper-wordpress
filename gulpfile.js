@@ -60,7 +60,9 @@
     'custom:lint',
     'lint:htmlhint',
     'lint:htmllint',
-    'lint:eslint',
+// Commenting out eslint because .eslintrc is drafted from the Drupal JavaScript
+// coding standards and no reasonably agreed upon standard exists for WordPress.
+//    'lint:eslint',
     'lint:jsonlint'
   ]);
 
