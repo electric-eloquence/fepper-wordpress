@@ -57,7 +57,7 @@ while ( have_posts() ) : the_post();
 		</div>
 		<div class="b-text">
 			<h2 class="headline"><?php the_title(); ?></h2>
-			<p><?php the_excerpt(); ?></p>
+			<?php the_excerpt(); ?>
 		</div>
 	</a>
 </div>
