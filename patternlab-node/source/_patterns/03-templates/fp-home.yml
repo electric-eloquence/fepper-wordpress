@@ -5,7 +5,7 @@
   ?>
 "# latest-posts": |
   <?php
-  query_posts( 'cat=1' );
+  query_posts( 'cat=1&paged='.get_query_var('paged') );
   while ( have_posts() ) : the_post();
   ?>
 "url": |
@@ -17,6 +17,10 @@
 "{ excerpt.medium }": |
   <?php the_excerpt(); ?>
 "/ latest-posts": |
-  <?php endwhile; ?>
+  <?php
+  endwhile;
+  // Previous/Next page navigation.
+  the_posts_pagination();
+  ?>
 "> 02-organisms/04-sections/01-recent-comments": |
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
