@@ -61,7 +61,11 @@
     'lint:htmlhint',
     'lint:htmllint',
 // Commenting out eslint because .eslintrc is drafted from the Drupal JavaScript
-// coding standards and no reasonably agreed upon standard exists for WordPress.
+// coding standards and no agreed upon .eslintrc exists for WordPress. Perhaps
+// the closest working example is from the eslint-config-wordpress NPM by netweb
+// https://www.npmjs.com/package/eslint-config-wordpress.
+// However, it is both buggy and overly-strict. Community contributions to
+// linting JS for WordPress are welcome.
 //    'lint:eslint',
     'lint:jsonlint'
   ]);
