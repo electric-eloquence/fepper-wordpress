@@ -85,7 +85,7 @@
 // However, it is both buggy and overly-strict. Community contributions to
 // linting JS for WordPress are welcome.
 //    'lint:eslint',
-    'lint:jsonlint'
+    'lint:jsonlint',
     'contrib:lint',
     'custom:lint'
   ]);
