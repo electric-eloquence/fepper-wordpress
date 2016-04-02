@@ -226,6 +226,7 @@ h1,
 h2,
 .beta {
 	line-height: 1.2;
+	margin-top: 0.5em;
 }
 
 h3,
@@ -258,7 +259,7 @@ hr {
 	border: 0;
 	height: 2px;
 	background: #eeeeee;
-	margin: 2rem 0;
+	margin: 2rem 0 1rem;
 }
 
 abbr {
@@ -453,14 +454,6 @@ input[type="search"]::-webkit-search-decoration {
 	padding-right: 3em;
 }
 
-.inline-form .search-submit {
-	background: none;
-	padding: 0.78em 1em;
-	border: 0;
-	border-left: 1px solid gray;
-	color: gray;
-}
-
 .search-form {
 	position: relative;
 }
@@ -468,8 +461,8 @@ input[type="search"]::-webkit-search-decoration {
 .search-form > label {
 	float: left;
 }
-
 .search-form > label:after {
+	color: black;
 	position: absolute;
 	top: 0.5em;
 	right: 1em;
@@ -490,6 +483,9 @@ input[type="submit"].search-submit {
 	padding-left: 0;
 	position: relative;
 	z-index: 1;
+}
+input[type="submit"].search-submit:hover {
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 /*------------------------------------*\
@@ -797,19 +793,29 @@ td {
 	line-height: 1;
 	border-left: 1px solid #dbdbdb;
 }
+.nav-toggle:focus {
+	color: #333333;
+}
+.nav-toggle:hover {
+	color: gray;
+}
 @media all and (min-width: 46.8em) {
 	.nav-toggle {
 		display: none;
 	}
 }
 
+.toggle-open {
+	max-height: none !important;
+}
+
 .search-form {
+	float: right;
 	overflow: hidden;
 	max-height: 0;
 }
 @media all and (min-width: 46.8em) {
 	.search-form {
-		float: right;
 		max-height: none;
 		margin: 0.65em 0.5em 0 0;
 	}
@@ -846,6 +852,7 @@ td {
 }
 
 .pagination {
+	padding-top: 1em;
 	overflow: hidden;
 }
 .pagination li {
@@ -1001,6 +1008,7 @@ td {
 	-webkit-font-smoothing: antialiased;
 }
 
+.search-form > label:after,
 .icon-twitter:before,
 .icon-stumbleupon:before,
 .icon-pinterest:before,
