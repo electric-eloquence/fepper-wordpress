@@ -4,7 +4,7 @@
 
 
 /*------------------------------------*\
-	$TABLE OF CONTENTS
+    $TABLE OF CONTENTS
 \*------------------------------------*/
 /**
  * VARIABLES..............................Declarations of Sass variables
@@ -40,7 +40,7 @@
 
 
 /*------------------------------------*\
-	$GLOBAL ELEMENTS
+    $GLOBAL ELEMENTS
 \*------------------------------------*/
 @import "partials/base/global-classes";
 @import "partials/base/main";
@@ -58,13 +58,13 @@
 
 
 /*------------------------------------*\
-	$LAYOUT
+    $LAYOUT
 \*------------------------------------*/
 @import "partials/objects/layout";
 
 
 /*------------------------------------*\
-	$PAGE STRUCTURE
+    $PAGE STRUCTURE
 \*------------------------------------*/
 @import "partials/objects/header";
 @import "partials/objects/nav";
@@ -74,13 +74,13 @@
 
 
 /*------------------------------------*\
-	$TEXT Styles
+    $TEXT Styles
 \*------------------------------------*/
 @import "partials/objects/text";
 
 
 /*------------------------------------*\
-	$COMPONENTS
+    $COMPONENTS
 \*------------------------------------*/
 @import "partials/objects/icons";
 @import "partials/objects/buttons";
