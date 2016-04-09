@@ -1,0 +1,8 @@
+"> 03-templates/fp-header": |
+  <?php
+  get_header();
+"> 03-templates/fp-single": |
+  get_template_part( 'fp-single' );
+"> 03-templates/fp-footer": |
+  get_footer();
+  ?>
