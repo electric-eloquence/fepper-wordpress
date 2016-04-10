@@ -27,7 +27,7 @@ while ( have_posts() ) : the_post();
 </div>
 
 							</li>
-<?php
+						<?php
 endwhile;
 // Previous/Next page navigation.
 the_posts_pagination();
