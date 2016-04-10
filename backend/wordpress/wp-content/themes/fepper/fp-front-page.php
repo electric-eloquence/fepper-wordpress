@@ -15,7 +15,7 @@ while ( have_posts() ) : the_post();
 	</a>
 </div>
 
-<?php endwhile; ?>
+		<?php endwhile; ?>
 
 		<div class="g g-3up">
 			<?php
@@ -35,7 +35,7 @@ while ( have_posts() ) : the_post();
 </div>
 
 				</div>
-<?php endwhile; ?>
+			<?php endwhile; ?>
 		</div><!--end 3up-->
 
 		<hr />
@@ -63,7 +63,7 @@ while ( have_posts() ) : the_post();
 </div>
 
 							</li>
-<?php endwhile; ?>
+						<?php endwhile; ?>
 					</ul>
 					<a href="<?php echo esc_url( site_url( 'blog' ) ); ?>" class="text-btn">View more posts</a>
 				</section>
