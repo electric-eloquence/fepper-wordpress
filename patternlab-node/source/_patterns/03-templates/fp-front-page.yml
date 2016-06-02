@@ -5,7 +5,7 @@
   ?>
 "url": |
   <?php the_permalink(); ?>
-"> atoms-landscape-16x9": |
+"> elements-landscape-16x9": |
   <?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 "headline.medium": |
   <?php the_title(); ?>
@@ -16,7 +16,7 @@
   query_posts( 'cat=11' );
   while ( have_posts() ) : the_post();
   ?>
-"> atoms-landscape-4x3": |
+"> elements-landscape-4x3": |
   <?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 "headline.short": |
   <?php the_title(); ?>
@@ -27,7 +27,7 @@
   query_posts( 'cat=1' );
   while ( have_posts() ) : the_post();
   ?>
-"> atoms-square": |
+"> elements-square": |
   <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
 "{ excerpt.medium }": |
   <?php the_excerpt(); ?>
@@ -35,5 +35,5 @@
   <?php endwhile; ?>
 "view-more--href": |
   <?php echo esc_url( site_url( 'blog' ) ); ?>
-"> 02-organisms/04-sections/01-recent-comments": |
+"> 02-components/04-sections/01-recent-comments": |
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
