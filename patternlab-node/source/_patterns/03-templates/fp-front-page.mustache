@@ -1,16 +1,16 @@
 <div class="page" id="page">
 	<div role="main">
 		{{# emergency }}
-			{{> 01-molecules/07-messaging/00-alert }}
+			{{> 01-compounds/07-messaging/00-alert }}
 		{{/ emergency }}
 		{{# hero }}
-			{{> 01-molecules/02-blocks/02-block-hero.mustache }}
+			{{> 01-compounds/02-blocks/02-block-hero.mustache }}
 		{{/ hero }}
 
 		<div class="g g-3up">
 			{{# touts }}
 				<div class="gi">
-					{{> 01-molecules/02-blocks/05-inset-block.mustache }}
+					{{> 01-compounds/02-blocks/05-inset-block.mustache }}
 				</div>
 			{{/ touts }}
 		</div><!--end 3up-->
@@ -24,7 +24,7 @@
 					<ul class="post-list">
 						{{# latest-posts }}
 							<li>
-								{{> 01-molecules/02-blocks/00-media-block.mustache }}
+								{{> 01-compounds/02-blocks/00-media-block.mustache }}
 							</li>
 						{{/ latest-posts }}
 					</ul>
@@ -33,7 +33,7 @@
 			</div><!--end .l-main-->
 
 			<div class="l-sidebar">
-				{{> 02-organisms/04-sections/01-recent-comments }}
+				{{> 02-components/04-sections/01-recent-comments }}
 			</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->
 	</div><!--End role=main-->
