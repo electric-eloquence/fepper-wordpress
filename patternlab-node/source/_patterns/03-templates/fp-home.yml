@@ -10,7 +10,7 @@
   ?>
 "url": |
   <?php the_permalink(); ?>
-"> atoms-square": |
+"> elements-square": |
   <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
 "headline.short": |
   <?php the_title(); ?>
@@ -22,5 +22,5 @@
   // Previous/Next page navigation.
   the_posts_pagination();
   ?>
-"> 02-organisms/04-sections/01-recent-comments": |
+"> 02-components/04-sections/01-recent-comments": |
   <?php dynamic_sidebar( 'sidebar-1' ); ?>

@@ -16,7 +16,7 @@
   ?>
 "# listItems.five": |
   <?php
-"> 01-molecules/06-components/02-single-comment": |
+"> 01-compounds/06-components/02-single-comment": |
   wp_list_comments( array(
   	'style'       => 'ul',
   	'short_ping'  => true,
@@ -26,7 +26,7 @@
   ?>
 "/ comments": |
   <?php endif; ?>
-"> 01-molecules/04-forms/01-comment-form": |
+"> 01-compounds/04-forms/01-comment-form": |
   <?php
   // If comments are closed and there are comments, let's leave a little note, shall we?
   if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
