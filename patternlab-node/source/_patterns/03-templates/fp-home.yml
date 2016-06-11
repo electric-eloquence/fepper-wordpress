@@ -1,26 +1,26 @@
-"page-title": |
+"page-title": |2
   <?php
   $page_for_posts_id = get_option('page_for_posts');
   echo get_post_field( 'post_content', $page_for_posts_id );
   ?>
-"# latest-posts": |
+"# latest-posts": |2
   <?php
   query_posts( 'cat=1&paged='.get_query_var('paged') );
   while ( have_posts() ) : the_post();
   ?>
-"url": |
+"url": |2
   <?php the_permalink(); ?>
-"> elements-square": |
+"> elements-square": |2
   <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
-"headline.short": |
+"headline.short": |2
   <?php the_title(); ?>
-"{ excerpt.medium }": |
+"{ excerpt.medium }": |2
   <?php the_excerpt(); ?>
-"/ latest-posts": |
+"/ latest-posts": |2
   <?php
   endwhile;
   // Previous/Next page navigation.
   the_posts_pagination();
   ?>
-"> 02-components/04-sections/01-recent-comments": |
+"> 02-components/04-sections/01-recent-comments": |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
