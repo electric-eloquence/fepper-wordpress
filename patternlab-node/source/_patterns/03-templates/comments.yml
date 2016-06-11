@@ -1,6 +1,6 @@
-"# comments": |
+"# comments": |2
   <?php if ( have_comments() ) : ?>
-"count": |
+"count": |2
   <?php
   printf(
   	_nx(
@@ -14,19 +14,19 @@
   	get_the_title()
   );
   ?>
-"# listItems.five": |
+"# listItems.five": |2
   <?php
-"> 01-compounds/06-components/02-single-comment": |
+"> 01-compounds/06-components/02-single-comment": |2
   wp_list_comments( array(
   	'style'       => 'ul',
   	'short_ping'  => true,
   	'avatar_size' => 102,
   ) );
-"/ listItems.five": |
+"/ listItems.five": |2
   ?>
-"/ comments": |
+"/ comments": |2
   <?php endif; ?>
-"> 01-compounds/04-forms/01-comment-form": |
+"> 01-compounds/04-forms/01-comment-form": |2
   <?php
   // If comments are closed and there are comments, let's leave a little note, shall we?
   if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :

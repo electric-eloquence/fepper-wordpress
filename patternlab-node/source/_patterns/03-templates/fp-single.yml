@@ -1,18 +1,18 @@
-"# article": |
+"# article": |2
   <?php while ( have_posts() ) : the_post(); ?>
-"article_title": |
+"article_title": |2
   <?php the_title(); ?>
-"> 01-compounds/00-text/01-byline-author-time": |
+"> 01-compounds/00-text/01-byline-author-time": |2
   <div class="byline">By <?php the_author(); ?> on <?php the_date(); ?></div>
-"> 02-components/01-article/00-article-body": |
+"> 02-components/01-article/00-article-body": |2
   <?php the_content(); ?>
-"> 02-components/02-comments/00-comment-thread": |
+"> 02-components/02-comments/00-comment-thread": |2
   <?php
   if ( comments_open() || get_comments_number() ) :
   	comments_template();
   endif;
   ?>
-"/ article": |
+"/ article": |2
   <?php endwhile; ?>
-"> 02-components/04-sections/02-related-posts": |
+"> 02-components/04-sections/02-related-posts": |2
   <?php dynamic_sidebar( 'sidebar-2' ); ?>
