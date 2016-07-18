@@ -16,7 +16,7 @@
   ?>
 '# listItems.five': |2
   <?php
-'> 01-compounds/06-components/02-single-comment': |2
+'> 01-compounds/02-blocks/06-single-comment': |2
   wp_list_comments( array(
   	'style'       => 'ul',
   	'short_ping'  => true,
