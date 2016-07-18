@@ -8,53 +8,59 @@
   },
   "description" : "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
   "url" : "#",
-  "img": {
-    "landscape_4x3": {
-      "src": "../../assets/fpo_4x3.png",
-      "alt": "4x3 Image"
-    },
-    "landscape_16x9": {
-      "src": "../../assets/fpo_16x9.png",
-      "alt": "16x9 Image"
-    },
-    "square": {
-      "src": "../../assets/fpo_square.png",
-      "alt": "Square Thumbnail"
-    },
-    "avatar" : {
-      "src" : "../../assets/fpo_avatar.png",
-      "alt" : "Person Name"
-    },
-    "rectangle": {
-      "src": "http://placeimg.com/400/300/tech",
-      "alt": "Rectangle"
-    }
-  },
-  "logo": {
-    "href": "../04-pages-00-homepage/04-pages-00-homepage.html",
-    "src": "../../assets/logo.png"
-  },
-  "month" : {
-    "long": "February",
-    "short": "Feb",
-    "digit": "02"
-  },
-  "author" : {
-    "first_name": "Author",
-    "last_name": "Name"
-  },
-  "headline" : {
-    "short" : "Lorem ipsum dolor sit (37 characters)",
-    "medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
-  },
-  "name" : {
-    "first": "Lacy",
-    "firsti": "L",
-    "middle": "Tommie",
-    "middlei": "T",
-    "last": "Way",
-    "lasti": "W"
-  },
+	"img": {
+		"landscape_4x3": {
+			"src": "../../_assets/fpo_4x3.png",
+			"alt": "4x3 Image"
+		},
+		"landscape_16x9": {
+			"src": "../../_assets/fpo_16x9.png",
+			"alt": "16x9 Image"
+		},
+		"square": {
+			"src": "../../_assets/fpo_square.png",
+			"alt": "Square Thumbnail"
+		},
+		"avatar" : {
+			"src" : "../../_assets/fpo_avatar.png",
+			"alt" : "Person Name"
+		},
+		"rectangle": {
+			"src": "http://placeimg.com/400/300/tech",
+			"alt": "Rectangle"
+		}
+	},
+	"logo": {
+		"href": "../04-pages-00-homepage/04-pages-00-homepage.html",
+		"src": "../../_assets/logo.png"
+	},
+	"month" : {
+		"long": "February",
+		"short": "Feb",
+		"digit": "02"
+	},
+	"author" : {
+		"first_name": "Author",
+		"last_name": "Name"
+	},
+	"headline" : {
+		"short" : "Lorem ipsum dolor sit (37 characters)",
+		"medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
+	},
+	"name" : {
+		"first": "Lacy",
+		"firsti": "L",
+		"middle": "Tommie",
+		"middlei": "T",
+		"last": "Way",
+		"lasti": "W"
+	},
+	"search": {
+		"action": "#"
+	},
+	"comments": {
+		"count": "5 Comments"
+	},
   "bp_lg_max": -1,
   "bp_lg_min": 1024,
   "bp_md_min": 768,
