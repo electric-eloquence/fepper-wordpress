@@ -1,39 +1,39 @@
-'# hero': |2
+"# hero": |2
   <?php
   query_posts( 'cat=6' );
   while ( have_posts() ) : the_post();
   ?>
-'url': |2
+"url": |2
   <?php the_permalink(); ?>
-'> elements-landscape-16x9': |2
+"> elements-landscape-16x9": |2
   <?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
-'headline.medium': |2
+"headline.medium": |2
   <?php the_title(); ?>
-'/ hero': |2
+"/ hero": |2
   <?php endwhile; ?>
-'# touts': |2
+"# touts": |2
   <?php
   query_posts( 'cat=11' );
   while ( have_posts() ) : the_post();
   ?>
-'> elements-landscape-4x3': |2
+"> elements-landscape-4x3": |2
   <?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
-'headline.short': |2
+"headline.short": |2
   <?php the_title(); ?>
-'/ touts': |2
+"/ touts": |2
   <?php endwhile; ?>
-'# latest-posts': |2
+"# latest-posts": |2
   <?php
   query_posts( 'cat=1' );
   while ( have_posts() ) : the_post();
   ?>
-'> elements-square': |2
+"> elements-square": |2
   <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
-'excerpt.medium': |2
+"excerpt.medium": |2
   <?php the_excerpt(); ?>
-'/ latest-posts': |2
+"/ latest-posts": |2
   <?php endwhile; ?>
-'view-more--href': |2
+"view-more--href": |2
   <?php echo esc_url( site_url( 'blog' ) ); ?>
-'> 02-components/04-sections/01-recent-comments': |2
+"> 02-components/04-sections/01-recent-comments": |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
