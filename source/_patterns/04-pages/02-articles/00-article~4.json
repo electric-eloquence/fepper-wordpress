@@ -1,0 +1,11 @@
+{
+	"article": {
+		"article_title" : "Navigate the Allegheny River",
+		"img": {
+			"landscape_16x9": {
+				"src": "../../_assets/sample/thumb-square-river.jpg",
+				"alt": "Post Thumbnail"
+			}
+		}
+	}
+}
