@@ -2,10 +2,8 @@
 
 # A frontend prototyper for the rapid prototyping of websites
 
-### Downstream projects
-* [Fepper Base](https://github.com/electric-eloquence/fepper-base) - no unnecessary assets, styles, or Pattern Lab demo.
-* [Fepper for Drupal](https://github.com/electric-eloquence/fepper-drupal) - templates configured for Drupal 8, along with a Drupal theme built to accommodate those templates.
-* [Fepper for Wordpress](https://github.com/electric-eloquence/fepper-wordpress) - templates configured for WordPress, along with a WordPress theme built to accommodate those templates.
+##### This checkout of Fepper has templates configured for WordPress, along with a WordPress theme built to accept those templates.
+The Fepper WordPress theme has been tested for compatibility with WordPress core since WordPress 4.3.0.
 
 ### Table of contents
 * [Install](#install)
