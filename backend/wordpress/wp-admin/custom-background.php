@@ -18,7 +18,7 @@ class Custom_Background {
 	/**
 	 * Callback for administration header.
 	 *
-	 * @var callback
+	 * @var callable
 	 * @since 3.0.0
 	 */
 	public $admin_header_callback;
@@ -26,12 +26,16 @@ class Custom_Background {
 	/**
 	 * Callback for header div.
 	 *
-	 * @var callback
+	 * @var callable
 	 * @since 3.0.0
 	 */
 	public $admin_image_div_callback;
 
 	/**
+	 * Used to trigger a success message when settings updated and set to true.
+	 *
+	 * @since 3.0.0
+	 * @access private
 	 * @var bool
 	 */
 	private $updated;
@@ -40,8 +44,8 @@ class Custom_Background {
 	 * Constructor - Register administration header callback.
 	 *
 	 * @since 3.0.0
-	 * @param callback $admin_header_callback
-	 * @param callback $admin_image_div_callback Optional custom image div output callback.
+	 * @param callable $admin_header_callback
+	 * @param callable $admin_image_div_callback Optional custom image div output callback.
 	 */
 	public function __construct($admin_header_callback = '', $admin_image_div_callback = '') {
 		$this->admin_header_callback = $admin_header_callback;
@@ -406,7 +410,7 @@ if ( current_theme_supports( 'custom-background', 'default-color' ) )
 	}
 
 	/**
-	 * AJAX handler for adding custom background context to an attachment.
+	 * Ajax handler for adding custom background context to an attachment.
 	 *
 	 * Triggered when the user adds a new background image from the
 	 * Media Manager.
