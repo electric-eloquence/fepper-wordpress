@@ -3,7 +3,7 @@
 # A frontend prototyper for the rapid prototyping of websites
 
 ##### This checkout of Fepper has templates configured for WordPress, along with a WordPress theme built to accept those templates.
-The Fepper WordPress theme is backward-compatible with WordPress core to WordPress 4.0.
+The Fepper WordPress theme is backward-compatible with WordPress core down to WordPress 4.0.
 
 ### Table of contents
 * [Install](#install)
