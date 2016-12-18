@@ -15,7 +15,7 @@
 // $breakpoints['bp_md_min'] = 768;
 // $breakpoints['bp_sm_min'] = 480;
 // $breakpoints['bp_xs_min'] = 0;
-$bp_ini = get_template_directory() . '/scripts/variables.styl';
+$bp_ini = get_template_directory() . '/scripts/src/variables.styl';
 if (file_exists($bp_ini)) {
   $GLOBALS['breakpoints'] = parse_ini_file($bp_ini);
 }
@@ -95,7 +95,7 @@ add_action( 'wp_head', 'fepper_javascript_detection', 0 );
  */
 function fepper_styles() {
 	// Load our main stylesheet.
-	wp_enqueue_style( 'fepper-style', get_template_directory_uri() . '/styles/style.css' );
+	wp_enqueue_style( 'fepper-style', get_template_directory_uri() . '/styles/bld/style.css' );
 }
 
 /**
@@ -103,9 +103,9 @@ function fepper_styles() {
  */
 function fepper_scripts() {
 	// Load our JavaScripts.
-	wp_enqueue_script( 'fepper-variables', get_template_directory_uri() . '/scripts/variables.styl', array(), false, true );
-	wp_enqueue_script( 'fepper-fepper-obj', get_template_directory_uri() . '/scripts/fepper-obj.js', array(), false, true );
-	wp_enqueue_script( 'fepper-functions', get_template_directory_uri() . '/scripts/functions.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'fepper-variables', get_template_directory_uri() . '/scripts/src/variables.styl', array(), false, true );
+	wp_enqueue_script( 'fepper-fepper-obj', get_template_directory_uri() . '/scripts/src/fepper-obj.js', array(), false, true );
+	wp_enqueue_script( 'fepper-functions', get_template_directory_uri() . '/scripts/src/functions.js', array( 'jquery' ), false, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'fepper_styles' );
