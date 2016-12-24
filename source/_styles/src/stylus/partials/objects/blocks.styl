@@ -79,6 +79,48 @@
 		background: $dim
 		color: $white
 		padding: $pad-half
+/* Hero and Insets */
+.hero-and-insets
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+.block-hero,
+.block-inset
+	.inner
+		display: block
+		position: relative
+@media all and (min-width: $bp-small-2) and (max-width: $bp-large - 1px)
+	.block-hero,
+	.block-inset
+		width: calc(50% - 0.4rem)
+	.block-hero
+		.b-thumb
+			padding-top: 75%
+	.block-hero
+		img
+			position: absolute
+			top: 0
+			left: 0
+	.block-hero
+		.b-text
+			background: $dim
+			color: $white
+			overflow: hidden
+			padding: $pad-half
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 7.36rem
+	.block-hero
+		.headline
+			margin-top: 0
+@media all and (min-width: $bp-large)
+	.block-hero
+		width: 100%
+	.block-inset
+		padding-top: $pad-half
+		width: calc(33.3333333% - 1.0666666rem)
 /* Block Thumb with Summary */
 .block-thumb-summary
 	.b-thumb
