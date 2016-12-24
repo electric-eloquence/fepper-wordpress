@@ -1,16 +1,14 @@
 <div class="page" id="page">
 	<div role="main">
-		{{# hero }}
-			{{> 01-compounds/02-blocks/02-block-hero.mustache }}
-		{{/ hero }}
+		<section class="hero-and-insets">
+			{{# hero }}
+				{{> 01-compounds/02-blocks/02-block-hero.mustache }}
+			{{/ hero }}
 
-		<div class="g g-3up">
 			{{# touts }}
-				<div class="gi">
-					{{> 01-compounds/02-blocks/05-inset-block.mustache }}
-				</div>
+				{{> 01-compounds/02-blocks/05-inset-block.mustache }}
 			{{/ touts }}
-		</div><!--end 3up-->
+		</section>
 
 		<hr />
 
