@@ -155,7 +155,6 @@ h1,
 h2,
 .beta {
 	line-height: 1.2;
-	margin-top: 0.5em;
 }
 h3,
 .gamma {
@@ -418,7 +417,7 @@ footer [role=main] {
 		padding-right: 1.6rem;
 	}
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 799px) {
 	.l-two-col .l-sidebar {
 		clear: both;
 	}
@@ -508,18 +507,36 @@ footer [role=main] {
 	}
 }
 .pagination {
-	padding-top: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 1em;
 	overflow: hidden;
 }
-.pagination li {
+.pagination .nav-links > * {
+	display: block;
 	float: left;
+	padding: 0 1.6rem;
 	border-right: 1px solid #eee;
 }
-.pagination li:last-child {
+.pagination .nav-links > *:last-child {
 	border: 0;
 }
-.pagination a {
-	padding: 1.6rem;
+@media all and (max-width: 479px) {
+	.pagination .nav-links > * {
+		padding: 0 0.8rem;
+	}
+	.pagination .nav-links > *:first-child {
+		padding-left: 0;
+	}
+	.pagination .nav-links > *:last-child {
+		padding-right: 0;
+	}
+}
+@media all and (min-width: 800px) {
+	.pagination {
+		justify-content: flex-start;
+	}
 }
 [role=main] {
 	padding: 0.8rem 0.8rem 3.2rem;
@@ -831,22 +848,41 @@ footer [role=main] {
 	vertical-align: top;
 	overflow: hidden;
 }
-@media all and (min-width: 576px) {
-	.block-thumb .b-thumb {
-		display: table-cell;
-		vertical-align: top;
-		width: 30%;
-		max-width: 10em;
-	}
-	.block-thumb .b-thumb img {
-		display: block;
-		width: 100%;
-		height: auto;
+@media all and (max-width: 575px) {
+	.block-thumb .headline {
+		font-size: 1.8rem;
 	}
 }
-@media all and (min-width: 576px) {
+@media all and (min-width: 480px) {
+	.block-thumb .headline {
+		float: right;
+		padding: 0 1.6rem;
+		width: 70%;
+	}
+}
+.block-thumb .b-thumb {
+	float: left;
+}
+@media all and (max-width: 479px) {
+	.block-thumb .b-thumb {
+		max-width: 30rem;
+	}
+}
+@media all and (min-width: 480px) {
+	.block-thumb .b-thumb {
+		width: 30%;
+	}
+}
+.block-thumb .b-text {
+	float: right;
+}
+@media all and (max-width: 575px) {
+	.block-thumb .b-text p {
+		font-size: 1.4rem;
+	}
+}
+@media all and (min-width: 480px) {
 	.block-thumb .b-text {
-		display: table-cell;
 		width: 70%;
 		padding: 0 1.6rem;
 	}
@@ -932,9 +968,6 @@ footer [role=main] {
 .block-thumb-summary .b-text {
 	margin-left: 50%;
 	padding: 0.8rem;
-}
-.b-text h2 {
-	margin-top: 0;
 }
 .inline-list li {
 	display: inline-block;
