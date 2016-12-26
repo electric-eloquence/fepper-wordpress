@@ -936,6 +936,9 @@ footer [role=main] {
 	margin-left: 50%;
 	padding: 0.8rem;
 }
+.b-text h2 {
+	margin-top: 0;
+}
 .inline-list li {
 	display: inline-block;
 }
