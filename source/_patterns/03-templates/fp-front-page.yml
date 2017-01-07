@@ -22,7 +22,7 @@
   <?php the_title(); ?>
 "/ touts": |2
   <?php endwhile; ?>
-"# latest-posts": |2
+"# latest_posts": |2
   <?php
   query_posts( 'cat=1' );
   while ( have_posts() ) : the_post();
@@ -31,9 +31,9 @@
   <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
 "excerpt.medium": |2
   <?php the_excerpt(); ?>
-"/ latest-posts": |2
+"/ latest_posts": |2
   <?php endwhile; ?>
-"view-more--href": |2
+"view_more_href": |2
   <?php echo esc_url( site_url( 'blog' ) ); ?>
 "> 02-components/04-sections/01-recent-comments": |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>

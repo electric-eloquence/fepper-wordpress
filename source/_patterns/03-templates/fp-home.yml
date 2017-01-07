@@ -3,7 +3,7 @@
   $page_for_posts_id = get_option('page_for_posts');
   echo get_post_field( 'post_content', $page_for_posts_id );
   ?>
-"# latest-posts": |2
+"# latest_posts": |2
   <?php
   query_posts( 'cat=1&paged='.get_query_var('paged') );
   while ( have_posts() ) : the_post();
@@ -16,7 +16,7 @@
   <?php the_title(); ?>
 "excerpt.medium": |2
   <?php the_excerpt(); ?>
-"/ latest-posts": |2
+"/ latest_posts": |2
   <?php
   endwhile;
   // Previous/Next page navigation.
