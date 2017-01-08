@@ -1,4 +1,4 @@
-"page-title": |2
+"page_title": |2
   <?php
   $page_for_posts_id = get_option('page_for_posts');
   echo get_post_field( 'post_content', $page_for_posts_id );
