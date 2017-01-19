@@ -309,7 +309,7 @@ input[type="search"]::-webkit-search-decoration {
 .inline-search-results-form {
 	width: 100%;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
 	.inline-search-results-form {
 		width: 82%;
 	}
@@ -444,7 +444,7 @@ footer [role=main] {
 	max-width: 12.8rem;
 	margin: 0.64rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
 	.logo {
 		max-width: 14.4rem;
 	}
@@ -463,7 +463,7 @@ footer [role=main] {
 .nav-toggle:hover {
 	color: #808080;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
 	.nav-toggle {
 		display: none;
 	}
@@ -476,7 +476,7 @@ footer [role=main] {
 	overflow: hidden;
 	max-height: 0;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
 	.search-form {
 		max-height: none;
 		margin: 0.65em 0.5em 0 0;
@@ -495,7 +495,7 @@ footer [role=main] {
 .nav.active {
 	max-height: 40em;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
 	.nav {
 		max-height: none;
 		float: right;
@@ -524,7 +524,7 @@ footer [role=main] {
 .pagination .nav-links > *:last-child {
 	border: 0;
 }
-@media all and (max-width: 479px) {
+@media all and (max-width: 480px) {
 	.pagination .nav-links > * {
 		padding: 0 0.8rem;
 	}
@@ -560,7 +560,7 @@ footer [role=main] {
 .nav-footer li {
 	border-bottom: 1px solid #333;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
 	.nav-footer li {
 		border: 0;
 		float: left;
@@ -570,7 +570,7 @@ footer [role=main] {
 	display: block;
 	padding: 1.6rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 769px) {
 	.copyright {
 		float: right;
 	}
@@ -855,7 +855,7 @@ footer [role=main] {
 		font-size: 1.8rem;
 	}
 }
-@media all and (min-width: 480px) {
+@media all and (min-width: 481px) {
 	.block-thumb .headline {
 		float: right;
 		padding: 0 1.6rem;
@@ -865,12 +865,12 @@ footer [role=main] {
 .block-thumb .b-thumb {
 	float: left;
 }
-@media all and (max-width: 479px) {
+@media all and (max-width: 480px) {
 	.block-thumb .b-thumb {
 		max-width: 30rem;
 	}
 }
-@media all and (min-width: 480px) {
+@media all and (min-width: 481px) {
 	.block-thumb .b-thumb {
 		width: 30%;
 	}
@@ -883,7 +883,7 @@ footer [role=main] {
 		font-size: 1.4rem;
 	}
 }
-@media all and (min-width: 480px) {
+@media all and (min-width: 481px) {
 	.block-thumb .b-text {
 		width: 70%;
 		padding: 0 1.6rem;
@@ -1035,7 +1035,7 @@ footer [role=main] {
 .tooltip h2 {
 	margin-top: 0;
 }
-@media all and (min-width: 480px) {
+@media all and (min-width: 481px) {
 	.tooltip {
 		width: 22em;
 	}
