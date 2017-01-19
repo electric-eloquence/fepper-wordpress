@@ -70,11 +70,6 @@ figure {
 /*------------------------------------*
 	$GLOBAL ELEMENTS
 *------------------------------------*/
-.cf,
-.l-two-col,
-[role=main] {
-	*zoom: 1;
-}
 .cf:before,
 .l-two-col:before,
 [role=main]:before,
