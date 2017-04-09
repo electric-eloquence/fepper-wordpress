@@ -73,6 +73,18 @@ endif; // fepper_setup
 add_action( 'after_setup_theme', 'fepper_setup' );
 
 /**
+ * Sets the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function fepper_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'fepper_content_width', 840 );
+}
+add_action( 'after_setup_theme', 'fepper_content_width', 0 );
+
+/**
  * Change excerpt length to 35 words
  */
 function fepper_excerpt_length( $length ) {
