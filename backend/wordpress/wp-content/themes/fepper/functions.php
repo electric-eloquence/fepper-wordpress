@@ -144,3 +144,8 @@ function fepper_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'fepper_widgets_init' );
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
