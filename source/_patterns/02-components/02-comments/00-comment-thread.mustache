@@ -2,11 +2,13 @@
 	<div class="comments-container">
 		{{# comments }}
 			<h2 class="section-title">{{ count }}</h2>
+            {{ the_comments_navigation }}
 			<ul class="comment-list">
 				{{# listItems.five }}
 					{{> 01-compounds/02-blocks/06-single-comment }}
 				{{/ listItems.five }}
 			</ul>
+            {{ the_comments_navigation }}
 		{{/ comments }}
 		{{> 01-compounds/04-forms/01-comment-form }}
 	</div>
