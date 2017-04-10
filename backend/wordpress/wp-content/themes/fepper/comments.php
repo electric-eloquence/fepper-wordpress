@@ -14,9 +14,7 @@ printf(
 	get_the_title()
 );
 ?></h2>
-
-			<?php the_comments_navigation(); ?>
-
+            <?php the_comments_navigation(); ?>
 			<ul class="comment-list">
 				<?php
 					wp_list_comments( array(
@@ -26,9 +24,7 @@ printf(
 ) );
 				?>
 			</ul>
-
-			<?php the_comments_navigation(); ?>
-
+            <?php the_comments_navigation(); ?>
 		<?php endif; ?>
 		<?php
 // If comments are closed and there are comments, let's leave a little note, shall we?
