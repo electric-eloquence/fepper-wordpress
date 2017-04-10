@@ -52,7 +52,9 @@ The Fepper WordPress theme is backward-compatible with WordPress core down to Wo
 #### WordPress install
 * To install the included WordPress instance, restore the MySQL dump `fepper-wordpress-mysqldump.sql`.
 * Update the `DB_` settings in `backend/wordpress/wp-config.php` to reflect your own database settings.
-* Log into the WordPress admin with `admin:admin`
+* Configure `wp.local` to be the hostname in your web server configs.
+* Open http://wp.local in a browser.
+* Log into WordPress with `admin:admin`
 
 #### Windows install
 * Assumes you haven't checked out the Fepper-Windows project and just need to add the Windows scripts to your project.
