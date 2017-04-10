@@ -32,8 +32,8 @@ The Fepper WordPress theme is backward-compatible with WordPress core down to Wo
 * Unix-like or Windows OS.
 * Recommended minimum Node.js version 7.6.0.
 
-#### The simplest way to get started
-* Download the [latest release](https://github.com/electric-eloquence/fepper-wordpress/releases).
+#### Simplest way to get started
+* Download the [latest release](https://github.com/electric-eloquence/fepper/releases).
 
 #### Main install
 * On Mac OS:
