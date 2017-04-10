@@ -103,7 +103,7 @@ add_filter( 'excerpt_length', 'fepper_excerpt_length', 999 );
 
 if ( ! function_exists( 'fepper_fonts_url' ) ) :
 /**
- * Register Google fonts for Twenty Sixteen.
+ * Register Google fonts.
  *
  * Create your own fepper_fonts_url() function to override in a child theme.
  *
