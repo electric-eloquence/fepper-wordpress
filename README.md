@@ -5,6 +5,8 @@
 #### This checkout of Fepper has templates configured for WordPress, along with a WordPress theme built to accept those templates.
 The Fepper WordPress theme is backward-compatible with WordPress core down to WordPress 4.0.
 
+* [Main project](https://github.com/electric-eloquence/fepper)
+
 ### Table of contents
 * [Install](#install)
 * [Update](#update)
