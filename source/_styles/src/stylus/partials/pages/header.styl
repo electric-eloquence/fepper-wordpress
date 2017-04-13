@@ -1,0 +1,23 @@
+.header
+	background: $white
+	padding: 0
+	border-bottom: 1px solid #dbdbdb
+	@extend .lc
+.nav-toggle
+	float: right
+	display: block
+	padding: 1.44rem 1.6rem 1.12rem
+	font-size: 2.08rem
+	line-height: 1
+	border-left: 1px solid #dbdbdb
+	&:focus
+		color: $gray-dark
+	&:hover
+		color: $gray
+	@media all and (min-width: $bp-med)
+		display: none
+.toggle-open
+	max-height: none !important
+.article-header
+	h1
+		font-size: 2.5em
