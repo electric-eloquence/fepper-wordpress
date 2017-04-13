@@ -454,27 +454,67 @@ input[type="submit"].search-submit:hover {
 .nav {
 	clear: both;
 	overflow: hidden;
-	max-height: 0;
 }
 .nav a {
 	display: block;
-	padding: 1.6rem;
-	border-top: 1px solid #eee;
 }
 .nav.active {
-	max-height: 40em;
+	max-height: none;
+}
+@media all and (max-width: 767px) {
+	.nav {
+		max-height: 0;
+	}
+	.nav li {
+		border-top: 1px solid #eee;
+	}
+	.nav a {
+		display: table;
+		padding: 0.8rem 1.6rem;
+	}
+	.nav .children li {
+		padding-left: 2rem;
+	}
 }
 @media all and (min-width: 768px) {
 	.nav {
-		max-height: none;
-		float: right;
+		border-top: 1px solid #eee;
 		clear: none;
+		float: right;
+		margin-top: -0.1rem;
+		max-height: none;
+		padding-top: 1.2rem;
 	}
 	.nav li {
 		float: left;
 	}
 	.nav a {
 		border: 0;
+		padding: 0.4rem 1.6rem;
+	}
+	.nav .children {
+		max-height: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: 2;
+	}
+	.nav .children li {
+		background-color: #fff;
+		border: 1px solid #eee;
+		border-bottom: 0;
+		float: none;
+		width: 100%;
+	}
+	.nav .children li:last-child {
+		border-bottom: 1px solid #eee;
+	}
+	.nav .page_item_has_children:hover .children {
+		max-height: none;
+		-webkit-transition: max-height 0.3s ease;
+		-moz-transition: max-height 0.3s ease;
+		-ms-transition: max-height 0.3s ease;
+		-o-transition: max-height 0.3s ease;
+		transition: max-height 0.3s ease;
 	}
 }
 .pagination {
