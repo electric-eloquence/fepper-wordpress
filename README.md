@@ -1,6 +1,6 @@
 ## Fepper
 
-# A frontend prototyper tool for the rapid prototyping of web sites
+# A frontend prototyper tool for rapid prototyping of web sites
 
 #### This checkout of Fepper has templates configured for WordPress, along with a WordPress theme built to accept those templates.
 The Fepper WordPress theme is backward-compatible with WordPress core down to WordPress 4.0.
