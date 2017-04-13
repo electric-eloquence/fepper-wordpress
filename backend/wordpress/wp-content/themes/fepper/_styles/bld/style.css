@@ -482,7 +482,6 @@ input[type="submit"].search-submit:hover {
 		clear: none;
 		float: right;
 		margin-top: -0.1rem;
-		max-height: none;
 		padding-top: 1.2rem;
 	}
 	.nav li {
