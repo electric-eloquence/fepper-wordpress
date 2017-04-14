@@ -1,5 +1,6 @@
 .nav
 	clear: both
+	margin-top: -0.1rem
 	overflow: hidden
 	ul
 		background-color: $white
@@ -7,6 +8,11 @@
 		display: block
 	@media all and (max-width: $bp-sm-max)
 		max-height: 0
+		position: absolute
+		top: 5rem
+		left: 0
+		width: 100%
+		z-index: 1
 		li
 			border-top: 1px solid $gray-light-2
 		a
@@ -18,14 +24,22 @@
 	@media all and (min-width: $bp-med)
 		border-top: 1px solid $gray-light-2
 		clear: none
-		float: right
-		margin-top: -0.1rem
+		float: left
 		padding-top: $pad-quarter * 3
 		li
 			float: left
 		a
 			border: 0
 			padding: $pad-quarter $pad
+		.page_item_has_children
+			> a::after
+				color: $gray
+				content: "▼"
+				font-size: $font-size-sm
+				margin-left: $space-half
+			&:hover
+				.children
+					max-height: 100%
 		.children
 			max-height: 0
 			overflow: hidden
@@ -39,9 +53,6 @@
 				width: 100%
 			li:last-child
 				border-bottom: 1px solid $gray-light-2
-		.page_item_has_children:hover
-			.children
-				max-height: 100%
 .pagination
 	display: flex
 	flex-wrap: wrap

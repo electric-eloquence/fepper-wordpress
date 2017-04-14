@@ -418,6 +418,19 @@ input[type="search"]::-webkit-search-decoration {
 	max-height: 0;
 	position: relative;
 }
+@media all and (max-width: 767px) {
+	.search-form {
+		background-color: #fff;
+		margin-top: 0.2rem;
+		position: absolute;
+		top: 5rem;
+		right: 0;
+		z-index: 2;
+	}
+	.search-form > label {
+		padding-bottom: 0;
+	}
+}
 @media all and (min-width: 768px) {
 	.search-form {
 		max-height: none;
@@ -453,6 +466,7 @@ input[type="submit"].search-submit:hover {
 }
 .nav {
 	clear: both;
+	margin-top: -0.1rem;
 	overflow: hidden;
 }
 .nav ul {
@@ -464,6 +478,11 @@ input[type="submit"].search-submit:hover {
 @media all and (max-width: 767px) {
 	.nav {
 		max-height: 0;
+		position: absolute;
+		top: 5rem;
+		left: 0;
+		width: 100%;
+		z-index: 1;
 	}
 	.nav li {
 		border-top: 1px solid #eee;
@@ -480,8 +499,7 @@ input[type="submit"].search-submit:hover {
 	.nav {
 		border-top: 1px solid #eee;
 		clear: none;
-		float: right;
-		margin-top: -0.1rem;
+		float: left;
 		padding-top: 1.2rem;
 	}
 	.nav li {
@@ -490,6 +508,15 @@ input[type="submit"].search-submit:hover {
 	.nav a {
 		border: 0;
 		padding: 0.4rem 1.6rem;
+	}
+	.nav .page_item_has_children > a::after {
+		color: #808080;
+		content: "▼";
+		font-size: 1.2rem;
+		margin-left: 0.8rem;
+	}
+	.nav .page_item_has_children:hover .children {
+		max-height: 100%;
 	}
 	.nav .children {
 		max-height: 0;
@@ -510,9 +537,6 @@ input[type="submit"].search-submit:hover {
 	}
 	.nav .children li:last-child {
 		border-bottom: 1px solid #eee;
-	}
-	.nav .page_item_has_children:hover .children {
-		max-height: 100%;
 	}
 }
 .pagination {
