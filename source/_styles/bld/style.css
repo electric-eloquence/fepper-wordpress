@@ -455,11 +455,11 @@ input[type="submit"].search-submit:hover {
 	clear: both;
 	overflow: hidden;
 }
+.nav ul {
+	background-color: #fff;
+}
 .nav a {
 	display: block;
-}
-.nav.active {
-	max-height: none;
 }
 @media all and (max-width: 767px) {
 	.nav {
@@ -495,10 +495,14 @@ input[type="submit"].search-submit:hover {
 		max-height: 0;
 		overflow: hidden;
 		position: absolute;
+		-webkit-transition: max-height 0.3s ease;
+		-moz-transition: max-height 0.3s ease;
+		-ms-transition: max-height 0.3s ease;
+		-o-transition: max-height 0.3s ease;
+		transition: max-height 0.3s ease;
 		z-index: 2;
 	}
 	.nav .children li {
-		background-color: #fff;
 		border: 1px solid #eee;
 		border-bottom: 0;
 		float: none;
@@ -508,12 +512,7 @@ input[type="submit"].search-submit:hover {
 		border-bottom: 1px solid #eee;
 	}
 	.nav .page_item_has_children:hover .children {
-		max-height: none;
-		-webkit-transition: max-height 0.3s ease;
-		-moz-transition: max-height 0.3s ease;
-		-ms-transition: max-height 0.3s ease;
-		-o-transition: max-height 0.3s ease;
-		transition: max-height 0.3s ease;
+		max-height: 100%;
 	}
 }
 .pagination {
@@ -855,7 +854,7 @@ footer .header {
 	}
 }
 .toggle-open {
-	max-height: none !important;
+	max-height: 100% !important;
 }
 .article-header h1 {
 	font-size: 2.5em;
