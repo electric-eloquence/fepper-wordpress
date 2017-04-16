@@ -32,7 +32,7 @@
 	},
 	"logo": {
 		"href": "../04-pages-00-homepage/04-pages-00-homepage.html",
-		"src": "../../_assets/src/logo.png"
+		"src": "../../_assets/src/logo.svg"
 	},
 	"author" : {
 		"first_name": "Author",
