@@ -1,5 +1,9 @@
 <div class="page" id="page">
 	<div role="main">
+		{{# emergency }}
+			{{> 01-compounds/07-messaging/00-alert }}
+		{{/ emergency }}
+
 		<section class="hero-and-insets">
 			{{# hero }}
 				{{> 01-compounds/02-blocks/02-block-hero.mustache }}
@@ -10,12 +14,14 @@
 			{{/ touts }}
 		</section>
 
-		<hr />
+		{{# homepage }}
+			<hr />
+		{{/ homepage }}
 
 		<div class="l-two-col">
 			<div class="l-main">
 				<section class="section latest-posts">
-					<h2 class="section-title">Latest Posts</h2>
+					<h2 class="section-title">{{ latest_posts_title }}</h2>
 					<ul class="post-list">
 						{{# latest_posts }}
 							<li>
@@ -23,7 +29,9 @@
 							</li>
 						{{/ latest_posts }}
 					</ul>
-					<a href="{{ view_more_href }}" class="text-btn">View more posts</a>
+					{{# view_more_msg }}
+						<a href="{{ view_more_href }}" class="text-btn">{{ view_more_msg }}</a>
+					{{/ view_more_msg }}
 				</section>
 			</div><!--end .l-main-->
 
