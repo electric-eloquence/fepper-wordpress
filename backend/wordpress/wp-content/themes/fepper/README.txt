@@ -43,7 +43,7 @@ reasonably working interface between the two very different environments.
   * Assign three posts to the "Tout" category.
     * Give each post a 4x3 Featured Image.
   * Posts assigned to the "Uncategorized" category will appear as blog listings
-    on both the /home and the /blog pages.
+    on the Home and Blog pages.
 
 == Copyright ==
 
