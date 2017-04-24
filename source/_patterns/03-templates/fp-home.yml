@@ -1,17 +1,17 @@
 "page_title": |2
   <?php
-  $page_for_posts_id = get_option('page_for_posts');
+  $page_for_posts_id = get_option( 'page_for_posts' );
   echo get_post_field( 'post_content', $page_for_posts_id );
   ?>
 "# latest_posts": |2
   <?php
-  query_posts( 'cat=1&paged='.get_query_var('paged') );
+  query_posts( 'category_name=uncategorized&posts_per_page=20&paged='.get_query_var( 'paged' ) );
   while ( have_posts() ) : the_post();
   ?>
 "url": |2
   <?php the_permalink(); ?>
 "> elements-square": |2
-  <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+  <?php echo get_the_post_thumbnail( $post, 'medium' ); ?>
 "headline.short": |2
   <?php the_title(); ?>
 "excerpt.medium": |2

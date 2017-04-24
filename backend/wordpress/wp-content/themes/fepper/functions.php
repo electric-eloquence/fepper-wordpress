@@ -16,8 +16,8 @@
 // $breakpoints['bp_sm_min'] = 480;
 // $breakpoints['bp_xs_min'] = 0;
 $bp_ini = get_template_directory() . '/_scripts/src/variables.styl';
-if (file_exists($bp_ini)) {
-  $GLOBALS['breakpoints'] = parse_ini_file($bp_ini);
+if ( file_exists( $bp_ini ) ) {
+	$GLOBALS['breakpoints'] = parse_ini_file( $bp_ini );
 }
 
 if ( ! function_exists( 'fepper_setup' ) ) :
@@ -93,40 +93,32 @@ function fepper_content_width() {
 }
 add_action( 'after_setup_theme', 'fepper_content_width', 0 );
 
-/**
- * Change excerpt length to 35 words
- */
-function fepper_excerpt_length( $length ) {
-  return 35;
-}
-add_filter( 'excerpt_length', 'fepper_excerpt_length', 999 );
-
 if ( ! function_exists( 'fepper_fonts_url' ) ) :
 /**
- * Register Google fonts.
+ * register google fonts.
  *
- * Create your own fepper_fonts_url() function to override in a child theme.
+ * create your own fepper_fonts_url() function to override in a child theme.
  *
- * @return string Google fonts URL for the theme.
+ * @return string google fonts url for the theme.
  */
 function fepper_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
 
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'fepper' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
+	/* translators: if there are characters in your language that are not supported by merriweather, translate this to 'off'. do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'merriweather font: on or off', 'fepper' ) ) {
+		$fonts[] = 'merriweather:400,700,900,400italic,700italic,900italic';
 	}
 
-	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'fepper' ) ) {
-		$fonts[] = 'Montserrat:400,700';
+	/* translators: if there are characters in your language that are not supported by montserrat, translate this to 'off'. do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'montserrat font: on or off', 'fepper' ) ) {
+		$fonts[] = 'montserrat:400,700';
 	}
 
-	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'fepper' ) ) {
-		$fonts[] = 'Inconsolata:400';
+	/* translators: if there are characters in your language that are not supported by inconsolata, translate this to 'off'. do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'inconsolata font: on or off', 'fepper' ) ) {
+		$fonts[] = 'inconsolata:400';
 	}
 
 	if ( $fonts ) {
@@ -141,28 +133,28 @@ function fepper_fonts_url() {
 endif;
 
 /**
- * JavaScript Detection.
+ * javascript detection.
  *
- * Adds a `js` class to the root `<html>` element when JavaScript is detected.
+ * adds a `js` class to the root `<html>` element when javascript is detected.
  */
 function fepper_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+	echo "<script>(function(html){html.classname = html.classname.replace(/\bno-js\b/,'js')})(document.documentelement);</script>\n";
 }
 add_action( 'wp_head', 'fepper_javascript_detection', 0 );
 
 /**
- * Enqueue styles.
+ * enqueue styles.
  */
 function fepper_styles() {
-	// Load our main stylesheet.
+	// load our main stylesheet.
 	wp_enqueue_style( 'fepper-style', get_template_directory_uri() . '/_styles/bld/style.css' );
 }
 
 /**
- * Enqueue scripts.
+ * enqueue scripts.
  */
 function fepper_scripts() {
-	// Load our JavaScripts.
+	// load our javascripts.
 	wp_enqueue_script( 'fepper-variables', get_template_directory_uri() . '/_scripts/src/variables.styl', array(), false, true );
 	wp_enqueue_script( 'fepper-fepper-obj', get_template_directory_uri() . '/_scripts/src/fepper-obj.js', array(), false, true );
 	wp_enqueue_script( 'fepper-functions', get_template_directory_uri() . '/_scripts/src/functions.js', array( 'jquery' ), false, true );
@@ -175,31 +167,31 @@ add_action( 'wp_enqueue_scripts', 'fepper_styles' );
 add_action( 'wp_enqueue_scripts', 'fepper_scripts' );
 
 /**
- * Register widget area.
+ * register widget area.
  *
- * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://codex.wordpress.org/function_reference/register_sidebar
  */
 function fepper_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Header Sidebar', 'fepper' ),
+		'name'          => __( 'header sidebar', 'fepper' ),
 		'id'            => 'sidebar',
-		'description'   => __( 'Add widgets here to appear in your header.', 'fepper' ),
+		'description'   => __( 'add widgets here to appear in your header.', 'fepper' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Side Sidebar 1', 'fepper' ),
+		'name'          => __( 'side sidebar 1', 'fepper' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'fepper' ),
+		'description'   => __( 'add widgets here to appear in your sidebar.', 'fepper' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Side Sidebar 2', 'fepper' ),
+		'name'          => __( 'side sidebar 2', 'fepper' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'fepper' ),
+		'description'   => __( 'add widgets here to appear in your sidebar.', 'fepper' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -209,11 +201,11 @@ function fepper_widgets_init() {
 add_action( 'widgets_init', 'fepper_widgets_init' );
 
 /**
- * Custom template tags for this theme.
+ * custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Customizer additions.
+ * customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';

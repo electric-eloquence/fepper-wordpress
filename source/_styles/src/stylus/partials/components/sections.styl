@@ -1,8 +1,38 @@
 .section-title
 	margin-bottom: $space-half
+#widget-area
+	background: url("../../_assets/src/landscape-16x9-mountains.jpg") center no-repeat
+	background-size: cover
+	color: $white
+	aside
+		padding-left: 0.8rem
+	aside:nth-child(2)
+		clear: both
+		padding-top: $pad
+	aside:last-child
+		border-bottom: 1px solid $gray-light-2
+		padding-bottom: $pad
+	aside:first-child
+		border-bottom: 0
+		float: right
+		padding-bottom: 0
+	ul
+		li
+			float: left
+			&:last-child
+				float: none
+			a
+				color: $white
+				padding: 0.25em $pad-double
+				&:first-child
+					padding-left: 0
+
 .widget-title
 	border-bottom: 1px solid $gray-light-3
-	padding: 0.5rem 0
-.widget > ul > li
-	border-bottom: 1px solid $gray-light-3
-	padding: 0.25em 0
+	padding: 0 0 0.5em
+*:not(#widget-area) >
+	.widget_recent_entries,
+	.widget_recent_comments
+		> ul > li
+			border-bottom: 1px solid $gray-light-3
+			padding: 0.4rem 0

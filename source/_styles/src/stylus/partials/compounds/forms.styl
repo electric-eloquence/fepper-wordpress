@@ -41,22 +41,25 @@ input[type="search"]::-webkit-search-decoration
 .is-valid
 	border-color: $valid
 /* Search Form */
-.search-field
-	padding-right: 3em
+.widget_search
+	margin-bottom: 0
+	@media all and (min-width: $bp-med)
+		height: 5.5rem
 .search-form
-	float: right
+	background: $white-translucent
 	overflow: hidden
 	max-height: 0
 	position: relative
+	> label
+		padding-bottom: 0
+	input
+		background: transparent
 	@media all and (max-width: $bp-sm-max)
-		background-color: $white
-		margin-top: 0.2rem
+		margin-top: 0.3rem
 		position: absolute
-		top: 5rem
+		top: 4.8rem
 		right: 0
 		z-index: 2
-		> label
-			padding-bottom: 0
 	@media all and (min-width: $bp-med)
 		max-height: none
 		margin: 0.65em 0.5em 0 0
@@ -65,13 +68,12 @@ input[type="search"]::-webkit-search-decoration
 .search-form > label:after
 	color: $black
 	position: absolute
-	top: 0.5em
+	top: 0.6em
 	right: 1em
 .search-field
 	width: 11.5em
 	height: 36px
 input[type="submit"].search-submit
-	background-color: transparent
 	border-left: 0
 	color: transparent
 	font-size: 0.85em
@@ -79,6 +81,7 @@ input[type="submit"].search-submit
 	padding-right: 0
 	padding-left: 0
 	position: relative
+	width: 5rem
 	z-index: 1
 input[type="submit"].search-submit:hover
-	background-color: rgba(0, 0, 0, 0.3)
+	background: rgba(0, 0, 0, 0.3)

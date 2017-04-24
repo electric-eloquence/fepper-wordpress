@@ -3,18 +3,18 @@
 	margin-top: -0.1rem
 	overflow: hidden
 	ul
-		background-color: $white
+		background: $white-translucent
 	a
 		display: block
 	@media all and (max-width: $bp-sm-max)
 		max-height: 0
 		position: absolute
-		top: 5rem
+		top: 5.1rem
 		left: 0
 		width: 100%
 		z-index: 1
 		li
-			border-top: 1px solid $gray-light-2
+			border-top: 1px solid $gray-light-3
 		a
 			display: table
 			padding: $pad-half $pad
@@ -31,6 +31,10 @@
 		a
 			border: 0
 			padding: $pad-quarter $pad
+		> ul
+			> li:first-child
+				a
+					padding-left: $pad-half
 		.page_item_has_children
 			> a::after
 				color: $gray
@@ -73,5 +77,5 @@
 				padding-left: 0
 			&:last-child
 				padding-right: 0
-	@media all and (min-width: $bp-med-2)
+	@media all and (min-width: $bp-med)
 		justify-content: flex-start
