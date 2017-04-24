@@ -1,7 +1,7 @@
 <div class="page" id="page">
 	<div role="main">
 		<h1 class="section-title"><?php
-$page_for_posts_id = get_option('page_for_posts');
+$page_for_posts_id = get_option( 'page_for_posts' );
 echo get_post_field( 'post_content', $page_for_posts_id );
 ?></h1>
 		<div class="l-two-col">
@@ -10,7 +10,7 @@ echo get_post_field( 'post_content', $page_for_posts_id );
 					
 					<ul class="post-list">
 						<?php
-query_posts( 'cat=1&paged='.get_query_var('paged') );
+query_posts( 'category_name=uncategorized&posts_per_page=20&paged='.get_query_var( 'paged' ) );
 while ( have_posts() ) : the_post();
 ?>
 							<li>
@@ -18,7 +18,7 @@ while ( have_posts() ) : the_post();
 	<a href="<?php the_permalink(); ?>" class="b-inner cf">
 		<h2 class="headline"><?php the_title(); ?></h2>
 		<div class="b-thumb">
-			<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+			<?php echo get_the_post_thumbnail( $post, 'medium' ); ?>
 		</div>
 		<div class="b-text">
 			<?php the_excerpt(); ?>

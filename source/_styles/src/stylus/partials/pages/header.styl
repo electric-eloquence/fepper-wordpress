@@ -1,15 +1,21 @@
 .header
 	background: $white
+	border-bottom: 1px solid $gray-light-3
+	//height: 5.1rem
 	padding: 0
-	border-bottom: 1px solid #dbdbdb
 	@extend .lc
+	@media all and (min-width: $bp-med)
+		//height: 5.6rem
 .nav-toggle
+	background: $white-translucent
 	float: right
 	display: block
-	padding: 1.44rem 1.6rem 1.12rem
+	padding: 1.5rem
 	font-size: 2.08rem
 	line-height: 1
-	border-left: 1px solid #dbdbdb
+	border-left: 1px solid $gray-light-3
+	width: 5.1rem
+	height: 5rem
 	&:focus
 		color: $gray-dark
 	&:hover

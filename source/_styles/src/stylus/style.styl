@@ -7,7 +7,7 @@
 // The base on which the rest of the styles are built.
 // /////////////////////////////////////////////////////////////////////////////
 @import 'partials/base/variables'
-@import 'partials/base/mixins'
+@import 'partials/base/helpers'
 @import 'partials/base/reset'
 @import 'partials/base/global'
 @import 'partials/base/animation'
@@ -43,12 +43,13 @@
 @import 'partials/pages/header'
 
 // These rules are here to pass theme-check.
-.sticky .posted-on {
-	display: none;
-}
-.bypostauthor > article .fn:after {
-	content: "\f304";
-	left: 3px;
-	position: relative;
-	top: 5px;
-}
+.bypostauthor 
+	> article
+		.fn:after
+			content: "\f304"
+			left: 3px
+			position: relative
+			top: 5px
+.sticky
+	.posted-on
+		display: none

@@ -1,22 +1,15 @@
-/* Layout Container */
-.lc
-	max-width: $max-width
-	margin: 0 auto
-	padding: $pad-half
-	footer &
-		padding: $pad $pad 0
 /* Two Column Layout */
 .l-two-col
 	@extend .cf
-	.l-main
-		@media all and (min-width: $bp-med-2)
+	@media all and (max-width: $bp-sm-max)
+		.l-sidebar
+			clear: both
+	@media all and (min-width: $bp-med)
+		.l-main
 			float: left
 			width: 70%
 			padding-right: $pad
-	.l-sidebar
-		@media all and (max-width: $bp-med-2 - 1px)
-			clear: both
-		@media all and (min-width: $bp-med-2)
+		.l-sidebar
 			float: left
 			width: 30%
 			padding: 0 0 0 $pad
@@ -33,13 +26,60 @@
 		margin-bottom: 0
 .headline
 	line-height: 1.2
+/* Hero and Insets */
+.hero-and-insets
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	padding-bottom: $pad-and-half
+.block-hero,
+.block-inset
+	.inner
+		display: block
+		position: relative
+	.b-text
+		color: $white
+	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+		width: calc(50% - 0.4rem)
 /* Hero Block */
 .block-hero
 	margin-bottom: $space-half
 	.b-thumb
 		img
 			display: block
-	@media all and (min-width: $bp-med-2)
+	@media all and (max-width: $bp-xs-max)
+		.b-text
+			display: flex
+			flex-flow: column nowrap
+			justify-content: center
+			height: 8.7rem
+	@media all and (max-width: $bp-sm-max)
+		.b-text
+			background: $dimmer
+			overflow: hidden
+		.headline
+			font-size: 1.8rem
+			padding: 0 $pad-half
+	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+		.b-thumb
+			padding-top: 75%
+		img
+			position: absolute
+			top: 0
+			left: 0
+		.b-text
+			overflow: hidden
+			padding-top: 19%
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+		.headline
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%);
+	@media all and (min-width: $bp-med)
 		position: relative
 		.b-text
 			position: absolute
@@ -49,6 +89,31 @@
 			background: $dim
 			color: $white
 			padding: $pad-and-half
+/* Block Inset */
+.block-inset
+	margin-bottom: $space-half
+	position: relative
+	.b-thumb
+		position: relative
+		z-index: 0
+		img
+			display: block
+	.b-text
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		background: $dim
+		color: $white
+		padding: $pad-half
+	@media all and (max-width: $bp-sm-max)
+		.headline
+			font-size: 1.7rem
+	@media all and (min-width: $bp-med)
+		padding-top: $pad-half
+		width: calc(33.3333333% - 1.0666666rem)
+		.headline
+			font-size: 1.8rem
 /* Block Thumbnail with Headline */
 .block-thumb
 	display: table
@@ -58,25 +123,27 @@
 		display: table-row
 		vertical-align: top
 		overflow: hidden
-	.headline
-		@media all and (max-width: $bp-small-2 - 1px)
+	.b-thumb
+		float: left
+	.b-text
+		float: right
+	@media all and (max-width: $bp-xs-max)
+		.b-thumb
+			max-width: 22.5rem
+	@media all and (max-width: $bp-sm-max)
+		.headline
 			font-size: 1.8rem
-		@media all and (min-width: $bp-small)
+		.b-text
+			p
+				font-size: 1.4rem
+	@media all and (min-width: $bp-small)
+		.headline
 			float: right
 			padding: 0 $pad
 			width: 70%
-	.b-thumb
-		float: left
-		@media all and (max-width: $bp-small - 1px)
-			max-width: 30rem
-		@media all and (min-width: $bp-small)
+		.b-thumb
 			width: 30%
-	.b-text
-		float: right
-		@media all and (max-width: $bp-small-2 - 1px)
-			p
-				font-size: 1.4rem
-		@media all and (min-width: $bp-small)
+		.b-text
 			width: 70%
 			padding: 0 $pad
 /* Block Headline Summary */
@@ -84,67 +151,6 @@
 	a
 		display: block
 		padding: $pad-half
-/* Block Inset */
-.block-inset
-	position: relative
-	.b-thumb
-		position: relative
-		z-index: 0
-		img
-			display: block
-/* Hero Block */
-.block-inset
-	margin-bottom: $space-half
-	position: relative
-	.headline
-		font-size: 1.1em
-	.b-text
-		position: absolute
-		bottom: 0
-		left: 0
-		width: 100%
-		background: $dim
-		color: $white
-		padding: $pad-half
-/* Hero and Insets */
-.hero-and-insets
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
-.block-hero,
-.block-inset
-	.inner
-		display: block
-		position: relative
-@media all and (min-width: $bp-small-2) and (max-width: $bp-med-2 - 1px)
-	.block-hero,
-	.block-inset
-		width: calc(50% - 0.4rem)
-	.block-hero
-		.b-thumb
-			padding-top: 75%
-	.block-hero
-		img
-			position: absolute
-			top: 0
-			left: 0
-	.block-hero
-		.b-text
-			background: $dim
-			color: $white
-			overflow: hidden
-			padding: $pad-half
-			position: absolute
-			bottom: 0
-			left: 0
-			width: 100%
-			height: 7.36rem
-@media all and (min-width: $bp-med-2)
-	.block-hero
-		width: 100%
-	.block-inset
-		padding-top: $pad-half
-		width: calc(33.3333333% - 1.0666666rem)
 /* Block Thumb with Summary */
 .block-thumb-summary
 	.b-thumb

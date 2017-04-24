@@ -4,8 +4,18 @@
 	background: $gray-dark-2
 	color: $white
 	line-height: 1.2
+	height: $footer-height
+	padding-top: $pad-half
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
 	a
 		color: $gray-light
-.copyright
-	@media all and (min-width: $bp-med)
-		float: right
+	p
+		margin-bottom: 0
+	.footer-content
+		@extend .lc
+		@media all and (min-width: $bp-med)
+			display: flex
+			justify-content: flex-end
