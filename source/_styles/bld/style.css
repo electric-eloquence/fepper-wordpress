@@ -85,6 +85,36 @@ body {
 		font-size: 1.4em;
 	}
 }
+h1,
+.alpha {
+	line-height: 1.2;
+}
+h2,
+.beta {
+	line-height: 1.2;
+}
+h3,
+.gamma {
+	line-height: 1.2;
+}
+p {
+	margin-bottom: 1.6rem;
+}
+a {
+	color: #333;
+	text-decoration: none;
+	outline: 0;
+}
+a:hover,
+a:focus {
+	color: #808080;
+}
+hr {
+	border: 0;
+	height: 2px;
+	background: #eee;
+	margin-bottom: 3.2rem;
+}
 aside,
 .section {
 	margin-bottom: 1.6rem;
@@ -285,42 +315,12 @@ aside,
 	margin-left: -2.72rem;
 	margin-right: 0.8rem;
 }
-h1,
-.alpha {
-	line-height: 1.2;
-}
-h2,
-.beta {
-	line-height: 1.2;
-}
-h3,
-.gamma {
-	line-height: 1.2;
-}
-p {
-	margin-bottom: 1.6rem;
-}
 blockquote {
 	font-style: italic;
 	border-left: 1px solid #808080;
 	color: #808080;
 	padding-left: 1.6rem;
 	margin-bottom: 1.6rem;
-}
-a {
-	color: #333;
-	text-decoration: none;
-	outline: 0;
-}
-a:hover,
-a:focus {
-	color: #808080;
-}
-hr {
-	border: 0;
-	height: 2px;
-	background: #eee;
-	margin-bottom: 3.2rem;
 }
 ol,
 ul {
