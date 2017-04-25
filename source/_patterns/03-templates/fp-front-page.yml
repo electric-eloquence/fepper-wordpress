@@ -13,20 +13,20 @@
   <?php the_title(); ?>
 "/ hero": |2
   <?php endwhile; ?>
-"# touts": |2
+"# subs": |2
   <?php
-  query_posts( 'category_name=tout' );
-  $post_count_tout = $wp_query->post_count;
+  query_posts( 'category_name=sub' );
+  $post_count_sub = $wp_query->post_count;
   while ( have_posts() ) : the_post();
   ?>
 "> elements-landscape-4x3": |2
   <?php echo get_the_post_thumbnail( $post, 'full' ); ?>
 "headline.short": |2
   <?php the_title(); ?>
-"/ touts": |2
+"/ subs": |2
   <?php endwhile; ?>
 "# homepage": |2
-  <?php if ( $post_count_hero || $post_count_tout ) : ?>
+  <?php if ( $post_count_hero || $post_count_sub ) : ?>
 "/ homepage": |2
   <?php endif; ?>
 "latest_posts_title": |2
