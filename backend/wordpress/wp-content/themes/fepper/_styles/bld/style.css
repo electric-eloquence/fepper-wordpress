@@ -757,7 +757,7 @@ input[type="submit"].search-submit:hover {
 	}
 }
 [role="main"] {
-	padding: 0.8rem 0.8rem 3.2rem;
+	padding: 0.8rem;
 	overflow: hidden;
 }
 .block {
