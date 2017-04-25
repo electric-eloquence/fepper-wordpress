@@ -21,8 +21,8 @@ while ( have_posts() ) : the_post();
 			<?php endwhile; ?>
 
 			<?php
-query_posts( 'category_name=tout' );
-$post_count_tout = $wp_query->post_count;
+query_posts( 'category_name=sub' );
+$post_count_sub = $wp_query->post_count;
 while ( have_posts() ) : the_post();
 ?>
 				<div class="block block-inset">
@@ -39,7 +39,7 @@ while ( have_posts() ) : the_post();
 			<?php endwhile; ?>
 		</section>
 
-		<?php if ( $post_count_hero || $post_count_tout ) : ?>
+		<?php if ( $post_count_hero || $post_count_sub ) : ?>
 			<hr />
 		<?php endif; ?>
 
