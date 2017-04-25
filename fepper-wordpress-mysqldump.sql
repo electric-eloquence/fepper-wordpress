@@ -330,7 +330,7 @@ CREATE TABLE `wp_terms` (
 
 LOCK TABLES `wp_terms` WRITE;
 /*!40000 ALTER TABLE `wp_terms` DISABLE KEYS */;
-INSERT INTO `wp_terms` VALUES (1,'Uncategorized','uncategorized',0),(6,'Hero','hero',0),(11,'Tout','tout',0);
+INSERT INTO `wp_terms` VALUES (1,'Uncategorized','uncategorized',0),(6,'Hero','hero',0),(11,'Sub','sub',0);
 /*!40000 ALTER TABLE `wp_terms` ENABLE KEYS */;
 UNLOCK TABLES;
 
