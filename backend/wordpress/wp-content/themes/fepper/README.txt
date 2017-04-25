@@ -34,13 +34,14 @@ reasonably working interface between the two very different environments.
 * However, if you wish to replicate the look and feel of the Fepper demo site 
   (as per the screenshot), you should follow the Fepper documentation on 
   importing the sample WordPress backend mentioned earlier. This will serve as a 
-  starting point for further customization.
+  starting point for further customization:
+  https://github.com/electric-eloquence/fepper-wordpress#user-content-wordpress-install
 * You may also replicate this look and feel from a fresh WordPress install (with 
   no import):
-  * Create "Hero" and "Tout" categories.
+  * Create "Hero" and "Sub" categories.
   * Assign a single post to the "Hero" category.
     * Give this a large 16x9 Featured Image.
-  * Assign three posts to the "Tout" category.
+  * Assign three posts to the "Sub" category.
     * Give each post a 4x3 Featured Image.
   * Posts assigned to the "Uncategorized" category will appear as blog listings
     on the Home and Blog pages.
