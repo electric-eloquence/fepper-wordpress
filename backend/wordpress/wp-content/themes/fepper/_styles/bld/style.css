@@ -640,10 +640,6 @@ input[type="submit"].search-submit:hover {
 .comments li {
 	margin-bottom: 1.6rem;
 }
-.comment-container {
-	overflow: hidden;
-	margin-bottom: 1.6rem;
-}
 .comment-body {
 	float: left;
 }
