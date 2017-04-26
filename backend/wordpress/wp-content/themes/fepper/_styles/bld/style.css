@@ -640,10 +640,8 @@ input[type="submit"].search-submit:hover {
 .comments li {
 	margin-bottom: 1.6rem;
 }
-.comment-body {
-	float: left;
-}
 .comment-meta {
+	float: left;
 	min-height: 9em;
 	width: 12em;
 }
@@ -663,6 +661,12 @@ input[type="submit"].search-submit:hover {
 .comment-respond {
 	border-top: 1px solid #ddd;
 	padding-top: 1em;
+}
+@media all and (max-width: 767px) {
+	.comment-respond {
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 1em;
+	}
 }
 .section-title {
 	margin-bottom: 0.8rem;

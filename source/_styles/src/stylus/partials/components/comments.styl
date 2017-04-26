@@ -12,9 +12,8 @@
 		margin-bottom: $space
 .comment
 	@extend .cf
-.comment-body
-	float: left
 .comment-meta
+	float: left
 	min-height: 9em
 	width: 12em
 	img
@@ -31,3 +30,6 @@
 .comment-respond
 	border-top: 1px solid $gray-light-3
 	padding-top: 1em
+	@media all and (max-width: $bp-sm-max)
+		border-bottom: 1px solid $gray-light-3
+		padding-bottom: 1em
