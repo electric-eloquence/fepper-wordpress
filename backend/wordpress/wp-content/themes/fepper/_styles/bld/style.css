@@ -664,8 +664,7 @@ input[type="submit"].search-submit:hover {
 }
 @media all and (max-width: 767px) {
 	.comment-respond {
-		border-bottom: 1px solid #ddd;
-		padding-bottom: 1em;
+		padding-bottom: 0.4rem;
 	}
 }
 .section-title {
