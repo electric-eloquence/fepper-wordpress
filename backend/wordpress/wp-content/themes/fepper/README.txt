@@ -16,7 +16,7 @@ theme to match the look and feel of the Fepper frontend.
 
 This theme is ideal for incorporating Pattern Lab into your WordPress 
 development flow. There is probably no other theme which provides any 
-reasonably working interface between the two very different environments.
+reasonably working interface between these two very different platforms.
 
 == Installation ==
 
