@@ -55,7 +55,7 @@ The Fepper WordPress theme is backward-compatible with WordPress core down to Wo
   * If changes do not appear immediately, it may be necessary to install a [LiveReload browser extension](http://livereload.com/extensions/).
 
 #### WordPress install
-* To install the included WordPress instance, restore the MySQL dump `fepper-wordpress-mysqldump.sql`.
+* To install the included WordPress backend, restore the MySQL dump `fepper-wordpress-mysqldump.sql`.
 * Update the `DB_` settings in `backend/wordpress/wp-config.php` to reflect your own database settings.
 * Configure `wp.local` to be the hostname in your web server configs.
 * Configure `backend/wordpress` (correctly pathed) to be the document root for this host.
