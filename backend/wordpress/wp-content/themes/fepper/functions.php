@@ -11,10 +11,11 @@
 // can access them.
 // Out of the box, they will be:
 // $breakpoints['bp_lg_max'] = -1;
-// $breakpoints['bp_lg_min'] = 1024;
-// $breakpoints['bp_md_min'] = 768;
-// $breakpoints['bp_sm_min'] = 480;
-// $breakpoints['bp_xs_min'] = 0;
+// $breakpoints['bp_md_max'] = 1024;
+// $breakpoints['bp_sm_max'] = 767;
+// $breakpoints['bp_xs_max'] = 480;
+// $breakpoints['bp_xx_max'] = 320;
+// $breakpoints['bp_xx_min'] = 0;
 $bp_ini = get_template_directory() . '/_scripts/src/variables.styl';
 if ( file_exists( $bp_ini ) ) {
 	$GLOBALS['breakpoints'] = parse_ini_file( $bp_ini );
