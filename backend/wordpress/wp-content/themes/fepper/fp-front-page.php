@@ -1,6 +1,6 @@
 <div class="page" id="page">
 	<div role="main">
-		<section class="hero-and-insets">
+		<section class="hero-and-subs">
 			<?php
 query_posts( 'category_name=hero' );
 global $wp_query;
@@ -25,7 +25,7 @@ query_posts( 'category_name=sub' );
 $post_count_sub = $wp_query->post_count;
 while ( have_posts() ) : the_post();
 ?>
-				<div class="block block-inset">
+				<div class="block block-sub">
 	<a href="<?php the_permalink(); ?>" class="inner">
 		<div class="b-thumb">
 			<?php echo get_the_post_thumbnail( $post, 'full' ); ?>
