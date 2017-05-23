@@ -1,5 +1,5 @@
 {
-	"hero" : [
+	"hero": [
 		{
 			"url": "../04-pages-02-articles-00-article/04-pages-02-articles-00-article.html",
 			"img": {
@@ -8,12 +8,12 @@
 					"alt": "Mountains"
 				}
 			},
-			"headline" : {
-				"medium" : "Top 10 mountain ranges for hiking"
+			"headline": {
+				"medium": "Top 10 mountain ranges for hiking"
 			}
 		}
 	],
-	"subs" : [
+	"subs": [
 		{
 			"url": "../04-pages-02-articles-00-article-1/04-pages-02-articles-00-article-1.html",
 			"img": {
@@ -22,8 +22,8 @@
 					"alt": "Climber"
 				}
 			},
-			"headline" : {
-				"short" : "Extreme climbing tips"
+			"headline": {
+				"short": "Extreme climbing tips"
 			}
 		},
 		{
@@ -34,8 +34,8 @@
 					"alt": "Stream hiking"
 				}
 			},
-			"headline" : {
-				"short" : "Stream hiking"
+			"headline": {
+				"short": "Stream hiking"
 			}
 		},
 		{
@@ -46,12 +46,12 @@
 					"alt": "Explore hiking trails"
 				}
 			},
-			"headline" : {
-				"short" : "Explore hiking trails"
+			"headline": {
+				"short": "Explore hiking trails"
 			}
 		}
 	],
-	"latest_posts" : [
+	"latest_posts": [
 		{
 			"url": "../04-pages-02-articles-00-article-4/04-pages-02-articles-00-article-4.html",
 			"img": {
@@ -60,11 +60,11 @@
 					"alt": "Post Thumbnail"
 				}
 			},
-			"headline" : {
-				"short" : "Navigate the Allegheny River"
+			"headline": {
+				"short": "Navigate the Allegheny River"
 			},
-			"excerpt" : {
-				"medium" : "<p>The Allegheny River is a principal tributary of the Ohio River; it is located in the Eastern United States. The Allegheny River joins with the Monongahela River to form the Ohio River at the Point of Point State Park in Downtown Pittsburgh, Pennsylvania.</p>"
+			"excerpt": {
+				"medium": "<p>The Allegheny River is a principal tributary of the Ohio River; it is located in the Eastern United States. The Allegheny River joins with the Monongahela River to form the Ohio River at the Point of Point State Park in Downtown Pittsburgh, Pennsylvania.</p>"
 			}
 		},
 		{
@@ -75,11 +75,11 @@
 					"alt": "Ivy"
 				}
 			},
-			"headline" : {
-				"short" : "How to detect and avoid poison ivy"
+			"headline": {
+				"short": "How to detect and avoid poison ivy"
 			},
-			"excerpt" : {
-				"medium" : "<p>Toxicodendron radicans, commonly known as poison ivy is a poisonous North American plant that is well known for its production of urushiol</p>"
+			"excerpt": {
+				"medium": "<p>Toxicodendron radicans, commonly known as poison ivy is a poisonous North American plant that is well known for its production of urushiol</p>"
 			}
 		},
 		{
@@ -90,11 +90,11 @@
 					"alt": "Yosemite"
 				}
 			},
-			"headline" : {
-				"short" : "Top 10 hiking mountains"
+			"headline": {
+				"short": "Top 10 hiking mountains"
 			},
-			"excerpt" : {
-				"medium" : "<p>Yosemite National Park is a United States National Park spanning eastern portions of Tuolumne, Mariposa and Madera counties in the central eastern portion of the U.S. state of California.</p>"
+			"excerpt": {
+				"medium": "<p>Yosemite National Park is a United States National Park spanning eastern portions of Tuolumne, Mariposa and Madera counties in the central eastern portion of the U.S. state of California.</p>"
 			}
 		},
 		{
@@ -105,11 +105,11 @@
 					"alt": "Fire"
 				}
 			},
-			"headline" : {
-				"short" : "How to build a campfire"
+			"headline": {
+				"short": "How to build a campfire"
 			},
-			"excerpt" : {
-				"medium" : "<p>A campfire is a fire lit at a campsite, to serve the following functions: light, warmth, a beacon, an insect and/or apex predator deterrent, to cook, and for a psychological sense of security.</p>"
+			"excerpt": {
+				"medium": "<p>A campfire is a fire lit at a campsite, to serve the following functions: light, warmth, a beacon, an insect and/or apex predator deterrent, to cook, and for a psychological sense of security.</p>"
 			}
 		},
 		{
@@ -120,11 +120,11 @@
 					"alt": "Camping Gear"
 				}
 			},
-			"headline" : {
-				"short" : "Pick the right camping gear"
+			"headline": {
+				"short": "Pick the right camping gear"
 			},
-			"excerpt" : {
-				"medium" : "<p>The equipment used in camping varies with the particular type of camping. For instance, in survival camping the equipment consists of small items which have the purpose of helping the camper in providing food, heat and safety.</p>"
+			"excerpt": {
+				"medium": "<p>The equipment used in camping varies with the particular type of camping. For instance, in survival camping the equipment consists of small items which have the purpose of helping the camper in providing food, heat and safety.</p>"
 			}
 		}
 	]
