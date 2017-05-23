@@ -751,21 +751,6 @@ input[type="submit"].search-submit:hover {
 		justify-content: flex-start;
 	}
 }
-.alert {
-	text-align: center;
-	padding: 1.6rem;
-	margin-bottom: 0.8rem;
-	border: 1px solid #808080;
-	background: #f9f9f9;
-}
-.alert-error {
-	color: #f00;
-	border-color: #f00;
-	background: #ffbebe;
-}
-.required {
-	color: #f00;
-}
 .intro {
 	font-size: 1.1em;
 	font-weight: bold;
