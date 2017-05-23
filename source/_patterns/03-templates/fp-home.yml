@@ -22,5 +22,5 @@
   // Previous/Next page navigation.
   the_posts_pagination();
   ?>
-"> 02-components/04-sections/01-recent-comments": |2
+"> 02-components/03-sections/00-recent-comments": |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
