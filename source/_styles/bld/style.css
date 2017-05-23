@@ -362,17 +362,17 @@ object {
 	line-height: 1.2;
 }
 .block-hero .inner,
-.block-inset .inner {
+.block-sub .inner {
 	display: block;
 	position: relative;
 }
 .block-hero .b-text,
-.block-inset .b-text {
+.block-sub .b-text {
 	color: #fff;
 }
 @media all and (min-width: 481px) and (max-width: 767px) {
 	.block-hero,
-	.block-inset {
+	.block-sub {
 		width: calc(50% - 0.4rem);
 	}
 }
@@ -438,18 +438,18 @@ object {
 		padding: 2.4rem;
 	}
 }
-.block-inset {
+.block-sub {
 	margin-bottom: 0.8rem;
 	position: relative;
 }
-.block-inset .b-thumb {
+.block-sub .b-thumb {
 	position: relative;
 	z-index: 0;
 }
-.block-inset .b-thumb img {
+.block-sub .b-thumb img {
 	display: block;
 }
-.block-inset .b-text {
+.block-sub .b-text {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -459,16 +459,16 @@ object {
 	padding: 0.8rem;
 }
 @media all and (max-width: 767px) {
-	.block-inset .headline {
+	.block-sub .headline {
 		font-size: 1.7rem;
 	}
 }
 @media all and (min-width: 768px) {
-	.block-inset {
+	.block-sub {
 		padding-top: 0.8rem;
 		width: calc(33.3333333% - 1.0666666rem);
 	}
-	.block-inset .headline {
+	.block-sub .headline {
 		font-size: 1.8rem;
 	}
 }
@@ -898,7 +898,7 @@ input[type="submit"].search-submit:hover {
 	padding: 0.8rem;
 	overflow: hidden;
 }
-.hero-and-insets {
+.hero-and-subs {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
