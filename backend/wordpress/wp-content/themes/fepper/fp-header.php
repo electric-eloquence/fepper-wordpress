@@ -1,6 +1,6 @@
 <!-- Begin .header -->
 <header class="header cf" role="banner">
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/_assets/src/logo.svg" class="logo" alt="<?php echo get_bloginfo(); ?>" /></a>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/_assets/src/logo.svg" alt="<?php echo get_bloginfo(); ?>" /></a>
 <a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
 	<a href="#" class="nav-toggle nav-toggle-menu icon-menu"></a>
 	<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
