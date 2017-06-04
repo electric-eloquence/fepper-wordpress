@@ -689,6 +689,9 @@ input[type="submit"].search-submit:hover {
 	.nav > ul > li:first-child a {
 		padding-left: 0.8rem;
 	}
+	.nav > ul > li > .children {
+		position: absolute;
+	}
 	.nav .page_item_has_children > a::after {
 		color: #808080;
 		content: "▼";
@@ -698,10 +701,12 @@ input[type="submit"].search-submit:hover {
 	.nav .page_item_has_children:hover .children {
 		max-height: 100%;
 	}
+	.nav .page_item_has_children .page_item_has_children {
+		padding-left: 1rem;
+	}
 	.nav .children {
 		max-height: 0;
 		overflow: hidden;
-		position: absolute;
 		-webkit-transition: max-height 0.3s ease;
 		-moz-transition: max-height 0.3s ease;
 		-ms-transition: max-height 0.3s ease;
@@ -717,6 +722,14 @@ input[type="submit"].search-submit:hover {
 	}
 	.nav .children li:last-child {
 		border-bottom: 1px solid #eee;
+	}
+	.nav .children .children {
+		background: transparent;
+	}
+	.nav .children .children li {
+		border-right: 0;
+		border-bottom: 0;
+		border-left: 0;
 	}
 }
 .pagination {
