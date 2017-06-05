@@ -1,34 +1,65 @@
+$meta-width = 12em
 .comments
-	&.section
-		border-top: 1px solid $gray-light-3
-		margin-top: 2em
-		.section-title
-			margin: 1rem 0
-		.comment
-			min-height: 9em
-		.reply
-			display: none
-	li
-		margin-bottom: $space
-.comment
-	@extend .cf
-.comment-meta
-	float: left
-	min-height: 9em
-	width: 12em
-	img
-		display: block
-		border: 1px solid $gray-light-2
-		margin-bottom: $space-half
-.comment-author,
-.comment-metadata,
-.comment-name
-	font-size: $font-size-sm
-.comment-content
-	p
-		margin-bottom: 0
-.comment-respond
 	border-top: 1px solid $gray-light-3
-	padding-top: 1em
-	@media all and (max-width: $bp-sm-max)
-		padding-bottom: $pad-quarter
+	margin-top: 2em
+	.section-title
+		margin: 0.625em 0 0
+	.comment
+		min-height: 9em
+		padding: 0.75em 0 0.5em
+	.comment-list
+		> .comment
+			> .children
+			&:last-child
+				border-bottom: 1px solid $gray-light-3
+	.comment-body
+		padding-bottom: 0.5em
+		position: relative
+		@extend .cf
+	.comment-meta
+		float: left
+		min-height: 9em
+		width: $meta-width
+		img
+			display: block
+			border: 1px solid $gray-light-2
+			margin-bottom: 0.5em
+	.comment-author,
+	.comment-metadata,
+	.comment-name
+		font-size: $font-size-sm
+	.comment-meta + .comment-content
+		margin-left: $meta-width
+		width: "calc(100% - %s)" % $meta-width
+		p
+			margin-bottom: 0
+	.comment-meta + .comment-content + .reply
+		margin: 0.25em 0 0 12em
+		&::before
+			content: "•"
+			margin-left: 0.25em
+		a
+			padding-left: 0.75em
+	.children
+		margin-left: 0.75em
+	.comment-respond
+		padding-top: 1em
+		@media all and (max-width: $bp-sm-max)
+			padding-bottom: 0.25em
+	@media all and (max-width: $bp-xs-max)
+		.comment-body
+			padding-bottom: 0
+		.comment-meta
+			float: none
+			margin-bottom: 0.25em
+			min-height: 0
+			width: auto
+			> div
+				display: inline-block
+		.comment-author
+			img
+				display: none
+		.comment-meta + .comment-content,
+		.comment-meta + .comment-content + .reply
+			margin-left: 0
+			width: auto
