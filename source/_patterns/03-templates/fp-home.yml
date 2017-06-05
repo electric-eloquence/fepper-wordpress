@@ -1,13 +1,13 @@
 "page_title": |2
   <?php
-  $page_for_posts_id = get_option( 'page_for_posts' );
-  echo get_post_field( 'post_content', $page_for_posts_id );
-  ?>
+  			$page_for_posts_id = get_option( 'page_for_posts' );
+  			echo get_post_field( 'post_content', $page_for_posts_id );
+  		?>
 "# latest_posts": |2
   <?php
-  query_posts( 'category_name=uncategorized&posts_per_page=20&paged='.get_query_var( 'paged' ) );
-  while ( have_posts() ) : the_post();
-  ?>
+  							query_posts( 'category_name=uncategorized&posts_per_page=20&paged='.get_query_var( 'paged' ) );
+  							while ( have_posts() ) : the_post();
+  						?>
 "url": |2
   <?php the_permalink(); ?>
 "> elements-square": |2
@@ -18,9 +18,9 @@
   <?php the_excerpt(); ?>
 "/ latest_posts": |2
   <?php
-  endwhile;
-  // Previous/Next page navigation.
-  the_posts_pagination();
-  ?>
+  							endwhile;
+  							// Previous/Next page navigation.
+  							the_posts_pagination();
+  						?>
 "> 02-components/03-sections/00-recent-comments": |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
