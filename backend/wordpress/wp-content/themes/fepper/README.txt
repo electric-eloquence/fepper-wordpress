@@ -48,7 +48,7 @@ reasonably working interface between these two very different platforms.
 
 == Copyright ==
 
-Fepper WordPress Theme, Copyright 2017 Electric Eloquence
+Fepper WordPress Theme, Copyright 2017 - ∞ Electric Eloquence
 Fepper WordPress Theme is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
