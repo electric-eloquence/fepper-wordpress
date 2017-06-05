@@ -1,18 +1,18 @@
 <div class="page" id="page">
 	<div role="main">
 		<h1 class="section-title"><?php
-$page_for_posts_id = get_option( 'page_for_posts' );
-echo get_post_field( 'post_content', $page_for_posts_id );
-?></h1>
+			$page_for_posts_id = get_option( 'page_for_posts' );
+			echo get_post_field( 'post_content', $page_for_posts_id );
+		?></h1>
 		<div class="l-two-col">
 			<div class="l-main">
 				<section class="section latest-posts">
 					
 					<ul class="post-list">
 						<?php
-query_posts( 'category_name=uncategorized&posts_per_page=20&paged='.get_query_var( 'paged' ) );
-while ( have_posts() ) : the_post();
-?>
+							query_posts( 'category_name=uncategorized&posts_per_page=20&paged='.get_query_var( 'paged' ) );
+							while ( have_posts() ) : the_post();
+						?>
 							<li>
 								<div class="block block-thumb">
 	<a href="<?php the_permalink(); ?>" class="b-inner cf">
@@ -28,10 +28,10 @@ while ( have_posts() ) : the_post();
 
 							</li>
 						<?php
-endwhile;
-// Previous/Next page navigation.
-the_posts_pagination();
-?>
+							endwhile;
+							// Previous/Next page navigation.
+							the_posts_pagination();
+						?>
 					</ul>
 				</section>
 				</div><!--end l-main-->
