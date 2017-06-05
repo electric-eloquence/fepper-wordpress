@@ -11,10 +11,10 @@
 						<?php the_content(); ?>
 					</article><!--end .article-->
 					<?php
-if ( comments_open() || get_comments_number() ) :
-	comments_template();
-endif;
-?>
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
+					?>
 				<?php endwhile; ?>
 			</div><!--end l-main-->
 

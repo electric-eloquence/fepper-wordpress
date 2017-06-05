@@ -8,10 +8,10 @@
   <?php the_content(); ?>
 "> 02-components/02-comments/00-comment-thread": |2
   <?php
-  if ( comments_open() || get_comments_number() ) :
-  	comments_template();
-  endif;
-  ?>
+  						if ( comments_open() || get_comments_number() ) :
+  							comments_template();
+  						endif;
+  					?>
 "/ article": |2
   <?php endwhile; ?>
 "> 02-components/03-sections/01-related-posts": |2

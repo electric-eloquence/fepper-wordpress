@@ -6,9 +6,9 @@
   <?php echo get_bloginfo(); ?>
 "> 01-compounds/02-forms/00-search": |2
   <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-  	<div id="widget-area" class="widget-area" role="complementary">
-  		<?php dynamic_sidebar( 'sidebar' ); ?>
-  	</div><!-- .widget-area -->
-  <?php endif; ?>
+  		<div id="widget-area" class="widget-area" role="complementary">
+  			<?php dynamic_sidebar( 'sidebar' ); ?>
+  		</div><!-- .widget-area -->
+  	<?php endif; ?>
 "> 01-compounds/03-navigation/00-primary-nav": |2
   <?php wp_nav_menu( array( 'menu_class' => 'nav', 'theme_location' => 'primary' ) ); ?>
