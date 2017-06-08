@@ -807,10 +807,13 @@ input[type="submit"].search-submit:hover {
 	display: block;
 	border: 1px solid #eee;
 	margin-bottom: 0.5em;
+	width: 6.25em;
 }
-.comments .comment-meta .comment-author,
+.comments .comment-meta .fn,
+.comments .comment-meta .comment-author span,
 .comments .comment-meta .comment-metadata {
 	font-size: 0.75em;
+	line-height: 1;
 }
 .comments .comment-meta .fn,
 .comments .comment-meta .comment-metadata {
