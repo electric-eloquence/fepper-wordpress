@@ -334,16 +334,19 @@ ul {
 img,
 video,
 object {
-	max-width: 100%;
+	display: block;
 	height: auto;
+	max-width: 100%;
 }
 .logo {
 	float: left;
-	height: 3.7rem;
 	margin: 0.65rem 1.5rem 0.65rem 0.65rem;
 }
+.logo img {
+	height: 3.7rem;
+}
 @media all and (min-width: 768px) {
-	.logo {
+	.logo img {
 		height: 4.2rem;
 	}
 }
