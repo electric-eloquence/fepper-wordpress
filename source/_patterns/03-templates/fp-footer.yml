@@ -1,2 +1,2 @@
-"footer_content": |2
+'footer_content': |2
   <?php echo get_bloginfo(); ?>

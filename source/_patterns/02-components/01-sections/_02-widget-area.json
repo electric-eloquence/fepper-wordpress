@@ -1,0 +1,49 @@
+{
+	"widget_recent_entries": {
+		"related_posts": {
+			"ul_items": [
+				{
+					"item": "<a href=\"http://wp.local/?p=1\">Hello world!</a>"
+				}
+			]
+		}
+	},
+	"widget_recent_comments": {
+		"recentcomments": [
+			{
+				"comment": "<span class=\"comment-author-link\"><a href=\"#\" rel=\"external nofollow\" class=\"url\">A WordPress Commenter</a></span> on <a href=\"#\">Hello world!</a>"
+			}
+		]
+	},
+	"widget_archive": {
+		"ul_items": [
+			{
+				"item": "<a href=\"#\">June 1991</a>"
+			}
+		]
+	},
+	"widget_categories": {
+		"ul_items": [
+			{
+				"item_attributes": " class=\"cat-item cat-item-1\"",
+				"item": "<a href=\"#\">Uncategorized</a>"
+			}
+		]
+	},
+	"widget_meta": {
+		"ul_items": [
+			{
+				"item": "<a href=\"#\">Log in</a>"
+			},
+			{
+				"item": "<a href=\"#\">Entries <abbr title=\"Really Simple Syndication\">RSS</abbr></a>"
+			},
+			{
+				"item": "<a href=\"#\">Comments <abbr title=\"Really Simple Syndication\">RSS</abbr></a>"
+			},
+			{
+				"item": "<a href=\"#\" title=\"Powered by WordPress, state-of-the-art semantic personal publishing platform.\">WordPress.org</a>"
+			}
+		]
+	}
+}

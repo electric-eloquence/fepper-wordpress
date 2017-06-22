@@ -1,0 +1,13 @@
+<div class="nav">
+	<ul>
+		{{# demo_site? }}
+			<li class="page_item"><a href="{{ link.pages-homepage }}">Home</a></li>
+			<li class="page_item"><a href="#">About</a></li>
+			<li class="page_item"><a href="{{ link.pages-blog }}">Blog</a></li>
+			<li class="page_item"><a href="#">Contact</a></li>
+		{{/ demo_site? }}
+		{{# new_install? }}
+			<li class="page_item"><a href="#">Sample Page</a></li>
+		{{/ new_install? }}
+	</ul>
+</div><!--end .nav-->

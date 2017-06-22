@@ -1,14 +1,14 @@
-"href": |2
+'href': |2
   <?php echo esc_url( home_url( '/' ) ); ?>
-"src": |2
+'img.logo.src': |2
   <?php echo esc_url( get_template_directory_uri() ); ?>/_assets/src/logo.svg
-"alt": |2
+'img.logo.alt': |2
   <?php echo get_bloginfo(); ?>
-"> 01-compounds/02-forms/00-search": |2
+'> 02-components/01-sections/02-widget-area': |2
   <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
   		<div id="widget-area" class="widget-area" role="complementary">
   			<?php dynamic_sidebar( 'sidebar' ); ?>
   		</div><!-- .widget-area -->
   	<?php endif; ?>
-"> 01-compounds/03-navigation/00-primary-nav": |2
+'> 02-components/03-navigation/00-primary-nav': |2
   <?php wp_nav_menu( array( 'menu_class' => 'nav', 'theme_location' => 'primary' ) ); ?>

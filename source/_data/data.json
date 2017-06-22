@@ -8,7 +8,46 @@
   },
   "description": "So, setting about it as methodically as men might smoke out a wasps' nest, the Martians spread this strange stifling vapour over the Londonward country. The horns of the crescent slowly moved apart, until at last they formed a line from Hanwell to Coombe and Malden. All night through their destructive tubes advanced.",
   "url": "#",
+  "footer_content": "&copy; MIT License",
+	"ul_items": [
+		{
+			"item": "This is a list item in an unordered list"
+		},
+		{
+			"item": "An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line."
+		},
+		{
+			"item": "Lists can be nested inside of each other"
+		},
+		{
+			"item": "<ul><li>This is a nested list item</li><li>This is another nested list item in an unordered list</li></ul>"
+		},
+		{
+			"item": "This is the last list item"
+		}
+	],
+	"ol_items": [
+		{
+			"item": "This is a list item in an ordered list"
+		},
+		{
+			"item": "An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters."
+		},
+		{
+			"item": "Lists can be nested inside of each other"
+		},
+		{
+			"item": "<ol><li>This is a nested list item</li><li>This is another nested list item in an ordered list</li></ol>"
+		},
+		{
+			"item": "This is the last list item"
+		}
+	],
 	"img": {
+		"logo": {
+			"src": "../../_assets/src/logo.svg",
+			"alt": "Home"
+		},
 		"landscape_4x3": {
 			"src": "../../_assets/src/fpo_4x3.png",
 			"alt": "4x3 Image"
@@ -30,13 +69,12 @@
 			"alt": "Rectangle"
 		}
 	},
-	"logo": {
-		"href": "../04-pages-00-homepage/04-pages-00-homepage.html",
-		"src": "../../_assets/src/logo.svg"
-	},
 	"author": {
 		"first_name": "Author",
 		"last_name": "Name"
+	},
+	"logo": {
+		"href": "../04-pages-00-homepage-00-homepage/04-pages-00-homepage-00-homepage.html"
 	},
 	"headline": {
 		"short": "Lorem ipsum dolor sit (37 characters)",
@@ -50,15 +88,93 @@
 		"last": "Way",
 		"lasti": "W"
 	},
-	"search": {
-		"action": "#"
+	"recentcomments": [
+		{
+			"comment": "Headline Lorem ipsum dolor sit amet"
+		},
+		{
+			"comment": "Laborum, molestiae, rerum, dolores eveniet"
+		},
+		{
+			"comment": "quae est fugit distinctio iure odit minus non ipsum"
+		},
+		{
+			"comment": "dolorum deserunt omnis voluptates voluptatum"
+		},
+		{
+			"comment": "nventore dignissimos vel molestiae, rerum, dolore"
+		}
+	],
+	"related_posts": {
+		"ul_items": [
+			{
+				"item": "<a href=\"#\">Headline Lorem ipsum dolor sit amet</a>"
+			},
+			{
+				"item": "<a href=\"#\">Laborum, molestiae, rerum, dolores eveniet </a>"
+			},
+			{
+				"item": "<a href=\"#\">quae est fugit distinctio iure odit minus non ipsum </a>"
+			},
+			{
+				"item": "<a href=\"#\">dolorum deserunt omnis voluptates voluptatum</a>"
+			},
+			{
+				"item": "<a href=\"#\">nventore dignissimos vel molestiae, rerum, dolore</a>"
+			}
+		]
 	},
-	"footer_content": "&copy; MIT License.",
+	"widget_recent_entries": {
+		"related_posts": {
+			"ul_items": [
+				{
+					"item": "<a href=\"http://wp.local/?p=1\">Hello world!</a>"
+				}
+			]
+		}
+	},
+	"widget_recent_comments": {
+		"recentcomments": [
+			{
+				"comment": "<span class=\"comment-author-link\"><a href=\"#\" rel=\"external nofollow\" class=\"url\">A WordPress Commenter</a></span> on <a href=\"#\">Hello world!</a>"
+			}
+		]
+	},
+	"widget_archive": {
+		"ul_items": [
+			{
+				"item": "<a href=\"#\">June 1991</a>"
+			}
+		]
+	},
+	"widget_categories": {
+		"ul_items": [
+			{
+				"item_attributes": " class=\"cat-item cat-item-1\"",
+				"item": "<a href=\"#\">Uncategorized</a>"
+			}
+		]
+	},
+	"widget_meta": {
+		"ul_items": [
+			{
+				"item": "<a href=\"#\">Log in</a>"
+			},
+			{
+				"item": "<a href=\"#\">Entries <abbr title=\"Really Simple Syndication\">RSS</abbr></a>"
+			},
+			{
+				"item": "<a href=\"#\">Comments <abbr title=\"Really Simple Syndication\">RSS</abbr></a>"
+			},
+			{
+				"item": "<a href=\"#\" title=\"Powered by WordPress, state-of-the-art semantic personal publishing platform.\">WordPress.org</a>"
+			}
+		]
+	},
 	"comments": {
 		"count": "5 Comments"
 	},
 	"latest_posts_title": "Latest Posts",
-	"view_more_msg": "View more posts",
   "bp_lg_max": "-1",
   "bp_md_max": "1024",
   "bp_sm_max": "767",

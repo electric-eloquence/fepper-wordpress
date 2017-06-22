@@ -67,7 +67,7 @@ input[type="search"]::-webkit-search-decoration
 		z-index: 2
 	@media all and (min-width: $bp-med)
 		max-height: none
-		margin: 0.65em 0.5em 0 0
+		margin: 0.65rem 0 0
 .search-form > label
 	float: left
 .search-form > label:after
@@ -77,12 +77,14 @@ input[type="search"]::-webkit-search-decoration
 	right: 1em
 .search-field
 	width: 11.5em
-	height: 36px
+input
+	height: 4rem
+	@media all and (max-width: $bp-md-max)
+		height: 3.7rem
 input[type="submit"].search-submit
 	border-left: 0
 	color: transparent
 	font-size: 0.85em
-	height: 36px
 	padding-right: 0
 	padding-left: 0
 	position: relative
