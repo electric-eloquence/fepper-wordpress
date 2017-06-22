@@ -1,0 +1,15 @@
+{
+	"new_install?": true,
+	"latest_posts_title": "Latest Post",
+	"latest_posts": [
+		{
+			"url": "#",
+			"headline": {
+				"short": "Hello world!"
+			},
+			"excerpt": {
+				"medium": "<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>"
+			}
+		}
+	]
+}

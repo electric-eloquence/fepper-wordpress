@@ -1,6 +1,6 @@
 <div class="page" id="page">
 	<div role="main">
-		<h1 class="section-title">{{ page_title }}</h1>
+		<h1 class="section-title">{{{ page_title }}}</h1>
 		<div class="l-two-col">
 			<div class="l-main">
 				<section class="section latest-posts">
@@ -14,10 +14,10 @@
 					</ul>
 				</section>
 				{{{ pagination_label }}}
-				{{> compounds-pagination }}
+				{{> components-pagination }}
 			</div><!--end l-main-->
 			<div class="l-sidebar">
-				{{> 02-components/03-sections/00-recent-comments }}
+				{{> 02-components/01-sections/00-recent-comments }}
 			</div><!--end l-sidebar-->
 		</div><!--end two-col-->
 	</div><!--End role=main-->

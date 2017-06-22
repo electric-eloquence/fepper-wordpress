@@ -198,7 +198,7 @@ figure {
 .header,
 [role="main"],
 .footer .footer-content {
-	max-width: 115.2rem;
+	max-width: 1152px;
 	margin: 0 auto;
 	padding: 0.8rem;
 }
@@ -314,21 +314,22 @@ ul {
 .post-list li {
 	margin-bottom: 1.6rem;
 }
-.text a {
-	text-decoration: underline;
-}
-.text ul {
+.text ul,
+ul.text {
 	list-style: disc;
 	margin: 0 0 1.6rem 1.2em;
 }
-.text ul ul {
+.text ul ul,
+ul.text ul {
 	margin-bottom: 0;
 }
-.text ol {
+.text ol,
+ol.text {
 	list-style: decimal;
 	margin: 0 0 1.6rem 1.2em;
 }
-.text ol ol {
+.text ol ol,
+ol.text ol {
 	margin-bottom: 0;
 }
 img,
@@ -340,14 +341,14 @@ object {
 }
 .logo {
 	float: left;
-	margin: 0.65rem 1.5rem 0.65rem 0.65rem;
+	margin: 0.65rem 1.5rem 0.65rem 0;
 }
 .logo img {
 	height: 3.7rem;
 }
 @media all and (min-width: 768px) {
 	.logo img {
-		height: 4.2rem;
+		height: 4rem;
 	}
 }
 .byline {
@@ -622,7 +623,7 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (min-width: 768px) {
 	.search-form {
 		max-height: none;
-		margin: 0.65em 0.5em 0 0;
+		margin: 0.65rem 0 0;
 	}
 }
 .search-form > label {
@@ -636,13 +637,19 @@ input[type="search"]::-webkit-search-decoration {
 }
 .search-field {
 	width: 11.5em;
-	height: 36px;
+}
+input {
+	height: 4rem;
+}
+@media all and (max-width: 1024px) {
+	input {
+		height: 3.7rem;
+	}
 }
 input[type="submit"].search-submit {
 	border-left: 0;
 	color: transparent;
 	font-size: 0.85em;
-	height: 36px;
 	padding-right: 0;
 	padding-left: 0;
 	position: relative;
@@ -651,6 +658,156 @@ input[type="submit"].search-submit {
 }
 input[type="submit"].search-submit:hover {
 	background: rgba(0,0,0,0.3);
+}
+.intro {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+.section-title {
+	margin-bottom: 0.8rem;
+}
+#widget-area {
+	background: url("../../_assets/src/landscape-16x9-mountains.jpg") center no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+#widget-area aside {
+	padding-left: 0.8rem;
+}
+#widget-area aside:nth-child(2) {
+	clear: both;
+	padding-top: 1.6rem;
+}
+#widget-area aside:last-child {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 1.6rem;
+}
+#widget-area aside:first-child {
+	border-bottom: 0;
+	float: right;
+	padding-bottom: 0;
+}
+#widget-area ul li {
+	float: left;
+}
+#widget-area ul li:last-child {
+	float: none;
+}
+#widget-area ul li a {
+	color: #fff;
+	padding: 0.25em 3.2rem;
+}
+#widget-area ul li a:first-child {
+	padding-left: 0;
+}
+.l-sidebar .widgettitle {
+	border-bottom: 1px solid #ddd;
+	padding: 0 0 0.5em;
+}
+*:not(#widget-area) > .widget_recent_entries > ul > li,
+*:not(#widget-area) > .widget_recent_comments > ul > li {
+	border-bottom: 1px solid #ddd;
+	padding: 0.4rem 0;
+}
+.comments {
+	border-top: 1px solid #ddd;
+	margin-top: 2em;
+}
+.comments .section-title {
+	margin: 0.625em 0 0;
+}
+.comments .comment {
+	min-height: 9em;
+	margin-bottom: 0.5em;
+	padding-top: 0.75em;
+}
+.comments li.comment:last-of-type > .comment-body {
+	border-bottom: 1px solid #ddd;
+}
+.comments .comment-body {
+	padding-bottom: 0.5em;
+	position: relative;
+}
+.comments .comment-meta {
+	float: left;
+	min-height: 9em;
+	width: 12em;
+}
+.comments .comment-meta img {
+	display: block;
+	border: 1px solid #eee;
+	margin-bottom: 0.5em;
+	width: 6.25em;
+}
+.comments .comment-meta .fn,
+.comments .comment-meta .comment-author span,
+.comments .comment-meta .comment-metadata {
+	font-size: 0.75em;
+	line-height: 1;
+}
+.comments .comment-meta .fn,
+.comments .comment-meta .comment-metadata {
+	margin-left: 2px;
+}
+.comments .comment-meta + .comment-content {
+	margin-left: 12em;
+	width: calc(100% - 12em);
+}
+.comments .comment-meta + .comment-content p {
+	margin-bottom: 0;
+}
+.comments .comment-meta + .comment-content + .reply {
+	margin: 0.25em 0 0 12em;
+}
+.comments .comment-meta + .comment-content + .reply::before {
+	content: "•";
+	margin-left: 0.25em;
+}
+.comments .comment-meta + .comment-content + .reply a {
+	padding-left: 0.75em;
+}
+.comments .children {
+	margin-left: 0.75em;
+}
+.comments .children .comment-body {
+	border-left: 1px solid #ddd;
+}
+.comments .comment-respond {
+	padding-top: 1em;
+}
+@media all and (max-width: 767px) {
+	.comments .comment-respond {
+		padding-bottom: 0.25em;
+	}
+}
+@media all and (max-width: 480px) {
+	.comments .comment-body {
+		padding-bottom: 0;
+	}
+	.comments .comment-meta {
+		float: none;
+		margin-bottom: 0.25em;
+		min-height: 0;
+		width: auto;
+	}
+	.comments .comment-meta > div {
+		display: inline-block;
+	}
+	.comments .comment-meta .comment-author img {
+		display: none;
+	}
+	.comments .comment-meta .fn,
+	.comments .comment-meta .comment-metadata {
+		margin-left: 0;
+	}
+	.comments .comment-meta + .comment-content,
+	.comments .comment-meta + .comment-content + .reply {
+		margin-left: 0;
+		width: auto;
+	}
+	.comments .children .comment-body > * {
+		margin-left: 2px;
+	}
 }
 .nav {
 	clear: both;
@@ -775,160 +932,26 @@ input[type="submit"].search-submit:hover {
 		justify-content: flex-start;
 	}
 }
-.intro {
-	font-size: 1.1em;
-	font-weight: bold;
-}
-.comments {
-	border-top: 1px solid #ddd;
-	margin-top: 2em;
-}
-.comments .section-title {
-	margin: 0.625em 0 0;
-}
-.comments .comment {
-	min-height: 9em;
-	margin-bottom: 0.5em;
-	padding-top: 0.75em;
-}
-.comments li.comment:last-of-type > .comment-body {
-	border-bottom: 1px solid #ddd;
-}
-.comments .comment-body {
-	padding-bottom: 0.5em;
-	position: relative;
-}
-.comments .comment-meta {
-	float: left;
-	min-height: 9em;
-	width: 12em;
-}
-.comments .comment-meta img {
-	display: block;
-	border: 1px solid #eee;
-	margin-bottom: 0.5em;
-	width: 6.25em;
-}
-.comments .comment-meta .fn,
-.comments .comment-meta .comment-author span,
-.comments .comment-meta .comment-metadata {
-	font-size: 0.75em;
-	line-height: 1;
-}
-.comments .comment-meta .fn,
-.comments .comment-meta .comment-metadata {
-	margin-left: 2px;
-}
-.comments .comment-meta + .comment-content {
-	margin-left: 12em;
-	width: calc(100% - 12em);
-}
-.comments .comment-meta + .comment-content p {
-	margin-bottom: 0;
-}
-.comments .comment-meta + .comment-content + .reply {
-	margin: 0.25em 0 0 12em;
-}
-.comments .comment-meta + .comment-content + .reply::before {
-	content: "•";
-	margin-left: 0.25em;
-}
-.comments .comment-meta + .comment-content + .reply a {
-	padding-left: 0.75em;
-}
-.comments .children {
-	margin-left: 0.75em;
-}
-.comments .children .comment-body {
-	border-left: 1px solid #ddd;
-}
-.comments .comment-respond {
-	padding-top: 1em;
-}
-@media all and (max-width: 767px) {
-	.comments .comment-respond {
-		padding-bottom: 0.25em;
-	}
-}
-@media all and (max-width: 480px) {
-	.comments .comment-body {
-		padding-bottom: 0;
-	}
-	.comments .comment-meta {
-		float: none;
-		margin-bottom: 0.25em;
-		min-height: 0;
-		width: auto;
-	}
-	.comments .comment-meta > div {
-		display: inline-block;
-	}
-	.comments .comment-meta .comment-author img {
-		display: none;
-	}
-	.comments .comment-meta .fn,
-	.comments .comment-meta .comment-metadata {
-		margin-left: 0;
-	}
-	.comments .comment-meta + .comment-content,
-	.comments .comment-meta + .comment-content + .reply {
-		margin-left: 0;
-		width: auto;
-	}
-	.comments .children .comment-body > * {
-		margin-left: 2px;
-	}
-}
-.section-title {
-	margin-bottom: 0.8rem;
-}
-#widget-area {
-	background: url("../../_assets/src/landscape-16x9-mountains.jpg") center no-repeat;
-	background-size: cover;
-	color: #fff;
-}
-#widget-area aside {
-	padding-left: 0.8rem;
-}
-#widget-area aside:nth-child(2) {
-	clear: both;
-	padding-top: 1.6rem;
-}
-#widget-area aside:last-child {
-	border-bottom: 1px solid #eee;
-	padding-bottom: 1.6rem;
-}
-#widget-area aside:first-child {
-	border-bottom: 0;
-	float: right;
-	padding-bottom: 0;
-}
-#widget-area ul li {
-	float: left;
-}
-#widget-area ul li:last-child {
-	float: none;
-}
-#widget-area ul li a {
-	color: #fff;
-	padding: 0.25em 3.2rem;
-}
-#widget-area ul li a:first-child {
-	padding-left: 0;
-}
-.widget-title {
-	border-bottom: 1px solid #ddd;
-	padding: 0 0 0.5em;
-}
-*:not(#widget-area) > .widget_recent_entries > ul > li,
-*:not(#widget-area) > .widget_recent_comments > ul > li {
-	border-bottom: 1px solid #ddd;
-	padding: 0.4rem 0;
-}
 .header {
 	background: #fff;
 	border-bottom: 1px solid #ddd;
 	padding: 0;
+}
+@media all and (max-width: 767px) {
+	.header {
+		margin: 0 0 0 0.8rem;
+		width: calc(100% - 0.8rem);
+	}
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	.header {
+		width: calc(100% - 1.6rem);
+	}
+}
+@media all and (min-width: 1152px) {
+	.header {
+		width: calc(1152px - 1.6rem);
+	}
 }
 .nav-toggle {
 	background: rgba(255,255,255,0.9);

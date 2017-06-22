@@ -3,6 +3,13 @@
 	border-bottom: 1px solid $gray-light-3
 	padding: 0
 	@extend .lc
+	@media all and (max-width: $bp-sm-max)
+		margin: 0 0 0 $space-half
+		width: "calc(100% - %s)" % $space-half
+	@media all and (min-width: $bp-med) and (max-width: $bp-md-max)
+		width: "calc(100% - %s)" % $space
+	@media all and (min-width: $max-width)
+		width: "calc(%s - %s)" % ($max-width $space)
 .nav-toggle
 	background: $white-translucent
 	float: right
