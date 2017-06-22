@@ -10,14 +10,14 @@
 			{{/ subs }}
 		</section>
 
-		{{# homepage }}
+		{{# homepage? }}
 			<hr />
-		{{/ homepage }}
+		{{/ homepage? }}
 
 		<div class="l-two-col">
 			<div class="l-main">
 				<section class="section latest-posts">
-					<h2 class="section-title">{{ latest_posts_title }}</h2>
+					<h2 class="section-title">{{{ latest_posts_title }}}</h2>
 					<ul class="post-list">
 						{{# latest_posts }}
 							<li>
@@ -26,13 +26,15 @@
 						{{/ latest_posts }}
 					</ul>
 					{{# view_more_msg }}
-						<a href="{{ view_more_href }}" class="text-btn">{{ view_more_msg }}</a>
+						<a href="{{ view_more_href }}" class="text-btn">{{{ view_more_msg }}}</a>
 					{{/ view_more_msg }}
 				</section>
 			</div><!--end .l-main-->
 
 			<div class="l-sidebar">
-				{{> 02-components/03-sections/00-recent-comments }}
+				{{# demo_site? }}
+					{{> 02-components/01-sections/00-recent-comments }}
+				{{/ demo_site? }}
 			</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->
 	</div><!--End role=main-->

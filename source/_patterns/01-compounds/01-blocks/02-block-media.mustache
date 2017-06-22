@@ -2,7 +2,9 @@
 	<a href="{{ url }}" class="b-inner cf">
 		<h2 class="headline">{{ headline.short }}</h2>
 		<div class="b-thumb">
-			{{> elements-square }}
+			{{# demo_site? }}
+				{{> elements-square }}
+			{{/ demo_site? }}
 		</div>
 		<div class="b-text">
 			{{{ excerpt.medium }}}

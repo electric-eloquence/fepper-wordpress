@@ -66,7 +66,7 @@
 		<h2 class="headline"><?php the_title(); ?></h2>
 		<div class="b-thumb">
 			<?php echo get_the_post_thumbnail( $post, 'medium' ); ?>
-		</div>
+			</div>
 		<div class="b-text">
 			<?php the_excerpt(); ?>
 		</div>
@@ -86,7 +86,7 @@
 
 			<div class="l-sidebar">
 				<?php dynamic_sidebar( 'sidebar-1' ); ?>
-			</div><!--end .l-sidebar-->
+				</div><!--end .l-sidebar-->
 		</div><!--end .l-two-col-->
 	</div><!--End role=main-->
 </div>

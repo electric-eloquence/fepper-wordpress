@@ -1,35 +1,35 @@
-"# hero": |2
+'# hero': |2
   <?php
   				query_posts( 'category_name=hero' );
   				global $wp_query;
   				$post_count_hero = $wp_query->post_count;
   				while ( have_posts() ) : the_post();
   			?>
-"url": |2
+'url': |2
   <?php the_permalink(); ?>
-"> elements-landscape-16x9": |2
+'> elements-landscape-16x9': |2
   <?php echo get_the_post_thumbnail( $post, 'full' ); ?>
-"headline.medium": |2
+'headline.medium': |2
   <?php the_title(); ?>
-"/ hero": |2
+'/ hero': |2
   <?php endwhile; ?>
-"# subs": |2
+'# subs': |2
   <?php
   				query_posts( 'category_name=sub' );
   				$post_count_sub = $wp_query->post_count;
   				while ( have_posts() ) : the_post();
   			?>
-"> elements-landscape-4x3": |2
+'> elements-landscape-4x3': |2
   <?php echo get_the_post_thumbnail( $post, 'full' ); ?>
-"headline.short": |2
+'headline.short': |2
   <?php the_title(); ?>
-"/ subs": |2
+'/ subs': |2
   <?php endwhile; ?>
-"# homepage": |2
+'# homepage\?': |2
   <?php if ( $post_count_hero || $post_count_sub ) : ?>
-"/ homepage": |2
+'/ homepage\?': |2
   <?php endif; ?>
-"latest_posts_title": |2
+'latest_posts_title': |2
   <?php
   						query_posts( 'category_name=uncategorized' );
   						$post_count_uncat = $wp_query->post_count;
@@ -37,28 +37,28 @@
   						$post_counter = 0;
   						echo _n('Latest Post', 'Latest Posts', $post_count_uncat, 'fepper');
   					?>
-"# latest_posts": |2
+'# latest_posts': |2
   <?php
   							while ( have_posts() ) : the_post();
   								if ( $post_counter >= $post_count_uncat_max ) {
   									break;
   								}
   						?>
-"> elements-square": |2
+'> elements-square': |2
   <?php echo get_the_post_thumbnail( $post, 'medium' ); ?>
-"excerpt.medium": |2
+'excerpt.medium': |2
   <?php the_excerpt(); ?>
-"/ latest_posts": |2
+'/ latest_posts': |2
   <?php $post_counter++; endwhile; ?>
-"# view_more_msg": |2
+'# view_more_msg': |2
   <?php
   						if ( get_page_by_path( blog ) && $post_count_uncat > $post_count_uncat_max ) :
   					?>
-"view_more_href": |2
+'view_more_href': |2
   <?php echo esc_url( home_url( 'blog' ) ); ?>
-"view_more_msg": |2
+'view_more_msg': |2
   <?php _e('View more posts', 'fepper'); ?>
-"/ view_more_msg": |2
+'/ view_more_msg': |2
   <?php endif; ?>
-"> 02-components/03-sections/00-recent-comments": |2
+'> 02-components/01-sections/00-recent-comments': |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>

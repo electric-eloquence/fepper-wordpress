@@ -5,16 +5,15 @@ ol, ul
 .post-list
 	li
 		margin-bottom: $space
-.text
-	a
-		text-decoration: underline
+.text ul,
+ul.text
+	list-style: disc
+	margin: 0 0 $space 1.2em
 	ul
-		list-style: disc
-		margin: 0 0 $space 1.2em
-		ul
-			margin-bottom: 0
+		margin-bottom: 0
+.text ol,
+ol.text
+	list-style: decimal
+	margin: 0 0 $space 1.2em
 	ol
-		list-style: decimal
-		margin: 0 0 $space 1.2em
-		ol
-			margin-bottom: 0
+		margin-bottom: 0

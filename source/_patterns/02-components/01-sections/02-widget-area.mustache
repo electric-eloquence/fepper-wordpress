@@ -1,0 +1,33 @@
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<div id="widget-area" class="widget-area" role="complementary">
+	{{# new_install? }}
+		{{> 01-compounds/02-forms/00-search }}
+		{{# widget_recent_entries }}
+			{{> 02-components/01-sections/01-related-posts }}
+		{{/ widget_recent_entries }}
+		{{# widget_recent_comments }}
+			{{> 02-components/01-sections/00-recent-comments }}
+		{{/ widget_recent_comments }}
+		<aside id="archives-2" class="widget widget_archive">
+			<h2 class="widgettitle">Archives</h2>
+			{{# widget_archive }}
+				{{> 00-elements/01-lists/00-unordered }}
+			{{/ widget_archive }}
+		</aside>
+		<aside id="categories-2" class="widget widget_categories">
+			<h2 class="widgettitle">Categories</h2>
+			{{# widget_categories }}
+				{{> 00-elements/01-lists/00-unordered }}
+			{{/ widget_categories }}
+		</aside>
+		<aside id="meta-2" class="widget widget_meta">
+			<h2 class="widgettitle">Meta</h2>
+			{{# widget_meta }}
+				{{> 00-elements/01-lists/00-unordered }}
+			{{/ widget_meta }}
+		</aside>
+	{{/ new_install? }}
+	{{^ new_install? }}
+		{{> 01-compounds/02-forms/00-search }}
+	{{/ new_install? }}
+</div>
