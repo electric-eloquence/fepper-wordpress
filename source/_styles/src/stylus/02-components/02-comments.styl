@@ -6,9 +6,9 @@ $meta-width = 12em
 		margin: 0.625em 0 0
 	.comment
 		min-height: 9em
-		margin-bottom: 0.5em
-		padding-top: 0.75em
-	li.comment:last-of-type > .comment-body
+		margin-top: 0.75em
+		padding-bottom: 0.5em
+	li.comment:last-of-type
 		border-bottom: 1px solid $gray-light-3
 	.comment-body
 		padding-bottom: 0.5em
@@ -52,18 +52,30 @@ $meta-width = 12em
 		@media all and (max-width: $bp-sm-max)
 			padding-bottom: 0.25em
 	@media all and (max-width: $bp-xs-max)
+		.comment
+			margin: 0
+			padding: 0
+		.comment:last-of-type
+			padding-bottom: 0.5em
 		.comment-body
 			padding-bottom: 0
 		.comment-meta
 			float: none
+			min-height: 6.25em
 			margin-bottom: 0.25em
-			min-height: 0
-			width: auto
+			position: relative
+			width: 100%
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
 			> div
 				display: inline-block
 			.comment-author
 				img
-					display: none
+					margin-bottom: 0
+					position: absolute
+					top: 0
+					right: 0
 			.fn,
 			.comment-metadata
 				margin-left: 0
@@ -71,6 +83,8 @@ $meta-width = 12em
 		.comment-meta + .comment-content + .reply
 			margin-left: 0
 			width: auto
+		.comment-metadata
+			margin-bottom: 0.5em
 		.children
 			.comment-body
 				> *
