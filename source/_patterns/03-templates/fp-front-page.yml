@@ -52,7 +52,7 @@
   <?php $post_counter++; endwhile; ?>
 '# view_more_msg': |2
   <?php
-  						if ( get_page_by_path( blog ) && $post_count_uncat > $post_count_uncat_max ) :
+  						if ( get_page_by_path( 'blog' ) && $post_count_uncat > $post_count_uncat_max ) :
   					?>
 'view_more_href': |2
   <?php echo esc_url( home_url( 'blog' ) ); ?>

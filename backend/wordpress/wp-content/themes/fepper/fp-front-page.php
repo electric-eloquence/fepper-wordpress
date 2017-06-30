@@ -77,7 +77,7 @@
 						<?php $post_counter++; endwhile; ?>
 					</ul>
 					<?php
-						if ( get_page_by_path( blog ) && $post_count_uncat > $post_count_uncat_max ) :
+						if ( get_page_by_path( 'blog' ) && $post_count_uncat > $post_count_uncat_max ) :
 					?>
 						<a href="<?php echo esc_url( home_url( 'blog' ) ); ?>" class="text-btn"><?php _e('View more posts', 'fepper'); ?></a>
 					<?php endif; ?>
