@@ -37,17 +37,16 @@
 					padding-left: $pad-half
 			> li > .children
 				position: absolute
+		> ul > .page_item_has_children .page_item_has_children li
+			padding-left: $space-half
 		.page_item_has_children
 			> a::after
 				color: $gray
 				content: "▼"
 				font-size: $font-size-sm
-				margin-left: $space-half
 			&:hover
 				.children
 					max-height: 100%
-			.page_item_has_children
-				padding-left: 1rem
 		.children
 			max-height: 0
 			overflow: hidden
