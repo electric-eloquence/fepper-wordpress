@@ -812,7 +812,7 @@ input[type="submit"].search-submit:hover {
 	}
 	.comments .comment-meta {
 		float: none;
-		min-height: 6.25em;
+		min-height: 8.75rem;
 		margin-bottom: 0.25em;
 		position: relative;
 		width: 100%;
@@ -821,7 +821,7 @@ input[type="submit"].search-submit:hover {
 		justify-content: flex-end;
 	}
 	.comments .comment-meta > div {
-		display: inline-block;
+		width: calc(100% - 8.75rem);
 	}
 	.comments .comment-meta .comment-author img {
 		margin-bottom: 0;
