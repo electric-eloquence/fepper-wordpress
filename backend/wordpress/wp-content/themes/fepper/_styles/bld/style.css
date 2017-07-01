@@ -304,7 +304,6 @@ p a {
 	text-decoration: underline;
 }
 blockquote {
-	font-style: italic;
 	border-left: 1px solid #808080;
 	color: #808080;
 	padding-left: 1.6rem;
@@ -821,7 +820,7 @@ input[type="submit"].search-submit:hover {
 		justify-content: flex-end;
 	}
 	.comments .comment-meta > div {
-		width: calc(100% - 8.75rem);
+		width: calc(100% - 8.75rem - 0.2rem);
 	}
 	.comments .comment-meta .comment-author img {
 		margin-bottom: 0;
