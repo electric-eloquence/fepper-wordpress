@@ -40,6 +40,16 @@ function fepper_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
+	 * Enable support for custom logo.
+	 */
+	add_theme_support( 'custom-logo', array(
+		'width'       => 140,
+		'height'      => 40,
+		'flex-width' => true,
+		'flex-height' => true,
+	) );
+
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
@@ -47,9 +57,10 @@ function fepper_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 825, 510, true );
 
-	// This theme uses wp_nav_menu() in two locations.
+	// This theme uses wp_nav_menu() in three locations.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu',      'fepper' ),
+		'footer'  => __( 'Footer Menu',       'fepper' ),
 		'social'  => __( 'Social Links Menu', 'fepper' ),
 	) );
 

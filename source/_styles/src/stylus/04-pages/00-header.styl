@@ -1,17 +1,36 @@
 .header
-	background: $white
+	background-color: $white
 	border-bottom: 1px solid $gray-light-3
 	padding: 0
 	@extend .lc
+	a
+		&:hover, &:focus
+			color: $gray
 	@media all and (max-width: $bp-sm-max)
 		margin: 0 0 0 $space-half
 		width: "calc(100% - %s)" % $space-half
-	@media all and (min-width: $bp-med) and (max-width: $bp-md-max)
+	@media all and (min-width: $bp-med) and (max-width: $max-width)
 		width: "calc(100% - %s)" % $space
 	@media all and (min-width: $max-width)
 		width: "calc(%s - %s)" % ($max-width $space)
+.header-image
+	margin: 0 0 $space 0
+	max-width: none
+	width: 100%
+	.site-branding
+		padding-left: $space-half
+	@media all and (min-width: $max-width)
+		> *:not(.site-branding)
+			padding-right: "calc((100% - %s) / 2)" % $max-width
+			padding-left: "calc((100% - %s) / 2)" % $max-width
+		.site-branding
+			padding-left: "calc((100% - %s + %s) / 2)" % ($max-width $space)
+.site-branding
+	float: left
+	margin-top: 0.65rem
+	a
+		display: block
 .nav-toggle
-	background: $white-translucent
 	float: right
 	display: block
 	padding: 1.5rem
@@ -20,14 +39,11 @@
 	border-left: 1px solid $gray-light-3
 	width: 5.1rem
 	height: 5rem
-	&:focus
-		color: $gray-dark
-	&:hover
-		color: $gray
 	@media all and (min-width: $bp-med)
 		display: none
+	.header &
+		color: $gray-dark
+	.header-image &
+		border-bottom: 1px solid $gray-light-3
 .toggle-open
 	max-height: 100% !important
-.article-header
-	h1
-		font-size: 2.5em

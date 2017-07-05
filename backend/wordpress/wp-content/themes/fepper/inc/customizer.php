@@ -4,8 +4,8 @@
  */
 function fepper_custom_header_and_background() {
 	$color_scheme             = fepper_get_color_scheme();
-	$default_background_color = trim( $color_scheme[0], '#' );
-	$default_text_color       = trim( $color_scheme[3], '#' );
+	$default_background_color = trim( $color_scheme[1], '#' );
+	$default_text_color       = trim( $color_scheme[1], '#' );
 
 	/**
 	 * Filter the arguments used when adding 'custom-background' support.
@@ -37,7 +37,7 @@ function fepper_custom_header_and_background() {
 	add_theme_support( 'custom-header', apply_filters( 'fepper_custom_header_args', array(
 		'default-text-color'     => $default_text_color,
 		'width'                  => 1200,
-		'height'                 => 280,
+		'height'                 => 675,
 		'flex-height'            => true
 	) ) );
 }

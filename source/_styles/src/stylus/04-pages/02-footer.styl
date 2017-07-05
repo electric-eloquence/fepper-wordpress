@@ -4,18 +4,45 @@
 	background: $gray-dark-2
 	color: $white
 	line-height: 1.2
-	height: $footer-height
-	padding-top: $pad-half
-	position: absolute
-	bottom: 0
-	left: 0
-	width: 100%
 	a
-		color: $gray-light
+		color: $white
+		&:hover, &:focus
+			color: $gray
 	p
 		margin-bottom: 0
 	.footer-content
+		padding-top: $space-half
 		@extend .lc
-		@media all and (min-width: $bp-med)
-			display: flex
-			justify-content: flex-end
+		div[class^="menu-"]
+			font-size: 0.75em
+	@media all and (min-width: $bp-med)
+		.footer-content
+			padding-top: $space
+			> div
+				display: inline-block
+				margin-right: $space-double
+				margin-bottom: $space-quarter
+				vertical-align: -0.8rem
+			> div:first-child
+				vertical-align: baseline
+			> div:last-child
+				margin-right: 0
+		div[class^="menu-"],
+		ul,
+		.page_item_has_children,
+		.menu-item-has-children
+			@extend .cf
+		ul,
+		li,
+		.page_item_has_children > a,
+		.menu-item-has-children > a
+			float: left
+		li
+			margin-right: $space
+		li:last-child
+			margin-right: 0
+		.children,
+		.sub-menu
+			margin-left: $space
+			> li:last-child
+				margin-right: 0

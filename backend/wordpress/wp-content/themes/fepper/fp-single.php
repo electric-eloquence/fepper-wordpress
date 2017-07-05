@@ -1,6 +1,11 @@
 <div class="page" id="page">
 	<div role="main">
-		<div class="l-two-col">
+		<?php if ( ! is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div class="l-one-col">
+		<?php endif; ?>
+		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div class="l-two-col">
+		<?php endif; ?>
 			<div class="l-main">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<article class="article">
@@ -18,9 +23,11 @@
 				<?php endwhile; ?>
 			</div><!--end l-main-->
 
-			<div class="l-sidebar">
-				<?php dynamic_sidebar( 'sidebar-2' ); ?>
-				</div><!--end l-sidebar-->
-		</div><!--end l-two-col-->
+			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+				<div class="l-sidebar">
+					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+					</div><!--end l-sidebar-->
+			<?php endif; ?>
+		</div>
 	</div><!--End role=main-->
 </div>

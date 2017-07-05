@@ -1,58 +1,96 @@
 '# hero': |2
   <?php
-  				query_posts( 'category_name=hero' );
-  				global $wp_query;
-  				$post_count_hero = $wp_query->post_count;
-  				while ( have_posts() ) : the_post();
+  				global $post;
+  				$args = array(
+  					'category_name'  => 'hero',
+  					'post_type'      => 'post',
+  					'post_status'    => 'publish',
+  					'posts_per_page' => 1,
+  				);
+  				$posts_hero = get_posts( $args );
+  				foreach ( $posts_hero as $post ) :
+  					setup_postdata( $post );
   			?>
 'url': |2
   <?php the_permalink(); ?>
+'# homepage\?': |2
+  <?php
+  							$post_thumbnail = get_the_post_thumbnail( $post, 'full' );
+  							if ( $post_thumbnail ) :
+  						?>
 '> elements-landscape-16x9': |2
-  <?php echo get_the_post_thumbnail( $post, 'full' ); ?>
+  <?php echo $post_thumbnail; ?>
+'/ homepage\?': |2
+  <?php endif; ?>
 'headline.medium': |2
   <?php the_title(); ?>
 '/ hero': |2
-  <?php endwhile; ?>
+  <?php endforeach; ?>
 '# subs': |2
   <?php
-  				query_posts( 'category_name=sub' );
-  				$post_count_sub = $wp_query->post_count;
-  				while ( have_posts() ) : the_post();
+  				$args = array(
+  					'category_name'  => 'sub',
+  					'post_type'      => 'post',
+  					'post_status'    => 'publish',
+  					'posts_per_page' => 3,
+  				);
+  				$posts_sub = get_posts( $args );
+  				foreach ( $posts_sub as $post ) :
+  					setup_postdata( $post );
   			?>
 '> elements-landscape-4x3': |2
-  <?php echo get_the_post_thumbnail( $post, 'full' ); ?>
+  <?php echo $post_thumbnail; ?>
 'headline.short': |2
   <?php the_title(); ?>
 '/ subs': |2
-  <?php endwhile; ?>
-'# homepage\?': |2
-  <?php if ( $post_count_hero || $post_count_sub ) : ?>
-'/ homepage\?': |2
+  <?php endforeach; ?>
+'\^ sidebar_1\?': |2
+  <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
+'/ sidebar_1\?': |2
   <?php endif; ?>
+'# sidebar_1\?': |2
+  <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 'latest_posts_title': |2
   <?php
-  						query_posts( 'category_name=uncategorized' );
-  						$post_count_uncat = $wp_query->post_count;
-  						$post_count_uncat_max = 5;
-  						$post_counter = 0;
-  						echo _n('Latest Post', 'Latest Posts', $post_count_uncat, 'fepper');
+  						$posts_hoagie_count_max = 5;
+  						$posts_hoagie_counter = 0;
+  						$args = array(
+  							'category_name'  => 'uncategorized',
+  							'post_type'      => 'post',
+  							'post_status'    => 'publish',
+  							'posts_per_page' => $posts_hoagie_count_max + 1,
+  						);
+  						$posts_hoagie = get_posts( $args );
+  						$posts_hoagie_count = count( $posts_hoagie );
+  						echo _n('Latest Post', 'Latest Posts', $posts_hoagie_count, 'fepper');
   					?>
 '# latest_posts': |2
   <?php
-  							while ( have_posts() ) : the_post();
-  								if ( $post_counter >= $post_count_uncat_max ) {
+  							foreach ( $posts_hoagie as $post ) :
+  								if ( $posts_hoagie_counter >= $posts_hoagie_count_max ) {
   									break;
   								}
+  								setup_postdata( $post );
   						?>
+'# demo_site\?': |2
+  <?php
+  											$post_thumbnail = get_the_post_thumbnail( $post, 'medium' );
+  											if ( $post_thumbnail ) :
+  										?>
 '> elements-square': |2
-  <?php echo get_the_post_thumbnail( $post, 'medium' ); ?>
+  <?php echo $post_thumbnail; ?>
+'/ demo_site\?': |2
+  <?php endif; ?>
 'excerpt.medium': |2
   <?php the_excerpt(); ?>
 '/ latest_posts': |2
-  <?php $post_counter++; endwhile; ?>
+  <?php
+  							$posts_hoagie_counter++;
+  							endforeach;
+  						?>
 '# view_more_msg': |2
   <?php
-  						if ( get_page_by_path( 'blog' ) && $post_count_uncat > $post_count_uncat_max ) :
+  						if ( get_page_by_path( 'blog' ) && $posts_hoagie_count > $posts_hoagie_count_max ) :
   					?>
 'view_more_href': |2
   <?php echo esc_url( home_url( 'blog' ) ); ?>
