@@ -1,6 +1,10 @@
 /* Two Column Layout */
 .l-two-col
 	@extend .cf
+	body.home &
+		border-top: 2px solid $gray-light-2
+		margin-top: $space-half
+		padding-top: $space-double
 	@media all and (max-width: $bp-sm-max)
 		.l-sidebar
 			clear: both
@@ -8,14 +12,14 @@
 		.l-main
 			float: left
 			width: 70%
-			padding-right: $pad
+			padding-right: $space
 		.l-sidebar
 			float: left
 			width: 30%
-			padding: 0 0 0 $pad
+			padding: 0 0 0 $space
 /* Main */
 [role="main"]
-	padding: $pad-half
+	padding: $space-half
 	overflow: hidden
 	@extend .lc
 	@extend .cf
@@ -24,4 +28,4 @@
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-	padding-bottom: $pad-and-half
+	padding-bottom: $space-and-half

@@ -3,6 +3,12 @@
   			$page_for_posts_id = get_option( 'page_for_posts' );
   			echo get_post_field( 'post_content', $page_for_posts_id );
   		?>
+'\^ sidebar_1\?': |2
+  <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
+'/ sidebar_1\?': |2
+  <?php endif; ?>
+'# sidebar_1\?': |2
+  <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 '# latest_posts': |2
   <?php
   							query_posts( 'category_name=uncategorized&posts_per_page=20&paged='.get_query_var( 'paged' ) );

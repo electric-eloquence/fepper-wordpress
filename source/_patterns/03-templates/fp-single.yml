@@ -1,3 +1,9 @@
+'\^ sidebar_2\?': |2
+  <?php if ( ! is_active_sidebar( 'sidebar-2' ) ) : ?>
+'/ sidebar_2\?': |2
+  <?php endif; ?>
+'# sidebar_2\?': |2
+  <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
 '# article': |2
   <?php while ( have_posts() ) : the_post(); ?>
 'article_title': |2

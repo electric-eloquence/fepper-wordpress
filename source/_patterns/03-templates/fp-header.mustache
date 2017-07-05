@@ -1,6 +1,11 @@
 <!-- Begin .header -->
-<header class="header cf" role="banner">
-	{{> 01-compounds/01-blocks/04-logo.mustache }}
+<style>
+	{{{ header_styles }}}
+</style>
+<header class="header cf {{ header_classes }}" role="banner">
+	<div class="site-branding">
+		{{> 01-compounds/01-blocks/04-logo }}
+	</div>
 	<a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
 	<a href="#" class="nav-toggle nav-toggle-menu icon-menu"></a>
 	{{> 02-components/01-sections/02-widget-area }}
