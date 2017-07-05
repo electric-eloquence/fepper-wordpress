@@ -16,11 +16,11 @@ button, input, select, textarea
 	margin: 0
 input, textarea
 	border: 1px solid $gray
-	padding: $pad-half 1.04rem
+	padding: $space-half 1.04rem
 input[type=text], input[type=search], input[type=url], input[type=number], textarea
 	-webkit-appearance: none
 button, input[type="submit"]
-	padding: $pad-half
+	padding: $space-half
 	background: $gray-dark
 	border: 1px solid $gray
 	color: $white
@@ -43,11 +43,11 @@ input[type="search"]::-webkit-search-decoration
 	color: $error
 .has-error
 	border-color: $error
-.is-valid
-	border-color: $valid
 /* Search Form */
-.widget_search
+#widget-area .widget_search
 	margin-bottom: 0
+	header:not(.header-image) &
+		padding-right: 0
 	@media all and (min-width: $bp-med)
 		height: 5.5rem
 .search-form
@@ -73,13 +73,13 @@ input[type="search"]::-webkit-search-decoration
 .search-form > label:after
 	color: $black
 	position: absolute
-	top: 0.6em
-	right: 1em
+	top: 0.7em
+	right: 1.1em
 .search-field
 	width: 11.5em
 input
 	height: 4rem
-	@media all and (max-width: $bp-md-max)
+	@media all and (max-width: $bp-sm-max)
 		height: 3.7rem
 input[type="submit"].search-submit
 	border-left: 0

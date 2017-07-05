@@ -1,6 +1,11 @@
 <div class="page" id="page">
 	<div role="main">
-		<div class="l-two-col">
+		{{^ sidebar_2? }}
+			<div class="l-one-col">
+		{{/ sidebar_2? }}
+		{{# sidebar_2? }}
+			<div class="l-two-col">
+		{{/ sidebar_2? }}
 			<div class="l-main">
 				{{# article }}
 					<article class="article">
@@ -14,10 +19,12 @@
 				{{/ article }}
 			</div><!--end l-main-->
 
-			<div class="l-sidebar">
-				{{> 02-components/01-sections/01-related-posts }}
-				{{> 02-components/01-sections/00-recent-comments }}
-			</div><!--end l-sidebar-->
-		</div><!--end l-two-col-->
+			{{# sidebar_2? }}
+				<div class="l-sidebar">
+					{{> 02-components/01-sections/01-related-posts }}
+					{{> 02-components/01-sections/00-recent-comments }}
+				</div><!--end l-sidebar-->
+			{{/ sidebar_2? }}
+		</div>
 	</div><!--End role=main-->
 </div>

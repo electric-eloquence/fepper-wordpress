@@ -13,8 +13,8 @@
 	.b-text
 		color: $white
 	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
-		width: calc(50% - 0.4rem)
-/* Hero Block */
+		width: "calc(50% - %s)" % $space-quarter
+/* Block Hero */
 .block-hero
 	margin-bottom: $space-half
 	.b-thumb
@@ -32,7 +32,7 @@
 			overflow: hidden
 		.headline
 			font-size: 1.8rem
-			padding: 0 $pad-half
+			padding: 0 $space-half
 	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
 		.b-thumb
 			padding-top: 75%
@@ -55,13 +55,14 @@
 	@media all and (min-width: $bp-med)
 		position: relative
 		.b-text
+			background: $dim
+			color: $white
+			padding: $space-and-half
+		.b-thumb + .b-text
 			position: absolute
 			bottom: 0
 			left: 0
 			width: 100%
-			background: $dim
-			color: $white
-			padding: $pad-and-half
 /* Block Sub */
 .block-sub
 	margin-bottom: $space-half
@@ -72,23 +73,24 @@
 		img
 			display: block
 	.b-text
+		background: $dim
+		color: $white
+		padding: $space-half
+	.b-thumb + .b-text
 		position: absolute
 		bottom: 0
 		left: 0
 		width: 100%
-		background: $dim
-		color: $white
-		padding: $pad-half
 	@media all and (max-width: $bp-sm-max)
 		.headline
 			font-size: 1.7rem
 	@media all and (min-width: $bp-med)
-		padding-top: $pad-half
+		padding-top: $space-half
 		width: calc(33.3333333% - 1.0666666rem)
 		.headline
 			font-size: 1.8rem
-/* Block Thumbnail with Headline */
-.block-thumb
+/* Block Hoagie */
+.block-hoagie
 	display: table
 	width: 100%
 	border-collapse: collapse
@@ -112,10 +114,10 @@
 	@media all and (min-width: $bp-small)
 		.headline
 			float: right
-			padding: 0 $pad
+			padding: 0 $space
 			width: 70%
 		.b-thumb
 			width: 30%
 		.b-text
 			width: 70%
-			padding: 0 $pad
+			padding: 0 $space

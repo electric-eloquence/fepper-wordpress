@@ -2,91 +2,131 @@
 	<div role="main">
 		<section class="hero-and-subs">
 			<?php
-				query_posts( 'category_name=hero' );
-				global $wp_query;
-				$post_count_hero = $wp_query->post_count;
-				while ( have_posts() ) : the_post();
+				global $post;
+				$args = array(
+					'category_name'  => 'hero',
+					'post_type'      => 'post',
+					'post_status'    => 'publish',
+					'posts_per_page' => 1,
+				);
+				$posts_hero = get_posts( $args );
+				foreach ( $posts_hero as $post ) :
+					setup_postdata( $post );
 			?>
 				<div class="block block-hero">
-	<a href="<?php the_permalink(); ?>" class="inner">
-		<div class="b-thumb">
-			<?php echo get_the_post_thumbnail( $post, 'full' ); ?>
-		</div>
-		<div class="b-text">
-			<h2 class="headline"><?php the_title(); ?></h2>
-		</div>
-	</a>
-</div>
+					<a href="<?php the_permalink(); ?>" class="inner">
+						<?php
+							$post_thumbnail = get_the_post_thumbnail( $post, 'full' );
+							if ( $post_thumbnail ) :
+						?>
+							<div class="b-thumb">
+								<?php echo $post_thumbnail; ?>
+							</div>
+						<?php endif; ?>
+						<div class="b-text">
+							<h2 class="headline"><?php the_title(); ?></h2>
+						</div>
+					</a>
+				</div>
 
-			<?php endwhile; ?>
+			<?php endforeach; ?>
 
 			<?php
-				query_posts( 'category_name=sub' );
-				$post_count_sub = $wp_query->post_count;
-				while ( have_posts() ) : the_post();
+				$args = array(
+					'category_name'  => 'sub',
+					'post_type'      => 'post',
+					'post_status'    => 'publish',
+					'posts_per_page' => 3,
+				);
+				$posts_sub = get_posts( $args );
+				foreach ( $posts_sub as $post ) :
+					setup_postdata( $post );
 			?>
 				<div class="block block-sub">
-	<a href="<?php the_permalink(); ?>" class="inner">
-		<div class="b-thumb">
-			<?php echo get_the_post_thumbnail( $post, 'full' ); ?>
-		</div>
-		<div class="b-text">
-			<h2 class="headline"><?php the_title(); ?></h2>
-		</div>
-	</a>
-</div>
+					<a href="<?php the_permalink(); ?>" class="inner">
+						<?php
+							$post_thumbnail = get_the_post_thumbnail( $post, 'full' );
+							if ( $post_thumbnail ) :
+						?>
+							<div class="b-thumb">
+								<?php echo $post_thumbnail; ?>
+							</div>
+						<?php endif; ?>
+						<div class="b-text">
+							<h2 class="headline"><?php the_title(); ?></h2>
+						</div>
+					</a>
+				</div>
 
-			<?php endwhile; ?>
+			<?php endforeach; ?>
 		</section>
 
-		<?php if ( $post_count_hero || $post_count_sub ) : ?>
-			<hr />
+		<?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
+			<div class="l-one-col">
 		<?php endif; ?>
-
-		<div class="l-two-col">
+		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+			<div class="l-two-col">
+		<?php endif; ?>
 			<div class="l-main">
-				<section class="section latest-posts">
+				<section class="section hoagies">
 					<h2 class="section-title"><?php
-						query_posts( 'category_name=uncategorized' );
-						$post_count_uncat = $wp_query->post_count;
-						$post_count_uncat_max = 5;
-						$post_counter = 0;
-						echo _n('Latest Post', 'Latest Posts', $post_count_uncat, 'fepper');
+						$posts_hoagie_count_max = 5;
+						$posts_hoagie_counter = 0;
+						$args = array(
+							'category_name'  => 'uncategorized',
+							'post_type'      => 'post',
+							'post_status'    => 'publish',
+							'posts_per_page' => $posts_hoagie_count_max + 1,
+						);
+						$posts_hoagie = get_posts( $args );
+						$posts_hoagie_count = count( $posts_hoagie );
+						echo _n('Latest Post', 'Latest Posts', $posts_hoagie_count, 'fepper');
 					?></h2>
 					<ul class="post-list">
 						<?php
-							while ( have_posts() ) : the_post();
-								if ( $post_counter >= $post_count_uncat_max ) {
+							foreach ( $posts_hoagie as $post ) :
+								if ( $posts_hoagie_counter >= $posts_hoagie_count_max ) {
 									break;
 								}
+								setup_postdata( $post );
 						?>
 							<li>
-								<div class="block block-thumb">
-	<a href="<?php the_permalink(); ?>" class="b-inner cf">
-		<h2 class="headline"><?php the_title(); ?></h2>
-		<div class="b-thumb">
-			<?php echo get_the_post_thumbnail( $post, 'medium' ); ?>
-			</div>
-		<div class="b-text">
-			<?php the_excerpt(); ?>
-		</div>
-	</a>
-</div>
+								<div class="block block-hoagie">
+									<a href="<?php the_permalink(); ?>" class="b-inner cf">
+										<h2 class="headline"><?php the_title(); ?></h2>
+										<?php
+											$post_thumbnail = get_the_post_thumbnail( $post, 'medium' );
+											if ( $post_thumbnail ) :
+										?>
+											<div class="b-thumb">
+												<?php echo $post_thumbnail; ?>
+											</div>
+										<?php endif; ?>
+										<div class="b-text">
+											<?php the_excerpt(); ?>
+										</div>
+									</a>
+								</div>
 
 							</li>
-						<?php $post_counter++; endwhile; ?>
+						<?php
+							$posts_hoagie_counter++;
+							endforeach;
+						?>
 					</ul>
 					<?php
-						if ( get_page_by_path( 'blog' ) && $post_count_uncat > $post_count_uncat_max ) :
+						if ( get_page_by_path( 'blog' ) && $posts_hoagie_count > $posts_hoagie_count_max ) :
 					?>
 						<a href="<?php echo esc_url( home_url( 'blog' ) ); ?>" class="text-btn"><?php _e('View more posts', 'fepper'); ?></a>
 					<?php endif; ?>
 				</section>
 			</div><!--end .l-main-->
 
-			<div class="l-sidebar">
-				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+			<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+				<div class="l-sidebar">
+					<?php dynamic_sidebar( 'sidebar-1' ); ?>
 				</div><!--end .l-sidebar-->
-		</div><!--end .l-two-col-->
+			<?php endif; ?>
+		</div>
 	</div><!--End role=main-->
 </div>

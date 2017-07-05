@@ -1,11 +1,14 @@
-.nav
+.nav,
+.header div[class^="menu-"][class$="-container"]
 	clear: both
 	margin-top: -0.1rem
 	overflow: hidden
 	ul
 		background: $white-translucent
-	a
-		display: block
+	.header &
+		a
+			color: $gray-dark
+			display: block
 	@media all and (max-width: $bp-sm-max)
 		max-height: 0
 		position: absolute
@@ -17,37 +20,44 @@
 			border-top: 1px solid $gray-light-3
 		a
 			display: table
-			padding: $pad-half $pad
-		.children
+			padding: $space-half $space
+		.children,
+		.sub-menu
 			li
 				padding-left: 2rem
 	@media all and (min-width: $bp-med)
-		border-top: 1px solid $gray-light-2
+		border-top: 1px solid $gray-light-3
 		clear: none
 		float: left
-		padding-top: $pad-quarter * 3
+		padding-top: $space-quarter * 3
+		.header-image &
+			border-top: 0
+			padding-top: 0
 		li
 			float: left
 		a
 			border: 0
-			padding: $pad-quarter $pad
+			padding: $space-quarter $space
 		> ul
-			> li:first-child
-				a
-					padding-left: $pad-half
-			> li > .children
+			> li > .children,
+			> li > .sub-menu
 				position: absolute
-		> ul > .page_item_has_children .page_item_has_children li
+		> ul > .page_item_has_children .page_item_has_children li,
+		> ul > .menu-item-has-children .menu-item-has-children li
 			padding-left: $space-half
-		.page_item_has_children
+		.page_item_has_children,
+		.menu-item-has-children
 			> a::after
 				color: $gray
 				content: "▼"
-				font-size: $font-size-sm
+				font-size: 0.75em
+				margin-left: $space-half
 			&:hover
-				.children
+				.children,
+				.sub-menu
 					max-height: 100%
-		.children
+		.children,
+		.sub-menu
 			max-height: 0
 			overflow: hidden
 			transition: max-height 0.3s ease
@@ -59,7 +69,8 @@
 				width: 100%
 			li:last-child
 				border-bottom: 1px solid $gray-light-2
-			.children
+			.children,
+			.sub-menu
 				background: transparent
 				li
 					border-right: 0
@@ -74,13 +85,13 @@
 	.nav-links > *
 		display: block
 		float: left
-		padding: 0 $pad
+		padding: 0 $space
 		border-right: 1px solid $gray-light-2
 		&:last-child
 			border: 0
 	@media all and (max-width: $bp-small - 1px)
 		.nav-links > *
-			padding: 0 $pad-half
+			padding: 0 $space-half
 			&:first-child
 				padding-left: 0
 			&:last-child

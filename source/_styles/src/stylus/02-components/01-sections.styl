@@ -1,38 +1,49 @@
 .section-title
 	margin-bottom: $space-half
 #widget-area
-	background: url("../../_assets/src/landscape-16x9-mountains.jpg") center no-repeat
-	background-size: cover
-	color: $white
 	aside
-		padding-left: 0.8rem
+		padding-right: $space-half
+		padding-left: $space-half
 	aside:nth-child(2)
 		clear: both
-		padding-top: $pad
+		padding-top: $space
 	aside:last-child
-		border-bottom: 1px solid $gray-light-2
-		padding-bottom: $pad
+		border-bottom: 1px solid $gray-light-3
+		padding-bottom: $space
+		.header-image &
+			border-bottom: 0
 	aside:first-child
 		border-bottom: 0
 		float: right
 		padding-bottom: 0
+	aside:not(.widget_search)
+		@extend .cf
 	ul
 		li
 			float: left
 			&:last-child
 				float: none
 			a
-				color: $white
-				padding: 0.25em $pad-double
+				padding: 0.25em $space-double
 				&:first-child
 					padding-left: 0
-
+	@media all and (min-width: $bp-small)
+		.widget_recent_entries,
+		.widget_recent_comments
+			float: left
+			padding-top: $space
+			width: 50%
+			ul
+				li
+					float: none
+		.widget_recent_entries + aside:not(.widget_recent_comments),
+		.widget_recent_comments + aside
+			clear: both
 .l-sidebar .widgettitle
-	border-bottom: 1px solid $gray-light-3
 	padding: 0 0 0.5em
 *:not(#widget-area) >
 	.widget_recent_entries,
 	.widget_recent_comments
 		> ul > li
-			border-bottom: 1px solid $gray-light-3
-			padding: 0.4rem 0
+			border-top: 1px solid $gray-light-3
+			padding: $space-quarter 0

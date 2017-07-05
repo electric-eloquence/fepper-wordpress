@@ -1,14 +1,18 @@
 <div class="page" id="page">
 	<div role="main">
 		<h1 class="section-title">{{{ page_title }}}</h1>
-		<div class="l-two-col">
+		{{^ sidebar_1? }}
+			<div class="l-one-col">
+		{{/ sidebar_1? }}
+		{{# sidebar_1? }}
+			<div class="l-two-col">
+		{{/ sidebar_1? }}
 			<div class="l-main">
-				<section class="section latest-posts">
-					
+				<section class="section hoagies">
 					<ul class="post-list">
 						{{# latest_posts }}
 							<li>
-								{{> 01-compounds/01-blocks/02-block-media.mustache }}
+								{{> 01-compounds/01-blocks/02-block-hoagie.mustache }}
 							</li>
 						{{/ latest_posts }}
 					</ul>
@@ -16,9 +20,11 @@
 				{{{ pagination_label }}}
 				{{> components-pagination }}
 			</div><!--end l-main-->
-			<div class="l-sidebar">
-				{{> 02-components/01-sections/00-recent-comments }}
-			</div><!--end l-sidebar-->
-		</div><!--end two-col-->
+			{{# sidebar_1? }}
+				<div class="l-sidebar">
+					{{> 02-components/01-sections/00-recent-comments }}
+				</div><!--end l-sidebar-->
+			{{/ sidebar_1? }}
+		</div>
 	</div><!--End role=main-->
 </div>
