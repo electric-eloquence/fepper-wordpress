@@ -15,12 +15,13 @@
 						</header>
 						{{> 02-components/00-article/00-article-body }}
 					</article><!--end .article-->
+					{{{ page_links }}}
 					{{> 02-components/02-comments/00-comment-thread }}
 				{{/ article }}
 			</div><!--end l-main-->
 
 			{{# sidebar_2? }}
-				<div class="l-sidebar">
+				<div class="l-sidebar l-sidebar-2">
 					{{> 02-components/01-sections/01-related-posts }}
 					{{> 02-components/01-sections/00-recent-comments }}
 				</div><!--end l-sidebar-->

@@ -9,9 +9,24 @@
 'article_title': |2
   <?php the_title(); ?>
 '> 01-compounds/00-text/00-byline-author-time': |2
-  <div class="byline">By <?php the_author(); ?> on <?php the_date(); ?></div>
+  <div class="byline">
+  								<?php echo __( 'By', 'fepper' ) . ' ' . get_the_author() . ' '; ?>
+  								<?php echo __( 'on', 'fepper' ) . ' ' . get_the_date(); ?>
+  							</div>
 '> 02-components/00-article/00-article-body': |2
   <?php the_content(); ?>
+'page_links': |2
+  <div class="page-links">
+  						<?php
+  							wp_link_pages( array(
+  								'before'      => '<span class="page-links-title">' . __( 'Pages:', 'fepper' ) . '</span>',
+  								'after'       => '',
+  								'link_before' => '<span class="page-link">',
+  								'link_after'  => '</span>',
+  								'separator'   => ' | ',
+  							) );
+  						?>
+  					</div>
 '> 02-components/02-comments/00-comment-thread': |2
   <?php
   						if ( comments_open() || get_comments_number() ) :

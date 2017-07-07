@@ -1,15 +1,6 @@
 <div class="page" id="page">
 	<div role="main">
-		<section class="hero-and-subs">
-			{{# hero }}
-				{{> 01-compounds/01-blocks/00-block-hero.mustache }}
-			{{/ hero }}
-
-			{{# subs }}
-				{{> 01-compounds/01-blocks/01-block-sub.mustache }}
-			{{/ subs }}
-		</section>
-
+		<h1 class="section-title">{{{ page_title }}}</h1>
 		{{^ sidebar_1? }}
 			<div class="l-one-col">
 		{{/ sidebar_1? }}
@@ -18,7 +9,6 @@
 		{{/ sidebar_1? }}
 			<div class="l-main">
 				<section class="section hoagies">
-					<h2 class="section-title">{{{ latest_posts_title }}}</h2>
 					<ul class="post-list">
 						{{# latest_posts }}
 							<li>
@@ -26,16 +16,14 @@
 							</li>
 						{{/ latest_posts }}
 					</ul>
-					{{# view_more_msg }}
-						<a href="{{ view_more_href }}" class="text-btn">{{{ view_more_msg }}}</a>
-					{{/ view_more_msg }}
 				</section>
-			</div><!--end .l-main-->
-
+				{{{ pagination_label }}}
+				{{> components-pagination }}
+			</div><!--end l-main-->
 			{{# sidebar_1? }}
-				<div class="l-sidebar">
+				<div class="l-sidebar l-sidebar-1">
 					{{> 02-components/01-sections/00-recent-comments }}
-				</div><!--end .l-sidebar-->
+				</div><!--end l-sidebar-->
 			{{/ sidebar_1? }}
 		</div>
 	</div><!--End role=main-->
