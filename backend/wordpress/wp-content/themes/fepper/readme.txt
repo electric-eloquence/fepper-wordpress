@@ -5,7 +5,7 @@ Requires at least: WordPress 4.0
 Version: 0.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, one-column, post-formats, right-sidebar, threaded-comments, two-columns
+Tags: blog, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, one-column, right-sidebar, threaded-comments, two-columns
 
 == Description ==
 
