@@ -12,3 +12,5 @@ node_modules/
 /pref.yml
 /public/*
 !/public/package.json
+/source/
+yarn.lock
