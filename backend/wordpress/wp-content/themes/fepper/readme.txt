@@ -36,15 +36,18 @@ reasonably working interface between these two very different platforms.
   importing the sample WordPress backend mentioned earlier. This will serve as a 
   starting point for further customization:
   https://github.com/electric-eloquence/fepper-wordpress#user-content-wordpress-install
-* You may also replicate this look and feel from a fresh WordPress install (with 
+* You may also replicate this look and feel from a fresh WordPress install (with
   no import):
-  * Create "Hero" and "Sub" categories.
-  * Assign a single post to the "Hero" category.
+  * In /wp-admin/widgets.php, delete all widgets from the header sidebar except 
+    Search.
+  * In /wp-admin/edit-tags.php?taxonomy=category, create "Hero" and "Sub" 
+    categories.
+  * In /wp-admin/edit.php, add a new post and assign it to the "Hero" category.
     * Give this a large 16x9 Featured Image.
-  * Assign three posts to the "Sub" category.
+  * Add three new posts to the "Sub" category.
     * Give each post a 4x3 Featured Image.
-  * Posts assigned to the "Uncategorized" category will appear as blog listings
-    on the Home and Blog pages.
+  * Posts added to the "Uncategorized" category will appear as blog listings on 
+    the Home and Blog pages.
 
 == Copyright ==
 
@@ -61,15 +64,16 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Fepper WordPress Theme bundles the following third-party resources:
+== Bundled third-party resources ==
 
-IcoMoon icons, Copyright Roonas
+= IcoMoon icons =
+Copyright: Roonas
 License: GPL / CC BY 4
 License URI: http://www.gnu.org/licenses/gpl.html
 License URI: https://creativecommons.org/licenses/by/4.0/
 Source: https://icomoon.io
 
-Composite screenshot image
+= Composite screenshot image =
 Copyright: Alex Grichenko
 License: CC0 1.0 Universal (CC0 1.0)
 License URI: https://creativecommons.org/publicdomain/zero/1.0/
@@ -87,7 +91,8 @@ License: CC0 1.0 Universal (CC0 1.0)
 License URI: https://creativecommons.org/publicdomain/zero/1.0/
 Source: http://www.publicdomainpictures.net/view-image.php?image=55734&picture=night-sky-in-mountains
 
-Bundled header image, Copyright Alex Grichenko
+= Default header image =
+Copyright: Alex Grichenko
 License: CC0 1.0 Universal (CC0 1.0)
 License URI: https://creativecommons.org/publicdomain/zero/1.0/
 Source: http://www.publicdomainpictures.net/view-image.php?image=50301&picture=sunrise-in-mountains

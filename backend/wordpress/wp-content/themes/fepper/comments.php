@@ -2,15 +2,16 @@
 	<div class="comments-container">
 		<?php if ( have_comments() ) : ?>
 			<h2 class="section-title"><?php
+				$comments_number = get_comments_number();
 				printf(
 					_nx(
-						'One comment on &ldquo;%2$s&rdquo;',
+						'%1$s comment on &ldquo;%2$s&rdquo;',
 						'%1$s comments on &ldquo;%2$s&rdquo;',
-						get_comments_number(),
+						$comments_number,
 						'comments title',
 						'fepper'
 					),
-					number_format_i18n( get_comments_number() ),
+					number_format_i18n( $comments_number ),
 					get_the_title()
 				);
 			?></h2>

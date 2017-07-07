@@ -12,14 +12,14 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'fepper' ); ?></h1>
-				</header><!-- .page-header -->
+				<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'fepper' ); ?></h1>
 
 				<div class="page-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'fepper' ); ?></p>
 
-					<?php get_search_form(); ?>
+					<div class="right-search">
+						<?php get_search_form(); ?>
+					</div>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 

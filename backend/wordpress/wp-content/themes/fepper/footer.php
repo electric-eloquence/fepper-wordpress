@@ -9,7 +9,7 @@
  */
 ?>
 
-<?php get_template_part( 'fp-footer' ); ?>
+<?php get_template_part( 'template-parts/fp-footer' ); ?>
 <?php wp_footer(); ?>
 
 </body>

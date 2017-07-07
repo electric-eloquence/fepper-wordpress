@@ -11,10 +11,24 @@
 					<article class="article">
 						<header class="article-header">
 							<h1><?php the_title(); ?></h1>
-							<div class="byline">By <?php the_author(); ?> on <?php the_date(); ?></div>
+							<div class="byline">
+								<?php echo __( 'By', 'fepper' ) . ' ' . get_the_author() . ' '; ?>
+								<?php echo __( 'on', 'fepper' ) . ' ' . get_the_date(); ?>
+							</div>
 						</header>
 						<?php the_content(); ?>
 					</article><!--end .article-->
+					<div class="page-links">
+						<?php
+							wp_link_pages( array(
+								'before'      => '<span class="page-links-title">' . __( 'Pages:', 'fepper' ) . '</span>',
+								'after'       => '',
+								'link_before' => '<span class="page-link">',
+								'link_after'  => '</span>',
+								'separator'   => ' | ',
+							) );
+						?>
+					</div>
 					<?php
 						if ( comments_open() || get_comments_number() ) :
 							comments_template();
@@ -24,7 +38,7 @@
 			</div><!--end l-main-->
 
 			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-				<div class="l-sidebar">
+				<div class="l-sidebar l-sidebar-2">
 					<?php dynamic_sidebar( 'sidebar-2' ); ?>
 					</div><!--end l-sidebar-->
 			<?php endif; ?>
