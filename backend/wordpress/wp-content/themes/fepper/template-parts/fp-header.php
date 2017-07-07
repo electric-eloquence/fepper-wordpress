@@ -1,5 +1,5 @@
 <!-- Begin .header -->
-<style>
+<style type="text/css">
 	<?php
 		$text_color = get_theme_support( 'custom-header', 'default-text-color' );
 		if ( $text_color ) :
@@ -18,9 +18,9 @@
 	);
 	$posts_hero = get_posts( $args );
 	$posts_hero_count = count( $posts_hero );
-	if ( ! $posts_hero_count ) {
+	if ( ! $posts_hero_count ) :
 		echo 'header-image';
-	}
+	endif;
 ?>" role="banner">
 	<div class="site-branding">
 		<?php
@@ -45,7 +45,9 @@
 			else :
 				if ( display_header_text() ) :
 		?>
-					<h1 class="site-title"><?php echo get_bloginfo(); ?></h1>
+					<h1 class="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_bloginfo(); ?></a>
+					</h1>
 					<h2 class="site-description"><?php echo get_bloginfo( 'description' ); ?></h2>
 		<?php
 				endif;
@@ -61,11 +63,11 @@
 		<?php
 			if ( ! $posts_hero_count ) :
 				echo 'style="background: url(';
-				if ( get_header_image() ) {
+				if ( get_header_image() ) :
 					header_image();
-				} else {
+				else :
 					echo get_theme_root_uri() . '/fepper/_assets/src/landscape-16x9-mountains.jpg';
-				}
+				endif;
 				echo ') center no-repeat; background-size: cover;"';
 			endif;
 		?>

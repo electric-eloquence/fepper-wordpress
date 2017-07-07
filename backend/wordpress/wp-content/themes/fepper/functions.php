@@ -43,7 +43,6 @@ function fepper_setup() {
 	 * Enable support for custom logo.
 	 */
 	add_theme_support( 'custom-logo', array(
-		'width'       => 140,
 		'height'      => 40,
 		'flex-width' => true,
 		'flex-height' => true,
@@ -145,16 +144,6 @@ function fepper_fonts_url() {
 endif;
 
 /**
- * javascript detection.
- *
- * adds a `js` class to the root `<html>` element when javascript is detected.
- */
-function fepper_javascript_detection() {
-	echo "<script>(function(html){html.classname = html.classname.replace(/\bno-js\b/,'js')})(document.documentelement);</script>\n";
-}
-add_action( 'wp_head', 'fepper_javascript_detection', 0 );
-
-/**
  * enqueue styles.
  */
 function fepper_styles() {
@@ -194,7 +183,7 @@ function fepper_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'side sidebar 1', 'fepper' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'add widgets here to appear in your sidebar.', 'fepper' ),
+		'description'   => __( 'add widgets here to appear in your Front page and Blog Index page sidebars.', 'fepper' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widgettitle">',
@@ -203,7 +192,7 @@ function fepper_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'side sidebar 2', 'fepper' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'add widgets here to appear in your sidebar.', 'fepper' ),
+		'description'   => __( 'add widgets here to appear in your Post pages sidebars.', 'fepper' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widgettitle">',

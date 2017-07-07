@@ -39,6 +39,8 @@ hr
 aside,
 .section
 	margin-bottom: $space
+pre
+	overflow: auto
 /* Completely remove from the flow and screen readers. */
 .is-hidden
 	display: none !important
@@ -77,3 +79,9 @@ aside,
 	color: $error
 .text-btn
 	font-style: italic
+/* Hide elements in print view */
+@media print
+	header.header,
+	form,
+	footer.footer
+		display: none

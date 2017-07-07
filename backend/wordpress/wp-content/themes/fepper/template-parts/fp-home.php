@@ -40,7 +40,7 @@
 				</section>
 				</div><!--end l-main-->
 			<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-				<div class="l-sidebar">
+				<div class="l-sidebar l-sidebar-1">
 					<?php dynamic_sidebar( 'sidebar-1' ); ?>
 				</div><!--end l-sidebar-->
 			<?php endif; ?>

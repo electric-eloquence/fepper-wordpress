@@ -70,24 +70,32 @@
 			<div class="l-main">
 				<section class="section hoagies">
 					<h2 class="section-title"><?php
-						$posts_hoagie_count_max = 5;
+						$posts_hoagie_count_max = 15;
 						$posts_hoagie_counter = 0;
-						$args = array(
-							'category_name'  => 'uncategorized',
-							'post_type'      => 'post',
-							'post_status'    => 'publish',
-							'posts_per_page' => $posts_hoagie_count_max + 1,
-						);
+						if ( count( $posts_hero ) || count( $posts_sub ) ) :
+							$args = array(
+								'category_name'  => 'uncategorized',
+								'post_type'      => 'post',
+								'post_status'    => 'publish',
+								'posts_per_page' => $posts_hoagie_count_max + 1,
+							);
+						else :
+							$args = array(
+								'post_type'      => 'post',
+								'post_status'    => 'publish',
+								'posts_per_page' => $posts_hoagie_count_max + 1,
+							);
+						endif;
 						$posts_hoagie = get_posts( $args );
 						$posts_hoagie_count = count( $posts_hoagie );
-						echo _n('Latest Post', 'Latest Posts', $posts_hoagie_count, 'fepper');
+						echo _n( 'Latest Post', 'Latest Posts', $posts_hoagie_count, 'fepper' );
 					?></h2>
 					<ul class="post-list">
 						<?php
 							foreach ( $posts_hoagie as $post ) :
-								if ( $posts_hoagie_counter >= $posts_hoagie_count_max ) {
+								if ( $posts_hoagie_counter >= $posts_hoagie_count_max ) :
 									break;
-								}
+								endif;
 								setup_postdata( $post );
 						?>
 							<li>
@@ -114,16 +122,11 @@
 							endforeach;
 						?>
 					</ul>
-					<?php
-						if ( get_page_by_path( 'blog' ) && $posts_hoagie_count > $posts_hoagie_count_max ) :
-					?>
-						<a href="<?php echo esc_url( home_url( 'blog' ) ); ?>" class="text-btn"><?php _e('View more posts', 'fepper'); ?></a>
-					<?php endif; ?>
 				</section>
 			</div><!--end .l-main-->
 
 			<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-				<div class="l-sidebar">
+				<div class="l-sidebar l-sidebar-1">
 					<?php dynamic_sidebar( 'sidebar-1' ); ?>
 				</div><!--end .l-sidebar-->
 			<?php endif; ?>
