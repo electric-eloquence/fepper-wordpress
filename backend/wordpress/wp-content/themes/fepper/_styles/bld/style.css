@@ -1382,12 +1382,15 @@ a img.aligncenter {
 .page-links > .page-link {
 	color: #bbb;
 }
-.nav-links a {
+.post-navigation {
+	margin-top: 1em;
+}
+.post-navigation a {
 	font-size: 0.75em;
 }
-.nav-links a .meta-nav {
+.post-navigation a .meta-nav {
 	font-weight: bold;
 }
-.nav-links a .post-title {
+.post-navigation a .post-title {
 	text-decoration: underline;
 }
