@@ -203,10 +203,10 @@ function fepper_widgets_init() {
 			$description = 'The image and title from the latest published Post filtered by Category (default: "Hero"),';
 			$description += ' or if that Category is empty, the latest published Post.';
 			$widget_ops = array(
-				'description' => __( $description ),
+				'description'                 => __( $description, 'fepper' ),
 				'customize_selective_refresh' => true,
 			);
-			parent::__construct( 'hero', __( 'Hero' ), $widget_ops );
+			parent::__construct( 'hero', __( 'Hero', 'fepper' ), $widget_ops );
 		}
 
 		/**
@@ -242,15 +242,15 @@ function fepper_widgets_init() {
 			$category = $instance['category'];
 		?>
 			<p>
-				<label for="<?php echo $this->get_field_id('category'); ?>">
-					<?php _e('The Category to appear in your Hero block (default: "Hero")'); ?>
+				<label for="<?php echo $this->get_field_id( 'category' ); ?>">
+					<?php _e( 'The Category to appear in your Hero block (default: "Hero")', 'fepper' ); ?>
 				</label>
 				<input
 					class="widefat"
-					id="<?php echo $this->get_field_id('category'); ?>"
-					name="<?php echo $this->get_field_name('category'); ?>"
+					id="<?php echo $this->get_field_id( 'category' ); ?>"
+					name="<?php echo $this->get_field_name( 'category' ); ?>"
 					type="text"
-					value="<?php echo esc_attr($category); ?>"
+					value="<?php echo esc_attr( $category ); ?>"
 				/>
 			</p>
 		<?php
@@ -290,10 +290,10 @@ function fepper_widgets_init() {
 			$description = 'Images and titles from the 3 latest published Posts filtered by Category (default: "Sub"),';
 			$description += ' or if that Category is empty, the 2nd - 4th latest published Posts.';
 			$widget_ops = array(
-				'description' => __( $description ),
+				'description'                 => __( $description, 'fepper' ),
 				'customize_selective_refresh' => true,
 			);
-			parent::__construct( 'subs', __( 'Subs' ), $widget_ops );
+			parent::__construct( 'subs', __( 'Subs', 'fepper' ), $widget_ops );
 		}
 
 		/**
@@ -327,15 +327,15 @@ function fepper_widgets_init() {
 			$category = $instance['category'];
 		?>
 			<p>
-				<label for="<?php echo $this->get_field_id('category'); ?>">
-					<?php _e('The Category to appear in your Subs block (default: "Sub")'); ?>
+				<label for="<?php echo $this->get_field_id( 'category' ); ?>">
+					<?php _e( 'The Category to appear in your Subs block (default: "Sub")', 'fepper' ); ?>
 				</label>
 				<input
 					class="widefat"
-					id="<?php echo $this->get_field_id('category'); ?>"
-					name="<?php echo $this->get_field_name('category'); ?>"
+					id="<?php echo $this->get_field_id( 'category' ); ?>"
+					name="<?php echo $this->get_field_name( 'category' ); ?>"
 					type="text"
-					value="<?php echo esc_attr($category); ?>"
+					value="<?php echo esc_attr( $category ); ?>"
 				/>
 			</p>
 		<?php
