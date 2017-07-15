@@ -1,49 +1,11 @@
-'# hero': |2
-  <?php
-  				global $post;
-  				$args = array(
-  					'category_name'  => 'hero',
-  					'post_type'      => 'post',
-  					'post_status'    => 'publish',
-  					'posts_per_page' => 1,
-  				);
-  				$posts_hero = get_posts( $args );
-  				foreach ( $posts_hero as $post ) :
-  					setup_postdata( $post );
-  			?>
-'url': |2
-  <?php the_permalink(); ?>
-'# homepage\?': |2
-  <?php
-  							$post_thumbnail = get_the_post_thumbnail( $post, 'full' );
-  							if ( $post_thumbnail ) :
-  						?>
-'> elements-landscape-16x9': |2
-  <?php echo $post_thumbnail; ?>
-'/ homepage\?': |2
-  <?php endif; ?>
-'headline.medium': |2
-  <?php the_title(); ?>
-'/ hero': |2
-  <?php endforeach; ?>
-'# subs': |2
-  <?php
-  				$args = array(
-  					'category_name'  => 'sub',
-  					'post_type'      => 'post',
-  					'post_status'    => 'publish',
-  					'posts_per_page' => 3,
-  				);
-  				$posts_sub = get_posts( $args );
-  				foreach ( $posts_sub as $post ) :
-  					setup_postdata( $post );
-  			?>
-'> elements-landscape-4x3': |2
-  <?php echo $post_thumbnail; ?>
-'headline.short': |2
-  <?php the_title(); ?>
-'/ subs': |2
-  <?php endforeach; ?>
+'> 03-templates/template-parts/fp-widget-hero': |2
+  <?php if ( is_active_sidebar( 'hero' ) ) : ?>
+  				<?php dynamic_sidebar( 'hero' ); ?>
+  			<?php endif; ?>
+'> 03-templates/template-parts/fp-widget-subs': |2
+  <?php if ( is_active_sidebar( 'subs' ) ) : ?>
+  				<?php dynamic_sidebar( 'subs' ); ?>
+  			<?php endif; ?>
 '\^ sidebar_1\?': |2
   <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
 '/ sidebar_1\?': |2
@@ -52,37 +14,30 @@
   <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 'latest_posts_title': |2
   <?php
-  						$posts_hoagie_count_max = 15;
-  						$posts_hoagie_counter = 0;
-  						if ( count( $posts_hero ) || count( $posts_sub ) ) :
-  							$args = array(
-  								'category_name'  => 'uncategorized',
-  								'post_type'      => 'post',
-  								'post_status'    => 'publish',
-  								'posts_per_page' => $posts_hoagie_count_max + 1,
-  							);
-  						else :
-  							$args = array(
-  								'post_type'      => 'post',
-  								'post_status'    => 'publish',
-  								'posts_per_page' => $posts_hoagie_count_max + 1,
-  							);
-  						endif;
-  						$posts_hoagie = get_posts( $args );
-  						$posts_hoagie_count = count( $posts_hoagie );
-  						echo _n( 'Latest Post', 'Latest Posts', $posts_hoagie_count, 'fepper' );
+  						global $cat_excludes;
+  						global $hoagies_offset;
+  						$args = array(
+  							'post_type'        => 'post',
+  							'post_status'      => 'publish',
+  							'posts_per_page'   => get_option( 'posts_per_page' ),
+  							'category__not_in' => $cat_excludes,
+  							'offset'           => $hoagies_offset,
+  						);
+  						$query = new WP_Query( args );
+  						echo _n( 'Latest Post', 'Latest Posts', $query->post_count, 'fepper' );
   					?>
 '# latest_posts': |2
   <?php
-  							foreach ( $posts_hoagie as $post ) :
-  								if ( $posts_hoagie_counter >= $posts_hoagie_count_max ) :
-  									break;
-  								endif;
-  								setup_postdata( $post );
+  							while ( $query->have_posts() ) :
+  								$query->the_post();
   						?>
+'url': |2
+  <?php the_permalink(); ?>
+'headline.short': |2
+  <?php the_title(); ?>
 '# demo_site\?': |2
   <?php
-  											$post_thumbnail = get_the_post_thumbnail( $post, 'medium' );
+  											$post_thumbnail = get_the_post_thumbnail( $query->post, 'medium' );
   											if ( $post_thumbnail ) :
   										?>
 '> elements-square': |2
@@ -93,8 +48,7 @@
   <?php the_excerpt(); ?>
 '/ latest_posts': |2
   <?php
-  							$posts_hoagie_counter++;
-  							endforeach;
+  							endwhile;
   						?>
 '> 02-components/01-sections/00-recent-comments': |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>

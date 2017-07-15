@@ -1,13 +1,8 @@
 <div class="page" id="page">
 	<div role="main">
 		<section class="hero-and-subs">
-			{{# hero }}
-				{{> 01-compounds/01-blocks/00-block-hero.mustache }}
-			{{/ hero }}
-
-			{{# subs }}
-				{{> 01-compounds/01-blocks/01-block-sub.mustache }}
-			{{/ subs }}
+			{{> 03-templates/template-parts/fp-widget-hero }}
+			{{> 03-templates/template-parts/fp-widget-subs }}
 		</section>
 
 		{{^ sidebar_1? }}

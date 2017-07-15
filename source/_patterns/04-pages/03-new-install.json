@@ -1,6 +1,6 @@
 {
 	"new_install?": true,
-	"header_classes": "header-image",
+	"header_classes": "",
 	"latest_posts_title": "Latest Post",
 	"latest_posts": [
 		{
