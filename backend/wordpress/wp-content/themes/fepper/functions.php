@@ -202,8 +202,7 @@ function fepper_widgets_init() {
 		public function __construct() {
 			$widget_ops = array(
 				'description' => __(
-					'The image and title from the latest published Post filtered by Category (default: "Hero"), or if '
-					. 'that Category is empty, the latest published Post.',
+					'The image and title from the latest published Post filtered by Category (default: "Hero"), or if that Category is empty, the latest published Post.',
 					'fepper'
 				),
 				'customize_selective_refresh' => true,
@@ -291,8 +290,7 @@ function fepper_widgets_init() {
 		public function __construct() {
 			$widget_ops = array(
 				'description' => __(
-					'Images and titles from the 3 latest published Posts filtered by Category (default: "Sub"), or if '
-					. 'that Category is empty, the 2nd - 4th latest published Posts.',
+					'Images and titles from the 3 latest published Posts filtered by Category (default: "Sub"), or if that Category is empty, the 2nd - 4th latest published Posts.',
 					'fepper'
 				),
 				'customize_selective_refresh' => true,
