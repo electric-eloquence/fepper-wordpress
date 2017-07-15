@@ -15,8 +15,9 @@ get_header(); ?>
 				<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'fepper' ); ?></h1>
 
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'fepper' ); ?></p>
-
+					<p>
+						<?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'fepper' ); ?>
+					</p>
 					<div class="right-search">
 						<?php get_search_form(); ?>
 					</div>

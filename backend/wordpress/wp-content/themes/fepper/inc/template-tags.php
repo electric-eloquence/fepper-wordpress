@@ -52,7 +52,9 @@ if ( ! function_exists( 'fepper_entry_taxonomies' ) ) :
  * Create your own fepper_entry_taxonomies() function to override in a child theme.
  */
 function fepper_entry_taxonomies() {
-	$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'fepper' ) );
+	$categories_list = get_the_category_list(
+		_x( ', ', 'Used between list items, there is a space after the comma.', 'fepper' )
+	);
 	if ( $categories_list && fepper_categorized_blog() ) {
 		printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
 			_x( 'Categories', 'Used before category names.', 'fepper' ),
@@ -60,7 +62,10 @@ function fepper_entry_taxonomies() {
 		);
 	}
 
-	$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'fepper' ) );
+	$tags_list = get_the_tag_list(
+		'',
+		_x( ', ', 'Used between list items, there is a space after the comma.', 'fepper' )
+	);
 	if ( $tags_list ) {
 		printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
 			_x( 'Tags', 'Used before tag names.', 'fepper' ),
