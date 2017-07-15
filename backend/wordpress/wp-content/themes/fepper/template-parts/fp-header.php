@@ -11,6 +11,7 @@
 	<?php endif; ?>
 </style>
 <header class="header cf <?php
+	global $widgets;
 	$widgets = wp_get_sidebars_widgets();
 	if (
 		is_array( $widgets['sidebar'] ) &&

@@ -20,27 +20,25 @@
 					<h2 class="section-title"><?php
 						global $cat_excludes;
 						global $hoagies_offset;
+						global $wp_query;
 						$args = array(
-							'post_type'        => 'post',
-							'post_status'      => 'publish',
-							'posts_per_page'   => get_option( 'posts_per_page' ),
 							'category__not_in' => $cat_excludes,
 							'offset'           => $hoagies_offset,
 						);
-						$query = new WP_Query( $args );
-						echo _n( 'Latest Post', 'Latest Posts', $query->post_count, 'fepper' );
+						query_posts( $args );
+						echo _n( 'Latest Post', 'Latest Posts', $wp_query->post_count, 'fepper' );
 					?></h2>
 					<ul class="post-list">
 						<?php
-							while ( $query->have_posts() ) :
-								$query->the_post();
+							while ( have_posts() ) :
+								the_post();
 						?>
 							<li>
 								<div class="block block-hoagie">
 									<a href="<?php the_permalink(); ?>" class="b-inner cf">
 										<h2 class="headline"><?php the_title(); ?></h2>
 										<?php
-											$post_thumbnail = get_the_post_thumbnail( $query->post, 'medium' );
+											$post_thumbnail = get_the_post_thumbnail( $wp_query->post, 'medium' );
 											if ( $post_thumbnail ) :
 										?>
 											<div class="b-thumb">
