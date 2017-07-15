@@ -23,7 +23,7 @@
   							'category__not_in' => $cat_excludes,
   							'offset'           => $hoagies_offset,
   						);
-  						$query = new WP_Query( args );
+  						$query = new WP_Query( $args );
   						echo _n( 'Latest Post', 'Latest Posts', $query->post_count, 'fepper' );
   					?>
 '# latest_posts': |2
