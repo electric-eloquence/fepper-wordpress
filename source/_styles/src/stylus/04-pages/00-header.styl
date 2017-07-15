@@ -11,8 +11,23 @@
 			color: $gray
 	.site-branding
 		padding-left: $space-half
+	.nav-toggle
+		border-bottom: 1px solid $gray-light-3
+		color: $gray-dark
+		float: right
+		display: block
+		padding: 1.5rem
+		font-size: 2.08rem
+		line-height: 1
+		border-left: 1px solid $gray-light-3
+		width: 5.1rem
+		height: 5rem
+		@media all and (min-width: $bp-med)
+			display: none
 .header-no-image
 	margin-bottom: 0
+	.nav-toggle
+		border-bottom: 0
 @media all and (min-width: $max-width)
 	.header
 		> *:not(.site-branding)
@@ -31,20 +46,5 @@
 		display: table	
 	a
 		display: block
-.nav-toggle
-	border-bottom: 1px solid $gray-light-3
-	color: $gray-dark
-	float: right
-	display: block
-	padding: 1.5rem
-	font-size: 2.08rem
-	line-height: 1
-	border-left: 1px solid $gray-light-3
-	width: 5.1rem
-	height: 5rem
-	.header-no-image &
-		border-bottom: 0
-	@media all and (min-width: $bp-med)
-		display: none
 .toggle-open
 	max-height: 100% !important
