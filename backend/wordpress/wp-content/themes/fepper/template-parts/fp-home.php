@@ -14,8 +14,47 @@
 				<section class="section hoagies">
 					<ul class="post-list">
 						<?php
-							query_posts( 'category_name=uncategorized&posts_per_page=20&paged='.get_query_var( 'paged' ) );
-							while ( have_posts() ) : the_post();
+							global $hero_category_default;
+							global $subs_category_default;
+							global $widgets;
+							global $wp_registered_widgets;
+							$cat_excludes = [];
+							if ( is_array( $widgets['hero'] ) && $widgets['hero'][0] ) :
+								$widget_hero = $wp_registered_widgets[$widgets['hero'][0]]['callback'][0];
+								$widget_hero_settings = $widget_hero->get_settings();
+								if ( is_array( $widget_hero_settings ) ) :
+									foreach ( $widget_hero_settings as $setting ) :
+										if ( is_array( $setting ) && $setting['category'] ) :
+											$hero_category = $setting['category'];
+											array_push( $cat_excludes, get_cat_ID( $setting['category'] ) );
+										else:
+											array_push( $cat_excludes, get_cat_ID( $hero_category_default ) );
+											$hero_category = $hero_category_default;
+										endif;
+									endforeach;
+								endif;
+							endif;
+							if ( is_array( $widgets['subs'] ) && $widgets['subs'][0] ) :
+								$widget_subs = $wp_registered_widgets[$widgets['subs'][0]]['callback'][0];
+								$widget_subs_settings = $widget_subs->get_settings();
+								if ( is_array( $widget_subs_settings ) ) :
+									foreach ( $widget_subs_settings as $setting ) :
+										if ( is_array( $setting ) && $setting['category'] ) :
+											$subs_category = $setting['category'];
+											array_push( $cat_excludes, get_cat_ID( $setting['category'] ) );
+										else:
+											$subs_category = $subs_category_default;
+											array_push( $cat_excludes, get_cat_ID( $subs_category_default ) );
+										endif;
+									endforeach;
+								endif;
+							endif;
+							$args = array(
+								'category__not_in' => $cat_excludes,
+							);
+							query_posts( $args );
+							while ( have_posts() ) :
+								the_post();
 						?>
 							<li>
 								<div class="block block-hoagie">
