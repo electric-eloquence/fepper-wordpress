@@ -187,6 +187,13 @@ add_action( 'wp_enqueue_scripts', 'fepper_scripts' );
  */
 function fepper_widgets_init() {
 
+	/* Register global default settings for custom widgets. */
+	global $hero_category_default;
+	global $subs_category_default;
+
+	$hero_category_default = 'Hero';
+	$subs_category_default = 'Sub';
+
 	/**
 	 * Class used to implement a Hero widget.
 	 *
@@ -221,10 +228,11 @@ function fepper_widgets_init() {
 		 */
 		public function widget( $args, $instance ) {
 			global $cat_excludes;
+			global $hero_category_default;
 			global $hero_filter;
 			global $hoagies_offset;
 
-			$hero_filter = $hero_filter ? $hero_filter : $instance['category'] ? $instance['category'] : 'Hero';
+			$hero_filter = $instance['category'] ? $instance['category'] : $hero_category_default;
 			$cat_excludes = array( get_cat_ID( $hero_filter ) );
 			$hoagies_offset = 0;
 
@@ -239,12 +247,19 @@ function fepper_widgets_init() {
 		 * @param array $instance Current settings.
 		 */
 		public function form( $instance ) {
+			global $hero_category_default;
+
 			$instance = wp_parse_args( (array) $instance, array( 'category' => '') );
 			$category = $instance['category'];
 		?>
 			<p>
 				<label for="<?php echo $this->get_field_id( 'category' ); ?>">
-					<?php _e( 'The Category to appear in your Hero block (default: "Hero")', 'fepper' ); ?>
+					<?php
+						echo sprintf(
+							__( 'The Category to appear in your Hero block (default: "%")', 'fepper' ),
+							$hero_category_default
+						);
+					?>
 				</label>
 				<input
 					class="widefat"
@@ -309,9 +324,10 @@ function fepper_widgets_init() {
 		 */
 		public function widget( $args, $instance ) {
 			global $cat_excludes;
+			global $subs_category_default;
 			global $subs_filter;
 
-			$subs_filter = $subs_filter ? $subs_filter : $instance['category'] ? $instance['category'] : 'Sub';
+			$subs_filter = $instance['category'] ? $instance['category'] : $subs_category_default;
 			array_push( $cat_excludes, get_cat_ID( $subs_filter ) );
 
 			get_template_part( 'template-parts/fp-widget-subs' );
@@ -325,12 +341,19 @@ function fepper_widgets_init() {
 		 * @param array $instance Current settings.
 		 */
 		public function form( $instance ) {
+			global $subs_category_default;
+
 			$instance = wp_parse_args( (array) $instance, array( 'category' => '') );
 			$category = $instance['category'];
 		?>
 			<p>
 				<label for="<?php echo $this->get_field_id( 'category' ); ?>">
-					<?php _e( 'The Category to appear in your Subs block (default: "Sub")', 'fepper' ); ?>
+					<?php
+						echo sprintf(
+							__( 'The Category to appear in your Subs block (default: "%")', 'fepper' ),
+							$subs_category_default
+						);
+					?>
 				</label>
 				<input
 					class="widefat"

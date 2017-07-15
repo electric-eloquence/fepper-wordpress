@@ -10,6 +10,7 @@
   	<?php endif; ?>
 'header_classes': |2
   <?php
+  	global $widgets;
   	$widgets = wp_get_sidebars_widgets();
   	if (
   		is_array( $widgets['sidebar'] ) &&
