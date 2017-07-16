@@ -11,22 +11,20 @@
   <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 '# latest_posts': |2
   <?php
-  							global $hero_category_default;
-  							global $subs_category_default;
+  							global $hero_filter_default;
+  							global $subs_filter_default;
   							global $widgets;
   							global $wp_registered_widgets;
-  							$cat_excludes = [];
+  							$hoagies_filter_reverse = [];
   							if ( is_array( $widgets['hero'] ) && $widgets['hero'][0] ) :
   								$widget_hero = $wp_registered_widgets[$widgets['hero'][0]]['callback'][0];
   								$widget_hero_settings = $widget_hero->get_settings();
   								if ( is_array( $widget_hero_settings ) ) :
   									foreach ( $widget_hero_settings as $setting ) :
   										if ( is_array( $setting ) && $setting['category'] ) :
-  											$hero_category = $setting['category'];
-  											array_push( $cat_excludes, get_cat_ID( $setting['category'] ) );
+  											array_push( $hoagies_filter_reverse, get_cat_ID( $setting['category'] ) );
   										else:
-  											array_push( $cat_excludes, get_cat_ID( $hero_category_default ) );
-  											$hero_category = $hero_category_default;
+  											array_push( $hoagies_filter_reverse, get_cat_ID( $hero_filter_default ) );
   										endif;
   									endforeach;
   								endif;
@@ -37,17 +35,15 @@
   								if ( is_array( $widget_subs_settings ) ) :
   									foreach ( $widget_subs_settings as $setting ) :
   										if ( is_array( $setting ) && $setting['category'] ) :
-  											$subs_category = $setting['category'];
-  											array_push( $cat_excludes, get_cat_ID( $setting['category'] ) );
+  											array_push( $hoagies_filter_reverse, get_cat_ID( $setting['category'] ) );
   										else:
-  											$subs_category = $subs_category_default;
-  											array_push( $cat_excludes, get_cat_ID( $subs_category_default ) );
+  											array_push( $hoagies_filter_reverse, get_cat_ID( $subs_filter_default ) );
   										endif;
   									endforeach;
   								endif;
   							endif;
   							$args = array(
-  								'category__not_in' => $cat_excludes,
+  								'category__not_in' => $hoagies_filter_reverse,
   							);
   							query_posts( $args );
   							while ( have_posts() ) :

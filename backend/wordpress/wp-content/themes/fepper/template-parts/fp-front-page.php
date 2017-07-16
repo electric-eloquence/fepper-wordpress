@@ -18,11 +18,11 @@
 			<div class="l-main">
 				<section class="section hoagies">
 					<h2 class="section-title"><?php
-						global $cat_excludes;
+						global $hoagies_filter_reverse;
 						global $hoagies_offset;
 						global $wp_query;
 						$args = array(
-							'category__not_in' => $cat_excludes,
+							'category__not_in' => $hoagies_filter_reverse,
 							'offset'           => $hoagies_offset,
 						);
 						query_posts( $args );
