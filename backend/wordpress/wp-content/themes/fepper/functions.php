@@ -188,11 +188,11 @@ add_action( 'wp_enqueue_scripts', 'fepper_scripts' );
 function fepper_widgets_init() {
 
 	/* Register global default settings for custom widgets. */
-	global $hero_category_default;
-	global $subs_category_default;
+	global $hero_filter_default;
+	global $subs_filter_default;
 
-	$hero_category_default = 'Hero';
-	$subs_category_default = 'Sub';
+	$hero_filter_default = 'Hero';
+	$subs_filter_default = 'Sub';
 
 	/**
 	 * Class used to implement a Hero widget.
@@ -227,13 +227,13 @@ function fepper_widgets_init() {
 		 * @param array $instance Settings for the current Hero widget instance.
 		 */
 		public function widget( $args, $instance ) {
-			global $cat_excludes;
-			global $hero_category_default;
+			global $hoagies_filter_reverse;
+			global $hero_filter_default;
 			global $hero_filter;
 			global $hoagies_offset;
 
-			$hero_filter = $instance['category'] ? $instance['category'] : $hero_category_default;
-			$cat_excludes = array( get_cat_ID( $hero_filter ) );
+			$hero_filter = $instance['category'] ? $instance['category'] : $hero_filter_default;
+			$hoagies_filter_reverse = array( get_cat_ID( $hero_filter ) );
 			$hoagies_offset = 0;
 
 			get_template_part( 'template-parts/fp-widget-hero' );
@@ -247,7 +247,7 @@ function fepper_widgets_init() {
 		 * @param array $instance Current settings.
 		 */
 		public function form( $instance ) {
-			global $hero_category_default;
+			global $hero_filter_default;
 
 			$instance = wp_parse_args( (array) $instance, array( 'category' => '') );
 			$category = $instance['category'];
@@ -257,7 +257,7 @@ function fepper_widgets_init() {
 					<?php
 						echo sprintf(
 							__( 'The Category to appear in your Hero block (default: "%")', 'fepper' ),
-							$hero_category_default
+							$hero_filter_default
 						);
 					?>
 				</label>
@@ -323,12 +323,12 @@ function fepper_widgets_init() {
 		 * @param array $instance Settings for the current Subs widget instance.
 		 */
 		public function widget( $args, $instance ) {
-			global $cat_excludes;
-			global $subs_category_default;
+			global $hoagies_filter_reverse;
+			global $subs_filter_default;
 			global $subs_filter;
 
-			$subs_filter = $instance['category'] ? $instance['category'] : $subs_category_default;
-			array_push( $cat_excludes, get_cat_ID( $subs_filter ) );
+			$subs_filter = $instance['category'] ? $instance['category'] : $subs_filter_default;
+			array_push( $hoagies_filter_reverse, get_cat_ID( $subs_filter ) );
 
 			get_template_part( 'template-parts/fp-widget-subs' );
 		}
@@ -341,7 +341,7 @@ function fepper_widgets_init() {
 		 * @param array $instance Current settings.
 		 */
 		public function form( $instance ) {
-			global $subs_category_default;
+			global $subs_filter_default;
 
 			$instance = wp_parse_args( (array) $instance, array( 'category' => '') );
 			$category = $instance['category'];
@@ -351,7 +351,7 @@ function fepper_widgets_init() {
 					<?php
 						echo sprintf(
 							__( 'The Category to appear in your Subs block (default: "%")', 'fepper' ),
-							$subs_category_default
+							$subs_filter_default
 						);
 					?>
 				</label>
