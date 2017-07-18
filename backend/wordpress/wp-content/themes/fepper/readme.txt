@@ -40,14 +40,16 @@ reasonably working interface between these two very different platforms.
   no import):
   * In /wp-admin/widgets.php, delete all widgets from the header sidebar except 
     Search.
+  * In /wp-admin/widgets.php, add the Hero widget to the hero block.
+  * In /wp-admin/widgets.php, add the Subs widget to the subs block.
   * In /wp-admin/edit-tags.php?taxonomy=category, create "Hero" and "Sub" 
     categories.
   * In /wp-admin/edit.php, add a new post and assign it to the "Hero" category.
     * Give this a large 16x9 Featured Image.
   * Add three new posts to the "Sub" category.
     * Give each post a 4x3 Featured Image.
-  * Posts added to the "Uncategorized" category will appear as blog listings on 
-    the Home and Blog pages.
+  * Posts not categorized as "Hero" or "Sub" will appear as blog listings on the 
+    Home and Blog pages.
 
 == Copyright ==
 
