@@ -1,0 +1,53 @@
+.header
+	@extend .lc
+	background-color: $white
+	border-bottom: 1px solid $gray-light-3
+	margin: 0
+	max-width: none
+	padding: 0
+	width: 100%
+	a
+		&:hover, &:focus
+			color: $gray
+.site-branding
+	float: left
+	padding: $space-half
+	h1,
+	h2
+		display: table
+.nav-toggle
+	border-bottom: 1px solid $gray-light-3
+	border-left: 1px solid $gray-light-3
+	display: block
+	float: right
+	font-size: 2.08rem
+	line-height: 1
+	padding: ($space + 0.1rem) $space $space ($space + 0.1rem)
+	position: relative
+	right: 0
+	width: $nav-toggle-n-border
+	height: $nav-toggle-height
+	z-index: 2
+	.menu-open &
+		color: $gray-dark
+.toggle-open
+	max-height: 100% !important
+@media all and (max-width: $bp-sm-max)
+	.site-branding
+		max-width: "calc(100% - (2 * %s))" % $nav-toggle-n-border
+@media all and (min-width: $bp-med)
+	.nav-toggle
+		display: none
+@media all and (min-width: $bp-large)
+	.site-title
+		a
+			display: block
+			margin-top: 4rem
+		.custom-logo-link
+			margin-top: 0
+@media all and (min-width: $max-width)
+	.header > *:not(.site-branding)
+		padding-right: "calc((100% - %s) / 2)" % $max-width
+		padding-left: "calc((100% - %s) / 2)" % $max-width
+	.site-branding
+		padding-left: "calc((100% - %s + %s) / 2)" % ($max-width $space)

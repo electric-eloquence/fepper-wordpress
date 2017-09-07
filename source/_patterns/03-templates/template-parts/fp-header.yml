@@ -1,73 +1,64 @@
 'header_styles': |2
   <?php
-  		$text_color = get_theme_support( 'custom-header', 'default-text-color' );
+  		$text_color = get_theme_mod( 'header_textcolor', get_theme_support( 'custom-header', 'default-text-color' ) );
   		if ( $text_color ) :
   	?>
   		.header,
   		.header a {
-  			color: #<?php echo $text_color; ?>;
+  			color: #<?php echo esc_html( $text_color ); ?>;
   		}
   	<?php endif; ?>
-'header_classes': |2
+'nav_toggle_php': |2
   <?php
-  	global $widgets;
+  	$has_custom_logo = has_custom_logo();
+  	$is_front_page = is_front_page();
   	$widgets = wp_get_sidebars_widgets();
-  	if (
-  		is_array( $widgets['sidebar'] ) &&
-  		(
-  			( count( $widgets['sidebar'] ) == 1 && strpos( $widgets['sidebar'][0], 'search' ) === 0 ) ||
-  			count( $widgets['sidebar'] ) == 0
-  		)
-  	) :
-  		echo 'header-no-image';
-  	endif;
+  	$has_search = false;
+  	foreach ( $widgets['sidebar'] as $widget ) :
+  		if ( strpos( $widget, 'search' ) === 0 ) :
+  			$has_search = true;
+  			break;
+  		endif;
+  	endforeach;
   ?>
+'\^ new_install\?': |2
+  <?php if ( $has_custom_logo ) :
+  			if ( $is_front_page ) :
 '> 01-compounds/01-blocks/04-logo': |2
-  <?php
-  			if ( has_custom_logo() ) :
-  				if ( is_front_page() ) :
-  					echo '<h1 class="site-title">';
-  				endif;
-  				$custom_logo_id = get_theme_mod( 'custom_logo' );
-  				$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-  				$image_alt = get_post_meta( $custom_logo_id, '_wp_attachment_image_alt', true );
-  				if ( empty( $image_alt ) ) :
-  					$image_alt = get_bloginfo();
-  				endif;
-  		?>
-  				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
-  					<img src="<?php echo $image[0]; ?>" alt="<?php echo $image_alt; ?>" />
-  				</a>
-  		<?php
-  				if ( is_front_page() ) :
-  					echo '</h1>';
-  				endif;
-  			else :
-  				if ( display_header_text() ) :
-  		?>
-  					<h1 class="site-title">
-  						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_bloginfo(); ?></a>
-  					</h1>
-  					<h2 class="site-description"><?php echo get_bloginfo( 'description' ); ?></h2>
-  		<?php
-  				endif;
+  	echo '<h1 class="site-title">';
   			endif;
+  			the_custom_logo();
+  			if ( $is_front_page ) :
+  				echo '</h1>'; ?>
+'/ new_install\?': |2
+  <?php
+  			endif;
+  		endif; ?>
+'# new_install\?': |2
+  <?php if ( ! $has_custom_logo ) :
+  			if ( display_header_text() ) :
   		?>
+'url': |2
+  <?php echo esc_url( home_url( '/' ) ); ?>
+'title': |2
+  <?php bloginfo( 'name' ); ?>
+'tagline': |2
+  <?php bloginfo( 'description' ); ?>
+'# has_search': |2
+  <?php if ( $has_search ) : ?>
+'/ has_search': |2
+  <?php endif; ?>
 '> 02-components/01-sections/02-widget-area': |2
   <div
   		id="widget-area"
-  		class="widget-area"
+  		class="widget-area <?php if ( ! $has_custom_logo ) : ?>cf<?php endif; ?>"
   		role="complementary"
   		<?php
   			echo 'style="background: url(';
-  			if ( get_header_image() ) :
-  				header_image();
-  			else :
-  				echo get_theme_root_uri() . '/fepper/_assets/src/landscape-16x9-mountains.jpg';
-  			endif;
-  			echo ') center no-repeat; background-size: cover;"';
+  			header_image();
+  			echo ') center no-repeat; background-attachment: fixed; background-size: cover;"';
   		?>
-  		>
+  	>
   		<?php dynamic_sidebar( 'sidebar' ); ?>
   	</div><!-- .widget-area -->
 '> 02-components/03-navigation/00-primary-nav': |2

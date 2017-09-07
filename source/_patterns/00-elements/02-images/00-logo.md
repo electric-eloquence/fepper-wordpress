@@ -1,5 +1,5 @@
 ---
-el: .logo
+el: .custom-logo-link
 title: Logo
 ---
 The logo image is an SVG file, which ensures that the logo displays crisply even 

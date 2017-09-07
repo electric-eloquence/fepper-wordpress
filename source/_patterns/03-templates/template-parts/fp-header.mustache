@@ -2,11 +2,22 @@
 <style type="text/css">
 	{{{ header_styles }}}
 </style>
-<header class="header cf {{ header_classes }}" role="banner">
+{{ nav_toggle_php }}
+<header class="header cf" role="banner">
 	<div class="site-branding">
-		{{> 01-compounds/01-blocks/04-logo }}
+		{{^ new_install? }}
+			{{> 01-compounds/01-blocks/04-logo }}
+		{{/ new_install? }}
+		{{# new_install? }}
+			<h1 class="site-title">
+				<a href="{{{ url }}}">{{{ title }}}</a>
+			</h1>
+			<h2 class="site-description">{{{ tagline }}}</h2>
+		{{/ new_install? }}
 	</div>
-	<a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
+	{{# has_search }}
+		<a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
+	{{/ has_search }}
 	<a href="#" class="nav-toggle nav-toggle-menu icon-menu"></a>
 	{{> 02-components/01-sections/02-widget-area }}
 	{{> 02-components/03-navigation/00-primary-nav }}

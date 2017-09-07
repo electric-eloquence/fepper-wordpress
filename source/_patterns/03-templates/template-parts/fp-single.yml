@@ -1,9 +1,9 @@
-'\^ sidebar_2\?': |2
-  <?php if ( ! is_active_sidebar( 'sidebar-2' ) ) : ?>
-'/ sidebar_2\?': |2
+'\^ sidebar_1\?': |2
+  <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
+'/ sidebar_1\?': |2
   <?php endif; ?>
-'# sidebar_2\?': |2
-  <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+'# sidebar_1\?': |2
+  <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 '# article': |2
   <?php while ( have_posts() ) : the_post(); ?>
 'article_title': |2
@@ -27,7 +27,7 @@
   							) );
   						?>
   					</div>
-'> 02-components/02-comments/00-comment-thread': |2
+'> 03-templates/comments': |2
   <?php
   						if ( comments_open() || get_comments_number() ) :
   							comments_template();
@@ -56,5 +56,5 @@
   						) );
   					endif;
   				?>
-'> 02-components/01-sections/01-related-posts': |2
-  <?php dynamic_sidebar( 'sidebar-2' ); ?>
+'> 02-components/01-sections/00-recent-comments': |2
+  <?php dynamic_sidebar( 'sidebar-1' ); ?>

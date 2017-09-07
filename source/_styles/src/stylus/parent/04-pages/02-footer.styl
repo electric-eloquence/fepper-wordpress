@@ -1,0 +1,45 @@
+.footer
+	clear: both
+	overflow: hidden
+	background: $gray-dark-3
+	color: $white
+	line-height: 1.2
+	a
+		color: $white
+		&:hover, &:focus
+			color: $gray
+	p
+		margin-bottom: 0
+	.footer-content
+		@extend .lc
+		padding: $space $space-half $space-half
+		div[class^="menu-"]
+			font-size: 0.75em
+		> div
+			display: inline-block
+			margin-right: $space-double
+			margin-bottom: $space-half
+			vertical-align: -($space-half + $space-quarter)
+		> div:first-child
+			vertical-align: baseline
+		> div:last-child
+			margin-right: 0
+	div[class^="menu-"],
+	ul,
+	.page_item_has_children,
+	.menu-item-has-children
+		@extend .cf
+	ul,
+	li,
+	.page_item_has_children > a,
+	.menu-item-has-children > a
+		float: left
+	li
+		margin-right: $space
+	li:last-child
+		margin-right: 0
+	.children,
+	.sub-menu
+		margin-left: $space
+		> li:last-child
+			margin-right: 0

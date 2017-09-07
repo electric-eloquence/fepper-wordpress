@@ -1,52 +1,28 @@
-'> 03-templates/template-parts/fp-widget-hero': |2
-  <?php if ( is_active_sidebar( 'hero' ) ) : ?>
-  				<?php dynamic_sidebar( 'hero' ); ?>
-  			<?php endif; ?>
-'> 03-templates/template-parts/fp-widget-subs': |2
-  <?php if ( is_active_sidebar( 'subs' ) ) : ?>
-  				<?php dynamic_sidebar( 'subs' ); ?>
-  			<?php endif; ?>
-'\^ sidebar_1\?': |2
-  <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
-'/ sidebar_1\?': |2
-  <?php endif; ?>
-'# sidebar_1\?': |2
-  <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-'latest_posts_title': |2
+'hoagies_classes': |2
   <?php
-  						global $hoagies_filter_reverse;
-  						global $hoagies_offset;
-  						global $wp_query;
-  						$args = array(
-  							'category__not_in' => $hoagies_filter_reverse,
-  							'offset'           => $hoagies_offset,
-  						);
-  						query_posts( $args );
-  						echo _n( 'Latest Post', 'Latest Posts', $wp_query->post_count, 'fepper' );
-  					?>
+  	global $wp_query;
+  	$is_two_col = false;
+  	while ( have_posts() ) : the_post();
+  		if ( has_post_thumbnail() ) :
+  			$is_two_col = true;
+  			break;
+  		endif;
+  	endwhile;
+  	rewind_posts();
+  	if ( $is_two_col ) :
+  		echo 'hoagies-two-col ';
+  	endif;
+  	if ( $wp_query->post_count > 1 ) :
+  		echo 'post-list ';
+  	endif;
+  ?>
 '# latest_posts': |2
-  <?php
-  							while ( have_posts() ) :
-  								the_post();
-  						?>
-'url': |2
-  <?php the_permalink(); ?>
-'headline.short': |2
-  <?php the_title(); ?>
-'# demo_site\?': |2
-  <?php
-  											$post_thumbnail = get_the_post_thumbnail( $wp_query->post, 'medium' );
-  											if ( $post_thumbnail ) :
-  										?>
-'> elements-square': |2
-  <?php echo $post_thumbnail; ?>
-'/ demo_site\?': |2
-  <?php endif; ?>
-'excerpt.medium': |2
-  <?php the_excerpt(); ?>
+  <?php while ( have_posts() ) : the_post();
+'> 03-templates/template-parts/content': |2
+  get_template_part( 'template-parts/content' );
+'front_page_comments': |2
+  if ( comments_open() || get_comments_number() ) :
+  			comments_template();
+  		endif;
 '/ latest_posts': |2
-  <?php
-  							endwhile;
-  						?>
-'> 02-components/01-sections/00-recent-comments': |2
-  <?php dynamic_sidebar( 'sidebar-1' ); ?>
+  endwhile; ?>

@@ -1,0 +1,22 @@
+// Two Column Layout
+.l-two-col
+	@extend .cf
+	@media all and (max-width: $bp-sm-max)
+		.l-sidebar
+			clear: both
+	@media all and (min-width: $bp-med)
+		.l-main
+			float: left
+			width: 70%
+			padding-right: $space
+		.l-sidebar
+			float: left
+			width: 30%
+			padding: 0 0 0 $space
+// Main
+#main
+	@extend .lc
+	@extend .cf
+	margin-bottom: $space-double
+	padding: $space-double $space-half 0
+	overflow: hidden

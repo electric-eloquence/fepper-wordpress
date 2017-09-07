@@ -1,34 +1,8 @@
-<div class="page" id="page">
-	<div role="main">
-		<section class="hero-and-subs">
-			{{> 03-templates/template-parts/fp-widget-hero }}
-			{{> 03-templates/template-parts/fp-widget-subs }}
-		</section>
+<main id="main" class="fp-front-page {{ hoagies_classes }}" role="main">
 
-		{{^ sidebar_1? }}
-			<div class="l-one-col">
-		{{/ sidebar_1? }}
-		{{# sidebar_1? }}
-			<div class="l-two-col">
-		{{/ sidebar_1? }}
-			<div class="l-main">
-				<section class="section hoagies">
-					<h2 class="section-title">{{{ latest_posts_title }}}</h2>
-					<ul class="post-list">
-						{{# latest_posts }}
-							<li>
-								{{> 01-compounds/01-blocks/02-block-hoagie.mustache }}
-							</li>
-						{{/ latest_posts }}
-					</ul>
-				</section>
-			</div><!--end .l-main-->
+	{{# latest_posts }}
+		{{> 03-templates/template-parts/content }}
+		{{{ front_page_comments }}}
+	{{/ latest_posts }}
 
-			{{# sidebar_1? }}
-				<div class="l-sidebar l-sidebar-1">
-					{{> 02-components/01-sections/00-recent-comments }}
-				</div><!--end .l-sidebar-->
-			{{/ sidebar_1? }}
-		</div>
-	</div><!--End role=main-->
-</div>
+</main>

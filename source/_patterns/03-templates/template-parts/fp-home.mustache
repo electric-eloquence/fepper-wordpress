@@ -1,30 +1,43 @@
-<div class="page" id="page">
-	<div role="main">
+<main id="main" class="fp-home" role="main">
+	{{^ homepage? }}
 		<h1 class="section-title">{{{ page_title }}}</h1>
-		{{^ sidebar_1? }}
-			<div class="l-one-col">
-		{{/ sidebar_1? }}
+	{{/ homepage? }}
+	{{# homepage? }}
+		<section class="hero-and-subs">
+			{{# hero }}
+				{{> 01-compounds/01-blocks/00-block-hero.mustache }}
+			{{/ hero }}
+			{{# subs }}
+				{{> 01-compounds/01-blocks/01-block-sub.mustache }}
+			{{/ subs }}
+		</section>
+	{{/ homepage? }}
+	{{^ sidebar_1? }}
+		<div class="l-one-col">
+	{{/ sidebar_1? }}
+	{{# sidebar_1? }}
+		<div class="l-two-col">
+	{{/ sidebar_1? }}
+		{{# homepage? }}
+			<h2 class="section-title">{{{ section_title }}}</h2>
+		{{/ homepage? }}
+		<div class="l-main">
+			<section class="section hoagies {{ hoagies_classes }}">
+				<ul class="post-list">
+					{{# latest_posts }}
+						<li>
+							{{> 01-compounds/01-blocks/02-block-hoagie.mustache }}
+						</li>
+					{{/ latest_posts }}
+				</ul>
+			</section>
+			{{{ pagination_label }}}
+			{{> components-pagination }}
+		</div><!--end l-main-->
 		{{# sidebar_1? }}
-			<div class="l-two-col">
+			<div class="l-sidebar l-sidebar-1">
+				{{> 02-components/01-sections/00-recent-comments }}
+			</div><!--end l-sidebar-->
 		{{/ sidebar_1? }}
-			<div class="l-main">
-				<section class="section hoagies">
-					<ul class="post-list">
-						{{# latest_posts }}
-							<li>
-								{{> 01-compounds/01-blocks/02-block-hoagie.mustache }}
-							</li>
-						{{/ latest_posts }}
-					</ul>
-				</section>
-				{{{ pagination_label }}}
-				{{> components-pagination }}
-			</div><!--end l-main-->
-			{{# sidebar_1? }}
-				<div class="l-sidebar l-sidebar-1">
-					{{> 02-components/01-sections/00-recent-comments }}
-				</div><!--end l-sidebar-->
-			{{/ sidebar_1? }}
-		</div>
-	</div><!--End role=main-->
-</div>
+	</div>
+</main><!--End role=main-->
