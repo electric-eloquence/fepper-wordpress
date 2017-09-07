@@ -1,0 +1,54 @@
+.section-title
+	margin-bottom: $space-half
+#widget-area
+	aside
+		margin-bottom: $space-double
+		padding-right: $space-half
+		padding-left: $space-half
+	aside:nth-child(2)
+		clear: both
+		padding-top: $space-double
+	aside:last-child
+		border-bottom: 1px solid $gray-light-3
+		float: none
+		margin-bottom: 0
+		padding-bottom: $space-double
+		.header &
+			border-bottom: 0
+	aside:first-child
+		border-bottom: 0
+		float: right
+		padding-bottom: 0
+	aside:not(.widget_search)
+		@extend .cf
+	ul
+		li
+			float: left
+			&:last-child
+				float: none
+			a
+				padding: 0.25em $space-double
+				&:first-child
+					padding-left: 0
+	@media all and (min-width: $bp-small)
+		.widget_recent_entries,
+		.widget_recent_comments
+			float: left
+			padding-top: $space-double
+			width: 50%
+			ul
+				li
+					float: none
+		.widget_recent_entries + aside:not(.widget_recent_comments),
+		.widget_recent_comments + aside
+			clear: both
+.l-sidebar .widgettitle
+	padding: 0 0 0.5em
+*:not(#widget-area) >
+	.widget_recent_entries,
+	.widget_recent_comments
+		> ul > li
+			border-top: 1px solid $gray-light-3
+			padding: $space-quarter 0
+article[id^="post-"]
+	@extend .cf

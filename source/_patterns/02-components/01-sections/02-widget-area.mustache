@@ -15,7 +15,7 @@
     margin:0 !important;
   }
 </style>
-<div id="widget-area" class="widget-area" role="complementary">
+<div id="widget-area" class="widget-area {{^ img.logo }}cf{{/ img.logo }}" role="complementary">
 	{{# new_install? }}
 		{{> 01-compounds/02-forms/00-search }}
 		{{# widget_recent_entries }}

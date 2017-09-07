@@ -1,0 +1,85 @@
+.hero-and-subs
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-top: -($space-half)
+	padding-bottom: $space-and-half
+	@media all and (max-width: $bp-xs-max)
+		display: block
+.block-hero
+	margin-bottom: $space-half
+	.b-thumb
+		img
+			display: block
+	@media all and (max-width: $bp-xs-max)
+		.b-text
+			display: flex
+			flex-flow: column nowrap
+			justify-content: center
+			height: 8.7rem
+	@media all and (max-width: $bp-sm-max)
+		.b-text
+			background: $dimmer
+			overflow: hidden
+		.headline
+			font-size: 1.8rem
+			padding: 0 $space-half
+	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+		.b-thumb
+			padding-top: 75%
+		img
+			position: absolute
+			top: 0
+			left: 0
+		.b-thumb + .b-text
+			overflow: hidden
+			padding-top: 19%
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			.headline
+				position: absolute
+				top: 50%
+				left: 0
+				transform: translateY(-50%);
+	@media all and (min-width: $bp-med)
+		position: relative
+		.b-text
+			background: $dim
+			color: $white
+			padding: $space-and-half
+		.b-thumb + .b-text
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+.block-sub
+	margin-bottom: $space-half
+	position: relative
+	.b-thumb
+		position: relative
+		z-index: 0
+		img
+			display: block
+	.b-text
+		background: $dim
+		color: $white
+		padding: $space-half
+	.b-thumb + .b-text
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+	@media all and (max-width: $bp-sm-max)
+		.headline
+			font-size: 1.7rem
+	@media all and (min-width: $bp-med)
+		padding-top: $space-half
+		width: calc(33.3333333% - 1.0666666rem)
+		.headline
+			font-size: 1.8rem
+.hero-and-subs + .l-two-col
+	border-top: 2px solid $gray-light-2
+	margin-top: $space-half
+	padding-top: $space-double

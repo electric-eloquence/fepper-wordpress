@@ -22,11 +22,11 @@ backend:
     #styles_dir: docroot/themes/theme/styles
     #templates_dir: docroot/themes/theme/templates
     #templates_ext: tpl.php
-    assets_dir: wordpress/wp-content/themes/fepper/_assets
-    scripts_dir: wordpress/wp-content/themes/fepper/_scripts
-    styles_dir: wordpress/wp-content/themes/fepper/_styles
-    templates_dir: wordpress/wp-content/themes/fepper
+    assets_dir: wordpress/wp-content/themes/fepper-child/_assets
+    scripts_dir: wordpress/wp-content/themes/fepper-child/_scripts
+    templates_dir: wordpress/wp-content/themes/fepper-child
     templates_ext: php
+    # styles_dir is configured locally in source/_styles/bld/style-child.yml
 
   webserved_dirs:
     # Relative paths to the backend directories that will be served by Fepper's
