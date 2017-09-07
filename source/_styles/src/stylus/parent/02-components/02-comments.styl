@@ -1,0 +1,92 @@
+$meta-width = 12em
+.comments
+	border-top: 1px solid $gray-light-3
+	margin-top: 2em
+	.section-title
+		margin: 0.625em 0 0
+	.comment
+		min-height: 9em
+		margin-top: 0.75em
+		padding-bottom: 0.5em
+	li.comment:last-of-type
+		border-bottom: 1px solid $gray-light-3
+	.comment-body
+		@extend .cf
+		padding-bottom: 0.5em
+		position: relative
+	.comment-meta
+		float: left
+		min-height: 9em
+		width: $meta-width
+		img
+			display: block
+			border: 1px solid $gray-light-2
+			margin-bottom: 0.5em
+			width: 6.25em
+		.fn,
+		.comment-author span,
+		.comment-metadata
+			font-size: 0.75em
+			line-height: 1
+		.fn,
+		.comment-metadata
+			margin-left: 2px
+	.comment-meta + .comment-content
+		margin-left: $meta-width
+		width: "calc(100% - %s)" % $meta-width
+		p
+			margin-bottom: 0
+	.comment-meta + .comment-content + .reply
+		margin: 0.25em 0 0 12em
+		&::before
+			content: "•"
+			margin-left: 0.25em
+		a
+			padding-left: 0.75em
+	.children
+		margin-left: 0.75em
+		.comment-body
+			border-left: 1px solid $gray-light-3
+	.comment-respond
+		padding-top: 1em
+		@media all and (max-width: $bp-sm-max)
+			padding-bottom: 0.25em
+	@media all and (max-width: $bp-xs-max)
+		$img-size-xs = 8.75rem
+		.comment
+			margin: 0
+			padding: 0
+		.comment:last-of-type
+			padding-bottom: 0.5em
+		.comment-body
+			padding-bottom: 0
+		.comment-meta
+			float: none
+			min-height: $img-size-xs
+			margin-bottom: 0.25em
+			position: relative
+			width: 100%
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			> div
+				width: "calc(100% - %s - 0.2rem)" % $img-size-xs
+			.comment-author
+				img
+					margin-bottom: 0
+					position: absolute
+					top: 0
+					right: 0
+			.fn,
+			.comment-metadata
+				margin-left: 0
+		.comment-meta + .comment-content,
+		.comment-meta + .comment-content + .reply
+			margin-left: 0
+			width: auto
+		.comment-metadata
+			margin-bottom: 0.5em
+		.children
+			.comment-body
+				> *
+					margin-left: 2px

@@ -1,3 +1,9 @@
-<a href="{{ link.pages-homepage }}{{ href }}" class="logo">
+{{# homepage? }}
+	<h1 class="site-title">
+{{/ homepage? }}
+<a href="{{ link.pages-homepage }}{{ href }}" class="custom-logo-link" rel="home" itemprop="url">
 	{{> 00-elements/02-images/00-logo.mustache }}
 </a>
+{{# homepage? }}
+	</h1>
+{{/ homepage? }}

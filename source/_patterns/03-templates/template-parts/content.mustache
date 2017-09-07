@@ -1,0 +1,23 @@
+<article id="post-{{ article_id }}" {{{ article_attributes }}}>
+
+	<header class="entry-header headline">
+		{{{ headline.short }}}
+	</header>
+
+	{{# img }}
+		<div class="b-thumb">
+			{{> elements-square }}
+		</div>
+	{{/ img }}
+
+	<div class="entry-content b-text">
+		{{{ excerpt.medium }}}
+	</div>
+
+	{{{ article_bio }}}
+
+	<footer class="entry-footer b-text">
+		{{{ article_footer }}}
+	</footer>
+
+</article>

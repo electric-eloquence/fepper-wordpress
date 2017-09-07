@@ -1,0 +1,54 @@
+// Block
+.block
+	overflow: hidden
+.block,
+.b-text
+	p:last-child
+		margin-bottom: 0
+.headline
+	line-height: 1.2
+.block-hero,
+.block-sub
+	.inner
+		display: block
+		position: relative
+	.b-text
+		color: $white
+	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
+		width: "calc(50% - %s)" % $space-quarter
+.post-list article[id^="post-"],
+.block-hoagie
+	margin-bottom: $space
+article[id^="post-"],
+.block-hoagie
+	@extend .cf
+	width: 100%
+	.b-inner
+		overflow: hidden
+	.b-thumb
+		float: left
+	@media all and (max-width: $bp-xs-max)
+		.b-thumb
+			float: none
+			max-width: 22.5rem
+	@media all and (max-width: $bp-sm-max)
+		.entry-title,
+		.headline
+			font-size: 1.8rem
+		.b-text
+			p
+				font-size: 1.4rem
+	@media all and (min-width: $bp-small)
+		.hoagies-two-col &
+			.headline
+				float: right
+				padding: 0 $space
+				width: 70%
+			.b-thumb
+				width: 30%
+			.b-text
+				float: right
+				padding: 0 $space
+				width: 70%
+.hoagies-two-col
+	margin-bottom: 0

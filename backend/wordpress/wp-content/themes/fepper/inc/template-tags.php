@@ -1,17 +1,4 @@
 <?php
-if ( ! function_exists( 'fepper_the_custom_logo' ) ) :
-/**
- * Displays the optional custom logo.
- *
- * Does nothing if the custom logo is not available.
- */
-function fepper_the_custom_logo() {
-	if ( function_exists( 'the_custom_logo' ) ) {
-		the_custom_logo();
-	}
-}
-endif;
-
 if ( ! function_exists( 'fepper_categorized_blog' ) ) :
 /**
  * Determines whether blog/site has more than one category.

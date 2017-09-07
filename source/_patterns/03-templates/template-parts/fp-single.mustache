@@ -1,32 +1,30 @@
-<div class="page" id="page">
-	<div role="main">
-		{{^ sidebar_2? }}
-			<div class="l-one-col">
-		{{/ sidebar_2? }}
-		{{# sidebar_2? }}
-			<div class="l-two-col">
-		{{/ sidebar_2? }}
-			<div class="l-main">
-				{{# article }}
-					<article class="article">
-						<header class="article-header">
-							<h1>{{{ article_title }}}</h1>
-							{{> 01-compounds/00-text/00-byline-author-time }}
-						</header>
-						{{> 02-components/00-article/00-article-body }}
-					</article><!--end .article-->
-					{{{ page_links }}}
-					{{> 02-components/02-comments/00-comment-thread }}
-				{{/ article }}
-				{{{ post_navigation }}}
-			</div><!--end l-main-->
+<main id="main" class="fp-single" role="main">
+	{{^ sidebar_1? }}
+		<div class="l-one-col">
+	{{/ sidebar_1? }}
+	{{# sidebar_1? }}
+		<div class="l-two-col">
+	{{/ sidebar_1? }}
+		<div class="l-main">
+			{{# article }}
+				<article class="article">
+					<header class="article-header">
+						<h1>{{{ article_title }}}</h1>
+						{{> 01-compounds/00-text/00-byline-author-time }}
+					</header>
+					{{> 02-components/00-article/00-article-body }}
+				</article><!--end .article-->
+				{{{ page_links }}}
+				{{> 03-templates/comments }}
+			{{/ article }}
+			{{{ post_navigation }}}
+		</div><!--end l-main-->
 
-			{{# sidebar_2? }}
-				<div class="l-sidebar l-sidebar-2">
-					{{> 02-components/01-sections/01-related-posts }}
-					{{> 02-components/01-sections/00-recent-comments }}
-				</div><!--end l-sidebar-->
-			{{/ sidebar_2? }}
-		</div>
-	</div><!--End role=main-->
-</div>
+		{{# sidebar_1? }}
+			<div class="l-sidebar l-sidebar-1">
+				{{> 02-components/01-sections/01-related-posts }}
+				{{> 02-components/01-sections/00-recent-comments }}
+			</div><!--end l-sidebar-->
+		{{/ sidebar_1? }}
+	</div>
+</main><!--End role=main-->
