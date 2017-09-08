@@ -22,7 +22,6 @@ backend:
     #styles_dir: docroot/themes/theme/styles
     #templates_dir: docroot/themes/theme/templates
     #templates_ext: tpl.php
-    assets_dir: wordpress/wp-content/themes/fepper-child/_assets
     scripts_dir: wordpress/wp-content/themes/fepper-child/_scripts
     templates_dir: wordpress/wp-content/themes/fepper-child
     templates_ext: php
