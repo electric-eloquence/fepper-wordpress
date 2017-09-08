@@ -3,8 +3,6 @@
 # A frontend prototyper tool for rapid prototyping of web sites
 
 #### This checkout of Fepper has templates configured for WordPress, along with a [WordPress theme](https://wordpress.org/themes/fepper/) built to accept those templates.
-The Fepper WordPress theme is backward-compatible with WordPress core down to 
-WordPress 4.5.
 
 * [Main project](https://github.com/electric-eloquence/fepper)
 
@@ -31,6 +29,7 @@ WordPress 4.5.
 #### System requirements
 * Unix-like or Windows OS.
 * Recommended minimum Node.js version 8.0.0.
+* Minimum WordPress version 4.5.
 
 #### Simplest way to get started
 * Download the 
@@ -173,6 +172,9 @@ backend web application.
   entire hierarchy, i.e. only `assets_dir`, `scripts_dir`, or `styles_dir` 
 * Files prefixed by "\_\_" will be ignored as will files in the `_nosync` 
   directory at the root of the source directories. 
+* Frontend code will be synced with a customizable 
+  <a href="https://github.com/electric-eloquence/fepper-wordpress/blob/dev/backend/wordpress/wp-content/themes/fepper-child/readme.md" target="_blank">
+  child theme</a>. 
 
 ### <a id="templater"></a>Templater
 Fepper's Mustache templates can be translated into templates compatible with 
@@ -191,6 +193,10 @@ Follow these rules for setting up keys and values:
 * Wrap the key in single quotes.
 * Follow the closing quote with a colon, space, pipe, the numeral 2, and a newline `: |2`
 * Indent each line of the value by at least two spaces.
+  * In the Fepper for WordPress project, be mindful of the fact that YAML does 
+    not recognize tabs as valid indentation for values.
+  * Spaces precede tabs in YAML values, but the compiled PHP templates are 
+    entirely tab-indented.
 
 Run `fp syncback` or `fp template` to execute the Templater. 
 
