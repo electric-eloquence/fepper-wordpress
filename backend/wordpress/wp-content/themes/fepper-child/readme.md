@@ -2,7 +2,7 @@
 
 ## Description
 
-Use this child theme to customize the Fepper parent theme from WordPress.org.
+Use this child theme to customize the Fepper parent theme.
 
 ## Installation
 
@@ -11,7 +11,7 @@ Use this child theme to customize the Fepper parent theme from WordPress.org.
   at `backend/wordpress/wp-content/themes`.
 * Activate this theme in the browser admin at /wp-admin/themes.php
 
-# Fepper Usage
+## Fepper Usage
 
 * [Install Fepper](https://github.com/electric-eloquence/fepper-wordpress#user-content-install).
 * Launch Fepper on the command line:
@@ -20,11 +20,11 @@ Use this child theme to customize the Fepper parent theme from WordPress.org.
 * Sync your frontend code with the WordPress backend:
   * `fp syncback`
 
-# WordPress Usage
+## WordPress Usage
 
 * This child theme demonstrates a Hero + Subs + Hoagies graphical layout for the homepage.
 * The Hero section will be populated by the first post under the Hero category.
 * The Subs section will be populated by the first three posts under the Sub category.
 * The Hoagies section will be populated by a configurable number of posts that are neither Heroes nor Subs.
 * The Hero + Subs + Hoagies layout is by no means mandatory.
-* You are welcome (indeed encouraged) to apply any frontend code you wish.
+* You are welcome (indeed encouraged) to use any frontend code you wish.
