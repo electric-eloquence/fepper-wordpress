@@ -191,10 +191,11 @@ Follow these rules for setting up keys and values:
 * Leave other control structures within the key, i.e., !#/>^
 * Escape parentheses, carets, and question marks with a backslash.
 * Wrap the key in single quotes.
-* Follow the closing quote with a colon, space, pipe, the numeral 2, and a newline `: |2`
+* Follow the closing quote with a colon, space, pipe, the numeral 2, and a 
+  newline `: |2`
 * Indent each line of the value by at least two spaces.
-  * In the Fepper for WordPress project, be mindful of the fact that YAML does 
-    not recognize tabs as valid indentation for values.
+  * In Fepper for WordPress, be mindful of the fact that YAML does not recognize 
+    tabs as valid indentation for values.
   * Spaces precede tabs in YAML values, but the compiled PHP templates are 
     entirely tab-indented.
 
