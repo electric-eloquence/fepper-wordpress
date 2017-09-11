@@ -62,7 +62,7 @@ function fepper_setup() {
 	/*
 	 * Visual editor styles.
 	 */
-	add_editor_style( 'css/editor-style.css' );
+	add_editor_style( array( '_styles/bld/style.css', '_styles/bld/editor-style.css' ) );
 }
 endif; // fepper_setup
 add_action( 'after_setup_theme', 'fepper_setup' );

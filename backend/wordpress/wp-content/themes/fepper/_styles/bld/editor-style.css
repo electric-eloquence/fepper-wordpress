@@ -1,3 +1,35 @@
+html {
+	background: white;
+}
+
+body {
+	margin: 10px;
+}
+
+a {
+	text-decoration: underline;
+}
+
+ul,
+ol {
+	margin: 0 0 16px 1.2em
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+	margin-bottom: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
 .wp-caption {
 	background: transparent;
 	border: none;
