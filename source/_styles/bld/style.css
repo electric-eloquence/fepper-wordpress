@@ -408,10 +408,6 @@ object {
 		width: calc(50% - 0.4rem);
 	}
 }
-.post-list article[id^="post-"],
-.block-hoagie {
-	margin-bottom: 1.6rem;
-}
 article[id^="post-"],
 .block-hoagie {
 	width: 100%;
@@ -460,6 +456,10 @@ article[id^="post-"] .b-thumb,
 		padding: 0 1.6rem;
 		width: 70%;
 	}
+}
+.post-list article[id^="post-"],
+.block-hoagie {
+	margin-bottom: 1.6rem;
 }
 .hoagies-two-col {
 	margin-bottom: 0;
