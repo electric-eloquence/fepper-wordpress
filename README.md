@@ -176,7 +176,7 @@ backend web application.
   directory at the root of the source directories. 
 * Frontend code will be synced with a customizable 
   <a href="https://github.com/electric-eloquence/fepper-wordpress/blob/dev/backend/wordpress/wp-content/themes/fepper-child/readme.md" target="_blank">
-  child theme</a>. 
+  child theme</a>. The parent theme will not be modified.
 
 ### <a id="templater"></a>Templater
 Fepper's Mustache templates can be translated into templates compatible with 
