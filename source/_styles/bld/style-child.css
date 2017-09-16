@@ -120,7 +120,7 @@
 @media all and (min-width: 768px) {
 	.block-sub {
 		padding-top: 0.8rem;
-		width: calc(33.3333333% - 1.0666666rem);
+		width: calc(33.333333333333336% - (3.2rem / 3));
 	}
 	.block-sub .headline {
 		font-size: 1.8rem;
