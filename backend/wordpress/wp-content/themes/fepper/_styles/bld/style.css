@@ -1206,6 +1206,9 @@ a img.aligncenter {
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
 }
+.gallery-columns-3 .gallery-item {
+	max-width: 33.333333333333336%;
+}
 .gallery-columns-4 .gallery-item {
 	max-width: 25%;
 }
@@ -1216,13 +1219,13 @@ a img.aligncenter {
 	max-width: 16.666666666666668%;
 }
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+	max-width: 14.285714285714286%;
 }
 .gallery-columns-8 .gallery-item {
 	max-width: 12.5%;
 }
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+	max-width: 11.11111111111111%;
 }
 .gallery-icon img {
 	margin: 0 auto;
