@@ -1,39 +1,39 @@
-.cf:before,
-article[id^="post-"]:before,
-.block-hoagie:before,
-#widget-area aside:not(.widget_search):before,
-.comments .comment-body:before,
-.l-two-col:before,
-#main:before,
-.footer div[class^="menu-"]:before,
-.footer ul:before,
-.footer .page_item_has_children:before,
-.footer .menu-item-has-children:before,
-.cf:after,
-article[id^="post-"]:after,
-.block-hoagie:after,
-#widget-area aside:not(.widget_search):after,
-.comments .comment-body:after,
-.l-two-col:after,
-#main:after,
-.footer div[class^="menu-"]:after,
-.footer ul:after,
-.footer .page_item_has_children:after,
-.footer .menu-item-has-children:after {
+.cf::before,
+article[id^="post-"]::before,
+.block-hoagie::before,
+#widget-area aside:not(.widget_search)::before,
+.comments .comment-body::before,
+.l-two-col::before,
+#main::before,
+.footer div[class^="menu-"]::before,
+.footer ul::before,
+.footer .page_item_has_children::before,
+.footer .menu-item-has-children::before,
+.cf::after,
+article[id^="post-"]::after,
+.block-hoagie::after,
+#widget-area aside:not(.widget_search)::after,
+.comments .comment-body::after,
+.l-two-col::after,
+#main::after,
+.footer div[class^="menu-"]::after,
+.footer ul::after,
+.footer .page_item_has_children::after,
+.footer .menu-item-has-children::after {
 	content: " ";
 	display: table;
 }
-.cf:after,
-article[id^="post-"]:after,
-.block-hoagie:after,
-#widget-area aside:not(.widget_search):after,
-.comments .comment-body:after,
-.l-two-col:after,
-#main:after,
-.footer div[class^="menu-"]:after,
-.footer ul:after,
-.footer .page_item_has_children:after,
-.footer .menu-item-has-children:after {
+.cf::after,
+article[id^="post-"]::after,
+.block-hoagie::after,
+#widget-area aside:not(.widget_search)::after,
+.comments .comment-body::after,
+.l-two-col::after,
+#main::after,
+.footer div[class^="menu-"]::after,
+.footer ul::after,
+.footer .page_item_has_children::after,
+.footer .menu-item-has-children::after {
 	clear: both;
 }
 .lc,
@@ -123,7 +123,8 @@ summary {
 .icon-android::before,
 .icon-apple::before,
 .icon-envelope::before,
-.icon-arrow::before {
+.icon-arrow::before,
+.search-form > label::after {
 	font-family: 'icons';
 	speak: none;
 	font-style: normal;
@@ -148,7 +149,8 @@ summary {
 .icon-google-plus::before {
 	content: "\67";
 }
-.icon-search::before {
+.icon-search::before,
+.search-form > label::after {
 	content: "\73";
 }
 .icon-play::before {
@@ -567,7 +569,7 @@ input[type="search"]::-webkit-search-decoration {
 .search-form > label {
 	float: left;
 }
-.search-form > label:after {
+.search-form > label::after {
 	color: #000;
 	position: absolute;
 	top: 0.7em;
@@ -1245,7 +1247,7 @@ a img.aligncenter {
 .page-title {
 	margin-bottom: 0.5em;
 }
-.bypostauthor > article .fn:after {
+.bypostauthor > article .fn::after {
 	content: "";
 	left: 3px;
 	position: relative;
