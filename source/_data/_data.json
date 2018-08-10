@@ -1,6 +1,7 @@
 {
   "homepage": "04-pages-00-homepage",
-  "title": "Fepper",
+  "html_title": "Fepper WP",
+  "site_title": "Fepper Theme",
   "tagline": "A frontend prototyper tool for rapid prototyping of web sites",
   "url": "#",
   "sidebar_1?": true,
