@@ -2,7 +2,7 @@
 
 * Contributors: Electric Eloquence
 * Requires at least: WordPress 4.5
-* Version: 0.1.2
+* Version: 0.1.4
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Tags: blog, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, one-column, right-sidebar, threaded-comments, two-columns
@@ -31,6 +31,10 @@ reasonably working interface between these two very different platforms.
 * This theme is unopinionated with regards to styles and markup and should be 
   used as a parent theme. You are encouraged to override any or all aspects of 
   this theme for your custom needs.
+
+## Questions, Requests, Bug Reports
+
+https://github.com/electric-eloquence/fepper-wordpress/issues
 
 ## Copyright
 
