@@ -15,8 +15,8 @@
   				get_the_title()
   			);
   		?>
-'the_comments_navigation': |2
-  <?php the_comments_navigation(); ?>
+'the_comments_pagination': |2
+  <?php the_comments_pagination(); ?>
 '# listItems.five': |2
   <?php
 '> 01-compounds/01-blocks/03-single-comment': |2
