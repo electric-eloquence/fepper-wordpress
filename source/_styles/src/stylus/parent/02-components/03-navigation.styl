@@ -10,15 +10,14 @@
 				color: $gray
 		@media all and (max-width: $bp-sm-max)
 			background: $white-translucent
-			border-bottom: 1px solid $gray-light-3
 			max-height: 0
 			position: absolute
-			top: 0
+			top: $nav-toggle-height
 			left: 0
 			width: 100%
 			z-index: 1
-			> ul
-				padding-top: $nav-toggle-height
+			&.toggle-open
+				border-bottom: 1px solid $gray-light-3
 			li
 				border-top: 1px solid $gray-light-3
 			a
@@ -32,17 +31,19 @@
 			background: $white
 			clear: none
 			float: left
-			padding-top: $space-quarter * 3
 			&.fixed
 				border-bottom: 1px solid $gray-light-3
 				position: fixed
 				top: 0
 				width: 100%
-			li
-				float: left
+			> ul
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				min-height: $nav-toggle-height + 0.2rem
 			a
 				border: 0
-				padding: 0.6rem $space
+				padding: $space-quarter $space
 			> ul > li > .children,
 			> ul > li > .sub-menu
 				background: $white

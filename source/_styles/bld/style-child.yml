@@ -1,3 +1,0 @@
-# Configuring styles_dir locally, and not globally, because we don't want to
-# overwrite the parent theme's style.css.
-styles_dir: wordpress/wp-content/themes/fepper-child/_styles/bld

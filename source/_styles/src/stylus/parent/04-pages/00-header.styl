@@ -2,8 +2,6 @@
 	@extend .lc
 	background-color: $white
 	border-bottom: 1px solid $gray-light-3
-	margin: 0
-	max-width: none
 	padding: 0
 	width: 100%
 	a
@@ -11,10 +9,13 @@
 			color: $gray
 .site-branding
 	float: left
-	padding: $space-half
+	margin: $space-half
 	h1,
 	h2
 		display: table
+.site-title
+	margin: 0
+	padding: 0
 .nav-toggle
 	border-bottom: 1px solid $gray-light-3
 	border-left: 1px solid $gray-light-3
@@ -22,16 +23,14 @@
 	float: right
 	font-size: 2.08rem
 	line-height: 1
-	padding: ($space + 0.1rem) $space $space ($space + 0.1rem)
+	padding: $space
 	position: relative
 	right: 0
 	width: $nav-toggle-n-border
 	height: $nav-toggle-height
 	z-index: 2
-	.menu-open &
-		color: $gray-dark
 .toggle-open
-	max-height: 100% !important
+	max-height: none !important
 @media all and (max-width: $bp-sm-max)
 	.site-branding
 		max-width: "calc(100% - (2 * %s))" % $nav-toggle-n-border
@@ -49,5 +48,3 @@
 	.header > *:not(.site-branding)
 		padding-right: "calc((100% - %s) / 2)" % $max-width
 		padding-left: "calc((100% - %s) / 2)" % $max-width
-	.site-branding
-		padding-left: "calc((100% - %s + %s) / 2)" % ($max-width $space)

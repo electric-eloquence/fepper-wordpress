@@ -49,10 +49,10 @@
 	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<div class="l-two-col">
 	<?php endif; ?>
-		<?php if ( $_SERVER['REQUEST_URI'] == '/' ) : ?>
-			<h2 class="section-title"><?php _e( 'Latest Posts', 'fepper' ); ?></h2>
-		<?php endif; ?>
 		<div class="l-main">
+			<?php if ( $_SERVER['REQUEST_URI'] == '/' ) : ?>
+				<h2 class="section-title"><?php _e( 'Latest Posts', 'fepper' ); ?></h2>
+			<?php endif; ?>
 			<section class="section hoagies <?php
 				$args = array( 'category__not_in' => array( get_cat_ID( 'hero' ), get_cat_ID( 'sub' ) ) );
 				$is_two_col = false;

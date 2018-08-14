@@ -3,10 +3,17 @@
 	overflow: hidden
 .block,
 .b-text
+	p:first-child
+		margin-top: 0
 	p:last-child
 		margin-bottom: 0
-.headline
+.headline,
+.entry-title
 	line-height: 1.2
+	margin-top: 0
+	font-size: 2rem
+	@media all and (max-width: $bp-sm-max)
+		font-size: 1.7rem
 .block-hero,
 .block-sub
 	.inner
@@ -14,6 +21,9 @@
 		position: relative
 	.b-text
 		color: $white
+	@media all and (max-width: $bp-sm-max)
+		.headline
+			line-height: 1.1
 	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
 		width: "calc(50% - %s)" % $space-quarter
 article[id^="post-"],
@@ -27,11 +37,9 @@ article[id^="post-"],
 	@media all and (max-width: $bp-xs-max)
 		.b-thumb
 			float: none
-			max-width: 22.5rem
+			img
+				max-width: 22.5rem
 	@media all and (max-width: $bp-sm-max)
-		.entry-title,
-		.headline
-			font-size: 1.8rem
 		.b-text
 			p
 				font-size: 1.4rem
