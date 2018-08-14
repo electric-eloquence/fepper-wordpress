@@ -858,6 +858,7 @@ input[type="submit"].search-submit:hover {
 		position: fixed;
 		top: 0;
 		width: 100%;
+		z-index: 1;
 	}
 	.header div.nav > ul,
 	.header div[class^="menu-"] > ul {
