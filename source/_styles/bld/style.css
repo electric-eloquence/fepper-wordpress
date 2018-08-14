@@ -403,14 +403,14 @@ object {
 	margin-bottom: 0;
 }
 .headline,
-.entry-title {
+article:not(.type-page) > header > h2.entry-title {
 	line-height: 1.2;
 	margin-top: 0;
 	font-size: 2rem;
 }
 @media all and (max-width: 767px) {
 	.headline,
-	.entry-title {
+	article:not(.type-page) > header > h2.entry-title {
 		font-size: 1.7rem;
 	}
 }
