@@ -14,12 +14,19 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-top: -0.8rem;
 	padding-bottom: 2.4rem;
 }
 @media all and (max-width: 480px) {
 	.hero-and-subs {
 		display: block;
+	}
+}
+@media all and (max-width: 480px) {
+	.hero-and-subs h2,
+	.hero-and-subs + .l-two-col > .l-main h2,
+	.block-hoagie h2,
+	.widget_recent_comments h2 {
+		text-align: center;
 	}
 }
 .block-hero {
@@ -42,7 +49,7 @@
 		overflow: hidden;
 	}
 	.block-hero .headline {
-		font-size: 1.8rem;
+		margin-bottom: 0;
 		padding: 0 0.8rem;
 	}
 }
@@ -81,7 +88,7 @@
 	.block-hero .b-text {
 		background: rgba(0,0,0,0.5);
 		color: #fff;
-		padding: 2.4rem;
+		padding: 2.4rem 0.8rem;
 	}
 	.block-hero .b-thumb + .b-text {
 		position: absolute;
@@ -112,19 +119,16 @@
 	left: 0;
 	width: 100%;
 }
-@media all and (max-width: 767px) {
-	.block-sub .headline {
-		font-size: 1.7rem;
-	}
-}
 @media all and (min-width: 768px) {
 	.block-sub {
 		padding-top: 0.8rem;
 		width: calc(33.333333333333336% - (3.2rem / 3));
 	}
-	.block-sub .headline {
-		font-size: 1.8rem;
-	}
+}
+.block-hoagie .b-thumb {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .hero-and-subs + .l-two-col {
 	border-top: 2px solid #eee;
@@ -137,6 +141,11 @@
 .fp-single .l-sidebar-1 .widget_recent_entries {
 	display: block;
 }
+@media all and (max-width: 480px) {
+	#recentcomments {
+		text-align: center;
+	}
+}
 .nav-toggle {
 	border-bottom: 0;
 }
@@ -146,4 +155,10 @@
 #main {
 	margin-bottom: 1.6rem;
 	padding-top: 0.8rem;
+}
+@media all and (max-width: 480px) {
+	.footer .footer-content .site-title {
+		display: block;
+		text-align: center;
+	}
 }

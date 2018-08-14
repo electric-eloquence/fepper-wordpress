@@ -9,17 +9,38 @@
 	function mobileNavToggle( toggler, toggled ) {
 		var $toggler = $( toggler );
 
+		if ( !$toggler.length ) {
+			return;
+		}
+
+		var $toggled = $( toggled );
+
+		if ( !$toggled.length ) {
+			$toggler.hide();
+			return;
+		}
+
 		$toggler.click( function( e ) {
 			e.preventDefault();
 
-			$( toggled ).toggleClass( 'toggle-open' );
+			$toggled.toggleClass( 'toggle-open' );
 
 			if ( toggler === '.nav-toggle-search' ) {
 				$( '.header .search-field' ).focus();
 
 			} else if ( toggler === '.nav-toggle-menu' ) {
 				var $header = $( '.header' );
+
+				if ( !$header.length ) {
+					return;
+				}
+
 				var $headerLinks = $header.find( 'a' );
+
+				if ( !$headerLinks.length ) {
+					return;
+				}
+
 				var indexOf1stNavLink;
 
 				$header.toggleClass( 'menu-open' );
