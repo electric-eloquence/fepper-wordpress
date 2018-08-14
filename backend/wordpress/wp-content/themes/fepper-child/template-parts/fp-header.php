@@ -38,7 +38,7 @@
 			if ( display_header_text() ) :
 		?>
 			<h1 class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
 			</h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		<?php

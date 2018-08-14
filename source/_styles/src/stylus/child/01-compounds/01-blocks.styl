@@ -2,10 +2,16 @@
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-	margin-top: -($space-half)
 	padding-bottom: $space-and-half
 	@media all and (max-width: $bp-xs-max)
 		display: block
+.hero-and-subs,
+.hero-and-subs + .l-two-col > .l-main,
+.block-hoagie,
+.widget_recent_comments
+	@media all and (max-width: $bp-xs-max)
+		h2
+			text-align: center
 .block-hero
 	margin-bottom: $space-half
 	.b-thumb
@@ -22,7 +28,7 @@
 			background: $dimmer
 			overflow: hidden
 		.headline
-			font-size: 1.8rem
+			margin-bottom: 0
 			padding: 0 $space-half
 	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
 		.b-thumb
@@ -42,13 +48,13 @@
 				position: absolute
 				top: 50%
 				left: 0
-				transform: translateY(-50%);
+				transform: translateY(-50%)
 	@media all and (min-width: $bp-med)
 		position: relative
 		.b-text
 			background: $dim
 			color: $white
-			padding: $space-and-half
+			padding: $space-and-half $space-half
 		.b-thumb + .b-text
 			position: absolute
 			bottom: 0
@@ -71,14 +77,14 @@
 		bottom: 0
 		left: 0
 		width: 100%
-	@media all and (max-width: $bp-sm-max)
-		.headline
-			font-size: 1.7rem
 	@media all and (min-width: $bp-med)
 		padding-top: $space-half
 		width: "calc(%s - (%s / 3))" % ($column-width-narrow $space-double)
-		.headline
-			font-size: 1.8rem
+.block-hoagie
+	.b-thumb
+		display: flex
+		align-items: center
+		justify-content: center
 .hero-and-subs + .l-two-col
 	border-top: 2px solid $gray-light-2
 	margin-top: $space-half

@@ -1,5 +1,3 @@
-.section-title
-	margin-bottom: $space-half
 #widget-area
 	aside
 		margin-bottom: $space-double
@@ -42,8 +40,6 @@
 		.widget_recent_entries + aside:not(.widget_recent_comments),
 		.widget_recent_comments + aside
 			clear: both
-.l-sidebar .widgettitle
-	padding: 0 0 0.5em
 *:not(#widget-area) >
 	.widget_recent_entries,
 	.widget_recent_comments
@@ -52,3 +48,6 @@
 			padding: $space-quarter 0
 article[id^="post-"]
 	@extend .cf
+.section-title,
+.widgettitle
+	margin-bottom: $space-half

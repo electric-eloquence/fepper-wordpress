@@ -18,10 +18,10 @@
 	{{# sidebar_1? }}
 		<div class="l-two-col">
 	{{/ sidebar_1? }}
-		{{# homepage? }}
-			<h2 class="section-title">{{{ section_title }}}</h2>
-		{{/ homepage? }}
 		<div class="l-main">
+			{{# homepage? }}
+				<h2 class="section-title">{{{ section_title }}}</h2>
+			{{/ homepage? }}
 			<section class="section hoagies {{ hoagies_classes }}">
 				<ul class="post-list">
 					{{# latest_posts }}
