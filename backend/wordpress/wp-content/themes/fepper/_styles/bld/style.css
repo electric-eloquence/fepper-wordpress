@@ -1296,6 +1296,9 @@ a img.aligncenter {
 .post-navigation a .post-title {
 	text-decoration: underline;
 }
+.page-numbers.current {
+	color: #808080;
+}
 @media screen and (max-width: 600px) {
 	body.admin-bar {
 		padding-top: 4.6rem;
