@@ -6,8 +6,13 @@
  */
 
 if ( 'POST' != $_SERVER['REQUEST_METHOD'] ) {
+	$protocol = $_SERVER['SERVER_PROTOCOL'];
+	if ( ! in_array( $protocol, array( 'HTTP/1.1', 'HTTP/2', 'HTTP/2.0' ) ) ) {
+		$protocol = 'HTTP/1.0';
+	}
+
 	header('Allow: POST');
-	header('HTTP/1.1 405 Method Not Allowed');
+	header("$protocol 405 Method Not Allowed");
 	header('Content-Type: text/plain');
 	exit;
 }
@@ -28,16 +33,19 @@ if ( is_wp_error( $comment ) ) {
 }
 
 $user = wp_get_current_user();
+$cookies_consent = ( isset( $_POST['wp-comment-cookies-consent'] ) );
 
 /**
  * Perform other actions when comment cookies are set.
  *
  * @since 3.4.0
+ * @since 4.9.6 The `$cookies_consent` parameter was added.
  *
- * @param WP_Comment $comment Comment object.
- * @param WP_User    $user    User object. The user may not exist.
+ * @param WP_Comment $comment         Comment object.
+ * @param WP_User    $user            Comment author's user object. The user may not exist.
+ * @param boolean    $cookies_consent Comment author's consent to store cookies.
  */
-do_action( 'set_comment_cookies', $comment, $user );
+do_action( 'set_comment_cookies', $comment, $user, $cookies_consent );
 
 $location = empty( $_POST['redirect_to'] ) ? get_comment_link( $comment ) : $_POST['redirect_to'] . '#comment-' . $comment->comment_ID;
 

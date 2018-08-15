@@ -34,7 +34,7 @@ $post_id = isset($post_id)? (int) $post_id : 0;
 // Require an ID for the edit screen.
 if ( isset( $action ) && $action == 'edit' && !$ID ) {
 	wp_die(
-		'<h1>' . __( 'Cheatin&#8217; uh?' ) . '</h1>' .
+		'<h1>' . __( 'Something went wrong.' ) . '</h1>' .
 		'<p>' . __( 'Invalid item ID.' ) . '</p>',
 		403
 	);
@@ -42,7 +42,7 @@ if ( isset( $action ) && $action == 'edit' && !$ID ) {
 
 if ( ! empty( $_REQUEST['post_id'] ) && ! current_user_can( 'edit_post' , $_REQUEST['post_id'] ) ) {
 	wp_die(
-		'<h1>' . __( 'Cheatin&#8217; uh?' ) . '</h1>' .
+		'<h1>' . __( 'You need a higher level of permission.' ) . '</h1>' .
 		'<p>' . __( 'Sorry, you are not allowed to edit this item.' ) . '</p>',
 		403
 	);
@@ -95,7 +95,7 @@ if ( $tab == 'type' || $tab == 'type_url' || ! array_key_exists( $tab , media_up
 	 *
 	 * @since 2.5.0
 	 */
-	do_action( "media_upload_$type" );
+	do_action( "media_upload_{$type}" );
 } else {
 	/**
 	 * Fires inside limited and specific upload-tab views in the legacy
@@ -107,6 +107,6 @@ if ( $tab == 'type' || $tab == 'type_url' || ! array_key_exists( $tab , media_up
 	 *
 	 * @since 2.5.0
 	 */
-	do_action( "media_upload_$tab" );
+	do_action( "media_upload_{$tab}" );
 }
 
