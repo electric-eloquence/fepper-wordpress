@@ -15,12 +15,14 @@
 	$is_front_page = is_front_page();
 	$widgets = wp_get_sidebars_widgets();
 	$has_search = false;
-	foreach ( $widgets['sidebar'] as $widget ) :
-		if ( strpos( $widget, 'search' ) === 0 ) :
-			$has_search = true;
-			break;
-		endif;
-	endforeach;
+	if ( is_array( $widgets ) ) :
+		foreach ( $widgets['sidebar'] as $widget ) :
+			if ( strpos( $widget, 'search' ) === 0 ) :
+				$has_search = true;
+				break;
+			endif;
+		endforeach;
+	endif;
 ?>
 <header class="header cf" role="banner">
 	<div class="site-branding">
