@@ -6,10 +6,7 @@ $meta-width = 12em
 		margin: 0.625em 0 0
 	.comment
 		min-height: 9em
-		margin-top: 0.75em
-		padding-bottom: 0.5em
-	li.comment:last-of-type
-		border-bottom: 1px solid $gray-light-3
+		padding: 0.75em 0 0.5em
 	.comment-body
 		@extend .cf
 		padding-bottom: 0.5em
@@ -44,9 +41,9 @@ $meta-width = 12em
 		a
 			padding-left: 0.75em
 	.children
+		border-bottom: 1px solid $gray-light-3
+		border-left: 1px solid $gray-light-3
 		margin-left: 0.75em
-		.comment-body
-			border-left: 1px solid $gray-light-3
 	.comment-respond
 		padding-top: 1em
 		@media all and (max-width: $bp-sm-max)
