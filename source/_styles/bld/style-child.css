@@ -24,8 +24,12 @@
 @media all and (max-width: 480px) {
 	.hero-and-subs h2,
 	.hero-and-subs + .l-two-col > .l-main h2,
-	.block-hoagie h2,
-	.widget_recent_comments h2 {
+	.l-sidebar h2,
+	.comments h2,
+	.hero-and-subs h3,
+	.hero-and-subs + .l-two-col > .l-main h3,
+	.l-sidebar h3,
+	.comments h3 {
 		text-align: center;
 	}
 }
@@ -140,6 +144,13 @@
 }
 .fp-single .l-sidebar-1 .widget_recent_entries {
 	display: block;
+}
+@media all and (max-width: 480px) {
+	.l-sidebar-1 .widget_recent_entries,
+	.headline,
+	[class$="title"] {
+		text-align: center;
+	}
 }
 @media all and (max-width: 480px) {
 	#recentcomments {
