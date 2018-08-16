@@ -456,6 +456,10 @@ article[id^="post-"] .b-thumb,
 	.block-hoagie .b-thumb img {
 		max-width: 22.5rem;
 	}
+	article[id^="post-"] .b-text p:first-child,
+	.block-hoagie .b-text p:first-child {
+		margin-top: 0.4rem;
+	}
 }
 @media all and (max-width: 767px) {
 	article[id^="post-"] .b-text p,
@@ -690,11 +694,7 @@ input[type="submit"].search-submit:hover {
 }
 .comments .comment {
 	min-height: 9em;
-	margin-top: 0.75em;
-	padding-bottom: 0.5em;
-}
-.comments li.comment:last-of-type {
-	border-bottom: 1px solid #ddd;
+	padding: 0.75em 0 0.5em;
 }
 .comments .comment-body {
 	padding-bottom: 0.5em;
@@ -739,10 +739,9 @@ input[type="submit"].search-submit:hover {
 	padding-left: 0.75em;
 }
 .comments .children {
-	margin-left: 0.75em;
-}
-.comments .children .comment-body {
+	border-bottom: 1px solid #ddd;
 	border-left: 1px solid #ddd;
+	margin-left: 0.75em;
 }
 .comments .comment-respond {
 	padding-top: 1em;
