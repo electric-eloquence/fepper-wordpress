@@ -377,7 +377,6 @@ img,
 video,
 object {
 	display: block;
-	height: auto;
 	max-width: 100%;
 }
 @media all and (max-width: 767px) {
