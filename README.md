@@ -9,7 +9,18 @@
 
 #### This distribution of Fepper has templates configured for WordPress, along with a [WordPress theme](https://wordpress.org/themes/fepper/) built to accommodate these templates.
 
-* [Main distribution (Fepper without WordPress)](https://github.com/electric-eloquence/fepper)
+* [Fepper Base](https://github.com/electric-eloquence/fepper-base) - no 
+  unnecessary assets, styles, Pattern Lab demo, or 
+  <a href="https://www.npmjs.com/package/fp-stylus" target="_blank">fp-stylus</a> 
+  extension.
+* [Fepper for Drupal](https://github.com/electric-eloquence/fepper-drupal) - 
+  templates configured for Drupal, along with a Drupal theme built to 
+  accommodate those templates.
+* [Fepper for Windows](https://github.com/electric-eloquence/fepper-windows) - 
+  scripted to run on Windows.
+* [Fepper for Wordpress](https://github.com/electric-eloquence/fepper-wordpress) 
+  \- templates configured for WordPress, along with a WordPress theme built to 
+  accommodate those templates.
 
 ### Table of contents
 
@@ -343,7 +354,7 @@ means infinity.
 ### <a id="ui-customization"></a>UI Customization
 
 All aspects of the UI are available for customization. For example, the toolbar 
-can accept additions, modifications, and deletions per the needs of end users. 
+can accept additions, modifications, and deletions per the needs of end-users. 
 The UI markup is compiled by recursive, functional React calls. The recursion 
 tree is reflected by the directory structure containing the modules which 
 compose the UI. To override any given module, copy the directory structure 
