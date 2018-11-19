@@ -9,18 +9,7 @@
 
 #### This distribution of Fepper has templates configured for WordPress, along with a [WordPress theme](https://wordpress.org/themes/fepper/) built to accept those templates.
 
-* [Fepper Base](https://github.com/electric-eloquence/fepper-base) - no 
-  unnecessary assets, styles, Pattern Lab demo, or 
-  <a href="https://www.npmjs.com/package/fp-stylus" target="_blank">fp-stylus</a> 
-  extension.
-* [Fepper for Drupal](https://github.com/electric-eloquence/fepper-drupal) - 
-  templates configured for Drupal 8, along with a Drupal theme built to 
-  accommodate those templates.
-* [Fepper for Windows](https://github.com/electric-eloquence/fepper-windows) - 
-  scripted to run on Windows.
-* [Fepper for Wordpress](https://github.com/electric-eloquence/fepper-wordpress) 
-  \- templates configured for WordPress, along with a WordPress theme built to 
-  accommodate those templates.
+* [Main project (Fepper without WordPress)](https://github.com/electric-eloquence/fepper)
 
 ### Table of contents
 
