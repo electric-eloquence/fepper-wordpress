@@ -36,6 +36,38 @@ reasonably working interface between these two very different platforms.
 
 https://github.com/electric-eloquence/fepper-wordpress/issues
 
+## Changelog
+
+#### 0.1.4
+
+* Style updates, ensuring is_array before foreach
+* Screenshot adhering to new rule to not advertise theme
+* Linking to github issue queue in readme
+* Comment pagination instead of previous/next links
+* Mobile nav js checks for element existence before applying behaviors
+* Significant style improvements
+
+#### 0.1.3
+
+* Theme homepage update
+
+#### 0.1.2
+
+* CSS pseudo-class corrections
+
+#### 0.1.1
+
+* Style and readme updates
+
+#### 0.1.0
+
+* Minor css refactor, theme description update
+* Accommodating child theme
+
+#### 0.0.17
+
+* Fepper theme live on WordPress.org
+
 ## Copyright
 
 Fepper WordPress Theme, Copyright 2017 - ∞ Electric Eloquence
