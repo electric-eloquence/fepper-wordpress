@@ -38,12 +38,13 @@ https://github.com/electric-eloquence/fepper-wordpress/issues
 
 ## Changelog
 
-#### 0.1.5
+#### 0.1.6
+* Better font support in Linux
 
+#### 0.1.5
 * Better image rendering in MS Edge
 
 #### 0.1.4
-
 * Style updates, ensuring is_array before foreach
 * Screenshot adhering to new rule to not advertise theme
 * Linking to github issue queue in readme
@@ -52,24 +53,19 @@ https://github.com/electric-eloquence/fepper-wordpress/issues
 * Significant style improvements
 
 #### 0.1.3
-
 * Theme homepage update
 
 #### 0.1.2
-
 * CSS pseudo-class corrections
 
 #### 0.1.1
-
 * Style and readme updates
 
 #### 0.1.0
-
 * Minor css refactor, theme description update
 * Accommodating child theme
 
 #### 0.0.17
-
 * Fepper theme live on WordPress.org
 
 ## Copyright
@@ -91,7 +87,6 @@ GNU General Public License for more details.
 ## Bundled third-party resources
 
 ### IcoMoon icons
-
 * Copyright: Roonas
 * License: GPL / CC BY 4
 * License URI: http://www.gnu.org/licenses/gpl.html
@@ -99,7 +94,6 @@ GNU General Public License for more details.
 * Source: https://icomoon.io
 
 ### Default header image
-
 * Copyright: Alex Grichenko
 * License: CC0 1.0 Universal (CC0 1.0)
 * License URI: https://creativecommons.org/publicdomain/zero/1.0/
