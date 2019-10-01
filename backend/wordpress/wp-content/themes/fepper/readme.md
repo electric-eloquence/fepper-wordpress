@@ -2,7 +2,7 @@
 
 * Contributors: Electric Eloquence
 * Requires at least: WordPress 4.5
-* Version: 0.1.8
+* Version: 0.1.7
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Tags: blog, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, one-column, right-sidebar, threaded-comments, two-columns
@@ -38,11 +38,9 @@ https://github.com/electric-eloquence/fepper-wordpress/issues
 
 ## Changelog
 
-#### 0.1.8
-* Minor link update
-
 #### 0.1.7
 * Minor documentation updates
+* Minor link update
 
 #### 0.1.6
 * Better font support in Linux
