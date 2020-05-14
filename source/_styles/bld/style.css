@@ -471,17 +471,17 @@ article[id^="post-"] .b-thumb,
   .hoagies-two-col .block-hoagie .headline {
     float: right;
     padding: 0 1.6rem;
-    width: 66.66666666666667%;
+    width: 75%;
   }
   .hoagies-two-col article[id^="post-"] .b-thumb,
   .hoagies-two-col .block-hoagie .b-thumb {
-    width: 33.333333333333336%;
+    width: 25%;
   }
   .hoagies-two-col article[id^="post-"] .b-text,
   .hoagies-two-col .block-hoagie .b-text {
     float: right;
     padding: 0 1.6rem;
-    width: 66.66666666666667%;
+    width: 75%;
   }
 }
 .post-list article[id^="post-"],
@@ -1056,11 +1056,11 @@ input[type="submit"].search-submit:hover {
   .l-two-col .l-main {
     float: left;
     width: 66.66666666666667%;
-    padding-right: 1.6rem;
   }
 }
 @media all and (min-width: 1152px) {
   .l-two-col .l-main {
+    padding-right: 1.6rem;
     width: 75%;
   }
 }
