@@ -519,7 +519,7 @@ textarea {
 input,
 textarea {
   border: 1px solid #808080;
-  padding: 0.8rem 1.04rem;
+  padding: 0.8rem 0.625em;
 }
 input[type=text],
 input[type=search],
@@ -565,7 +565,7 @@ input[type="search"]::-webkit-search-decoration {
   margin-bottom: 0;
 }
 .search-form {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.95);
   overflow: hidden;
   max-height: 0;
   position: relative;
@@ -578,7 +578,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 @media all and (max-width: 767px) {
   .header .search-form {
-    margin-top: 0.1rem;
+    margin-top: 1px;
     position: absolute;
     top: 5.4rem;
     right: 0;
@@ -601,24 +601,23 @@ input[type="search"]::-webkit-search-decoration {
   right: 1.1em;
 }
 .search-field {
-  width: 11.5em;
+  width: 13.5em;
+}
+@media all and (min-width: 768px) and (max-width: 1151px) {
+  .search-field {
+    width: 11.4375em;
+  }
 }
 input {
-  height: 4rem;
-}
-@media all and (max-width: 767px) {
-  input {
-    height: 3.7rem;
-  }
+  height: 2.5em;
 }
 input[type="submit"].search-submit {
   border-left: 0;
   color: transparent;
-  font-size: 0.85em;
   padding-right: 0;
   padding-left: 0;
   position: relative;
-  width: 5rem;
+  width: 3.125em;
   z-index: 1;
 }
 input[type="submit"].search-submit:hover {
@@ -704,11 +703,13 @@ input[type="submit"].search-submit:hover {
   min-height: 9em;
   width: 12em;
 }
-.comments .comment-meta img {
+.comments .comment-meta img,
+.comments .comment-meta svg {
   display: block;
   border: 1px solid #eee;
-  margin-bottom: 0.5em;
-  width: 6.25em;
+  margin-bottom: 0.25em;
+  width: 5em;
+  height: 5em;
 }
 .comments .comment-meta .fn,
 .comments .comment-meta .comment-author span,
@@ -763,34 +764,36 @@ input[type="submit"].search-submit:hover {
   }
   .comments .comment-meta {
     float: none;
-    min-height: 8.75rem;
-    margin-bottom: 0.25em;
-    position: relative;
+    min-height: auto;
     width: 100%;
+  }
+  .comments .comment-author {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-flow: row wrap;
+    align-items: flex-end;
   }
-  .comments .comment-meta > div {
-    width: calc(100% - 8.75rem - 0.2rem);
+  .comments .comment-author img,
+  .comments .comment-author svg {
+    margin-bottom: -1.375em;
+    order: 2;
   }
-  .comments .comment-meta .comment-author img {
-    margin-bottom: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .comments .comment-meta .fn,
-  .comments .comment-meta .comment-metadata {
+  .comments .comment-author .fn {
     margin-left: 0;
+    order: 0;
+  }
+  .comments .comment-author .says {
+    flex-grow: 1;
+    margin-left: 0.375em;
+    order: 1;
   }
   .comments .comment-meta + .comment-content,
   .comments .comment-meta + .comment-content + .reply {
     margin-left: 0;
     width: auto;
   }
-  .comments .comment-metadata {
-    margin-bottom: 0.5em;
+  .comments .comment-meta .comment-metadata {
+    margin: 0.625em 0;
   }
   .comments .children .comment-body > * {
     margin-left: 2px;
@@ -815,7 +818,7 @@ input[type="submit"].search-submit:hover {
 @media all and (max-width: 767px) {
   .header div.nav,
   .header div[class^="menu-"] {
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.95);
     max-height: 0;
     position: absolute;
     top: 5.4rem;
@@ -1049,21 +1052,33 @@ input[type="submit"].search-submit:hover {
     padding-left: calc((100% - 1152px) / 2);
   }
 }
-@media all and (max-width: 767px) {
-  .l-two-col .l-sidebar {
-    clear: both;
-  }
-}
 @media all and (min-width: 768px) {
   .l-two-col .l-main {
     float: left;
     width: 66.66666666666667%;
     padding-right: 1.6rem;
   }
+}
+@media all and (min-width: 1152px) {
+  .l-two-col .l-main {
+    width: 75%;
+  }
+}
+@media all and (max-width: 767px) {
+  .l-two-col .l-sidebar {
+    clear: both;
+  }
+}
+@media all and (min-width: 768px) {
   .l-two-col .l-sidebar {
     float: left;
     width: 33.333333333333336%;
     padding: 0 0 0 1.6rem;
+  }
+}
+@media all and (min-width: 1152px) {
+  .l-two-col .l-sidebar {
+    width: 25%;
   }
 }
 #main,

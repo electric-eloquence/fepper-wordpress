@@ -1,18 +1,22 @@
 // Two Column Layout
 .l-two-col
 	@extend .cf
-	@media all and (max-width: $bp-sm-max)
-		.l-sidebar
-			clear: both
-	@media all and (min-width: $bp-med)
-		.l-main
+	.l-main
+		@media all and (min-width: $bp-med)
 			float: left
-			width: $column-width-wide
+			width: $column-width-two-thirds
 			padding-right: $space
-		.l-sidebar
+		@media all and (min-width: $max-width)
+			width: $column-width-three-quarters
+	.l-sidebar
+		@media all and (max-width: $bp-sm-max)
+			clear: both
+		@media all and (min-width: $bp-med)
 			float: left
-			width: $column-width-narrow
+			width: $column-width-one-third
 			padding: 0 0 0 $space
+		@media all and (min-width: $max-width)
+			width: $column-width-one-quarter
 // Main
 #main,
 [role="main"]

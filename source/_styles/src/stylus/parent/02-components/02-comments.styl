@@ -15,11 +15,13 @@ $meta-width = 12em
 		float: left
 		min-height: 9em
 		width: $meta-width
-		img
+		img,
+		svg
 			display: block
 			border: 1px solid $gray-light-2
-			margin-bottom: 0.5em
-			width: 6.25em
+			margin-bottom: 0.25em
+			width: 5em
+			height: 5em
 		.fn,
 		.comment-author span,
 		.comment-metadata
@@ -59,30 +61,31 @@ $meta-width = 12em
 			padding-bottom: 0
 		.comment-meta
 			float: none
-			min-height: $img-size-xs
-			margin-bottom: 0.25em
-			position: relative
+			min-height: auto
 			width: 100%
+		.comment-author
+			position: relative
 			display: flex
-			flex-direction: column
-			justify-content: flex-end
-			> div
-				width: "calc(100% - %s - 0.2rem)" % $img-size-xs
-			.comment-author
-				img
-					margin-bottom: 0
-					position: absolute
-					top: 0
-					right: 0
-			.fn,
-			.comment-metadata
+			flex-flow: row wrap
+			align-items: flex-end
+			img,
+			svg
+				margin-bottom: -1.375em
+				order: 2
+			.fn
 				margin-left: 0
+				order: 0
+			.says
+				flex-grow: 1
+				margin-left: 0.375em
+				order: 1
 		.comment-meta + .comment-content,
 		.comment-meta + .comment-content + .reply
 			margin-left: 0
 			width: auto
-		.comment-metadata
-			margin-bottom: 0.5em
+		.comment-meta
+			.comment-metadata
+				margin: 0.625em 0
 		.children
 			.comment-body
 				> *

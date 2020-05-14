@@ -16,7 +16,7 @@ button, input, select, textarea
 	margin: 0
 input, textarea
 	border: 1px solid $gray
-	padding: $space-half 1.04rem
+	padding: $space-half 0.625em
 input[type=text], input[type=search], input[type=url], input[type=number], textarea
 	-webkit-appearance: none
 button, input[type="submit"]
@@ -58,7 +58,7 @@ input[type="search"]::-webkit-search-decoration
 		background: transparent
 	.header &
 		@media all and (max-width: $bp-sm-max)
-			margin-top: 0.1rem
+			margin-top: 1px
 			position: absolute
 			top: $nav-toggle-height
 			right: 0
@@ -75,19 +75,18 @@ input[type="search"]::-webkit-search-decoration
 	top: 0.7em
 	right: 1.1em
 .search-field
-	width: 11.5em
+	width: 13.5em
+	@media all and (min-width: $bp-med) and (max-width: ($max-width - 1px))
+		width: 11.4375em
 input
-	height: 4rem
-	@media all and (max-width: $bp-sm-max)
-		height: 3.7rem
+	height: 2.5em
 input[type="submit"].search-submit
 	border-left: 0
 	color: transparent
-	font-size: 0.85em
 	padding-right: 0
 	padding-left: 0
 	position: relative
-	width: 5rem
+	width: 3.125em
 	z-index: 1
 input[type="submit"].search-submit:hover
 	background: rgba(0, 0, 0, 0.3)
