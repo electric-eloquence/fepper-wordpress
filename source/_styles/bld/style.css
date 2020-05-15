@@ -413,6 +413,11 @@ article:not(.type-page) > header > h2.entry-title {
     font-size: 1.7rem;
   }
 }
+@media all and (min-width: 768px) {
+  .block-hero .headline {
+    font-size: 2.4rem;
+  }
+}
 .block-hero .inner,
 .block-sub .inner {
   display: block;
@@ -580,7 +585,6 @@ input[type="search"]::-webkit-search-decoration {
   .header .search-form {
     margin-top: 1px;
     position: absolute;
-    top: 5.4rem;
     right: 0;
     z-index: 3;
   }
@@ -622,6 +626,11 @@ input[type="submit"].search-submit {
 }
 input[type="submit"].search-submit:hover {
   background: rgba(0,0,0,0.3);
+}
+@media all and (min-width: 1152px) {
+  .article {
+    padding-right: 1.6rem;
+  }
 }
 #widget-area aside {
   margin-bottom: 3.2rem;
@@ -775,7 +784,7 @@ input[type="submit"].search-submit:hover {
   }
   .comments .comment-author img,
   .comments .comment-author svg {
-    margin-bottom: -1.375em;
+    margin-bottom: -1.5em;
     order: 2;
   }
   .comments .comment-author .fn {
@@ -793,7 +802,7 @@ input[type="submit"].search-submit:hover {
     width: auto;
   }
   .comments .comment-meta .comment-metadata {
-    margin: 0.625em 0;
+    margin: 0.625em 0 1em;
   }
   .comments .children .comment-body > * {
     margin-left: 2px;
@@ -821,7 +830,6 @@ input[type="submit"].search-submit:hover {
     background: rgba(255,255,255,0.95);
     max-height: 0;
     position: absolute;
-    top: 5.4rem;
     left: 0;
     width: 100%;
     z-index: 1;
@@ -837,7 +845,7 @@ input[type="submit"].search-submit:hover {
   .header div.nav a,
   .header div[class^="menu-"] a {
     display: table;
-    padding: 0.8rem 1.6rem;
+    padding: 0.7rem 1.6rem;
   }
   .header div.nav .children li,
   .header div[class^="menu-"] .children li,
