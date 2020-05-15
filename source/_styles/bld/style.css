@@ -784,7 +784,7 @@ input[type="submit"].search-submit:hover {
   }
   .comments .comment-author img,
   .comments .comment-author svg {
-    margin-bottom: -1.5em;
+    margin-bottom: -1.7em;
     order: 2;
   }
   .comments .comment-author .fn {
