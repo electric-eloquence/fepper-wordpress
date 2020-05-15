@@ -25,6 +25,12 @@
 
 			$toggled.toggleClass( 'toggle-open' );
 
+			var togglerRect = $toggler[0].getBoundingClientRect();
+
+			if ( $toggled.hasClass( 'toggle-open' ) ) {
+				$toggled.css( 'top', togglerRect.bottom + 'px');
+			}
+
 			if ( toggler === '.nav-toggle-search' ) {
 				$( '.header .search-field' ).focus();
 
@@ -66,6 +72,21 @@
 	$( document ).ready( function() {
 		mobileNavToggle( '.nav-toggle-search', '.header .search-form' );
 		mobileNavToggle( '.nav-toggle-menu', '.header div.nav, .header div[class^="menu-"]' );
+
+		$( window ).resize( function() {
+			var $searchBlock = $( '.header .search-form' );
+			var $mainMenuBlock = $( '.header div.nav, .header div[class^="menu-"]' );
+
+			if ( $searchBlock.length && $searchBlock.hasClass( 'toggle-open' ) ) {
+				$searchBlock.removeClass( 'toggle-open' );
+				$searchBlock.css( 'top', '0' );
+			}
+
+			if ( $mainMenuBlock.length && $mainMenuBlock.hasClass( 'toggle-open' ) ) {
+				$mainMenuBlock.removeClass( 'toggle-open' );
+				$mainMenuBlock.css( 'top', '0' );
+			}
+		} );
 	} );
 
 } )( jQuery );
