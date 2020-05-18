@@ -10,6 +10,22 @@
 	max-width: 1152px;
 	margin: 0 auto;
 }
+.nav-toggle {
+	border-bottom: 0;
+}
+.header .nav-toggle {
+	color: #333;
+}
+#main {
+	margin-bottom: 1.6rem;
+	padding-top: 0.8rem;
+}
+@media all and (max-width: 480px) {
+	.footer .footer-content .site-title {
+		display: block;
+		text-align: center;
+	}
+}
 .hero-and-subs {
 	display: flex;
 	flex-wrap: wrap;
@@ -154,22 +170,6 @@
 }
 @media all and (max-width: 480px) {
 	#recentcomments {
-		text-align: center;
-	}
-}
-.nav-toggle {
-	border-bottom: 0;
-}
-.header .nav-toggle {
-	color: #333;
-}
-#main {
-	margin-bottom: 1.6rem;
-	padding-top: 0.8rem;
-}
-@media all and (max-width: 480px) {
-	.footer .footer-content .site-title {
-		display: block;
 		text-align: center;
 	}
 }
