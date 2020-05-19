@@ -28,4 +28,4 @@ jobs:
       - name: Build
         run: |
           npm install
-          npm test
+          npm test:mocha # Mocha only. No ESLint because of the presence of windows newlines.
