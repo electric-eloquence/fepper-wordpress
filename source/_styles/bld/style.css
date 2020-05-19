@@ -528,9 +528,14 @@ article ol {
 }
 img,
 video,
-object {
+object,
+svg {
   display: block;
   max-width: 100%;
+}
+img,
+svg {
+  height: auto;
 }
 @media all and (max-width: 767px) {
   .custom-logo {
@@ -868,11 +873,9 @@ input[type="submit"].search-submit:hover {
 }
 .comments .comment-meta img,
 .comments .comment-meta svg {
-  display: block;
   border: 1px solid #eee;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5rem;
   width: 5em;
-  height: 5em;
 }
 .comments .comment-meta .fn,
 .comments .comment-meta .says,
