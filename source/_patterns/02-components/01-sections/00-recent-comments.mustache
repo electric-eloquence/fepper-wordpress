@@ -1,15 +1,15 @@
 <aside id="recent-comments-2" class="widget widget_recent_comments">
 	<h2 class="widgettitle">Recent Comments</h2>
 	<ul id="recentcomments">
-		{{# recentcomments }}
+		{{# listItems.five }}
 			<li class="recentcomments">
 				{{# new_install? }}
-					{{{ comment }}}
+					{{ article_title }}
 				{{/ new_install? }}
 				{{^ new_install? }}
-					<span class="comment-author-link">{{> elements-time }}</span> - <a href="#">{{{ comment }}}</a></li>
+					<span class="comment-author-link">{{ name.first }} {{ name.last }}</span> on <a href="#">{{ article_title }}</a>
 				{{/ new_install? }}
 			</li>
-		{{/ recentcomments }}
+		{{/ listItems.five }}
 	</ul>
 </aside>
