@@ -35,7 +35,7 @@
   				?>
 '/ article': |2
   <?php endwhile; ?>
-'post_navigation': |2
+'> 02-components/03-navigation/02-post-navigation': |2
   <?php
   				if ( is_singular( 'attachment' ) ) :
   					// Parent post navigation.
