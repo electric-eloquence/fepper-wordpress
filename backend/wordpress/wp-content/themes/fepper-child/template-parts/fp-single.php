@@ -34,26 +34,6 @@
 					endif;
 				?>
 			<?php endwhile; ?>
-			<?php
-				if ( is_singular( 'attachment' ) ) :
-					// Parent post navigation.
-					the_post_navigation( array(
-						'prev_text' => _x(
-							'<span class="meta-nav">Published in</span><span class="post-title">%title</span>',
-							'Parent post link',
-							'fepper'
-						),
-					) );
-				elseif ( is_singular( 'post' ) ) :
-					// Previous/next post navigation.
-					the_post_navigation( array(
-						'prev_text' => '<span class="meta-nav">' . __( 'Previous post:', 'fepper' ) . '</span> ' .
-							'<span class="post-title">%title</span>',
-						'next_text' => '<span class="meta-nav">' . __( 'Next post:', 'fepper' ) . '</span> ' .
-							'<span class="post-title">%title</span>',
-					) );
-				endif;
-			?>
 		</div><!--end l-main-->
 
 		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
