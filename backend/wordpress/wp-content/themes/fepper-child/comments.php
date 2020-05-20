@@ -4,14 +4,13 @@
 			$comments_number = get_comments_number();
 			printf(
 				_nx(
-					'%1$s comment on &ldquo;%2$s&rdquo;',
-					'%1$s comments on &ldquo;%2$s&rdquo;',
+					'%1$s comment',
+					'%1$s comments',
 					$comments_number,
 					'comments title',
 					'fepper'
 				),
-				number_format_i18n( $comments_number ),
-				get_the_title()
+				number_format_i18n( $comments_number )
 			);
 		?></h2>
 		<?php the_comments_pagination(); ?>
