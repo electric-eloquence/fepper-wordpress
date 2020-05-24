@@ -563,18 +563,7 @@ svg {
 article:not(.type-page) > header > h2.entry-title {
 	line-height: 1.2;
 	margin-top: 0;
-	font-size: 2rem;
-}
-@media all and (max-width: 767px) {
-	.headline,
-	article:not(.type-page) > header > h2.entry-title {
-		font-size: 1.7rem;
-	}
-}
-@media all and (min-width: 768px) {
-	.block-hero .headline {
-		font-size: 2.4rem;
-	}
+	font-size: 1.25em;
 }
 .block-hero .inner,
 .block-sub .inner {
@@ -597,8 +586,14 @@ article:not(.type-page) > header > h2.entry-title {
 		width: calc(50% - 0.4rem);
 	}
 }
+@media all and (min-width: 768px) {
+	.block-hero .headline {
+		font-size: 2.4rem;
+	}
+}
 article[id^="post-"],
 .block-hoagie {
+	margin-bottom: 1.6rem;
 	width: 100%;
 }
 article[id^="post-"] .b-inner,
@@ -648,9 +643,6 @@ article[id^="post-"] .b-thumb,
 	}
 }
 .post-list article[id^="post-"],
-.block-hoagie {
-	margin-bottom: 1.6rem;
-}
 .hoagies-two-col {
 	margin-bottom: 0;
 }
@@ -716,6 +708,11 @@ input[type="search"]::-webkit-search-decoration {
 @media all and (max-width: 480px) {
 	textarea {
 		width: 100%;
+	}
+}
+@media all and (min-width: 768px) {
+	textarea {
+		max-width: 100%;
 	}
 }
 .required {
