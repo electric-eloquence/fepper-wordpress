@@ -11,12 +11,7 @@
 article:not(.type-page) > header > h2.entry-title
 	line-height: 1.2
 	margin-top: 0
-	font-size: 2rem
-	@media all and (max-width: $bp-sm-max)
-		font-size: 1.7rem
-.block-hero .headline
-	@media all and (min-width: $bp-med)
-		font-size: 2.4rem
+	font-size: 1.25em
 .block-hero,
 .block-sub
 	.inner
@@ -29,9 +24,13 @@ article:not(.type-page) > header > h2.entry-title
 			line-height: 1.1
 	@media all and (min-width: $bp-small) and (max-width: $bp-sm-max)
 		width: "calc(50% - %s)" % $space-quarter
+.block-hero .headline
+	@media all and (min-width: $bp-med)
+		font-size: 2.4rem
 article[id^="post-"],
 .block-hoagie
 	@extend .cf
+	margin-bottom: $space
 	width: 100%
 	.b-inner
 		overflow: hidden
@@ -62,7 +61,5 @@ article[id^="post-"],
 				padding: 0 $space
 				width: $column-width-three-quarters
 .post-list article[id^="post-"],
-.block-hoagie
-	margin-bottom: $space
 .hoagies-two-col
 	margin-bottom: 0
