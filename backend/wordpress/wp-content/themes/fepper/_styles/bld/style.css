@@ -386,6 +386,9 @@ pre {
 	height: 5.4rem;
 	z-index: 2;
 }
+.nav-toggle:active {
+	background-color: #eee;
+}
 .toggle-open {
 	max-height: none !important;
 }
@@ -1013,6 +1016,10 @@ input[type="submit"].search-submit:hover {
 	.header div.nav a,
 	.header div[class^="menu-"] a {
 		padding: 0.7rem 1.6rem;
+	}
+	.header div.nav a:active,
+	.header div[class^="menu-"] a:active {
+		background-color: #eee;
 	}
 	.header div.nav .children li,
 	.header div[class^="menu-"] .children li,
