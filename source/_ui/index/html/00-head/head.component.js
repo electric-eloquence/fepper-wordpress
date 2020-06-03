@@ -1,7 +1,7 @@
 module.exports = {
-  id: 'patternlab-head',
-  dangerouslySetInnerHTML: {
-    __html: `
+	id: 'patternlab-head',
+	dangerouslySetInnerHTML: {
+		__html: `
 <title id="title">Fepper WP</title>
 <meta charset="UTF-8">
 {{! Never cache patterns. }}
@@ -32,5 +32,5 @@ module.exports = {
 <script src="{{ pathsPublic.js }}/src/variables.styl" type="text/javascript"></script>
 <script src="{{ pathsPublic.js }}/src/fepper-obj.js"></script>
 `
-  }
+	}
 };
