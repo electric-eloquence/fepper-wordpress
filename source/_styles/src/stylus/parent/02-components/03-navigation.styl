@@ -20,7 +20,6 @@
 			li
 				border-top: 1px solid $gray-light-2
 			a
-				display: table
 				padding: 0.7rem $space
 			.children,
 			.sub-menu
@@ -91,13 +90,13 @@
 	.nav-links > *
 		display: block
 		float: left
-		padding: 0 1.2rem
+		// Using padding for a tag to increase tappable area when the link is a numeral.
+		padding: 0 0.75em
 		border-right: 1px solid $gray-light-1
 		&:last-child
 			border: 0
 	@media all and (max-width: $bp-small - 1px)
 		.nav-links > *
-			padding: 0 $space-half
 			&:first-child
 				padding-left: 0
 			&:last-child

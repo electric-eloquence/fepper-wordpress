@@ -30,7 +30,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 2.4rem;
+  padding-bottom: 1em;
 }
 @media all and (max-width: 480px) {
   .hero-and-subs {
@@ -153,7 +153,7 @@
 .hero-and-subs + .l-two-col {
   border-top: 2px solid #eee;
   margin-top: 0.8rem;
-  padding-top: 3.2rem;
+  padding-top: 1em;
 }
 .l-sidebar-1 .widget_recent_entries {
   display: none;

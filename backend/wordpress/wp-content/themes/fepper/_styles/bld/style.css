@@ -91,6 +91,41 @@ section,
 summary {
 	display: block;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.5;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+h2 {
+	font-size: 1.5em;
+	margin: 0.83em 0;
+}
+h3 {
+	font-size: 1.17em;
+	margin: 1em 0;
+}
+h4 {
+	font-size: 1em;
+	margin: 1.33em 0;
+}
+h5 {
+	font-size: 0.83em;
+	margin: 1.67em 0;
+}
+h6 {
+	font-size: 0.67em;
+	margin: 2.33em 0;
+}
+p {
+	margin: 1em 0;
+}
 @font-face {
 	font-family: 'icons';
 	src: url("fonts/icons.eot");
@@ -229,12 +264,6 @@ h6 {
 	margin: 0.4rem 0;
 	padding: 0.4rem 0 0;
 }
-article h1,
-aside h1,
-nav h1,
-section h1 {
-	font-size: 2em;
-}
 h1,
 h2 {
 	line-height: 1.2;
@@ -247,9 +276,6 @@ h5 {
 }
 h6 {
 	font-size: 1em;
-}
-p {
-	margin: 1.6rem 0;
 }
 a {
 	color: #333;
@@ -647,7 +673,7 @@ article[id^="post-"] .b-thumb,
 	margin-bottom: 0;
 }
 form > div {
-	margin-bottom: 1.6rem;
+	margin-bottom: 1em;
 }
 form ol,
 form ul {
@@ -710,7 +736,7 @@ input[type="search"]::-webkit-search-decoration {
 		width: 100%;
 	}
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 481px) {
 	textarea {
 		max-width: 100%;
 	}
@@ -849,10 +875,8 @@ input[type="submit"].search-submit:hover {
 }
 .comments {
 	border-top: 1px solid #ddd;
-	margin-top: 2em;
-}
-.comments .section-title {
-	margin: 0.625em 0 0;
+	margin-top: 1.5em;
+	padding-top: 1em;
 }
 .comments .comment {
 	min-height: 9em;
@@ -988,7 +1012,6 @@ input[type="submit"].search-submit:hover {
 	}
 	.header div.nav a,
 	.header div[class^="menu-"] a {
-		display: table;
 		padding: 0.7rem 1.6rem;
 	}
 	.header div.nav .children li,
@@ -1118,16 +1141,13 @@ input[type="submit"].search-submit:hover {
 .pagination .nav-links > * {
 	display: block;
 	float: left;
-	padding: 0 1.2rem;
+	padding: 0 0.75em;
 	border-right: 1px solid #eee;
 }
 .pagination .nav-links > *:last-child {
 	border: 0;
 }
 @media all and (max-width: 480px) {
-	.pagination .nav-links > * {
-		padding: 0 0.8rem;
-	}
 	.pagination .nav-links > *:first-child {
 		padding-left: 0;
 	}
