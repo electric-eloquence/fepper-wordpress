@@ -1018,7 +1018,7 @@ input[type="submit"].search-submit:hover {
 	.header div[class^="menu-"] .children li,
 	.header div.nav .sub-menu li,
 	.header div[class^="menu-"] .sub-menu li {
-		padding-left: 2rem;
+		padding-left: 1.2rem;
 	}
 }
 @media all and (min-width: 768px) {
@@ -1043,10 +1043,13 @@ input[type="submit"].search-submit:hover {
 		align-items: center;
 		min-height: 5.600000000000001rem;
 	}
+	.header div.nav li,
+	.header div[class^="menu-"] li {
+		padding: 0 1em;
+	}
 	.header div.nav a,
 	.header div[class^="menu-"] a {
-		border: 0;
-		padding: 0.4rem 1.6rem;
+		padding: 0.2rem 0;
 	}
 	.header div.nav > ul > li > .children,
 	.header div[class^="menu-"] > ul > li > .children,
@@ -1142,7 +1145,7 @@ input[type="submit"].search-submit:hover {
 	display: block;
 	float: left;
 	padding: 0 0.75em;
-	border-right: 1px solid #eee;
+	border-right: 1px solid #ddd;
 }
 .pagination .nav-links > *:last-child {
 	border: 0;
