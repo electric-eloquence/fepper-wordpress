@@ -24,7 +24,7 @@
 			.children,
 			.sub-menu
 				li
-					padding-left: 2rem
+					padding-left: 1.2rem
 		@media all and (min-width: $bp-med)
 			background: $white
 			clear: none
@@ -40,9 +40,10 @@
 				flex-wrap: wrap
 				align-items: center
 				min-height: $nav-toggle-height + 0.2rem
+			li
+				padding: 0 1em
 			a
-				border: 0
-				padding: $space-quarter $space
+				padding: 0.2rem 0
 			> ul > li > .children,
 			> ul > li > .sub-menu
 				background: $white
@@ -92,7 +93,7 @@
 		float: left
 		// Using padding for a tag to increase tappable area when the link is a numeral.
 		padding: 0 0.75em
-		border-right: 1px solid $gray-light-1
+		border-right: 1px solid $gray-light-2
 		&:last-child
 			border: 0
 	@media all and (max-width: $bp-small - 1px)
