@@ -1157,6 +1157,10 @@ input[type="submit"].search-submit:hover {
 .pagination .nav-links > *:last-child {
   border: 0;
 }
+.pagination .page-numbers.current {
+  color: #333;
+  font-weight: bold;
+}
 @media all and (max-width: 480px) {
   .pagination .nav-links > *:first-child {
     padding-left: 0;
