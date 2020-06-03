@@ -25,10 +25,13 @@
 
 			$toggled.toggleClass( 'toggle-open' );
 
-			var togglerRect = $toggler[0].getBoundingClientRect();
+			var $body = $( 'body' );
+			var cssTop = 'calc(' + $body.css( 'padding-top' ) + ' + ' + $toggler.outerHeight() + 'px)';
 
 			if ( $toggled.hasClass( 'toggle-open' ) ) {
-				$toggled.css( 'top', togglerRect.bottom + 'px');
+				$toggled.css( 'top', cssTop );
+			} else {
+				$toggled.css( 'top', '' );
 			}
 
 			if ( toggler === '.nav-toggle-search' ) {
@@ -79,12 +82,12 @@
 
 			if ( $searchBlock.length && $searchBlock.hasClass( 'toggle-open' ) ) {
 				$searchBlock.removeClass( 'toggle-open' );
-				$searchBlock.css( 'top', '0' );
+				$searchBlock.css( 'top', '' );
 			}
 
 			if ( $mainMenuBlock.length && $mainMenuBlock.hasClass( 'toggle-open' ) ) {
 				$mainMenuBlock.removeClass( 'toggle-open' );
-				$mainMenuBlock.css( 'top', '0' );
+				$mainMenuBlock.css( 'top', '' );
 			}
 		} );
 	} );
