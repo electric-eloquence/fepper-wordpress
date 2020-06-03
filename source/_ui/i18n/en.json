@@ -1,218 +1,218 @@
 {
-  "View":
-    "",
-  "Annotations":
-    "",
-  "Code":
-    "",
-  "Open in new window":
-    "",
-  "Size":
-    "",
-  "W":
-    "",
-  "Random":
-    "",
-  "Disco":
-    "",
-  "Grow":
-    "",
-  "Tools":
-    "",
-  "Fepper docs":
-    "",
-  "Pattern Lab docs":
-    "",
-  "Keyboard shortcuts":
-    "",
-  "Search patterns":
-    "",
-  "All":
-    "",
-  "Nothing here yet!":
-    "",
-  "Make sure there are patterns in source/_patterns":
-    "",
-  "Run fp ui:compile":
-    "",
-  "Run fp restart":
-    "",
-  "Check the console for JavaScript errors":
-    "",
-  "The state of":
-    "",
-  "includes the following patterns":
-    "",
-  "is included by the following patterns":
-    "",
-  "No Annotations":
-    "",
-  "There are no annotations for this pattern":
-    "",
-  "ERROR":
-    "",
-  "Missing or malformed %s!":
-    "",
-  "Missing an essential file from %s":
-    "",
-  "Malformed %s":
-    "",
-  "Found pattern-specific listitems.json for %s":
-    "",
-  "There was an error parsing pattern-specific listitems.json for %s":
-    "",
-  "Could not find optional user-defined header, usually found at %s":
-    "",
-  "Could not find optional user-defined footer, usually found at %s":
-    "",
-  "There is no public/index.html, which means the UI needs to be compiled":
-    "",
-  "Please run fp ui:compile":
-    "",
-  "The build used approximately %s":
-    "",
-  "User Interface CLI":
-    "",
-  "Use:":
-    "",
-  "task":
-    "",
-  "additional args":
-    "",
-  "Tasks:":
-    "",
-  "Build the patterns and output them to the public directory":
-    "",
-  "Delete all patterns in the public directory":
-    "",
-  "Compile the user interface from its components":
-    "",
-  "Copy frontend files (_assets, _scripts, _styles) to the public directory":
-    "",
-  "Copy _styles to the public directory (for injection into the browser without a refresh)":
-    "",
-  "Get more information about Fepper UI CLI commands":
-    "",
-  "Invalid config object!":
-    "",
-  "View All":
-    "",
-  "Found pseudo-pattern %s - variant of %s":
-    "",
-  "Found new pattern %s":
-    "",
-  "Found pattern-specific JSON data for %s":
-    "",
-  "There was an error parsing pattern-specific JSON for %s":
-    "",
-  "The partials list in viewall.mustache must have valid opening and closing tags!":
-    "",
-  "There can be only one partials list in viewall.mustache!":
-    "",
-  "%s is missing partial %s":
-    "",
-  "Listening on port %s":
-    "",
-  "Cannot GET %s":
-    "",
-  "SUCCESS":
-    "",
-  "Refresh the browser to check that your template appears under the &quot;Scrape&quot; menu.":
-    "",
-  "WARNING":
-    "",
-  "The HTML at that URL and selector contains code (probably SVG or XML) defined outside the HTML spec. This will prevent Fepper from writing its data into a JSON file.":
-    "",
-  "Invalid filename!":
-    "",
-  "The HTML at that URL and selector could not be parsed. Make sure it is well formed and syntactically correct.":
-    "",
-  "The HTML at that URL and selector could not be scraped. Make sure that they are reachable and syntactically correct.":
-    "",
-  "Incorrect submission!":
-    "",
-  "Running npm --global update on fepper-cli...":
-    "",
-  "Running this command again as root/Administrator...":
-    "",
-  "Running npm update in %s...":
-    "",
-  "Copied %s to %s":
-    "",
-  "Working directory changed to %s":
-    "",
-  "Template %s translated":
-    "",
-  "Launch Fepper and open it in a browser":
-    "",
-  "Build data.json from underscore-prefixed .json files":
-    "",
-  "Copy assets, scripts, and styles to the backend":
-    "",
-  "Output a new build to the public directory":
-    "",
-  "Restart after shutdown, but without opening the browser":
-    "",
-  "Generate a static site from the 04-pages directory":
-    "",
-  "Combine frontend-copy and template tasks":
-    "",
-  "Translate templates in 03-templates for the backend, and output them there":
-    "",
-  "Compile the UI React components":
-    "",
-  "Print UI tasks and their descriptions":
-    "",
-  "Update Fepper distro, Fepper CLI, Fepper NPM, Fepper UI, and Fepper extensions":
-    "",
-  "Print the versions of Fepper CLI, Fepper NPM, and Fepper UI":
-    "",
-  "Print extension tasks and their descriptions":
-    "",
-  "Fepper HTML Scraper":
-    "",
-  "You can only use the HTML Scraper on the machine that is running this Fepper instance!":
-    "",
-  "If you <em>are</em> on this machine, you may need to resync this browser with Fepper.":
-    "",
-  "Please go to the command line and quit this Fepper instance. Then run <code>fp</code> (not <code>fp restart</code>).":
-    "",
-  "URL:":
-    "",
-  "Selector:":
-    "",
-  "Submit":
-    "",
-  "Help":
-    "",
-  "Hide":
-    "",
-  "Use this tool to scrape and import Mustache templates and JSON data files from actual web pages, preferably the actual backend CMS that Fepper is prototyping for. Simply enter the URL of the page you wish to scrape. Then, enter the CSS selector you wish to target (prepended with &quot;#&quot; for IDs and &quot;.&quot; for classes). Classnames and tagnames may be appended with array index notation ([n]). Otherwise, the Scraper will scrape all elements of that class or tag sequentially. Such a loosely targeted scrape will save many of the targeted fields to the JSON file, but will only save the first instance of the target to a Mustache template.":
-    "",
-  "Upon submit, you should be able to review the scraped output on the subsequent page. If the output looks correct, enter a filename and submit again. The Scraper will save Mustache and JSON files by that name in your patterns&apos; scrape directory, also viewable under the Scrape menu of the toolbar. The Scraper will correctly indent the Mustache code. However, the JSON parsing requires a conversion from HTML to XHTML, so don&apos;t expect an exact copy of the HTML structure of the source HTML.":
-    "",
-  "Does this HTML look right?":
-    "",
-  "Yes, import into Fepper.":
-    "",
-  "Enter a filename to save this under (extension not necessary):":
-    "",
-  "Otherwise, correct the URL and selector and submit again.":
-    "",
-  "To open the UI, click here:":
-    "",
-  "To halt Fepper, go to the command prompt where Fepper is running and press ctrl+c.":
-    "",
-  "The following documentation is also available in Fepper&apos;s README.md:":
-    "",
-  "Too many requests per minute!":
-    "",
-  "Fepper cannot find the directory in which to start working! You may need to submit it as a constructor argument!":
-    "",
-  "Exiting!":
-    "",
-  "fepper-utils deepGet() requires a valid path parameter, e.g. deepGet(nest, 'egg.yolk')":
-    "",
-  "%s extension contains invalid characters!":
-    ""
+	"View":
+		"",
+	"Annotations":
+		"",
+	"Code":
+		"",
+	"Open in new window":
+		"",
+	"Size":
+		"",
+	"W":
+		"",
+	"Random":
+		"",
+	"Disco":
+		"",
+	"Grow":
+		"",
+	"Tools":
+		"",
+	"Fepper docs":
+		"",
+	"Pattern Lab docs":
+		"",
+	"Keyboard shortcuts":
+		"",
+	"Search patterns":
+		"",
+	"All":
+		"",
+	"Nothing here yet!":
+		"",
+	"Make sure there are patterns in source/_patterns":
+		"",
+	"Run fp ui:compile":
+		"",
+	"Run fp restart":
+		"",
+	"Check the console for JavaScript errors":
+		"",
+	"The state of":
+		"",
+	"includes the following patterns":
+		"",
+	"is included by the following patterns":
+		"",
+	"No Annotations":
+		"",
+	"There are no annotations for this pattern":
+		"",
+	"ERROR":
+		"",
+	"Missing or malformed %s!":
+		"",
+	"Missing an essential file from %s":
+		"",
+	"Malformed %s":
+		"",
+	"Found pattern-specific listitems.json for %s":
+		"",
+	"There was an error parsing pattern-specific listitems.json for %s":
+		"",
+	"Could not find optional user-defined header, usually found at %s":
+		"",
+	"Could not find optional user-defined footer, usually found at %s":
+		"",
+	"There is no public/index.html, which means the UI needs to be compiled":
+		"",
+	"Please run fp ui:compile":
+		"",
+	"The build used approximately %s":
+		"",
+	"User Interface CLI":
+		"",
+	"Use:":
+		"",
+	"task":
+		"",
+	"additional args":
+		"",
+	"Tasks:":
+		"",
+	"Build the patterns and output them to the public directory":
+		"",
+	"Delete all patterns in the public directory":
+		"",
+	"Compile the user interface from its components":
+		"",
+	"Copy frontend files (_assets, _scripts, _styles) to the public directory":
+		"",
+	"Copy _styles to the public directory (for injection into the browser without a refresh)":
+		"",
+	"Get more information about Fepper UI CLI commands":
+		"",
+	"Invalid config object!":
+		"",
+	"View All":
+		"",
+	"Found pseudo-pattern %s - variant of %s":
+		"",
+	"Found new pattern %s":
+		"",
+	"Found pattern-specific JSON data for %s":
+		"",
+	"There was an error parsing pattern-specific JSON for %s":
+		"",
+	"The partials list in viewall.mustache must have valid opening and closing tags!":
+		"",
+	"There can be only one partials list in viewall.mustache!":
+		"",
+	"%s is missing partial %s":
+		"",
+	"Listening on port %s":
+		"",
+	"Cannot GET %s":
+		"",
+	"SUCCESS":
+		"",
+	"Refresh the browser to check that your template appears under the &quot;Scrape&quot; menu.":
+		"",
+	"WARNING":
+		"",
+	"The HTML at that URL and selector contains code (probably SVG or XML) defined outside the HTML spec. This will prevent Fepper from writing its data into a JSON file.":
+		"",
+	"Invalid filename!":
+		"",
+	"The HTML at that URL and selector could not be parsed. Make sure it is well formed and syntactically correct.":
+		"",
+	"The HTML at that URL and selector could not be scraped. Make sure that they are reachable and syntactically correct.":
+		"",
+	"Incorrect submission!":
+		"",
+	"Running npm --global update on fepper-cli...":
+		"",
+	"Running this command again as root/Administrator...":
+		"",
+	"Running npm update in %s...":
+		"",
+	"Copied %s to %s":
+		"",
+	"Working directory changed to %s":
+		"",
+	"Template %s translated":
+		"",
+	"Launch Fepper and open it in a browser":
+		"",
+	"Build data.json from underscore-prefixed .json files":
+		"",
+	"Copy assets, scripts, and styles to the backend":
+		"",
+	"Output a new build to the public directory":
+		"",
+	"Restart after shutdown, but without opening the browser":
+		"",
+	"Generate a static site from the 04-pages directory":
+		"",
+	"Combine frontend-copy and template tasks":
+		"",
+	"Translate templates in 03-templates for the backend, and output them there":
+		"",
+	"Compile the UI React components":
+		"",
+	"Print UI tasks and their descriptions":
+		"",
+	"Update Fepper distro, Fepper CLI, Fepper NPM, Fepper UI, and Fepper extensions":
+		"",
+	"Print the versions of Fepper CLI, Fepper NPM, and Fepper UI":
+		"",
+	"Print extension tasks and their descriptions":
+		"",
+	"Fepper HTML Scraper":
+		"",
+	"You can only use the HTML Scraper on the machine that is running this Fepper instance!":
+		"",
+	"If you <em>are</em> on this machine, you may need to resync this browser with Fepper.":
+		"",
+	"Please go to the command line and quit this Fepper instance. Then run <code>fp</code> (not <code>fp restart</code>).":
+		"",
+	"URL:":
+		"",
+	"Selector:":
+		"",
+	"Submit":
+		"",
+	"Help":
+		"",
+	"Hide":
+		"",
+	"Use this tool to scrape and import Mustache templates and JSON data files from actual web pages, preferably the actual backend CMS that Fepper is prototyping for. Simply enter the URL of the page you wish to scrape. Then, enter the CSS selector you wish to target (prepended with &quot;#&quot; for IDs and &quot;.&quot; for classes). Classnames and tagnames may be appended with array index notation ([n]). Otherwise, the Scraper will scrape all elements of that class or tag sequentially. Such a loosely targeted scrape will save many of the targeted fields to the JSON file, but will only save the first instance of the target to a Mustache template.":
+		"",
+	"Upon submit, you should be able to review the scraped output on the subsequent page. If the output looks correct, enter a filename and submit again. The Scraper will save Mustache and JSON files by that name in your patterns&apos; scrape directory, also viewable under the Scrape menu of the toolbar. The Scraper will correctly indent the Mustache code. However, the JSON parsing requires a conversion from HTML to XHTML, so don&apos;t expect an exact copy of the HTML structure of the source HTML.":
+		"",
+	"Does this HTML look right?":
+		"",
+	"Yes, import into Fepper.":
+		"",
+	"Enter a filename to save this under (extension not necessary):":
+		"",
+	"Otherwise, correct the URL and selector and submit again.":
+		"",
+	"To open the UI, click here:":
+		"",
+	"To halt Fepper, go to the command prompt where Fepper is running and press ctrl+c.":
+		"",
+	"The following documentation is also available in Fepper&apos;s README.md:":
+		"",
+	"Too many requests per minute!":
+		"",
+	"Fepper cannot find the directory in which to start working! You may need to submit it as a constructor argument!":
+		"",
+	"Exiting!":
+		"",
+	"fepper-utils deepGet() requires a valid path parameter, e.g. deepGet(nest, 'egg.yolk')":
+		"",
+	"%s extension contains invalid characters!":
+		""
 }
