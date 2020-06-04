@@ -1,7 +1,7 @@
 <!-- Begin Footer -->
-<footer class="footer" role="contentinfo">
+<footer id="footer" class="footer" role="contentinfo">
 	<div class="footer-content">
-		<div class="site-title"><?php bloginfo( 'name' ); ?></div>
+		<p class="site-info"><?php bloginfo( 'name' ); ?></p>
 		<?php
 			if ( has_nav_menu( 'footer' ) ) :
 				wp_nav_menu( array( 'menu_class' => 'menu-footer', 'theme_location' => 'footer' ) );

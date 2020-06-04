@@ -1,3 +1,9 @@
+<?php
+/**
+ * Do not copy this from the fepper-child theme to the fepper parent theme!
+ */
+?>
+
 <main id="main" class="fp-home" role="main">
 	<?php if ( $_SERVER['REQUEST_URI'] != '/' ) : ?>
 		<h1 class="section-title"><?php
@@ -101,3 +107,9 @@
 		<?php endif; ?>
 	</div>
 </main><!--End role=main-->
+
+<?php
+/**
+ * Do not copy this from the fepper-child theme to the fepper parent theme!
+ */
+?>

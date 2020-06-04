@@ -1,3 +1,9 @@
+'! Do not copy this from the fepper-child theme to the fepper parent theme!': |2
+  <?php
+  /**
+   * Do not copy this from the fepper-child theme to the fepper parent theme!
+   */
+  ?>
 '\^ homepage\?': |2
   <?php if ( $_SERVER['REQUEST_URI'] != '/' ) : ?>
 'page_title': |2

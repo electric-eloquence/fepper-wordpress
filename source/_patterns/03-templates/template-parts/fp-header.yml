@@ -24,25 +24,43 @@
   	endif;
   ?>
 '\^ new_install\?': |2
-  <?php if ( $has_custom_logo ) :
-  			if ( $is_front_page ) :
+  <?php
+  			if ( $has_custom_logo ) :
+  				if ( $is_front_page ) :
+  		?>
 '> 01-compounds/01-blocks/04-logo': |2
-  	echo '<h1 class="site-title">';
-  			endif;
-  			the_custom_logo();
-  			if ( $is_front_page ) :
-  				echo '</h1>'; ?>
+  <?php
+  					echo '<h1 class="site-title">';
+  				endif;
+  				the_custom_logo();
+  				if ( $is_front_page ) :
+  					echo '</h1>';
+  			?>
 '/ new_install\?': |2
   <?php
+  				endif;
   			endif;
-  		endif; ?>
-'# new_install\?': |2
-  <?php if ( ! $has_custom_logo ) :
-  			if ( display_header_text() ) :
   		?>
+'# new_install\?': |2
+  <?php
+  			if ( ! $has_custom_logo ) :
+  				if ( display_header_text() ) :
+  		?>
+'# is_front_page\?': |2
+  <?php
+  					if ( $is_front_page ) :
+  			?>
+'/ is_front_page\?': |2
+  <?php
+  					endif;
+  			?>
+'\^ is_front_page\?': |2
+  <?php
+  					if ( ! $is_front_page ) :
+  			?>
 'url': |2
   <?php echo esc_url( home_url( '/' ) ); ?>
-'title': |2
+'site_title': |2
   <?php bloginfo( 'name' ); ?>
 'tagline': |2
   <?php bloginfo( 'description' ); ?>
@@ -53,7 +71,7 @@
 '> 02-components/01-sections/02-widget-area': |2
   <div
   		id="widget-area"
-  		class="widget-area <?php if ( ! $has_custom_logo ) : ?>cf<?php endif; ?>"
+  		class="widget-area <?php if ( wp_get_theme()->get( 'Name' ) == 'fepper' ) : ?>cf<?php endif; ?>"
   		role="complementary"
   		<?php
   			echo 'style="background: url(';
