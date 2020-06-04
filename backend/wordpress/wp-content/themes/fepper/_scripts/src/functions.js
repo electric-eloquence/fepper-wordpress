@@ -9,13 +9,13 @@
 	function mobileNavToggle( toggler, toggled ) {
 		var $toggler = $( toggler );
 
-		if ( !$toggler.length ) {
+		if ( ! $toggler.length ) {
 			return;
 		}
 
 		var $toggled = $( toggled );
 
-		if ( !$toggled.length ) {
+		if ( ! $toggled.length ) {
 			$toggler.hide();
 			return;
 		}
@@ -25,19 +25,28 @@
 
 			$toggled.toggleClass( 'toggle-open' );
 
+			var $body = $( 'body' );
+			var cssTop = 'calc(' + $body.css( 'padding-top' ) + ' + ' + $toggler.outerHeight() + 'px)';
+
+			if ( $toggled.hasClass( 'toggle-open' ) ) {
+				$toggled.css( 'top', cssTop );
+			} else {
+				$toggled.css( 'top', '' );
+			}
+
 			if ( toggler === '.nav-toggle-search' ) {
 				$( '.header .search-field' ).focus();
 
 			} else if ( toggler === '.nav-toggle-menu' ) {
 				var $header = $( '.header' );
 
-				if ( !$header.length ) {
+				if ( ! $header.length ) {
 					return;
 				}
 
 				var $headerLinks = $header.find( 'a' );
 
-				if ( !$headerLinks.length ) {
+				if ( ! $headerLinks.length ) {
 					return;
 				}
 
@@ -64,60 +73,51 @@
 	}
 
 	$( document ).ready( function() {
-		var BP_SM_MAX = 767;
+		function resetFooterHeight() {
+			var $body = $( 'body' );
+			var $footer = $( 'footer[role="contentinfo"]' );
 
-		// When the nav menu is scrolled to the top of the page, fix it to the top.
-		$( window ).scroll( function() {
-			var $header = $( '.header' );
+			$footer.css( 'height', 'auto' );
 
-			if ( !$header.length ) {
-				return;
-			}
+			var footerHeight = $footer.length ? $footer.outerHeight() + 'px' : '';
 
-			var $main = $( '#main' );
+			if ( $body.hasClass( 'admin-bar' ) ) {
+				var htmlMarginTop = $( 'html' ).css( 'margin-top' );
+				var offsetHeight = $body.css( 'top' );
 
-			if ( !$main.length ) {
-				return;
-			}
+				$body.css( 'min-height', 'calc(100vh - ' + htmlMarginTop + ')' );
+				$footer.css( 'bottom', offsetHeight );
 
-			var mainHeight = $main.height();
-			var mainInnerHeight = $main.innerHeight();
-			var mainPaddingTop = mainInnerHeight - mainHeight;
-
-			var $nav = $( '#widget-area + div.nav, #widget-area + div[class^="menu-"]' );
-
-			if ( !$nav.length ) {
-				return;
-			}
-
-			var navOuterHeight = $nav.outerHeight();
-
-			var $widgets = $( '#widget-area' );
-
-			if ( !$widgets.length ) {
-				return;
-			}
-
-			var widgetsRect = $widgets[0].getBoundingClientRect();
-
-			// Only for larger viewports.
-			if ( window.innerWidth > BP_SM_MAX ) {
-				if ( widgetsRect.bottom < 0 ) {
-					if ( ! $nav.hasClass( 'fixed' ) ) {
-						$nav.addClass( 'fixed' );
-						$main.css( 'padding-top', ( mainPaddingTop + navOuterHeight ) + 'px' );
-					}
-				} else {
-					if ( $nav.hasClass( 'fixed' ) ) {
-						$nav.removeClass( 'fixed' );
-						$( '#main' ).css( 'padding-top', '' );
-					}
+				if ( ! parseInt( offsetHeight, 10 ) ) {
+					$body.css( 'padding-bottom', htmlMarginTop );
+					$footer.css( 'bottom', offsetHeight );
 				}
+			} else {
+				$body.css( 'padding-bottom', footerHeight );
 			}
-		} );
+		}
+
+		resetFooterHeight();
 
 		mobileNavToggle( '.nav-toggle-search', '.header .search-form' );
 		mobileNavToggle( '.nav-toggle-menu', '.header div.nav, .header div[class^="menu-"]' );
+
+		$( window ).resize( function() {
+			var $searchBlock = $( '.header .search-form' );
+			var $mainMenuBlock = $( '.header div.nav, .header div[class^="menu-"]' );
+
+			if ( $searchBlock.length && $searchBlock.hasClass( 'toggle-open' ) ) {
+				$searchBlock.removeClass( 'toggle-open' );
+				$searchBlock.css( 'top', '' );
+			}
+
+			if ( $mainMenuBlock.length && $mainMenuBlock.hasClass( 'toggle-open' ) ) {
+				$mainMenuBlock.removeClass( 'toggle-open' );
+				$mainMenuBlock.css( 'top', '' );
+			}
+
+			resetFooterHeight();
+		} );
 	} );
 
 } )( jQuery );

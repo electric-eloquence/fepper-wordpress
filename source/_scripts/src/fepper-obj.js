@@ -2,7 +2,7 @@
  * Fepper-specific global namespace for browser JavaScripts.
  * Be sure this is loaded before scripts that depend on it. Add additional properties as necessary.
  */
-(function () {
+( function () {
 	'use strict';
 
 	var FEPPER = {
@@ -31,4 +31,4 @@
 	};
 
 	window.FEPPER = FEPPER;
-})();
+} )();
