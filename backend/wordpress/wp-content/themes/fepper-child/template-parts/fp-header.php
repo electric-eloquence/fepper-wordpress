@@ -24,28 +24,61 @@
 		endforeach;
 	endif;
 ?>
-<header class="header cf" role="banner">
+<header id="header" class="header cf" role="banner">
 	<div class="site-branding">
-		<?php if ( $has_custom_logo ) :
-			if ( $is_front_page ) :
-				echo '<h1 class="site-title">';
-			endif;
-			the_custom_logo();
-			if ( $is_front_page ) :
-				echo '</h1>'; ?>
 		<?php
-			endif;
-		endif; ?>
-		<?php if ( ! $has_custom_logo ) :
-			if ( display_header_text() ) :
+			if ( $has_custom_logo ) :
+				if ( $is_front_page ) :
 		?>
-			<h1 class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
-			</h1>
+			<?php
+					echo '<h1 class="site-title">';
+				endif;
+				the_custom_logo();
+				if ( $is_front_page ) :
+					echo '</h1>';
+			?>
+		<?php
+				endif;
+			endif;
+		?>
+		<?php
+			if ( ! $has_custom_logo ) :
+				if ( display_header_text() ) :
+		?>
+			<?php
+					if ( $is_front_page ) :
+			?>
+				<h1 class="site-title">
+			<?php
+					endif;
+			?>
+			<?php
+					if ( ! $is_front_page ) :
+			?>
+				<div class="site-title">
+			<?php
+					endif;
+			?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+			<?php
+					if ( $is_front_page ) :
+			?>
+				</h1">
+			<?php
+					endif;
+			?>
+			<?php
+					if ( ! $is_front_page ) :
+			?>
+				</div>
+			<?php
+					endif;
+			?>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		<?php
+				endif;
 			endif;
-		endif; ?>
+		?>
 	</div>
 	<?php if ( $has_search ) : ?>
 		<a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
@@ -53,7 +86,7 @@
 	<a href="#" class="nav-toggle nav-toggle-menu icon-menu"></a>
 	<div
 		id="widget-area"
-		class="widget-area <?php if ( ! $has_custom_logo ) : ?>cf<?php endif; ?>"
+		class="widget-area <?php if ( wp_get_theme()->get( 'Name' ) == 'fepper' ) : ?>cf<?php endif; ?>"
 		role="complementary"
 		<?php
 			echo 'style="background: url(';
