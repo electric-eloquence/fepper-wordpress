@@ -11,19 +11,26 @@
   margin: 0 auto;
 }
 .nav-toggle {
-  border-bottom: 0;
+  border-left: 1px solid #ddd;
 }
 .header .nav-toggle {
   color: #333;
 }
 #main {
-  margin-bottom: 1.6rem;
   padding-top: 0.8rem;
+  padding-bottom: 1.6rem;
+}
+.footer .footer-content .site-info {
+  width: 100%;
 }
 @media all and (max-width: 480px) {
-  .footer .footer-content .site-title {
-    display: block;
+  .footer .footer-content .site-info {
     text-align: center;
+  }
+}
+@media all and (min-width: 768px) {
+  .footer .footer-content .site-info {
+    text-align: right;
   }
 }
 .hero-and-subs {

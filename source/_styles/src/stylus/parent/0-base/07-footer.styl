@@ -1,9 +1,11 @@
 .footer
+	bottom: 0
 	clear: both
 	overflow: hidden
 	background: $gray-dark-2
 	color: $white
-	line-height: 1.2
+	position: absolute
+	width: 100%
 	a
 		color: $white
 		&:hover, &:focus
@@ -12,18 +14,16 @@
 		margin-bottom: 0
 	.footer-content
 		@extend .lc
-		padding: $space $space-half $space-half
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: $space-half
+		width: 100%
 		div[class^="menu-"]
 			font-size: 0.75em
-		> div
-			display: inline-block
-			margin-right: $space-double
-			margin-bottom: $space-half
-			vertical-align: -($space-half + $space-quarter)
-		> div:first-child
-			vertical-align: baseline
-		> div:last-child
-			margin-right: 0
+		.site-info
+			margin: 0.5rem 0
 	div[class^="menu-"],
 	ul,
 	.page_item_has_children,

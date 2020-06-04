@@ -239,7 +239,6 @@ p {
 	transform: rotate(90deg);
 }
 html {
-	background: #131313;
 	font-size: 62.5%;
 }
 body {
@@ -247,6 +246,7 @@ body {
 	font: 1.6em/1.5 Helvetica, "Nimbus Sans L", "Liberation Sans", Roboto, sans-serif;
 	-webkit-text-size-adjust: 100%;
 	color: #333;
+	min-height: 100vh;
 	min-width: 320px;
 	position: relative;
 }
@@ -364,17 +364,18 @@ pre {
 	float: left;
 	margin: 0.8rem;
 }
-.site-branding h1,
+.site-branding .site-title,
 .site-branding h2 {
 	display: table;
 }
 .site-title {
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 1.2;
 	margin: 0;
 	padding: 0;
 }
 .nav-toggle {
-	border-bottom: 1px solid #ddd;
-	border-left: 1px solid #ddd;
 	display: block;
 	float: right;
 	font-size: 2.08rem;
@@ -447,16 +448,17 @@ pre {
 }
 #main,
 [role="main"] {
-	margin-bottom: 3.2rem;
-	padding: 3.2rem 0.8rem 0;
+	padding: 3.2rem 0.8rem 3.2rem;
 	overflow: hidden;
 }
 .footer {
+	bottom: 0;
 	clear: both;
 	overflow: hidden;
 	background: #081810;
 	color: #fff;
-	line-height: 1.2;
+	position: absolute;
+	width: 100%;
 }
 .footer a {
 	color: #fff;
@@ -469,22 +471,18 @@ pre {
 	margin-bottom: 0;
 }
 .footer .footer-content {
-	padding: 1.6rem 0.8rem 0.8rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0.8rem;
+	width: 100%;
 }
 .footer .footer-content div[class^="menu-"] {
 	font-size: 0.75em;
 }
-.footer .footer-content > div {
-	display: inline-block;
-	margin-right: 3.2rem;
-	margin-bottom: 0.8rem;
-	vertical-align: -1.2rem;
-}
-.footer .footer-content > div:first-child {
-	vertical-align: baseline;
-}
-.footer .footer-content > div:last-child {
-	margin-right: 0;
+.footer .footer-content .site-info {
+	margin: 0.5rem 0;
 }
 .footer ul,
 .footer li,
@@ -1145,7 +1143,8 @@ input[type="submit"].search-submit:hover {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding-bottom: 1em;
+	margin-bottom: 1em;
+	padding-top: 1em;
 	overflow: hidden;
 }
 .pagination .nav-links > * {
@@ -1307,6 +1306,9 @@ a img.aligncenter {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
 	display: none;
+}
+.search-results #main p {
+	margin-top: 0;
 }
 .page-title {
 	margin-bottom: 0.5em;
