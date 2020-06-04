@@ -3,15 +3,25 @@
 	{{{ header_styles }}}
 </style>
 {{ nav_toggle_php }}
-<header class="header cf" role="banner">
+<header id="header" class="header cf" role="banner">
 	<div class="site-branding">
 		{{^ new_install? }}
 			{{> 01-compounds/01-blocks/04-logo }}
 		{{/ new_install? }}
 		{{# new_install? }}
-			<h1 class="site-title">
+			{{# is_front_page? }}
+				<h1 class="site-title">
+			{{/ is_front_page? }}
+			{{^ is_front_page? }}
+				<div class="site-title">
+			{{/ is_front_page? }}
 				<a href="{{{ url }}}">{{{ site_title }}}</a>
-			</h1>
+			{{# is_front_page? }}
+				</h1">
+			{{/ is_front_page? }}
+			{{^ is_front_page? }}
+				</div>
+			{{/ is_front_page? }}
 			<h2 class="site-description">{{{ tagline }}}</h2>
 		{{/ new_install? }}
 	</div>
