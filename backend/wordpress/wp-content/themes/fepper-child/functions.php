@@ -32,6 +32,8 @@ function fepper_child_styles() {
  * enqueue scripts.
  */
 function fepper_child_scripts() {
+	$parent_script = 'fepper-functions';
+
 	// load our javascripts.
 	wp_enqueue_script(
 		'fepper-child-variables',
@@ -48,9 +50,16 @@ function fepper_child_scripts() {
 		true
 	);
 	wp_enqueue_script(
-		'fepper-child-functions',
-		get_stylesheet_directory_uri() . '/_scripts/src/functions.js',
+		$parent_script,
+		get_template_directory_uri() . '/_scripts/src/functions.js',
 		array( 'jquery' ),
+		false,
+		true
+	);
+	wp_enqueue_script(
+		'fepper-child-functions',
+		get_stylesheet_directory_uri() . '/_scripts/src/functions-child.js',
+		array( 'jquery', $parent_script ),
 		false,
 		true
 	);
