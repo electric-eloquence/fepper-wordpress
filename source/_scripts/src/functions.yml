@@ -1,0 +1,3 @@
+# functions.js goes in the parent theme.
+# The rest of the source files go in the child theme, as configured in pref.yml.
+scripts_dir: wordpress/wp-content/themes/fepper/_scripts/src
