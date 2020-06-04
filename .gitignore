@@ -6,7 +6,6 @@
 /.timestamp
 /backend/*
 /conf.yml
-/extend/
 /patternlab-config.json
 /pref.yml
 /public/*
