@@ -1,0 +1,9 @@
+{
+  "description": "Fepper extensions",
+  "repository": {},
+  "license": "MIT",
+  "devDependencies": {
+    "fp-stylus": "^1.2.13",
+    "gulp-replace": "^1.0.0"
+  }
+}
