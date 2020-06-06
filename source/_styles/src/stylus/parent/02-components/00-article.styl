@@ -1,3 +1,22 @@
-.article
-	@media all and (min-width: $bp-med)
-		padding-right: $space
+article
+	header:not(.entry-header)
+		margin-bottom: 1em
+.post-list article[id^="post-"]
+	border-bottom: 1px solid $gray-light-2
+	margin-bottom: 1.5em
+	padding-bottom: 2em
+	&:last-child
+		border-bottom: 0
+		margin-bottom: 0
+		padding-bottom: 0
+	.entry-content
+		h1, h2, h3, h4, h5, h6
+			margin: 0
+		p
+			margin: $space-quarter 0
+		dl
+			margin: 0
+		ol, ul
+			margin-bottom: 0
+		blockquote
+			margin-bottom: 0.5em

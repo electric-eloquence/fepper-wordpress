@@ -10,8 +10,14 @@
 	max-width: 1152px;
 	margin: 0 auto;
 }
+.header {
+	border-bottom: 1px solid #ddd;
+}
 .nav-toggle {
 	border-left: 1px solid #ddd;
+	padding: 1.6rem;
+	width: 5.5rem;
+	height: 5.4rem;
 }
 .header .nav-toggle {
 	color: #333;
@@ -76,7 +82,7 @@
 		overflow: hidden;
 	}
 	.block-hero .headline {
-		margin-bottom: 0;
+		margin: 0;
 		padding: 0 0.8rem;
 	}
 }
@@ -162,12 +168,6 @@
 	margin-top: 0.8rem;
 	padding-top: 1em;
 }
-.l-sidebar-1 .widget_recent_entries {
-	display: none;
-}
-.fp-single .l-sidebar-1 .widget_recent_entries {
-	display: block;
-}
 @media all and (max-width: 480px) {
 	.l-sidebar-1 .widget_recent_entries,
 	.headline,
@@ -175,8 +175,23 @@
 		text-align: center;
 	}
 }
+.l-sidebar-1 .widget_recent_entries {
+	display: none;
+}
+.fp-single .l-sidebar-1 .widget_recent_entries {
+	display: block;
+}
 @media all and (max-width: 480px) {
 	#recentcomments {
 		text-align: center;
+	}
+}
+.header div.nav a,
+.header div[class^="menu-"] a {
+	color: #000;
+}
+@media all and (min-width: 768px) {
+	.header div.nav:last-child {
+		margin-left: 0;
 	}
 }

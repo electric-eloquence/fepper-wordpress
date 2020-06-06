@@ -1,7 +1,7 @@
+.header-container
+	width: 100%
 .header
 	@extend .lc
-	background-color: $white
-	border-bottom: 1px solid $gray-light-2
 	padding: 0
 	width: 100%
 	a
@@ -24,11 +24,12 @@
 	float: right
 	font-size: 2.08rem
 	line-height: 1
-	padding: $space
+	padding: 1rem
 	position: relative
 	right: 0
-	width: $nav-toggle-n-border
-	height: $nav-toggle-height
+	width: 4.14rem
+	height: 4.14rem // This height vertically aligns 1st widget (Archives) with Description/Tagline on new install at
+	// 414-455 px wide viewport. This specific decimal helps align across browsers.
 	z-index: 2
 	&:active
 		background-color: $gray-light-1
@@ -40,13 +41,6 @@
 @media all and (min-width: $bp-med)
 	.nav-toggle
 		display: none
-@media all and (min-width: $bp-large)
-	.site-title
-		a
-			display: block
-			margin-top: 4rem
-		.custom-logo-link
-			margin-top: 0
 @media all and (min-width: $max-width)
 	.header > *:not(.site-branding)
 		padding-right: "calc((100% - %s) / 2)" % $max-width
