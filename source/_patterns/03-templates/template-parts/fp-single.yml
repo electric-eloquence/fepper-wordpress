@@ -13,6 +13,12 @@
   							<?php echo __( 'By', 'fepper' ) . ' ' . get_the_author() . ' '; ?>
   							<?php echo __( 'on', 'fepper' ) . ' ' . get_the_date(); ?>
   						</div>
+'> 00-elements/02-images/02-landscape-16x9': |2
+  <?php
+  						if ( has_post_thumbnail() ) :
+  							the_post_thumbnail( 'full' );
+  						endif;
+  					?>
 '> 02-components/00-article/00-article-body': |2
   <?php the_content(); ?>
 'page_links': |2

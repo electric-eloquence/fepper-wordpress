@@ -71,12 +71,14 @@
 '> 02-components/01-sections/02-widget-area': |2
   <div
   		id="widget-area"
-  		class="widget-area <?php if ( wp_get_theme()->get( 'Name' ) == 'fepper' ) : ?>cf<?php endif; ?>"
+  		class="widget-area"
   		role="complementary"
   		<?php
-  			echo 'style="background: url(';
-  			header_image();
-  			echo ') center no-repeat; background-attachment: fixed; background-size: cover;"';
+  			if ( wp_get_theme()->get( 'Name' ) == 'Fepper' ) :
+  				echo 'style="background: url(';
+  				header_image();
+  				echo ') 0 0 / cover no-repeat fixed;"';
+  			endif;
   		?>
   	>
   		<?php dynamic_sidebar( 'sidebar' ); ?>
