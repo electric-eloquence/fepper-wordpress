@@ -4,10 +4,6 @@
 	#widget-area a {
 		color:#fff;
 	}
-	#widget-area {
-	background: url("../../_assets/src/landscape-16x9-mountains.jpg") center no-repeat;
-		background-size: cover;
-	}
 	{{! Dynamically inserted by wp-includes/widgets/class-wp-widget-recent-comments.php }}
 	.recentcomments a {
 		display:inline !important;
@@ -15,7 +11,7 @@
 		margin:0 !important;
 	}
 </style>
-<div id="widget-area" class="widget-area {{^ img.logo }}cf{{/ img.logo }}" role="complementary">
+<div id="widget-area" class="widget-area" role="complementary">
 	{{# new_install? }}
 		{{> 01-compounds/02-forms/00-search }}
 		{{# widget_recent_entries }}

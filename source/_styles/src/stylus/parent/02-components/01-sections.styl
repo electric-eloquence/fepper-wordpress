@@ -1,33 +1,26 @@
 #widget-area
 	aside
-		margin-bottom: $space-double
-		padding-right: $space-half
-		padding-left: $space-half
+		margin-bottom: $space-half
+		padding: 1em $space-half 0 $space-half 
+	aside:first-child
+		float: right
+		margin-bottom: 0
+		padding-top: 0
 	aside:nth-child(2)
 		clear: both
-		padding-top: $space-double
 	aside:last-child
 		border-bottom: 1px solid $gray-light-2
-		float: none
-		margin-bottom: 0
-		padding-bottom: $space-double
 		.header &
 			border-bottom: 0
-	aside:first-child
-		border-bottom: 0
-		float: right
-		padding-bottom: 0
 	aside:not(.widget_search)
 		@extend .cf
 	ul
-		li
-			float: left
-			&:last-child
-				float: none
-			a
-				padding: 0.25em $space-double
-				&:first-child
-					padding-left: 0
+		display: flex
+		flex-wrap: wrap
+		a
+			padding: 0.25em $space-double
+			&:first-child
+				padding-left: 0
 	@media all and (min-width: $bp-small)
 		.widget_recent_entries,
 		.widget_recent_comments
@@ -45,7 +38,7 @@
 	.widget_recent_comments
 		> ul > li
 			border-top: 1px solid $gray-light-2
-			padding: $space-quarter 0
+			padding: 0.25em 0
 article[id^="post-"]
 	@extend .cf
 .section-title,

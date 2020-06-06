@@ -24,78 +24,82 @@
 		endforeach;
 	endif;
 ?>
-<header id="header" class="header cf" role="banner">
-	<div class="site-branding">
-		<?php
+<div class="header-container">
+	<header id="header" class="header cf" role="banner">
+		<div class="site-branding">
+			<?php
 			if ( $has_custom_logo ) :
 				if ( $is_front_page ) :
 		?>
-			<?php
+				<?php
 					echo '<h1 class="site-title">';
 				endif;
 				the_custom_logo();
 				if ( $is_front_page ) :
 					echo '</h1>';
 			?>
-		<?php
+			<?php
 				endif;
 			endif;
 		?>
-		<?php
+			<?php
 			if ( ! $has_custom_logo ) :
 				if ( display_header_text() ) :
 		?>
-			<?php
+				<?php
 					if ( $is_front_page ) :
 			?>
-				<h1 class="site-title">
-			<?php
+					<h1 class="site-title">
+				<?php
 					endif;
 			?>
-			<?php
+				<?php
 					if ( ! $is_front_page ) :
 			?>
-				<div class="site-title">
-			<?php
+					<div class="site-title">
+				<?php
 					endif;
 			?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-			<?php
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<?php
 					if ( $is_front_page ) :
 			?>
-				</h1">
-			<?php
+					</h1">
+				<?php
 					endif;
 			?>
-			<?php
+				<?php
 					if ( ! $is_front_page ) :
 			?>
-				</div>
-			<?php
+					</div>
+				<?php
 					endif;
 			?>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		<?php
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<?php
 				endif;
 			endif;
 		?>
-	</div>
-	<?php if ( $has_search ) : ?>
-		<a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
-	<?php endif; ?>
-	<a href="#" class="nav-toggle nav-toggle-menu icon-menu"></a>
-	<div
+		</div>
+		<?php if ( $has_search ) : ?>
+			<a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
+		<?php endif; ?>
+		<a href="#" class="nav-toggle nav-toggle-menu icon-menu"></a>
+		<div
 		id="widget-area"
-		class="widget-area <?php if ( wp_get_theme()->get( 'Name' ) == 'fepper' ) : ?>cf<?php endif; ?>"
+		class="widget-area"
 		role="complementary"
 		<?php
-			echo 'style="background: url(';
-			header_image();
-			echo ') center no-repeat; background-attachment: fixed; background-size: cover;"';
+			if ( wp_get_theme()->get( 'Name' ) == 'Fepper' ) :
+				echo 'style="background: url(';
+				header_image();
+				echo ') 0 0 / cover no-repeat fixed;"';
+			endif;
 		?>
 	>
 		<?php dynamic_sidebar( 'sidebar' ); ?>
 	</div><!-- .widget-area -->
-	<?php wp_nav_menu( array( 'menu_class' => 'nav', 'theme_location' => 'primary' ) ); ?>
-</header>
+		<?php wp_nav_menu( array( 'menu_class' => 'nav', 'theme_location' => 'primary' ) ); ?>
+	</header>
+</div>
 <!-- End .header -->

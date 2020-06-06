@@ -15,6 +15,11 @@
 							<?php echo __( 'on', 'fepper' ) . ' ' . get_the_date(); ?>
 						</div>
 					</header>
+					<?php
+						if ( has_post_thumbnail() ) :
+							the_post_thumbnail( 'full' );
+						endif;
+					?>
 					<?php the_content(); ?>
 				</article><!--end .article-->
 				<div class="page-links">

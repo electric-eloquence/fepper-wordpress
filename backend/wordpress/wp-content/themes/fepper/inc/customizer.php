@@ -30,7 +30,7 @@ function fepper_custom_header_and_background() {
 	 * }
 	 */
 	add_theme_support( 'custom-header', apply_filters( 'fepper_custom_header_args', array(
-		'default-image'          => get_template_directory_uri() . '/_assets/src/landscape-16x9-mountains.jpg',
+		'default-image'          => get_template_directory_uri() . '/_assets/src/landscape-2x1-mountains.jpg',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1200,
 		'height'                 => 675,
@@ -39,8 +39,8 @@ function fepper_custom_header_and_background() {
 
 	register_default_headers( array(
 		'default-image' => array(
-			'url'           => '%s/_assets/src/landscape-16x9-mountains.jpg',
-			'thumbnail_url' => '%s/_assets/src/landscape-16x9-mountains.jpg',
+			'url'           => '%s/_assets/src/landscape-2x1-mountains.jpg',
+			'thumbnail_url' => '%s/_assets/src/landscape-2x1-mountains.jpg',
 			'description'   => __( 'Default Header Image', 'fepper' ),
 		),
 	) );

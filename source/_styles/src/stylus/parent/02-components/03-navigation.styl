@@ -4,7 +4,6 @@
 		clear: both
 		overflow: hidden
 		a
-			color: $black
 			display: block
 			&:hover, &:focus
 				color: $gray
@@ -20,7 +19,10 @@
 			li
 				border-top: 1px solid $gray-light-2
 			a
+				color: $black
 				padding: 0.7rem $space
+				&:hover, &:focus
+					color: $gray
 				&:active
 					background-color: $gray-light-1
 			.children,
@@ -28,7 +30,6 @@
 				li
 					padding-left: 1.2rem
 		@media all and (min-width: $bp-med)
-			background: $white
 			clear: none
 			float: left
 			&.fixed
@@ -42,6 +43,7 @@
 				flex-wrap: wrap
 				align-items: center
 				min-height: $nav-toggle-height + 0.2rem
+				padding: $space-half 0
 			li
 				padding: 0 1em
 			a
@@ -50,13 +52,11 @@
 			> ul > li > .sub-menu
 				background: $white
 				position: absolute
-			> ul > .page_item_has_children .page_item_has_children li,
-			> ul > .menu-item-has-children .menu-item-has-children li
-				padding-left: $space-half
 			.page_item_has_children,
 			.menu-item-has-children
+				li
+					padding: 0 1.2rem
 				> a::after
-					color: $gray
 					content: "▼"
 					font-size: 0.75em
 					margin-left: $space-half
@@ -77,6 +77,10 @@
 					width: 100%
 				li:last-child
 					border-bottom: 1px solid $gray-light-1
+				a
+					color: $black
+					&:hover, &:focus
+						color: $gray
 				.children,
 				.sub-menu
 					background: transparent
@@ -84,6 +88,9 @@
 						border-right: 0
 						border-bottom: 0
 						border-left: 0
+	div.nav:last-child
+		@media all and (min-width: $bp-med)
+			margin-left: -($space-half)
 .pagination
 	display: flex
 	flex-wrap: wrap

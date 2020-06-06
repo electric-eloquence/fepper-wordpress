@@ -24,45 +24,82 @@
 		endforeach;
 	endif;
 ?>
-<header class="header cf" role="banner">
-	<div class="site-branding">
-		<?php if ( $has_custom_logo ) :
-			if ( $is_front_page ) :
-				echo '<h1 class="site-title">';
-			endif;
-			the_custom_logo();
-			if ( $is_front_page ) :
-				echo '</h1>'; ?>
-		<?php
-			endif;
-		endif; ?>
-		<?php if ( ! $has_custom_logo ) :
-			if ( display_header_text() ) :
+<div class="header-container">
+	<header id="header" class="header cf" role="banner">
+		<div class="site-branding">
+			<?php
+			if ( $has_custom_logo ) :
+				if ( $is_front_page ) :
 		?>
-			<h1 class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-			</h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		<?php
+				<?php
+					echo '<h1 class="site-title">';
+				endif;
+				the_custom_logo();
+				if ( $is_front_page ) :
+					echo '</h1>';
+			?>
+			<?php
+				endif;
 			endif;
-		endif; ?>
-	</div>
-	<?php if ( $has_search ) : ?>
-		<a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
-	<?php endif; ?>
-	<a href="#" class="nav-toggle nav-toggle-menu icon-menu"></a>
-	<div
+		?>
+			<?php
+			if ( ! $has_custom_logo ) :
+				if ( display_header_text() ) :
+		?>
+				<?php
+					if ( $is_front_page ) :
+			?>
+					<h1 class="site-title">
+				<?php
+					endif;
+			?>
+				<?php
+					if ( ! $is_front_page ) :
+			?>
+					<div class="site-title">
+				<?php
+					endif;
+			?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<?php
+					if ( $is_front_page ) :
+			?>
+					</h1">
+				<?php
+					endif;
+			?>
+				<?php
+					if ( ! $is_front_page ) :
+			?>
+					</div>
+				<?php
+					endif;
+			?>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<?php
+				endif;
+			endif;
+		?>
+		</div>
+		<?php if ( $has_search ) : ?>
+			<a href="#" class="nav-toggle nav-toggle-search icon-search"></a>
+		<?php endif; ?>
+		<a href="#" class="nav-toggle nav-toggle-menu icon-menu"></a>
+		<div
 		id="widget-area"
-		class="widget-area cf"
+		class="widget-area"
 		role="complementary"
 		<?php
-			echo 'style="background: url(';
-			header_image();
-			echo ') center no-repeat; background-attachment: fixed; background-size: cover;"';
+			if ( wp_get_theme()->get( 'Name' ) == 'Fepper' ) :
+				echo 'style="background: url(';
+				header_image();
+				echo ') 0 0 / cover no-repeat fixed;"';
+			endif;
 		?>
 	>
 		<?php dynamic_sidebar( 'sidebar' ); ?>
 	</div><!-- .widget-area -->
-	<?php wp_nav_menu( array( 'menu_class' => 'nav', 'theme_location' => 'primary' ) ); ?>
-</header>
+		<?php wp_nav_menu( array( 'menu_class' => 'nav', 'theme_location' => 'primary' ) ); ?>
+	</header>
+</div>
 <!-- End .header -->
