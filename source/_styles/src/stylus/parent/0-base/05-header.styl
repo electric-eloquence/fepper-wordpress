@@ -33,13 +33,17 @@
 	z-index: 2
 	&:active
 		background-color: $gray-light-1
+	&.focused
+		.header & // For specificity.
+			color: $gray
 .toggle-open
 	max-height: none !important
 @media all and (max-width: $bp-sm-max)
 	.site-branding
 		max-width: "calc(100% - (2 * %s))" % $nav-toggle-n-border
 @media all and (min-width: $bp-med)
-	.nav-toggle
+	.nav-toggle,
+	.header div .hidden-link.hidden-link
 		display: none
 @media all and (min-width: $max-width)
 	.header > *:not(.site-branding)

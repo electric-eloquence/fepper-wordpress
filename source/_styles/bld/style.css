@@ -305,13 +305,14 @@ pre {
 }
 .screen-reader-text,
 .visually-hidden {
-  position: absolute !important;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  overflow: hidden !important;
   padding: 0 !important;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
+  pointer-events: none !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
 }
 .right {
   float: right;
@@ -391,6 +392,9 @@ pre {
 .nav-toggle:active {
   background-color: #eee;
 }
+.header .nav-toggle.focused {
+  color: #808080;
+}
 .toggle-open {
   max-height: none !important;
 }
@@ -400,7 +404,8 @@ pre {
   }
 }
 @media all and (min-width: 768px) {
-  .nav-toggle {
+  .nav-toggle,
+  .header div .hidden-link.hidden-link {
     display: none;
   }
 }
