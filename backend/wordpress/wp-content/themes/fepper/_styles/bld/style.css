@@ -419,9 +419,7 @@ pre {
 	.l-two-col .l-main {
 		float: left;
 		width: 66.66666666666667%;
-	}
-	.l-two-col .l-main > * {
-		margin-right: 1.6rem;
+		padding-right: 1.6rem;
 	}
 }
 @media all and (min-width: 1025px) {
@@ -438,7 +436,7 @@ pre {
 	.l-two-col .l-sidebar {
 		float: left;
 		width: 33.333333333333336%;
-		padding: 0 0 0 1.6rem;
+		padding-left: 1.6rem;
 	}
 }
 @media all and (min-width: 1025px) {
@@ -590,6 +588,7 @@ svg {
 article:not(.type-page) > header > h2.entry-title {
 	line-height: 1.2;
 	font-size: 1.25em;
+	margin-top: 0;
 }
 .block-hero .inner,
 .block-sub .inner {
@@ -650,17 +649,17 @@ article[id^="post-"] .b-thumb,
 	}
 }
 @media all and (min-width: 481px) {
-	.hoagies-two-col article[id^="post-"] .b-thumb,
-	.hoagies-two-col .block-hoagie .b-thumb {
-		width: 25%;
-	}
 	.hoagies-two-col article[id^="post-"] .headline,
 	.hoagies-two-col .block-hoagie .headline,
 	.hoagies-two-col article[id^="post-"] .b-text,
 	.hoagies-two-col .block-hoagie .b-text {
 		float: right;
-		padding-left: 1.6rem;
+		padding: 0 0 0 1.6rem;
 		width: 75%;
+	}
+	.hoagies-two-col article[id^="post-"] .b-thumb,
+	.hoagies-two-col .block-hoagie .b-thumb {
+		width: 25%;
 	}
 }
 .block-hoagie {

@@ -11,7 +11,7 @@
 	var $navSearch;
 	var $navMenu;
 
-	// To create a hidden links enabling tabbed focusing of mobile nav links when clicking mobile nav toggle.
+	// Create hidden links enabling tabbed focusing of mobile nav links when clicking mobile nav toggle.
 	// An edgy case but still desirable for accessibility.
 	var $hiddenLinkSearch = $( '<a href="#" class="hidden-link visually-hidden"></a>' );
 	var $hiddenLinkMenu = $( '<a href="#" class="hidden-link visually-hidden"></a>' );
