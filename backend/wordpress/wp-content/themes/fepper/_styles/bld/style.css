@@ -750,7 +750,14 @@ input[type="search"]::-webkit-search-decoration {
 	position: relative;
 }
 .search-form > label {
+	float: left;
 	padding-bottom: 0;
+}
+.search-form > label::after {
+	color: #000;
+	position: absolute;
+	top: 0.7em;
+	right: 1.1em;
 }
 .search-form input {
 	background: transparent;
@@ -768,15 +775,6 @@ input[type="search"]::-webkit-search-decoration {
 		max-height: none;
 		margin: 0.8rem 0 0;
 	}
-}
-.search-form > label {
-	float: left;
-}
-.search-form > label::after {
-	color: #000;
-	position: absolute;
-	top: 0.7em;
-	right: 1.1em;
 }
 .search-field {
 	width: 13.5em;
@@ -798,8 +796,10 @@ input[type="submit"].search-submit {
 	width: 3.125em;
 	z-index: 1;
 }
-input[type="submit"].search-submit:hover {
-	background: rgba(0,0,0,0.3);
+input[type="submit"].search-submit:hover,
+input[type="submit"].search-submit:focus,
+input[type="submit"].search-submit:active {
+	background: rgba(0,0,0,0.1);
 }
 article header:not(.entry-header) {
 	margin-bottom: 1em;
