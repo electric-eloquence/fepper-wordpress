@@ -11,6 +11,7 @@
 article:not(.type-page) > header > h2.entry-title
 	line-height: 1.2
 	font-size: 1.25em
+	margin-top: 0
 .block-hero,
 .block-sub
 	.inner
@@ -48,13 +49,13 @@ article[id^="post-"],
 				font-size: 1.4rem
 	@media all and (min-width: $bp-small)
 		.hoagies-two-col &
-			.b-thumb
-				width: $column-width-one-quarter
 			.headline,
 			.b-text
 				float: right
-				padding-left: $space
+				padding: 0 0 0 $space
 				width: $column-width-three-quarters
+			.b-thumb
+				width: $column-width-one-quarter
 .block-hoagie
 	margin-bottom: $space
 .hoagies-two-col
