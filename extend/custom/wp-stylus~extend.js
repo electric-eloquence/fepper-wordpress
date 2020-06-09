@@ -14,7 +14,7 @@ backendStylesDirParent = utils.backendDirCheck(`${backendStylesDirParent}/bld`);
 
 gulp.task('tab-indent-compiled-stylus:parent', function (cb) {
   if (backendStylesDirParent) {
-    return gulp.src(conf.ui.paths.public.cssBld + '/style.css')
+    return gulp.src(conf.ui.paths.source.cssBld + '/style.css')
       .pipe(replace(/ {2}/g, '\t'))
       .pipe(gulp.dest(backendStylesDirParent));
   }
@@ -25,7 +25,7 @@ gulp.task('tab-indent-compiled-stylus:parent', function (cb) {
 
 gulp.task('tab-indent-compiled-stylus:child', function (cb) {
   if (backendStylesDirChild) {
-    return gulp.src(conf.ui.paths.public.cssBld + '/style-child.css')
+    return gulp.src(conf.ui.paths.source.cssBld + '/style-child.css')
       .pipe(replace(/ {2}/g, '\t'))
       .pipe(gulp.dest(backendStylesDirChild));
   }
