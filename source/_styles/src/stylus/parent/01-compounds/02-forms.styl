@@ -53,7 +53,14 @@ textarea
 	max-height: 0
 	position: relative
 	> label
+		float: left
 		padding-bottom: 0
+		&::after
+			@extend .icon-search::before
+			color: $black
+			position: absolute
+			top: 0.7em
+			right: 1.1em
 	input
 		background: transparent
 	.header &
@@ -65,14 +72,6 @@ textarea
 		@media all and (min-width: $bp-med)
 			max-height: none
 			margin: $space-half 0 0
-.search-form > label
-	float: left
-.search-form > label::after
-	@extend .icon-search::before
-	color: $black
-	position: absolute
-	top: 0.7em
-	right: 1.1em
 .search-field
 	width: 13.5em
 	@media all and (min-width: $bp-med) and (max-width: $bp-md-max)
@@ -87,5 +86,8 @@ input[type="submit"].search-submit
 	position: relative
 	width: 3.125em
 	z-index: 1
-input[type="submit"].search-submit:hover
-	background: rgba(0, 0, 0, 0.3)
+input[type="submit"].search-submit
+	&:hover,
+	&:focus,
+	&:active
+		background: rgba(0, 0, 0, 0.1)
