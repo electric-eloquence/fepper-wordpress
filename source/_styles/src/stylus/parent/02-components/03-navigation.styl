@@ -55,6 +55,7 @@
 			.page_item_has_children,
 			.menu-item-has-children
 				li
+					min-width: 11rem
 					padding: 0 1.2rem
 				> a::after
 					content: "▼"
@@ -71,12 +72,12 @@
 				transition: max-height 0.3s ease
 				z-index: 2
 				li
-					border: 1px solid $gray-light-1
+					border: 1px solid $gray-light-2
 					border-bottom: 0
 					float: none
 					width: 100%
 				li:last-child
-					border-bottom: 1px solid $gray-light-1
+					border-bottom: 1px solid $gray-light-2
 				a
 					color: $black
 					&:hover, &:focus
