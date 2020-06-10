@@ -1087,6 +1087,7 @@ article header:not(.entry-header) {
   .header div[class^="menu-"] .page_item_has_children li,
   .header div.nav .menu-item-has-children li,
   .header div[class^="menu-"] .menu-item-has-children li {
+    min-width: 11rem;
     padding: 0 1.2rem;
   }
   .header div.nav .page_item_has_children > a::after,
@@ -1124,7 +1125,7 @@ article header:not(.entry-header) {
   .header div[class^="menu-"] .children li,
   .header div.nav .sub-menu li,
   .header div[class^="menu-"] .sub-menu li {
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     border-bottom: 0;
     float: none;
     width: 100%;
@@ -1133,7 +1134,7 @@ article header:not(.entry-header) {
   .header div[class^="menu-"] .children li:last-child,
   .header div.nav .sub-menu li:last-child,
   .header div[class^="menu-"] .sub-menu li:last-child {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
   }
   .header div.nav .children a,
   .header div[class^="menu-"] .children a,
