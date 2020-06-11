@@ -242,7 +242,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: #fff;
+  background-color: #fff;
   font: 1.6em/1.5 Helvetica, "Nimbus Sans L", "Liberation Sans", Roboto, sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #333;
@@ -289,7 +289,7 @@ a:focus {
 hr {
   border: 0;
   height: 2px;
-  background: #eee;
+  background-color: #eee;
   margin-bottom: 3.2rem;
 }
 aside,
@@ -390,7 +390,7 @@ pre {
   z-index: 2;
 }
 .nav-toggle:active {
-  background: #eee;
+  background-color: #eee;
 }
 .header .nav-toggle.focused {
   color: #808080;
@@ -453,7 +453,7 @@ pre {
   bottom: 0;
   clear: both;
   overflow: hidden;
-  background: #081810;
+  background-color: #081810;
   color: #fff;
   position: absolute;
   width: 100%;
@@ -708,7 +708,7 @@ textarea {
 button,
 input[type="submit"] {
   padding: 0.8rem;
-  background: #333;
+  background-color: #333;
   border: 1px solid #808080;
   border-radius: 0;
   color: #fff;
@@ -744,7 +744,7 @@ input[type="search"]::-webkit-search-decoration {
   border-color: #f00;
 }
 .search-form {
-  background: rgba(255,255,255,0.95);
+  background-color: rgba(255,255,255,0.95);
   overflow: hidden;
   max-height: 0;
   position: relative;
@@ -760,7 +760,7 @@ input[type="search"]::-webkit-search-decoration {
   right: 1.1em;
 }
 .search-form input {
-  background: transparent;
+  background-color: transparent;
 }
 @media all and (max-width: 767px) {
   .header .search-form {
@@ -799,7 +799,7 @@ input[type="submit"].search-submit {
 input[type="submit"].search-submit:hover,
 input[type="submit"].search-submit:focus,
 input[type="submit"].search-submit:active {
-  background: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.1);
 }
 article header:not(.entry-header) {
   margin-bottom: 1em;
@@ -1009,7 +1009,7 @@ article header:not(.entry-header) {
 @media all and (max-width: 767px) {
   .header div.nav,
   .header div[class^="menu-"] {
-    background: rgba(255,255,255,0.95);
+    background-color: rgba(255,255,255,0.95);
     max-height: 0;
     position: absolute;
     left: 0;
@@ -1037,7 +1037,7 @@ article header:not(.entry-header) {
   }
   .header div.nav a:active,
   .header div[class^="menu-"] a:active {
-    background: #eee;
+    background-color: #eee;
   }
   .header div.nav .children li,
   .header div[class^="menu-"] .children li,
@@ -1120,7 +1120,7 @@ article header:not(.entry-header) {
   .header div[class^="menu-"] .page_item_has_children li,
   .header div.nav .menu-item-has-children li,
   .header div[class^="menu-"] .menu-item-has-children li {
-    background: #fff;
+    background-color: #fff;
     min-width: 11rem;
     padding: 0 1.2rem;
   }
@@ -1177,7 +1177,7 @@ article header:not(.entry-header) {
   .header div[class^="menu-"] .children .sub-menu,
   .header div.nav .sub-menu .sub-menu,
   .header div[class^="menu-"] .sub-menu .sub-menu {
-    background: transparent;
+    background-color: transparent;
   }
   .header div.nav .children .children li,
   .header div[class^="menu-"] .children .children li,
@@ -1283,7 +1283,7 @@ a img.aligncenter {
   z-index: 100000;
 }
 .wp-caption {
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #f0f0f0;
   max-width: 96%;
   padding: 5px 3px 10px;

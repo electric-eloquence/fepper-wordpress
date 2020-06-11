@@ -21,7 +21,7 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 	-webkit-appearance: none
 button, input[type="submit"]
 	padding: $space-half
-	background: $gray-dark
+	background-color: $gray-dark
 	border: 1px solid $gray
 	border-radius: 0
 	color: $white
@@ -48,7 +48,7 @@ textarea
 	border-color: $error
 // Search Form
 .search-form
-	background: $white-translucent
+	background-color: $white-translucent
 	overflow: hidden
 	max-height: 0
 	position: relative
@@ -62,7 +62,7 @@ textarea
 			top: 0.7em
 			right: 1.1em
 	input
-		background: transparent
+		background-color: transparent
 	.header &
 		@media all and (max-width: $bp-sm-max)
 			margin-top: 1px
@@ -90,4 +90,4 @@ input[type="submit"].search-submit
 	&:hover,
 	&:focus,
 	&:active
-		background: rgba(0, 0, 0, 0.1)
+		background-color: rgba(0, 0, 0, 0.1)
