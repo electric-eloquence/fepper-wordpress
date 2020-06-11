@@ -390,7 +390,7 @@ pre {
 	z-index: 2;
 }
 .nav-toggle:active {
-	background-color: #eee;
+	background: #eee;
 }
 .header .nav-toggle.focused {
 	color: #808080;
@@ -1037,7 +1037,7 @@ article header:not(.entry-header) {
 	}
 	.header div.nav a:active,
 	.header div[class^="menu-"] a:active {
-		background-color: #eee;
+		background: #eee;
 	}
 	.header div.nav .children li,
 	.header div[class^="menu-"] .children li,
