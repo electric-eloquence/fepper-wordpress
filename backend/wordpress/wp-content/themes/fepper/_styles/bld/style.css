@@ -1068,6 +1068,46 @@ article header:not(.entry-header) {
 		min-height: 5.600000000000001rem;
 		padding: 0.8rem 0;
 	}
+	.header div.nav > ul > .page_item_has_children > .children,
+	.header div[class^="menu-"] > ul > .page_item_has_children > .children,
+	.header div.nav > ul > .menu-item-has-children > .children,
+	.header div[class^="menu-"] > ul > .menu-item-has-children > .children,
+	.header div.nav > ul > .page_item_has_children > .sub-menu,
+	.header div[class^="menu-"] > ul > .page_item_has_children > .sub-menu,
+	.header div.nav > ul > .menu-item-has-children > .sub-menu,
+	.header div[class^="menu-"] > ul > .menu-item-has-children > .sub-menu {
+		margin-top: 0.8rem;
+		max-height: 0;
+		overflow: hidden;
+		padding-top: 0;
+		position: absolute;
+		-webkit-transition: max-height 0.3s ease;
+		-moz-transition: max-height 0.3s ease;
+		-ms-transition: max-height 0.3s ease;
+		-o-transition: max-height 0.3s ease;
+		transition: max-height 0.3s ease;
+		z-index: 2;
+	}
+	.header div.nav > ul > .page_item_has_children:hover > .children,
+	.header div[class^="menu-"] > ul > .page_item_has_children:hover > .children,
+	.header div.nav > ul > .menu-item-has-children:hover > .children,
+	.header div[class^="menu-"] > ul > .menu-item-has-children:hover > .children,
+	.header div.nav > ul > .page_item_has_children:focus > .children,
+	.header div[class^="menu-"] > ul > .page_item_has_children:focus > .children,
+	.header div.nav > ul > .menu-item-has-children:focus > .children,
+	.header div[class^="menu-"] > ul > .menu-item-has-children:focus > .children,
+	.header div.nav > ul > .page_item_has_children:hover > .sub-menu,
+	.header div[class^="menu-"] > ul > .page_item_has_children:hover > .sub-menu,
+	.header div.nav > ul > .menu-item-has-children:hover > .sub-menu,
+	.header div[class^="menu-"] > ul > .menu-item-has-children:hover > .sub-menu,
+	.header div.nav > ul > .page_item_has_children:focus > .sub-menu,
+	.header div[class^="menu-"] > ul > .page_item_has_children:focus > .sub-menu,
+	.header div.nav > ul > .menu-item-has-children:focus > .sub-menu,
+	.header div[class^="menu-"] > ul > .menu-item-has-children:focus > .sub-menu {
+		margin-top: 0;
+		max-height: 100vh;
+		padding-top: 0.8rem;
+	}
 	.header div.nav li,
 	.header div[class^="menu-"] li {
 		padding: 0 1em;
@@ -1076,19 +1116,19 @@ article header:not(.entry-header) {
 	.header div[class^="menu-"] a {
 		padding: 0.2rem 0;
 	}
-	.header div.nav > ul > li > .children,
-	.header div[class^="menu-"] > ul > li > .children,
-	.header div.nav > ul > li > .sub-menu,
-	.header div[class^="menu-"] > ul > li > .sub-menu {
-		background: #fff;
-		position: absolute;
-	}
 	.header div.nav .page_item_has_children li,
 	.header div[class^="menu-"] .page_item_has_children li,
 	.header div.nav .menu-item-has-children li,
 	.header div[class^="menu-"] .menu-item-has-children li {
+		background: #fff;
 		min-width: 11rem;
 		padding: 0 1.2rem;
+	}
+	.header div.nav .page_item_has_children a,
+	.header div[class^="menu-"] .page_item_has_children a,
+	.header div.nav .menu-item-has-children a,
+	.header div[class^="menu-"] .menu-item-has-children a {
+		padding: 0.15rem 0;
 	}
 	.header div.nav .page_item_has_children > a::after,
 	.header div[class^="menu-"] .page_item_has_children > a::after,
@@ -1097,29 +1137,6 @@ article header:not(.entry-header) {
 		content: "▼";
 		font-size: 0.75em;
 		margin-left: 0.8rem;
-	}
-	.header div.nav .page_item_has_children:hover .children,
-	.header div[class^="menu-"] .page_item_has_children:hover .children,
-	.header div.nav .menu-item-has-children:hover .children,
-	.header div[class^="menu-"] .menu-item-has-children:hover .children,
-	.header div.nav .page_item_has_children:hover .sub-menu,
-	.header div[class^="menu-"] .page_item_has_children:hover .sub-menu,
-	.header div.nav .menu-item-has-children:hover .sub-menu,
-	.header div[class^="menu-"] .menu-item-has-children:hover .sub-menu {
-		max-height: 100vh;
-	}
-	.header div.nav .children,
-	.header div[class^="menu-"] .children,
-	.header div.nav .sub-menu,
-	.header div[class^="menu-"] .sub-menu {
-		max-height: 0;
-		overflow: hidden;
-		-webkit-transition: max-height 0.3s ease;
-		-moz-transition: max-height 0.3s ease;
-		-ms-transition: max-height 0.3s ease;
-		-o-transition: max-height 0.3s ease;
-		transition: max-height 0.3s ease;
-		z-index: 2;
 	}
 	.header div.nav .children li,
 	.header div[class^="menu-"] .children li,

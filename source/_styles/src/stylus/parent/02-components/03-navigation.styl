@@ -44,33 +44,45 @@
 				align-items: center
 				min-height: $nav-toggle-height + 0.2rem
 				padding: $space-half 0
+				> .page_item_has_children,
+				> .menu-item-has-children
+					> .children,
+					> .sub-menu
+						margin-top: $space-half
+						max-height: 0
+						overflow: hidden
+						padding-top: 0
+						position: absolute
+						transition: max-height 0.3s ease
+						z-index: 2
+					&:hover,
+					&:focus
+						> .children,
+						> .sub-menu
+							// Margin and padding must be switched from unhovered/unfocused state
+							// so unexpanded items don't interfere with expanded items.
+							margin-top: 0
+							max-height: 100vh
+							padding-top: $space-half
 			li
 				padding: 0 1em
 			a
 				padding: 0.2rem 0
-			> ul > li > .children,
-			> ul > li > .sub-menu
-				background: $white
-				position: absolute
 			.page_item_has_children,
 			.menu-item-has-children
 				li
+					background: $white
 					min-width: 11rem
 					padding: 0 1.2rem
+				a
+					// This makes expanded menu horizontal borders align with header border bottom.
+					padding: 0.15rem 0
 				> a::after
 					content: "▼"
 					font-size: 0.75em
 					margin-left: $space-half
-				&:hover
-					.children,
-					.sub-menu
-						max-height: 100vh
 			.children,
 			.sub-menu
-				max-height: 0
-				overflow: hidden
-				transition: max-height 0.3s ease
-				z-index: 2
 				li
 					border: 1px solid $gray-light-2
 					border-bottom: 0
