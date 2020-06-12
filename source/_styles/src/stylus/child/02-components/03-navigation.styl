@@ -3,6 +3,10 @@
 	div[class^="menu-"]
 		a
 			color: $black
-	div.nav:last-child
-		@media all and (min-width: $bp-med)
+	@media all and (min-width: $bp-med)
+		div.nav,
+		div[class^="menu-"]
+			ul
+				min-height: 3.4rem
+		div.nav:last-child
 			margin-left: 0
