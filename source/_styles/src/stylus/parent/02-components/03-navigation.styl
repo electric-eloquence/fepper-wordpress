@@ -1,3 +1,4 @@
+$menu-margin = 1.1rem
 .header
 	div.nav,
 	div[class^="menu-"]
@@ -32,6 +33,7 @@
 		@media all and (min-width: $bp-med)
 			clear: none
 			float: left
+			margin: $menu-margin 0
 			&.fixed
 				border-bottom: 1px solid $gray-light-2
 				position: fixed
@@ -42,13 +44,11 @@
 				display: flex
 				flex-wrap: wrap
 				align-items: center
-				min-height: $nav-toggle-height + 0.2rem
-				padding: $space-half 0
 				> .page_item_has_children,
 				> .menu-item-has-children
 					> .children,
 					> .sub-menu
-						margin-top: $space-half
+						margin-top: $menu-margin
 						max-height: 0
 						overflow: hidden
 						padding-top: 0
@@ -63,11 +63,11 @@
 							// so unexpanded items don't interfere with expanded items.
 							margin-top: 0
 							max-height: 100vh
-							padding-top: $space-half
+							padding-top: $menu-margin
 			li
 				padding: 0 1em
 			a
-				padding: 0.2rem 0
+				padding: 0 0 0.2rem
 			.page_item_has_children,
 			.menu-item-has-children
 				li
@@ -76,7 +76,7 @@
 					padding: 0 1.2rem
 				a
 					// This makes expanded menu horizontal borders align with header border bottom.
-					padding: 0.15rem 0
+					padding: 0 0 0.1rem
 				> a::after
 					content: "▼"
 					font-size: 0.75em
