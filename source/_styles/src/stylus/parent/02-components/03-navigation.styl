@@ -20,7 +20,7 @@ $menu-margin = 1.1rem
 			li
 				border-top: 1px solid $gray-light-2
 			a
-				color: $black
+				color: $gray-dark
 				padding: 0.7rem $space
 				&:hover, &:focus
 					color: $gray
@@ -55,10 +55,10 @@ $menu-margin = 1.1rem
 						position: absolute
 						transition: max-height 0.3s ease
 						z-index: 2
-					&:hover,
-					&:focus
-						> .children,
-						> .sub-menu
+					&:hover > a,
+					a:focus
+						+ .children,
+						+ .sub-menu
 							// Margin and padding must be switched from unhovered/unfocused state
 							// so unexpanded items don't interfere with expanded items.
 							margin-top: 0
@@ -67,7 +67,7 @@ $menu-margin = 1.1rem
 			li
 				padding: 0 1em
 			a
-				padding: 0 0 0.2rem
+				padding: 0.1rem 0
 			.page_item_has_children,
 			.menu-item-has-children
 				li
@@ -76,7 +76,7 @@ $menu-margin = 1.1rem
 					padding: 0 1.2rem
 				a
 					// This makes expanded menu horizontal borders align with header border bottom.
-					padding: 0 0 0.1rem
+					padding: 0.05rem 0
 				> a::after
 					content: "▼"
 					font-size: 0.75em
@@ -91,7 +91,7 @@ $menu-margin = 1.1rem
 				li:last-child
 					border-bottom: 1px solid $gray-light-2
 				a
-					color: $black
+					color: $gray-dark
 					&:hover, &:focus
 						color: $gray
 				.children,
