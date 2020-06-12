@@ -13,6 +13,11 @@
 .header {
   border-bottom: 1px solid #ddd;
 }
+@media all and (min-width: 768px) {
+  .header {
+    padding-top: 0;
+  }
+}
 .nav-toggle {
   border-left: 1px solid #ddd;
   padding: 1.6rem;
@@ -191,6 +196,10 @@
   color: #000;
 }
 @media all and (min-width: 768px) {
+  .header div.nav ul,
+  .header div[class^="menu-"] ul {
+    min-height: 3.4rem;
+  }
   .header div.nav:last-child {
     margin-left: 0;
   }
