@@ -877,6 +877,15 @@ article header:not(.entry-header) {
 		clear: both;
 	}
 }
+@media all and (min-width: 768px) {
+	#widget-area aside:first-child {
+		margin-top: 0.8rem;
+	}
+	#widget-area aside:first-child .widgettitle {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
 *:not(#widget-area) > .widget_recent_entries > ul > li,
 *:not(#widget-area) > .widget_recent_comments > ul > li {
 	border-top: 1px solid #ddd;
