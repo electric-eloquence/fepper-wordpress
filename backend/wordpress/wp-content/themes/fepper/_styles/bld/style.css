@@ -1095,18 +1095,18 @@ article header:not(.entry-header) {
 	.header div[class^="menu-"] > ul > .page_item_has_children:hover > a + .children,
 	.header div.nav > ul > .menu-item-has-children:hover > a + .children,
 	.header div[class^="menu-"] > ul > .menu-item-has-children:hover > a + .children,
-	.header div.nav > ul > .page_item_has_children a:focus + .children,
-	.header div[class^="menu-"] > ul > .page_item_has_children a:focus + .children,
-	.header div.nav > ul > .menu-item-has-children a:focus + .children,
-	.header div[class^="menu-"] > ul > .menu-item-has-children a:focus + .children,
+	.header div.nav > ul > .page_item_has_children > a:focus + .children,
+	.header div[class^="menu-"] > ul > .page_item_has_children > a:focus + .children,
+	.header div.nav > ul > .menu-item-has-children > a:focus + .children,
+	.header div[class^="menu-"] > ul > .menu-item-has-children > a:focus + .children,
 	.header div.nav > ul > .page_item_has_children:hover > a + .sub-menu,
 	.header div[class^="menu-"] > ul > .page_item_has_children:hover > a + .sub-menu,
 	.header div.nav > ul > .menu-item-has-children:hover > a + .sub-menu,
 	.header div[class^="menu-"] > ul > .menu-item-has-children:hover > a + .sub-menu,
-	.header div.nav > ul > .page_item_has_children a:focus + .sub-menu,
-	.header div[class^="menu-"] > ul > .page_item_has_children a:focus + .sub-menu,
-	.header div.nav > ul > .menu-item-has-children a:focus + .sub-menu,
-	.header div[class^="menu-"] > ul > .menu-item-has-children a:focus + .sub-menu {
+	.header div.nav > ul > .page_item_has_children > a:focus + .sub-menu,
+	.header div[class^="menu-"] > ul > .page_item_has_children > a:focus + .sub-menu,
+	.header div.nav > ul > .menu-item-has-children > a:focus + .sub-menu,
+	.header div[class^="menu-"] > ul > .menu-item-has-children > a:focus + .sub-menu {
 		margin-top: 0;
 		max-height: 100vh;
 		padding-top: 1.1rem;
