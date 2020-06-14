@@ -148,6 +148,10 @@
 
 			resetFooterHeight();
 		} );
+
+		// On wider mobile viewports (phablets and tablets), touching ".expanded" links will expand nested menus.
+		// The following listener removes the focus from those links, thereby closing their expanded menus.
+		$( 'body' ).click( function () {} );
 	} );
 
 } )( jQuery );

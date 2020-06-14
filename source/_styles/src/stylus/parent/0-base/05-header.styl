@@ -40,8 +40,8 @@
 		max-width: "calc(100% - (2 * %s))" % $nav-toggle-n-border
 @media all and (min-width: $bp-med)
 	.nav-toggle,
-	.header div .hidden-link.hidden-link
-		display: none
+	.hidden-link
+		display: none !important
 @media all and (min-width: $max-width)
 	.header > *:not(.site-branding)
 		padding-right: "calc((100% - %s) / 2)" % $max-width
