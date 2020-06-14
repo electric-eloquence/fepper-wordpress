@@ -401,8 +401,8 @@ pre {
 }
 @media all and (min-width: 768px) {
   .nav-toggle,
-  .header div .hidden-link.hidden-link {
-    display: none;
+  .hidden-link {
+    display: none !important;
   }
 }
 @media all and (min-width: 1152px) {
@@ -1218,7 +1218,7 @@ article header:not(.entry-header) {
   border: 0;
 }
 .pagination .page-numbers.current {
-  color: #333;
+  color: #000;
   font-weight: bold;
 }
 @media all and (max-width: 480px) {
@@ -1404,9 +1404,6 @@ body.search-results #main p {
 }
 .post-navigation a .post-title {
   text-decoration: underline;
-}
-.page-numbers.current {
-  color: #808080;
 }
 @media screen and (max-width: 600px) {
   body.admin-bar {
