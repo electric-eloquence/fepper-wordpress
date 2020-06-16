@@ -188,7 +188,7 @@
 }
 .header div.nav a,
 .header div[class^="menu-"] a {
-  color: #000;
+  color: #333;
 }
 @media all and (min-width: 768px) {
   .header div.nav ul,

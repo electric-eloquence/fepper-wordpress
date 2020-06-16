@@ -750,7 +750,7 @@ input[type="search"]::-webkit-search-decoration {
 	padding-bottom: 0;
 }
 .search-form > label::after {
-	color: #000;
+	color: #333;
 	position: absolute;
 	top: 0.7em;
 	right: 1.1em;
