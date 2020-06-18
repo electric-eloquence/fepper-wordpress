@@ -635,7 +635,7 @@ article[id^="post-"] .b-thumb,
   }
   article[id^="post-"] .b-text p:first-child,
   .block-hoagie .b-text p:first-child {
-    margin-top: 0.4rem;
+    margin-top: 0.25em;
   }
 }
 @media all and (max-width: 767px) {
@@ -818,7 +818,7 @@ article header:not(.entry-header) {
   margin: 0;
 }
 .post-list article[id^="post-"] .entry-content p {
-  margin: 0.4rem 0;
+  margin: 0.25em 0;
 }
 .post-list article[id^="post-"] .entry-content dl {
   margin: 0;
