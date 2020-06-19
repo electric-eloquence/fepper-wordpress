@@ -17,6 +17,17 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+	<?php
+		$text_color = get_theme_mod( 'header_textcolor', get_theme_support( 'custom-header', 'default-text-color' ) );
+		if ( $text_color ) :
+	?>
+		<style type="text/css">
+			.header,
+			.header a {
+				color: #<?php echo esc_html( $text_color ); ?>;
+			}
+		</style>
+	<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
