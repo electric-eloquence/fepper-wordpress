@@ -37,6 +37,9 @@
 	max-height: none !important
 @media all and (max-width: $bp-sm-max)
 	.site-branding
+		// The subtraction of 2 * $nav-toggle-n-border is a holdover from an earlier release.
+		// This gives space for the nav toggles to float in the upper right, but is an arbitrary measurement in the
+		// parent theme. Nonetheless, there is no point in changing it.
 		max-width: "calc(100% - (2 * %s))" % $nav-toggle-n-border
 @media all and (min-width: $bp-med)
 	.nav-toggle,
