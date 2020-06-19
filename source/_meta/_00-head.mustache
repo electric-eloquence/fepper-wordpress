@@ -20,5 +20,22 @@
 	<link rel="stylesheet" href="../../_styles/bld/style.css{{ cacheBuster }}" media="all">
 	<link rel="stylesheet" href="../../_styles/bld/style-child.css{{ cacheBuster }}" media="all">
 	<script src="/wp-includes/js/jquery/jquery.js{{ cacheBuster }}"></script>
+	{{# new_install? }}
+		<style type="text/css">
+			.recentcomments a {
+				display:inline !important;
+				padding:0 !important;
+				margin:0 !important;
+			}
+		</style>
+		<style type="text/css">
+			{{! Dynamically inserted by wp-content/themes/fepper/fp-header.php }}
+			.header,
+			.header a {
+				color:#ffffff;
+			}
+			{{! Dynamically inserted by wp-includes/widgets/class-wp-widget-recent-comments.php }}
+		</style>
+	{{/ new_install? }}
 </head>
 <body class="{{ body_class }}">

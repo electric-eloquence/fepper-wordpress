@@ -1,17 +1,11 @@
-<style type="text/css">
-	{{! Dynamically inserted by wp-content/themes/fepper/fp-header.php }}
-	#widget-area,
-	#widget-area a {
-		color:#fff;
-	}
-	{{! Dynamically inserted by wp-includes/widgets/class-wp-widget-recent-comments.php }}
-	.recentcomments a {
-		display:inline !important;
-		padding:0 !important;
-		margin:0 !important;
-	}
-</style>
-<div id="widget-area" class="widget-area" role="complementary">
+<div
+	id="widget-area"
+	class="widget-area"
+	role="complementary"
+	{{# new_install? }}
+		style="background-image: url('../../_assets/src/landscape-2x1-mountains.jpg');"
+	{{/ new_install? }}
+>
 	{{# new_install? }}
 		{{> 01-compounds/02-forms/00-search }}
 		{{# widget_recent_entries }}

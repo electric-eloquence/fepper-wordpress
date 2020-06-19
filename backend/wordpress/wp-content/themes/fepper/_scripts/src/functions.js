@@ -54,6 +54,7 @@
 		}
 
 		var $hiddenLink = $toggled.find( '.hidden-link' );
+		var $togglerLastPos = $( '.nav-toggle' ).last().position();
 
 		if ( ! $hiddenLink.length ) {
 			if ( $toggler.hasClass( 'nav-toggle-search' ) ) {
@@ -71,7 +72,8 @@
 			$toggled.toggleClass( 'toggle-open' );
 
 			if ( $toggled.hasClass( 'toggle-open' ) ) {
-				var cssTop = 'calc(' + $( 'body' ).css( 'padding-top' ) + ' + ' + $toggler.outerHeight() + 'px)';
+				var cssTop = 'calc(' + $( 'body' ).css( 'padding-top' ) + ' + ' +
+					( $togglerLastPos.top + $toggler.outerHeight() ) + 'px)';
 
 				$toggled.css( 'top', cssTop );
 
