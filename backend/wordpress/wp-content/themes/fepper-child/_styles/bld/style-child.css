@@ -165,18 +165,16 @@
 	margin-top: 0.8rem;
 	padding-top: 1em;
 }
-@media all and (max-width: 480px) {
-	.l-sidebar-1 .widget_recent_entries,
-	.headline,
-	[class$="title"] {
-		text-align: center;
-	}
-}
 .l-sidebar-1 .widget_recent_entries {
 	display: none;
 }
 .fp-single .l-sidebar-1 .widget_recent_entries {
 	display: block;
+}
+@media all and (max-width: 480px) {
+	.l-sidebar-1 .widget_recent_entries > ul > li {
+		text-align: center;
+	}
 }
 @media all and (max-width: 480px) {
 	#recentcomments {
