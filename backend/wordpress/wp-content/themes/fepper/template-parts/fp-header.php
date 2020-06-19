@@ -1,15 +1,4 @@
 <!-- Begin .header -->
-<style type="text/css">
-	<?php
-		$text_color = get_theme_mod( 'header_textcolor', get_theme_support( 'custom-header', 'default-text-color' ) );
-		if ( $text_color ) :
-	?>
-		.header,
-		.header a {
-			color: #<?php echo esc_html( $text_color ); ?>;
-		}
-	<?php endif; ?>
-</style>
 <?php
 	$has_custom_logo = has_custom_logo();
 	$is_front_page = is_front_page();
@@ -64,7 +53,7 @@
 				<?php
 					if ( $is_front_page ) :
 			?>
-					</h1">
+					</h1>
 				<?php
 					endif;
 			?>

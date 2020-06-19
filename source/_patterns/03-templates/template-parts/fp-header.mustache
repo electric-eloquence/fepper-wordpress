@@ -1,7 +1,4 @@
 <!-- Begin .header -->
-<style type="text/css">
-	{{{ header_styles }}}
-</style>
 {{ nav_toggle_php }}
 <div class="header-container">
 	<header id="header" class="header cf" role="banner">
@@ -18,7 +15,7 @@
 				{{/ is_front_page? }}
 					<a href="{{{ url }}}">{{{ site_title }}}</a>
 				{{# is_front_page? }}
-					</h1">
+					</h1>
 				{{/ is_front_page? }}
 				{{^ is_front_page? }}
 					</div>
