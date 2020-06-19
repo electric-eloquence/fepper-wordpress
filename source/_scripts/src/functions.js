@@ -77,6 +77,8 @@
 
 				// Focus on hidden link, now previous to 1st nav link, so when users tab, they highlight 1st nav link.
 				$hiddenLink.focus();
+			} else {
+				$toggled.css( 'top', '' );
 			}
 		} );
 	}
