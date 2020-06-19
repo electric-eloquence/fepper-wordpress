@@ -1,5 +1,6 @@
 {
 	"new_install?": true,
+	"body_class": "home",
 	"latest_posts": [
 		{
 			"headline": {
