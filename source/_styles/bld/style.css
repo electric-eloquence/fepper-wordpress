@@ -1138,7 +1138,7 @@ article header:not(.entry-header) {
   .header div.nav .menu-item-has-children > a::after,
   .header div[class^="menu-"] .menu-item-has-children > a::after {
     content: "▼";
-    font-size: 0.75em;
+    font-size: 0.5625em;
     margin-left: 0.8rem;
   }
   .header div.nav .children li,
