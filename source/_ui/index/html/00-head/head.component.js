@@ -3,7 +3,7 @@ module.exports = {
 	dangerouslySetInnerHTML: {
 		__html: `
 <title id="title">Fepper WP</title>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 {{! Never cache patterns. }}
 <meta http-equiv="cache-control" content="max-age=0">
 <meta http-equiv="cache-control" content="no-cache">
