@@ -3,7 +3,7 @@
   "repository": {},
   "license": "MIT",
   "devDependencies": {
-    "fp-stylus": "^1.2.13",
+    "fp-stylus": "^1.2.14",
     "gulp-replace": "^1.0.0"
   }
 }
