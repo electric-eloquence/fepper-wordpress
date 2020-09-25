@@ -80,6 +80,7 @@
 				$hiddenLink.focus();
 			} else {
 				$toggled.css( 'top', '' );
+				$toggler.blur();
 			}
 		} );
 	}
