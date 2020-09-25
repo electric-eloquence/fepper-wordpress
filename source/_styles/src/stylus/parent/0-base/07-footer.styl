@@ -8,8 +8,11 @@
 	width: 100%
 	a
 		color: $white
-		&:hover, &:focus
+		&:focus
 			color: $gray
+		@media (hover: hover)
+			&:hover
+				color: $gray
 	p
 		margin-bottom: 0
 	.footer-content

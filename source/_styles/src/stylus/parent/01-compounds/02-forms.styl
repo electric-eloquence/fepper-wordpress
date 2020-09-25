@@ -86,7 +86,9 @@ input[type="submit"].search-submit
 	width: 3.125em
 	z-index: 1
 input[type="submit"].search-submit
-	&:hover,
 	&:focus,
 	&:active
 		background-color: rgba(0, 0, 0, 0.1)
+	@media (hover: hover)
+		&:hover
+			background-color: rgba(0, 0, 0, 0.1)
