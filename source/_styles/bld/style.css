@@ -282,9 +282,13 @@ a {
   text-decoration: none;
   outline: 0;
 }
-a:hover,
 a:focus {
   color: #808080;
+}
+@media (hover: hover) {
+  a:hover {
+    color: #808080;
+  }
 }
 hr {
   border: 0;
@@ -358,9 +362,13 @@ pre {
   padding: 0;
   width: 100%;
 }
-.header a:hover,
 .header a:focus {
   color: #808080;
+}
+@media (hover: hover) {
+  .header a:hover {
+    color: #808080;
+  }
 }
 .site-branding {
   float: left;
@@ -457,9 +465,13 @@ pre {
 .footer a {
   color: #fff;
 }
-.footer a:hover,
 .footer a:focus {
   color: #808080;
+}
+@media (hover: hover) {
+  .footer a:hover {
+    color: #808080;
+  }
 }
 .footer p {
   margin-bottom: 0;
@@ -791,10 +803,14 @@ input[type="submit"].search-submit {
   width: 3.125em;
   z-index: 1;
 }
-input[type="submit"].search-submit:hover,
 input[type="submit"].search-submit:focus,
 input[type="submit"].search-submit:active {
   background-color: rgba(0,0,0,0.1);
+}
+@media (hover: hover) {
+  input[type="submit"].search-submit:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
 }
 article header:not(.entry-header) {
   margin-bottom: 1em;
@@ -1004,11 +1020,15 @@ article header:not(.entry-header) {
 .header div[class^="menu-"] a {
   display: block;
 }
-.header div.nav a:hover,
-.header div[class^="menu-"] a:hover,
 .header div.nav a:focus,
 .header div[class^="menu-"] a:focus {
   color: #808080;
+}
+@media (hover: hover) {
+  .header div.nav a:hover,
+  .header div[class^="menu-"] a:hover {
+    color: #808080;
+  }
 }
 @media all and (max-width: 767px) {
   .header div.nav,
@@ -1033,8 +1053,6 @@ article header:not(.entry-header) {
     color: #333;
     padding: 0.7rem 1.6rem;
   }
-  .header div.nav a:hover,
-  .header div[class^="menu-"] a:hover,
   .header div.nav a:focus,
   .header div[class^="menu-"] a:focus {
     color: #808080;
@@ -1091,18 +1109,10 @@ article header:not(.entry-header) {
     transition: max-height 0.3s ease;
     z-index: 2;
   }
-  .header div.nav > ul > .page_item_has_children:hover > a + .children,
-  .header div[class^="menu-"] > ul > .page_item_has_children:hover > a + .children,
-  .header div.nav > ul > .menu-item-has-children:hover > a + .children,
-  .header div[class^="menu-"] > ul > .menu-item-has-children:hover > a + .children,
   .header div.nav > ul > .page_item_has_children > a:focus + .children,
   .header div[class^="menu-"] > ul > .page_item_has_children > a:focus + .children,
   .header div.nav > ul > .menu-item-has-children > a:focus + .children,
   .header div[class^="menu-"] > ul > .menu-item-has-children > a:focus + .children,
-  .header div.nav > ul > .page_item_has_children:hover > a + .sub-menu,
-  .header div[class^="menu-"] > ul > .page_item_has_children:hover > a + .sub-menu,
-  .header div.nav > ul > .menu-item-has-children:hover > a + .sub-menu,
-  .header div[class^="menu-"] > ul > .menu-item-has-children:hover > a + .sub-menu,
   .header div.nav > ul > .page_item_has_children > a:focus + .sub-menu,
   .header div[class^="menu-"] > ul > .page_item_has_children > a:focus + .sub-menu,
   .header div.nav > ul > .menu-item-has-children > a:focus + .sub-menu,
@@ -1162,10 +1172,6 @@ article header:not(.entry-header) {
   .header div[class^="menu-"] .sub-menu a {
     color: #333;
   }
-  .header div.nav .children a:hover,
-  .header div[class^="menu-"] .children a:hover,
-  .header div.nav .sub-menu a:hover,
-  .header div[class^="menu-"] .sub-menu a:hover,
   .header div.nav .children a:focus,
   .header div[class^="menu-"] .children a:focus,
   .header div.nav .sub-menu a:focus,
@@ -1193,6 +1199,32 @@ article header:not(.entry-header) {
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
+  }
+}
+@media all and (max-width: 767px) and (hover: hover) {
+  .header div.nav a:hover,
+  .header div[class^="menu-"] a:hover {
+    color: #808080;
+  }
+}
+@media all and (min-width: 768px) and (hover: hover) {
+  .header div.nav > ul > .page_item_has_children:hover > a + .children,
+  .header div[class^="menu-"] > ul > .page_item_has_children:hover > a + .children,
+  .header div.nav > ul > .menu-item-has-children:hover > a + .children,
+  .header div[class^="menu-"] > ul > .menu-item-has-children:hover > a + .children,
+  .header div.nav > ul > .page_item_has_children:hover > a + .sub-menu,
+  .header div[class^="menu-"] > ul > .page_item_has_children:hover > a + .sub-menu,
+  .header div.nav > ul > .menu-item-has-children:hover > a + .sub-menu,
+  .header div[class^="menu-"] > ul > .menu-item-has-children:hover > a + .sub-menu {
+    margin-top: 0;
+    max-height: 100vh;
+    padding-top: 1.1rem;
+  }
+  .header div.nav .children a:hover,
+  .header div[class^="menu-"] .children a:hover,
+  .header div.nav .sub-menu a:hover,
+  .header div[class^="menu-"] .sub-menu a:hover {
+    color: #808080;
   }
 }
 @media all and (min-width: 768px) {
