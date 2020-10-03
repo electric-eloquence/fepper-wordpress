@@ -4,12 +4,16 @@
     "browser": true,
     "node": false
   },
+  "parserOptions": {
+    "sourceType": "script"
+  },
   "globals": {
     "$": true,
     "jQuery": true
   },
   "rules": {
     "no-var": 0,
+    "one-var": [2, "always"],
     "prettier/prettier": 0
   }
 }
