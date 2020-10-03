@@ -5,7 +5,7 @@
     "postinstall": "node run/install.js",
     "start": "node node_modules/fepper/index.js",
     "test": "npm run test:eslint && npm run test:mocha",
-    "test:eslint": "eslint extend && eslint run && eslint test",
+    "test:eslint": "eslint extend && eslint run && eslint source/_scripts/src && eslint test",
     "test:mocha": "mocha test/install-tests.js && mocha test/install-extension-tests.js"
   },
   "husky": {
@@ -42,6 +42,7 @@
     "node": ">=12.0.0"
   },
   "devDependencies": {
+    "@wordpress/eslint-plugin": "^7.2.1",
     "chai": "4.x",
     "eslint": "7.x",
     "fepper": "*",
