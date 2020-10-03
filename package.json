@@ -4,15 +4,7 @@
   "scripts": {
     "install-base": "node run/install-base.js",
     "postinstall": "node run/install.js",
-    "start": "node node_modules/fepper/index.js",
-    "test": "npm run test:eslint && npm run test:mocha",
-    "test:eslint": "eslint extend && eslint run && eslint source/_scripts/src && eslint test",
-    "test:mocha": "mocha test/install-tests.js && mocha test/install-extension-tests.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test"
-    }
+    "start": "node node_modules/fepper/index.js"
   },
   "repository": {
     "type": "git",
@@ -43,14 +35,9 @@
     "node": ">=12.0.0"
   },
   "devDependencies": {
-    "@wordpress/eslint-plugin": "^7.2.1",
-    "chai": "4.x",
-    "eslint": "7.x",
-    "fepper": "*",
-    "fepper-utils": "*",
+    "fepper": "^0.37.1",
+    "fepper-utils": "^1.4.0",
     "fs-extra": "^8.1.0",
-    "gulp": "https://github.com/electric-eloquence/gulp/tarball/v3-lts",
-    "husky": "4.x",
-    "mocha": "8.x"
+    "gulp": "https://github.com/electric-eloquence/gulp/tarball/v3-lts@3.9.16"
   }
 }
