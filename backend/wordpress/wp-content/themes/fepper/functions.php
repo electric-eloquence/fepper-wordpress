@@ -95,7 +95,7 @@ function fepper_scripts() {
 	wp_enqueue_script(
 		'fepper-functions',
 		get_template_directory_uri() . '/_scripts/src/functions.js',
-		array( 'jquery' ),
+		array(),
 		false,
 		true
 	);
