@@ -22,7 +22,7 @@ compatible. (Support for just public instance fields is good enough.) This only
 pertains to the UI. Patterns and their destinations can be as backward-compatible 
 or as experimental as you wish to make them.
 
-### Downstream projects
+#### This distribution of Fepper has templates configured for WordPress, along with a [WordPress theme](https://wordpress.org/themes/fepper/) built to accommodate these templates.
 
 * [Main distribution (Fepper without WordPress)](https://github.com/electric-eloquence/fepper)
 
@@ -55,6 +55,7 @@ or as experimental as you wish to make them.
 
 * Unix-like or Windows OS.
 * Minimum supported Node.js version 12.0.0.
+* Minimum WordPress version 4.5.
 
 #### Simplest way to get started
 
@@ -665,16 +666,16 @@ As a reminder, the viewport sizes can be customized in `source/_scripts/src/vari
   Mustache</a>
 * <a href="https://www.npmjs.com/package/fepper-utils" target="_blank">Fepper Utils</a>
 
-[snyk-image]: https://snyk.io//test/github/electric-eloquence/fepper/master/badge.svg
-[snyk-url]: https://snyk.io//test/github/electric-eloquence/fepper/master
+[snyk-image]: https://snyk.io//test/github/electric-eloquence/fepper-wordpress/master/badge.svg
+[snyk-url]: https://snyk.io//test/github/electric-eloquence/fepper-wordpress/master
 
-[travis-image]: https://img.shields.io/travis/electric-eloquence/fepper/master.svg?label=mac%20%26%20linux
-[travis-url]: https://travis-ci.org/electric-eloquence/fepper
+[travis-image]: https://img.shields.io/travis/electric-eloquence/fepper-wordpress/master.svg?label=mac%20%26%20linux
+[travis-url]: https://travis-ci.org/electric-eloquence/fepper-wordpress
 
-[appveyor-image]: https://img.shields.io/appveyor/ci/e2tha-e/fepper/master.svg?label=windows
-[appveyor-url]: https://ci.appveyor.com/project/e2tha-e/fepper
+[appveyor-image]: https://img.shields.io/appveyor/ci/e2tha-e/fepper-wordpress/master.svg?label=windows
+[appveyor-url]: https://ci.appveyor.com/project/e2tha-e/fepper-wordpress
 
 [node-version-image]: https://img.shields.io/node/v/fepper.svg
 
-[license-image]: https://img.shields.io/github/license/electric-eloquence/fepper.svg
-[license-url]: https://raw.githubusercontent.com/electric-eloquence/fepper/master/LICENSE
+[license-image]: https://img.shields.io/github/license/electric-eloquence/fepper-wordpress.svg
+[license-url]: https://raw.githubusercontent.com/electric-eloquence/fepper-wordpress/master/LICENSE
