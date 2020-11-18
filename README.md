@@ -14,7 +14,7 @@
 ![Node Version][node-version-image]
 [![License][license-image]][license-url]
 
-### Downstream projects
+#### This distribution of Fepper has templates configured for WordPress, along with a [WordPress theme](https://wordpress.org/themes/fepper/) built to accommodate these templates.
 
 * [Main distribution (Fepper without WordPress)](https://github.com/electric-eloquence/fepper)
 
@@ -47,6 +47,7 @@
 
 * Unix-like or Windows OS.
 * Minimum supported Node.js version 12.0.0.
+* Minimum WordPress version 4.5.
 
 #### Simplest way to get started
 
@@ -669,8 +670,8 @@ As a reminder, the viewport sizes can be customized in `source/_scripts/src/vari
   Mustache</a>
 * <a href="https://www.npmjs.com/package/fepper-utils" target="_blank">Fepper Utils</a>
 
-[snyk-image]: https://snyk.io//test/github/electric-eloquence/fepper/master/badge.svg
-[snyk-url]: https://snyk.io//test/github/electric-eloquence/fepper/master
+[snyk-image]: https://snyk.io//test/github/electric-eloquence/fepper-wordpress/master/badge.svg
+[snyk-url]: https://snyk.io//test/github/electric-eloquence/fepper-wordpress/master
 
 [linux-image]: https://github.com/electric-eloquence/fepper-wordpress/workflows/Linux%20build/badge.svg?branch=master
 [linux-url]: https://github.com/electric-eloquence/fepper-wordpress/actions?query=workflow%3A"Linux+build"
@@ -683,5 +684,5 @@ As a reminder, the viewport sizes can be customized in `source/_scripts/src/vari
 
 [node-version-image]: https://img.shields.io/node/v/fepper.svg
 
-[license-image]: https://img.shields.io/github/license/electric-eloquence/fepper.svg
-[license-url]: https://raw.githubusercontent.com/electric-eloquence/fepper/master/LICENSE
+[license-image]: https://img.shields.io/github/license/electric-eloquence/fepper-wordpress.svg
+[license-url]: https://raw.githubusercontent.com/electric-eloquence/fepper-wordpress/master/LICENSE
