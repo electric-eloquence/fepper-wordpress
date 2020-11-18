@@ -1,7 +1,7 @@
 <p align="center">
   <img
     src="https://raw.githubusercontent.com/electric-eloquence/fepper-npm/master/excludes/fepper-branding.png"
-    alt="Fepper"
+    alt="Fepper for WordPress"
   >
 </p>
 
@@ -9,16 +9,7 @@
 
 #### This distribution of Fepper has templates configured for WordPress, along with a [WordPress theme](https://wordpress.org/themes/fepper/) built to accommodate these templates.
 
-* [Fepper Base](https://github.com/electric-eloquence/fepper-base) - no 
-  unnecessary assets, styles, Pattern Lab demo, or 
-  <a href="https://www.npmjs.com/package/fp-stylus" target="_blank">fp-stylus</a> 
-  extension.
-* [Fepper for Drupal](https://github.com/electric-eloquence/fepper-drupal) - 
-  templates configured for Drupal, along with a Drupal theme built to 
-  accommodate those templates.
-* [Fepper for Wordpress](https://github.com/electric-eloquence/fepper-wordpress) 
-  \- templates configured for WordPress, along with a WordPress theme built to 
-  accommodate those templates.
+* [Main distribution (Fepper without WordPress)](https://github.com/electric-eloquence/fepper)
 
 ### Table of contents
 
@@ -49,11 +40,12 @@
 
 * Unix-like or Windows OS.
 * Minimum supported Node.js version 8.10.0.
+* Minimum WordPress version 4.5.
 
 #### Simplest way to get started
 
 * Download the 
-  <a href="https://github.com/electric-eloquence/fepper/releases/latest" target="_blank">
+  <a href="https://github.com/electric-eloquence/fepper-wordpress/releases/latest" target="_blank">
   latest release</a>.
 
 #### Mac install
@@ -91,15 +83,18 @@
       fepper-cli</a>, which will give you the `fp` command.
     * It will then install and launch Fepper.
 
-#### Base install
+#### WordPress install
 
-* Comes with no unnecessary assets, styles, Pattern Lab demo, or 
-  <a href="https://www.npmjs.com/package/fp-stylus" target="_blank">fp-stylus</a> 
-  extension.
-* Node.js must be installed beforehand.
-* `npm install -g fepper-cli`
-* `npm run install-base`
-* `fp`
+* To install the included WordPress backend, restore the MySQL dump 
+  `fepper-wordpress-mysqldump.sql`.
+* Update the `DB_` settings in `backend/wordpress/wp-config.php` to reflect 
+  your own database settings.
+* Configure `wp.local` to be the hostname in your web server configs.
+* Configure `backend/wordpress` (correctly pathed) to be the document root for 
+  this host.
+* Restart the web server.
+* Open http://wp.local in a browser.
+* Log into WordPress with `admin:admin`
 
 #### Post-install
 
@@ -229,6 +224,10 @@ Follow these rules for setting up keys and values:
 * Follow the closing quote with a colon, space, pipe, the numeral 2, and a 
   newline `: |2`
 * Indent each line of the value by at least two spaces.
+  * In Fepper for WordPress, be mindful of the fact that YAML does not recognize 
+    tabs as valid indentation for values.
+  * Spaces precede tabs in YAML values, but the compiled PHP templates are 
+    entirely tab-indented.
 * When translating to a language with double-curly braces for tags (as per the 
   example), the double-curly braces must be escaped with a backslash per curly 
   brace.
