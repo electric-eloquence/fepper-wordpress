@@ -4,15 +4,10 @@
 .DS_Store
 .publish/
 /.timestamp
-/backend/*
 /conf.yml
-/extend/
 /install.log
 /npm-debug.log
 /package-lock.json
-/patternlab-config.json
-/pref.yml
 /public/*
-/source/
 ignore/
 node_modules/
