@@ -1,24 +1,15 @@
 <p align="center">
   <img
     src="https://raw.githubusercontent.com/electric-eloquence/fepper-npm/master/excludes/fepper-branding.png"
-    alt="Fepper"
+    alt="Fepper for WordPress"
   >
 </p>
 
 <h2 align="center">A frontend prototyper tool for rapid prototyping of websites</h2>
 
-### Downstream projects
+#### This checkout of Fepper has templates configured for WordPress, along with a [WordPress theme](https://wordpress.org/themes/fepper/) built to accept those templates.
 
-* [Fepper Base](https://github.com/electric-eloquence/fepper-base) - no 
-  unnecessary assets, styles, or Pattern Lab demo.
-* [Fepper for Drupal](https://github.com/electric-eloquence/fepper-drupal) - 
-  templates configured for Drupal 8, along with a Drupal theme built to 
-  accommodate those templates.
-* [Fepper for Windows](https://github.com/electric-eloquence/fepper-windows) - 
-  scripted to run on Windows.
-* [Fepper for Wordpress](https://github.com/electric-eloquence/fepper-wordpress) 
-  \- templates configured for WordPress, along with a WordPress theme built to 
-  accommodate those templates.
+* [Main project](https://github.com/electric-eloquence/fepper)
 
 ### Table of contents
 
@@ -46,11 +37,12 @@
 
 * Unix-like or Windows OS.
 * Minimum supported Node.js version 8.5.0.
+* Minimum WordPress version 4.5.
 
 #### Simplest way to get started
 
 * Download the 
-  <a href="https://github.com/electric-eloquence/fepper/releases/latest" target="_blank">
+  <a href="https://github.com/electric-eloquence/fepper-wordpress/releases/latest" target="_blank">
   latest release</a>.
 
 #### Main install
@@ -83,13 +75,18 @@
 * Start editing files in `source`. Changes should automatically appear in the 
   browser.
 
-#### Base install
+#### WordPress install
 
-* Comes with no unnecessary assets, styles, or Pattern Lab demo.
-* Node.js must be installed beforehand.
-* `npm install -g fepper-cli`
-* `npm run install-base`
-* `fp`
+* To install the included WordPress backend, restore the MySQL dump 
+  `fepper-wordpress-mysqldump.sql`.
+* Update the `DB_` settings in `backend/wordpress/wp-config.php` to reflect 
+  your own database settings.
+* Configure `wp.local` to be the hostname in your web server configs.
+* Configure `backend/wordpress` (correctly pathed) to be the document root for 
+  this host.
+* Restart the web server.
+* Open http://wp.local in a browser.
+* Log into WordPress with `admin:admin`
 
 #### Windows install
 
