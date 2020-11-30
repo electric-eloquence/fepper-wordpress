@@ -4,6 +4,6 @@
  * Custom functions go here.
  */
 
-( function( $ ) {
-
-} )( jQuery );
+( function () {
+	'use strict';
+} )();

@@ -43,13 +43,6 @@ function fepper_child_scripts() {
 		true
 	);
 	wp_enqueue_script(
-		'fepper-child-fepper-obj',
-		get_stylesheet_directory_uri() . '/_scripts/src/fepper-obj.js',
-		array(),
-		false,
-		true
-	);
-	wp_enqueue_script(
 		$parent_script,
 		get_template_directory_uri() . '/_scripts/src/functions.js',
 		array( 'jquery' ),
@@ -73,7 +66,6 @@ add_action( 'wp_enqueue_scripts', 'fepper_child_scripts' );
  */
 function fepper_child_dequeue_scripts() {
 	wp_dequeue_script( 'fepper-variables' );
-	wp_dequeue_script( 'fepper-fepper-obj' );
 	wp_dequeue_script( 'fepper-functions' );
 }
 add_action( 'wp_enqueue_scripts', 'fepper_child_dequeue_scripts', 100 );
