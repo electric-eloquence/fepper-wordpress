@@ -30,13 +30,13 @@
 
 	hiddenLinkSearch.addEventListener( 'keydown', function ( e ) {
 		if ( e.keyCode === 13 ) { // If the Enter key is hit.
-			togglerSearch.dispatchEvent( 'click' );
+			togglerSearch.click();
 		}
 	} );
 
 	hiddenLinkMenu.addEventListener( 'keydown', function ( e ) {
 		if ( e.keyCode === 13 ) { // If the Enter key is hit.
-			togglerMenu.dispatchEvent( 'click' );
+			togglerMenu.click();
 		}
 	} );
 
