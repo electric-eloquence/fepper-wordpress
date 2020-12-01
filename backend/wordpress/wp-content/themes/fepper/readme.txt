@@ -1,9 +1,9 @@
 === Fepper ===
 Contributors: e2tha-e
 Requires at least: 4.5
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 7.2
-Stable tag: 0.1.6
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, one-column, right-sidebar, threaded-comments, two-columns
@@ -35,6 +35,12 @@ reasonably working interface between these two very different platforms.
 https://github.com/electric-eloquence/fepper-wordpress/issues
 
 == Changelog ==
+
+= 1.0.2 =
+* Replaced jquery with vanilla js
+
+= 1.0.1 =
+* Improved hover states for mobile nav toggles
 
 = 1.0.0 =
 * General overarching improvements
