@@ -21,31 +21,43 @@
 	hiddenLinkMenu.href = "#";
 
 	hiddenLinkSearch.addEventListener( 'focus', function () {
-		togglerSearch.classList.add( 'focused' );
+		if ( togglerSearch ) {
+			togglerSearch.classList.add( 'focused' );
+		}
 	} );
 
 	hiddenLinkMenu.addEventListener( 'focus', function () {
-		togglerMenu.classList.add( 'focused' );
+		if ( togglerMenu ) {
+			togglerMenu.classList.add( 'focused' );
+		}
 	} );
 
 	hiddenLinkSearch.addEventListener( 'keydown', function ( e ) {
 		if ( e.keyCode === 13 ) { // If the Enter key is hit.
-			togglerSearch.dispatchEvent( 'click' );
+			if ( togglerSearch ) {
+				togglerSearch.click();
+			}
 		}
 	} );
 
 	hiddenLinkMenu.addEventListener( 'keydown', function ( e ) {
 		if ( e.keyCode === 13 ) { // If the Enter key is hit.
-			togglerMenu.dispatchEvent( 'click' );
+			if ( togglerMenu ) {
+				togglerMenu.click();
+			}
 		}
 	} );
 
 	hiddenLinkSearch.addEventListener( 'blur', function () {
-		togglerSearch.classList.remove( 'focused' );
+		if ( togglerSearch ) {
+			togglerSearch.classList.remove( 'focused' );
+		}
 	} );
 
 	hiddenLinkMenu.addEventListener( 'blur', function () {
-		togglerMenu.classList.remove( 'focused' );
+		if ( togglerMenu ) {
+			togglerMenu.classList.remove( 'focused' );
+		}
 	} );
 
 	function mobileNavToggle( toggler, toggled ) {
