@@ -13,9 +13,9 @@ module.exports = {
 {{! Handle the viewport. }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{! Load the UI styles. }}
-<link rel="stylesheet" href="node_modules/fepper-ui/styles/ui.css" media="all">
-<link rel="stylesheet" href="node_modules/fepper-ui/styles/prism-typeahead.css" media="all">
-<link rel="stylesheet" href="{{ pathsPublic.css }}/pattern-scaffolding.css" media="all">
+<link rel="stylesheet" href="node_modules/fepper-ui/styles/ui.css">
+<link rel="stylesheet" href="node_modules/fepper-ui/styles/prism-typeahead.css">
+<link rel="stylesheet" href="{{ pathsPublic.css }}/pattern-scaffolding.css">
 {{! Namespace a window.FEPPER_UI object to contain globals. }}
 <script>window.FEPPER_UI = {};</script>
 {{! Load libraries. }}
