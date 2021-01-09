@@ -34,4 +34,3 @@
 		<?php comment_form(); ?>
 	<?php endif; ?>
 </section>
-
