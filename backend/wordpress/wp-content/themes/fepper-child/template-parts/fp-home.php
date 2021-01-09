@@ -28,7 +28,6 @@
 						</div>
 					</a>
 				</div>
-
 			<?php endwhile; ?>
 			<?php
 				$args = array( 'category_name' => 'sub', 'posts_per_page' => 3 );
@@ -45,7 +44,6 @@
 						</div>
 					</a>
 				</div>
-
 			<?php endwhile; ?>
 		</section>
 	<?php endif; ?>
@@ -90,7 +88,6 @@
 									</div>
 								</a>
 							</div>
-
 						</li>
 					<?php
 						endwhile;

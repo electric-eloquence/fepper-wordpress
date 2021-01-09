@@ -1,8 +1,8 @@
-'\^ sidebar_1\?': |2
+'^ sidebar_1?': |2
   <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
-'/ sidebar_1\?': |2
+'/ sidebar_1?': |2
   <?php endif; ?>
-'# sidebar_1\?': |2
+'# sidebar_1?': |2
   <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 '# article': |2
   <?php while ( have_posts() ) : the_post(); ?>

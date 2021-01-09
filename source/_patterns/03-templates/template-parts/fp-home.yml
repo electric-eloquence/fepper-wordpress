@@ -4,16 +4,16 @@
    * Do not copy this from the fepper-child theme to the fepper parent theme!
    */
   ?>
-'\^ homepage\?': |2
+'^ homepage?': |2
   <?php if ( $_SERVER['REQUEST_URI'] != '/' ) : ?>
 'page_title': |2
   <?php
   			$page_for_posts_id = get_option( 'page_for_posts' );
   			echo get_post_field( 'post_title', $page_for_posts_id );
   		?>
-'/ homepage\?': |2
+'/ homepage?': |2
   <?php endif; ?>
-'# homepage\?': |2
+'# homepage?': |2
   <?php if ( $_SERVER['REQUEST_URI'] == '/' ) : ?>
 '# hero': |2
   <?php
@@ -37,11 +37,11 @@
   <?php the_title(); ?>
 '> elements-landscape-4x3': |2
   <?php the_post_thumbnail( 'full' ); ?>
-'\^ sidebar_1\?': |2
+'^ sidebar_1?': |2
   <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>
-'/ sidebar_1\?': |2
+'/ sidebar_1?': |2
   <?php endif; ?>
-'# sidebar_1\?': |2
+'# sidebar_1?': |2
   <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 'section_title': |2
   <?php _e( 'Latest Posts', 'fepper' ); ?>
