@@ -94,7 +94,6 @@
 
 #### WordPress install
 
-<<<<<<< HEAD
 * To install the included WordPress backend, restore the MySQL dump 
   `fepper-wordpress-mysqldump.sql`.
 * Update the `DB_` settings in `backend/wordpress/wp-config.php` to reflect 
@@ -105,15 +104,6 @@
 * Restart the web server.
 * Open http://wp.local in a browser.
 * Log into WordPress with `admin:admin`
-=======
-* Comes with no unnecessary assets, styles, demo website, or 
-  <a href="https://www.npmjs.com/package/fp-stylus" target="_blank">fp-stylus</a> 
-  extension.
-* Node.js must be installed beforehand.
-* `npm install -g fepper-cli`
-* `npm run install-base`
-* `fp`
->>>>>>> 4be7b4f29bd018706ee1de4b5cf3e42d0c3ae5d5
 
 #### Post-install
 
@@ -285,7 +275,6 @@ Follow these rules for setting up keys and values:
 * Delete the Feplet curly braces for keys.
 * Trim any exterior whitespace.
 * Leave other control structures and spaces within the key, e.g. !#/>^
-* Escape parentheses, carets, and question marks with backslashes.
 * Wrap the key in single quotes.
 * Follow the closing quote with a colon, space, pipe, the numeral 2, and a 
   newline `: |2`
