@@ -7,7 +7,7 @@
 .footer .page_item_has_children::before,
 .footer .menu-item-has-children::before,
 article[id^="post-"]::before,
-.block-hoagie::before,
+.block-dagwood::before,
 #widget-area aside:not(.widget_search)::before,
 .comments .comment-body::before,
 .cf::after,
@@ -19,7 +19,7 @@ article[id^="post-"]::before,
 .footer .page_item_has_children::after,
 .footer .menu-item-has-children::after,
 article[id^="post-"]::after,
-.block-hoagie::after,
+.block-dagwood::after,
 #widget-area aside:not(.widget_search)::after,
 .comments .comment-body::after {
 	content: " ";
@@ -34,7 +34,7 @@ article[id^="post-"]::after,
 .footer .page_item_has_children::after,
 .footer .menu-item-has-children::after,
 article[id^="post-"]::after,
-.block-hoagie::after,
+.block-dagwood::after,
 #widget-area aside:not(.widget_search)::after,
 .comments .comment-body::after {
 	clear: both;
@@ -625,55 +625,55 @@ article:not(.type-page) > header > h2.entry-title {
 	}
 }
 article[id^="post-"],
-.block-hoagie {
+.block-dagwood {
 	width: 100%;
 }
 article[id^="post-"] .b-inner,
-.block-hoagie .b-inner {
+.block-dagwood .b-inner {
 	overflow: hidden;
 }
 article[id^="post-"] .b-thumb,
-.block-hoagie .b-thumb {
+.block-dagwood .b-thumb {
 	float: left;
 }
 @media all and (max-width: 480px) {
 	article[id^="post-"] .b-thumb,
-	.block-hoagie .b-thumb {
+	.block-dagwood .b-thumb {
 		float: none;
 	}
 	article[id^="post-"] .b-thumb img,
-	.block-hoagie .b-thumb img {
+	.block-dagwood .b-thumb img {
 		max-width: 22.5rem;
 	}
 	article[id^="post-"] .b-text p:first-child,
-	.block-hoagie .b-text p:first-child {
+	.block-dagwood .b-text p:first-child {
 		margin-top: 0.25em;
 	}
 }
 @media all and (max-width: 767px) {
 	article[id^="post-"] .b-text p,
-	.block-hoagie .b-text p {
+	.block-dagwood .b-text p {
 		font-size: 1.4rem;
 	}
 }
 @media all and (min-width: 481px) {
-	.hoagies-two-col article[id^="post-"] .headline,
-	.hoagies-two-col .block-hoagie .headline,
-	.hoagies-two-col article[id^="post-"] .b-text,
-	.hoagies-two-col .block-hoagie .b-text {
+	.dagwood-two-col article[id^="post-"] .headline,
+	.dagwood-two-col .block-dagwood .headline,
+	.dagwood-two-col article[id^="post-"] .b-text,
+	.dagwood-two-col .block-dagwood .b-text {
 		float: right;
 		padding: 0 0 0 1.6rem;
 		width: 75%;
 	}
-	.hoagies-two-col article[id^="post-"] .b-thumb,
-	.hoagies-two-col .block-hoagie .b-thumb {
+	.dagwood-two-col article[id^="post-"] .b-thumb,
+	.dagwood-two-col .block-dagwood .b-thumb {
 		width: 25%;
 	}
 }
-.block-hoagie {
+.block-dagwood {
 	margin-bottom: 1.6rem;
 }
-.hoagies-two-col {
+.dagwood-two-col {
 	margin-bottom: 0;
 }
 form > div {

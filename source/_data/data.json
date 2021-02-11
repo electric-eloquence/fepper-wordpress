@@ -8,7 +8,7 @@
   "sidebar_2?": true,
   "header_styles": ".header,.header a {color:#ffffff}",
   "has_search": "has-search",
-  "hoagies_classes": "hoagies-two-col",
+  "dagwood_classes": "dagwood-two-col",
   "excerpt": {
     "short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
     "medium": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

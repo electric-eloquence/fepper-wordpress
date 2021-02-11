@@ -57,7 +57,7 @@
 			<?php if ( $_SERVER['REQUEST_URI'] == '/' ) : ?>
 				<h2 class="section-title"><?php _e( 'Latest Posts', 'fepper' ); ?></h2>
 			<?php endif; ?>
-			<section class="section hoagies <?php
+			<section class="section dagwood <?php
 				$args = array( 'category__not_in' => array( get_cat_ID( 'hero' ), get_cat_ID( 'sub' ) ) );
 				$is_two_col = false;
 				while ( have_posts() ) : the_post();
@@ -68,7 +68,7 @@
 				endwhile;
 				rewind_posts();
 				if ( $is_two_col ) :
-					echo 'hoagies-two-col ';
+					echo 'dagwood-two-col ';
 				endif;
 			?>">
 				<ul class="post-list">
@@ -77,7 +77,7 @@
 						while ( have_posts() ) : the_post();
 					?>
 						<li>
-							<div class="block block-hoagie">
+							%<div class="block block-dagwood">
 								<a href="<?php the_permalink(); ?>" class="b-inner cf">
 									<h2 class="headline"><?php the_title(); ?></h2>
 									<div class="b-thumb">

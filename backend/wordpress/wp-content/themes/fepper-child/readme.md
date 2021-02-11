@@ -22,9 +22,9 @@ Use this child theme to customize the Fepper parent theme.
 
 ## WordPress Usage
 
-* This child theme demonstrates a Hero + Subs + Hoagies graphical layout for the homepage.
+* This child theme demonstrates a Hero + Subs + Dagwood graphical layout for the homepage.
 * The Hero section will be populated by the first post under the Hero category.
 * The Subs section will be populated by the first three posts under the Sub category.
-* The Hoagies section will be populated by a configurable number of posts that are neither Heroes nor Subs.
-* The Hero + Subs + Hoagies layout is by no means mandatory.
+* The Dagwood section will be populated by a configurable number of posts that are neither Heroes nor Subs.
+* The Hero + Subs + Dagwood layout is by no means mandatory.
 * You are welcome (indeed encouraged) to use any frontend code you wish.

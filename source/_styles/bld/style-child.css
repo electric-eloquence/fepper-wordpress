@@ -155,7 +155,7 @@
     width: calc(33.333333333333336% - (3.2rem / 3));
   }
 }
-.block-hoagie .b-thumb {
+.block-dagwood .b-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
