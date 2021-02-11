@@ -36,6 +36,9 @@ https://github.com/electric-eloquence/fepper-wordpress/issues
 
 == Changelog ==
 
+= 1.0.3 =
+* Layout naming convention update
+
 = 1.0.2 =
 * Replaced jquery with vanilla js
 
