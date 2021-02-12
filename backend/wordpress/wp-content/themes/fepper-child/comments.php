@@ -15,14 +15,12 @@
 		?></h2>
 		<?php the_comments_pagination(); ?>
 		<ul class="comment-list">
-			<?php
-				wp_list_comments( array(
+			wp_list_comments( array(
 					'style'       => 'ul',
 					'short_ping'  => true,
 					'avatar_size' => 102,
 				) );
-			?>
-		</ul>
+			</ul>
 		<?php the_comments_pagination(); ?>
 	<?php endif; ?>
 	<?php

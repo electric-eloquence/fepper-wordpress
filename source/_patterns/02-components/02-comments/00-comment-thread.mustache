@@ -3,9 +3,9 @@
 		<h2 class="section-title">{{ count }}</h2>
 		{{ the_comments_pagination }}
 		<ul class="comment-list">
-			{{# listItems.five }}
+			{{# comment_placholders }}
 				{{> 01-compounds/01-blocks/03-single-comment }}
-			{{/ listItems.five }}
+			{{/ comment_placholders }}
 		</ul>
 		{{ the_comments_pagination }}
 	{{/ comments }}
