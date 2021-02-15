@@ -77,7 +77,7 @@
 						while ( have_posts() ) : the_post();
 					?>
 						<li>
-							%<div class="block block-dagwood">
+							<div class="block block-dagwood">
 								<a href="<?php the_permalink(); ?>" class="b-inner cf">
 									<h2 class="headline"><?php the_title(); ?></h2>
 									<div class="b-thumb">

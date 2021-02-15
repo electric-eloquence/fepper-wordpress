@@ -33,7 +33,7 @@
   <?php endwhile; ?>
 '> elements-landscape-16x9': |2
   <?php the_post_thumbnail( 'full' ); ?>
-'headline.short': |2
+'headline': |2
   <?php the_title(); ?>
 '> elements-landscape-4x3': |2
   <?php the_post_thumbnail( 'full' ); ?>
@@ -69,7 +69,7 @@
   <?php the_permalink(); ?>
 '> elements-square': |2
   <?php the_post_thumbnail( 'medium' ); ?>
-'excerpt.medium': |2
+'excerpt': |2
   <?php the_excerpt(); ?>
 '/ latest_posts': |2
   <?php
@@ -77,5 +77,5 @@
   						// Previous/Next page navigation.
   						the_posts_pagination();
   					?>
-'> 02-components/01-sections/00-recent-comments': |2
+'> 02-components/02-comments/00-recent-comments': |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
