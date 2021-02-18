@@ -10,7 +10,7 @@
 		<div class="l-two-col">
 	<?php endif; ?>
 		<div class="l-main">
-			<section class="section hoagies <?php
+			<section class="section dagwood <?php
 				$is_two_col = false;
 				while ( have_posts() ) : the_post();
 					if ( has_post_thumbnail() ) :
@@ -20,13 +20,13 @@
 				endwhile;
 				rewind_posts();
 				if ( $is_two_col ) :
-					echo 'hoagies-two-col ';
+					echo 'dagwood-two-col ';
 				endif;
 			?>">
 				<ul class="post-list">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<li>
-							<div class="block block-hoagie">
+							<div class="block block-dagwood">
 								<a href="<?php the_permalink(); ?>" class="b-inner cf">
 									<h2 class="headline"><?php the_title(); ?></h2>
 									<?php if ( has_post_thumbnail() ) : ?>
