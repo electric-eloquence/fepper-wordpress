@@ -9,7 +9,7 @@
 	endwhile;
 	rewind_posts();
 	if ( $is_two_col ) :
-		echo 'hoagies-two-col ';
+		echo 'dagwood-two-col ';
 	endif;
 	if ( $wp_query->post_count > 1 ) :
 		echo 'post-list ';

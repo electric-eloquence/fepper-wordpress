@@ -8,7 +8,7 @@
   <?php the_post_thumbnail( 'medium' ); ?>
 '/ img': |2
   <?php endif; ?>
-'headline.short': |2
+'headline': |2
   <?php
   			if ( is_single() ) :
   				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -19,7 +19,7 @@
   				);
   			endif;
   		?>
-'excerpt.medium': |2
+'excerpt': |2
   <?php
   			the_content( sprintf(
   				__( 'Continue reading %s', 'fepper' ),

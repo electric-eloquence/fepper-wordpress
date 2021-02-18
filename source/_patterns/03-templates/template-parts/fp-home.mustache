@@ -24,11 +24,11 @@
 			{{# homepage? }}
 				<h2 class="section-title">{{{ section_title }}}</h2>
 			{{/ homepage? }}
-			<section class="section hoagies {{ hoagies_classes }}">
+			<section class="section dagwood {{ dagwood_classes }}">
 				<ul class="post-list">
 					{{# latest_posts }}
 						<li>
-							{{> 01-compounds/01-blocks/02-block-hoagie.mustache }}
+							{{> 01-compounds/01-blocks/02-block-dagwood.mustache }}
 						</li>
 					{{/ latest_posts }}
 				</ul>
@@ -38,7 +38,7 @@
 		</div><!--end l-main-->
 		{{# sidebar_1? }}
 			<div class="l-sidebar l-sidebar-1">
-				{{> 02-components/01-sections/00-recent-comments }}
+				{{> 02-components/02-comments/00-recent-comments }}
 			</div><!--end l-sidebar-->
 		{{/ sidebar_1? }}
 	</div>

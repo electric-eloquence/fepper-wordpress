@@ -19,7 +19,7 @@
   							the_post_thumbnail( 'full' );
   						endif;
   					?>
-'> 02-components/00-article/00-article-body': |2
+'> 02-components/00-article/01-article-body': |2
   <?php the_content(); ?>
 'page_links': |2
   <div class="page-links">
@@ -41,5 +41,5 @@
   				?>
 '/ article': |2
   <?php endwhile; ?>
-'> 02-components/01-sections/00-recent-comments': |2
+'> 02-components/02-comments/00-recent-comments': |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>

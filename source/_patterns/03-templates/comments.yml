@@ -16,7 +16,7 @@
   		?>
 'the_comments_pagination': |2
   <?php the_comments_pagination(); ?>
-'# listItems.five': |2
+'# comment_placeholders': |2
   <?php
 '> 01-compounds/01-blocks/03-single-comment': |2
   wp_list_comments( array(
@@ -24,7 +24,7 @@
   					'short_ping'  => true,
   					'avatar_size' => 102,
   				) );
-'/ listItems.five': |2
+'/ comment_placeholders': |2
   ?>
 '/ comments': |2
   <?php endif; ?>

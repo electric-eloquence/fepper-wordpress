@@ -33,7 +33,7 @@
   <?php endwhile; ?>
 '> elements-landscape-16x9': |2
   <?php the_post_thumbnail( 'full' ); ?>
-'headline.short': |2
+'headline': |2
   <?php the_title(); ?>
 '> elements-landscape-4x3': |2
   <?php the_post_thumbnail( 'full' ); ?>
@@ -45,7 +45,7 @@
   <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 'section_title': |2
   <?php _e( 'Latest Posts', 'fepper' ); ?>
-'hoagies_classes': |2
+'dagwood_classes': |2
   <?php
   				$args = array( 'category__not_in' => array( get_cat_ID( 'hero' ), get_cat_ID( 'sub' ) ) );
   				$is_two_col = false;
@@ -57,7 +57,7 @@
   				endwhile;
   				rewind_posts();
   				if ( $is_two_col ) :
-  					echo 'hoagies-two-col ';
+  					echo 'dagwood-two-col ';
   				endif;
   			?>
 '# latest_posts': |2
@@ -69,7 +69,7 @@
   <?php the_permalink(); ?>
 '> elements-square': |2
   <?php the_post_thumbnail( 'medium' ); ?>
-'excerpt.medium': |2
+'excerpt': |2
   <?php the_excerpt(); ?>
 '/ latest_posts': |2
   <?php
@@ -77,5 +77,5 @@
   						// Previous/Next page navigation.
   						the_posts_pagination();
   					?>
-'> 02-components/01-sections/00-recent-comments': |2
+'> 02-components/02-comments/00-recent-comments': |2
   <?php dynamic_sidebar( 'sidebar-1' ); ?>
