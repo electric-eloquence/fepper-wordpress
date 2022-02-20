@@ -3,10 +3,10 @@
 *~
 .*.swp
 .DS_Store
-/.timestamp
+/.timestamp*
 /conf.yml
+/extend/
 /patternlab-config.json
-/pref.yml
 /public/*
 !/public/package.json
 ignore/
