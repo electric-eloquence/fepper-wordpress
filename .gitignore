@@ -5,7 +5,6 @@
 .DS_Store
 /.timestamp*
 /conf.yml
-/extend/
 /patternlab-config.json
 /public/*
 !/public/package.json
