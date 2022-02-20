@@ -40,7 +40,7 @@
     "url": "https://github.com/electric-eloquence/fepper/issues"
   },
   "devDependencies": {
-    "@wordpress/eslint-plugin": "^7.2.1",
+    "@wordpress/eslint-plugin": "^10.0.1",
     "chai": "4.x",
     "eslint": "8.x",
     "fepper": "*",
