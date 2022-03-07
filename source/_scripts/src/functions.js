@@ -136,7 +136,10 @@
 
 		headerContainer = document.querySelector( '.header-container' );
 		widgetArea = document.querySelector( '#widget-area' );
-		headerBgImg = getComputedStyle( widgetArea ).backgroundImage;
+
+		if ( widgetArea ) {
+			headerBgImg = getComputedStyle( widgetArea ).backgroundImage;
+		}
 
 		if ( headerBgImg ) {
 			headerContainer.style.background = headerBgImg + ' 0 0 / cover no-repeat fixed';
