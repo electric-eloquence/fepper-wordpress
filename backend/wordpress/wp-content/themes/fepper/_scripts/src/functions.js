@@ -111,7 +111,9 @@
 				htmlMarginTop = getComputedStyle( document.documentElement ).marginTop,
 				offsetHeight = getComputedStyle( body ).top;
 
-			footer.style.height = 'auto';
+			if ( footer ) {
+				footer.style.height = 'auto';
+			}
 
 			if ( body.classList.contains( 'admin-bar' ) ) {
 				if ( parseInt( htmlMarginTop, 10 ) ) {
@@ -122,21 +124,33 @@
 
 				if ( parseInt( offsetHeight, 10 ) ) {
 					body.style.paddingBottom = '';
-					footer.style.bottom = offsetHeight;
+
+					if ( footer ) {
+						footer.style.bottom = offsetHeight;
+					}
 				} else {
 					body.style.paddingBottom = footerHeight;
-					footer.style.bottom = '';
+
+					if ( footer ) {
+						footer.style.bottom = '';
+					}
 				}
 			} else {
 				body.style.minHeight = '';
 				body.style.paddingBottom = footerHeight;
-				footer.style.bottom = '';
+
+				if ( footer ) {
+					footer.style.bottom = '';
+				}
 			}
 		}
 
 		headerContainer = document.querySelector( '.header-container' );
 		widgetArea = document.querySelector( '#widget-area' );
-		headerBgImg = getComputedStyle( widgetArea ).backgroundImage;
+
+		if ( widgetArea ) {
+			headerBgImg = getComputedStyle( widgetArea ).backgroundImage;
+		}
 
 		if ( headerBgImg ) {
 			headerContainer.style.background = headerBgImg + ' 0 0 / cover no-repeat fixed';
