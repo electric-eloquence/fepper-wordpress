@@ -36,6 +36,9 @@ https://github.com/electric-eloquence/fepper-wordpress/issues
 
 == Changelog ==
 
+= 1.0.4 =
+* Better conditional statements in js
+
 = 1.0.3 =
 * Layout naming convention update
 
