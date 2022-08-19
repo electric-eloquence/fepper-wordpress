@@ -18,7 +18,9 @@
 	{{! End Pattern Lab }}
 
 	<link rel="stylesheet" href="../../_styles/bld/style.css{{ cacheBuster }}">
-	<link rel="stylesheet" href="../../_styles/bld/style-child.css{{ cacheBuster }}">
+	{{^ new_install? }}
+		<link rel="stylesheet" href="../../_styles/bld/style-child.css{{ cacheBuster }}">
+	{{/ new_install? }}
 	<script src="../../_scripts/src/variables.styl{{ cacheBuster }}" type="text/javascript"></script>
 	{{# new_install? }}
 		<style type="text/css">
