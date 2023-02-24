@@ -43,7 +43,7 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
-    "@wordpress/eslint-plugin": "^10.0.1",
+    "@wordpress/eslint-plugin": "^14.0.0",
     "chai": "4.x",
     "eslint": "8.x",
     "fepper": "*",
